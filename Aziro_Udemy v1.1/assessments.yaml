@@ -1,0 +1,445 @@
+- id: q1_context_engineering
+  question: You're tasked with refactoring a large codebase using Claude Code. Which
+    context engineering technique would be MOST effective in providing Claude Code
+    with sufficient information without overwhelming it?
+  options:
+    A: Pasting the entire codebase into the prompt.
+    B: Providing focused code snippets and high-level architectural diagrams.
+    C: Relying on Claude Code's inherent understanding of common code patterns.
+    D: Describing the codebase verbally in extensive detail.
+  correct_answer: B
+- id: q2_plan_mode
+  question: When would leveraging 'Plan Mode' in Claude Code be particularly beneficial
+    during a complex software development task?
+  options:
+    A: For simple, single-step code modifications.
+    B: When the task requires multiple interdependent steps and strategic decision-making.
+    C: To bypass the need for detailed prompt engineering.
+    D: When debugging existing code with known errors.
+  correct_answer: B
+- id: q3_subagents
+  question: You want to automate code review using Claude Code. What is the primary
+    advantage of using a subagent for this purpose?
+  options:
+    A: Subagents eliminate the need for prompt engineering.
+    B: Subagents allow for specialized expertise and focused tasks within a larger
+      workflow.
+    C: Subagents automatically fix all code review issues.
+    D: Subagents reduce the cost of using Claude Code.
+  correct_answer: B
+- id: q4_agent_skills
+  question: You've created a custom agent skill to format JSON data. How can you ensure
+    this skill is consistently used across different Claude Code sessions?
+  options:
+    A: Manually include the skill's prompt in each session.
+    B: Define the skill globally and make it available to all agents.
+    C: Copy and paste the skill's code into each project.
+    D: Rely on Claude Code to automatically detect the skill's functionality.
+  correct_answer: B
+- id: q5_mcps
+  question: What is the primary purpose of using MCP (Model Config Protocol) servers
+    with Claude Code?
+  options:
+    A: To reduce the latency of Claude Code responses.
+    B: To manage permissions and control access to sensitive data and functionalities.
+    C: To automatically generate documentation for Claude Code projects.
+    D: To improve the accuracy of Claude Code's code generation.
+  correct_answer: B
+- id: q6_hooks
+  question: You want to automatically run unit tests after Claude Code modifies a
+    file. How can you achieve this using hooks?
+  options:
+    A: By manually triggering the tests after each code change.
+    B: By configuring a hook that executes the tests whenever a file is saved.
+    C: By relying on Claude Code to automatically detect the need for testing.
+    D: By writing a separate script to monitor file changes and run the tests.
+  correct_answer: B
+- id: q7_plugins
+  question: What is the key benefit of using plugins with Claude Code?
+  options:
+    A: Plugins eliminate the need for prompt engineering.
+    B: Plugins extend Claude Code's functionality by integrating with external tools
+      and services.
+    C: Plugins automatically fix all code errors.
+    D: Plugins reduce the cost of using Claude Code.
+  correct_answer: B
+- id: q8_ralph_loop
+  question: What is the main advantage of running Claude Code in a (Ralph) loop?
+  options:
+    A: It reduces the computational cost of using Claude Code.
+    B: It enables continuous feedback and refinement of Claude Code's output.
+    C: It eliminates the need for manual prompt engineering.
+    D: It automatically generates documentation for Claude Code projects.
+  correct_answer: B
+- id: q9_web_interface
+  question: When would using the Claude Code web interface (cloud) be preferable to
+    using the CLI?
+  options:
+    A: When automating tasks with scripts.
+    B: When collaborating with a team on a project.
+    C: When working with extremely large codebases.
+    D: When requiring precise control over Claude Code's configuration.
+  correct_answer: B
+- id: q10_undo_actions
+  question: Why is understanding the 'undo actions' functionality crucial when working
+    with Claude Code?
+  options:
+    A: It allows you to revert to previous versions of your prompts.
+    B: It enables you to easily correct mistakes and experiment with different approaches.
+    C: It automatically saves your work to a remote repository.
+    D: It optimizes Claude Code's performance.
+  correct_answer: B
+- id: q11_prompt_engineering
+  question: You're getting inconsistent results from Claude Code. What's the FIRST
+    thing you should investigate regarding your prompts?
+  options:
+    A: The Claude Code model version.
+    B: The clarity and specificity of your instructions.
+    C: The length of your prompt.
+    D: The temperature setting.
+  correct_answer: B
+- id: q12_claude_md
+  question: What is the recommended approach for organizing project-specific information
+    when working with Claude Code?
+  options:
+    A: Storing all information in separate text files.
+    B: Using a `CLAUDE.MD` file to centralize context and instructions.
+    C: Relying on Claude Code to remember all project details.
+    D: Embedding information directly within the code comments.
+  correct_answer: B
+- id: q13_built_in_tools
+  question: You need to quickly summarize a long document before feeding it to Claude
+    Code. Which of Claude Code's built-in tools would be most helpful?
+  options:
+    A: The code completion tool.
+    B: The summarization tool.
+    C: The debugging tool.
+    D: The refactoring tool.
+  correct_answer: B
+- id: q14_encouraging_agent_usage
+  question: How can you encourage Claude Code to consistently utilize a custom subagent
+    you've created?
+  options:
+    A: Explicitly mention the subagent's name in your prompts.
+    B: Disable all other agents.
+    C: Reduce the temperature setting.
+    D: Increase the context window size.
+  correct_answer: A
+- id: q15_custom_skills
+  question: You want to create a skill that translates code comments from English
+    to Spanish. What is the most important consideration when designing this skill?
+  options:
+    A: The skill's code complexity.
+    B: The clarity and consistency of the input and output format.
+    C: The skill's execution speed.
+    D: The skill's visual appearance.
+  correct_answer: B
+- id: q16_screenshot_prompting
+  question: What is the primary benefit of using screenshots as part of your prompts
+    to Claude Code?
+  options:
+    A: It reduces the length of your prompts.
+    B: It provides visual context that can improve Claude Code's understanding.
+    C: It eliminates the need for text-based instructions.
+    D: It automatically generates code from the screenshot.
+  correct_answer: B
+- id: q17_feedback_loops
+  question: You're building a system to automatically test code changes generated
+    by Claude Code. How can you create a feedback loop to improve Claude Code's performance?
+  options:
+    A: Manually review all code changes.
+    B: Use the test results to refine your prompts and agent skills.
+    C: Increase the temperature setting.
+    D: Reduce the context window size.
+  correct_answer: B
+- id: q18_docker_sandboxes
+  question: What is the main security benefit of running Claude Code within a Docker
+    sandbox?
+  options:
+    A: It speeds up Claude Code's execution.
+    B: It isolates Claude Code from your host system, preventing potential security
+      breaches.
+    C: It automatically updates Claude Code to the latest version.
+    D: It reduces the cost of using Claude Code.
+  correct_answer: B
+- id: q19_native_sandboxing
+  question: How does Claude Code's native sandboxing differ from using Docker sandboxes?
+  options:
+    A: Native sandboxing is more secure.
+    B: Native sandboxing is easier to set up and use.
+    C: Native sandboxing offers more customization options.
+    D: Native sandboxing is only available in the web interface.
+  correct_answer: B
+- id: q20_version_control
+  question: Why is using a version control system (like Git) essential when working
+    with Claude Code?
+  options:
+    A: To automatically generate documentation.
+    B: To track changes, revert to previous versions, and collaborate effectively.
+    C: To speed up Claude Code's execution.
+    D: To reduce the cost of using Claude Code.
+  correct_answer: B
+- id: q21_context_compaction
+  question: You're noticing Claude Code is 'forgetting' information from earlier in
+    a long session. What should you do to address this?
+  options:
+    A: Increase the temperature setting.
+    B: Reduce the context window size.
+    C: Manually compact the context or start a new session.
+    D: Disable all plugins.
+  correct_answer: C
+- id: q22_advanced_permissions
+  question: You want to restrict Claude Code's access to only specific files and directories.
+    How can you achieve this using advanced permissions management?
+  options:
+    A: By modifying the Claude Code configuration file.
+    B: By using MCP servers and defining granular access controls.
+    C: By relying on Claude Code's default security settings.
+    D: By manually reviewing all file access requests.
+  correct_answer: B
+- id: q23_prompt_recommendations
+  question: Claude Code suggests adding more specific examples to your prompt. Why
+    is this a good practice?
+  options:
+    A: It makes the prompt longer.
+    B: It helps Claude Code understand the desired output format and style.
+    C: It reduces the computational cost of the prompt.
+    D: It eliminates the need for prompt engineering.
+  correct_answer: B
+- id: q24_custom_commands
+  question: You frequently use a specific prompt template to generate boilerplate
+    code. How can you streamline this process using Claude Code?
+  options:
+    A: Manually copy and paste the template each time.
+    B: Create a custom command (prompt template) that encapsulates the template.
+    C: Write a separate script to generate the boilerplate code.
+    D: Rely on Claude Code to automatically generate the boilerplate code.
+  correct_answer: B
+- id: q25_agent_skill_enhancement
+  question: You've created an agent skill, but it's not performing as well as expected.
+    What's a good first step to improve its performance?
+  options:
+    A: Increase the temperature setting.
+    B: Refine the skill's prompt and add more examples.
+    C: Disable all other agent skills.
+    D: Reduce the context window size.
+  correct_answer: B
+- id: q26_third_party_skills
+  question: What is a key consideration when integrating a third-party skill into
+    your Claude Code workflow?
+  options:
+    A: The skill's cost.
+    B: The skill's security and data privacy implications.
+    C: The skill's visual appearance.
+    D: The skill's code complexity.
+  correct_answer: B
+- id: q27_bun_integration
+  question: What is a primary benefit of using Bun alongside Claude Code?
+  options:
+    A: Bun automatically fixes all code errors.
+    B: Bun provides a faster and more efficient JavaScript runtime.
+    C: Bun eliminates the need for prompt engineering.
+    D: Bun reduces the cost of using Claude Code.
+  correct_answer: B
+- id: q28_session_management
+  question: You've been working on a complex task in Claude Code for several hours.
+    When should you consider starting a new session?
+  options:
+    A: When you encounter an error.
+    B: When the context window becomes too large and performance degrades.
+    C: When you want to switch to a different project.
+    D: When you finish the task.
+  correct_answer: B
+- id: q29_plugin_installation
+  question: What is the typical process for installing a new plugin in Claude Code?
+  options:
+    A: Manually downloading and installing the plugin's code.
+    B: Using Claude Code's built-in plugin manager.
+    C: Modifying the Claude Code configuration file.
+    D: Relying on Claude Code to automatically detect and install the plugin.
+  correct_answer: B
+- id: q30_automated_tests
+  question: How can automated tests be integrated into a Claude Code workflow to provide
+    feedback?
+  options:
+    A: By manually running the tests after each code change.
+    B: By configuring hooks to automatically run the tests whenever code is modified.
+    C: By relying on Claude Code to automatically detect the need for testing.
+    D: By writing a separate script to monitor file changes and run the tests.
+  correct_answer: B
+- id: q31_subagent_specialization
+  question: You're building a subagent to handle database migrations. What level of
+    detail should you provide in its initial prompt?
+  options:
+    A: A very general description of database migrations.
+    B: Specific instructions tailored to your database schema and migration process.
+    C: A link to a general database migration tutorial.
+    D: No instructions; let the subagent figure it out.
+  correct_answer: B
+- id: q32_prompt_iteration
+  question: You've created a prompt, but the results are not quite what you expected.
+    What's the best approach to improve it?
+  options:
+    A: Increase the temperature setting.
+    B: Iteratively refine the prompt based on the observed output.
+    C: Reduce the context window size.
+    D: Disable all plugins.
+  correct_answer: B
+- id: q33_model_selection
+  question: You need Claude Code to generate highly creative and imaginative text.
+    Which AI model would be most suitable?
+  options:
+    A: A model optimized for factual accuracy.
+    B: A model with a higher temperature setting.
+    C: A model with a lower temperature setting.
+    D: A model optimized for code completion.
+  correct_answer: B
+- id: q34_cli_vs_web
+  question: You're automating a series of code generation tasks. Which interface,
+    CLI or Web, would be more efficient?
+  options:
+    A: Web interface, due to its graphical nature.
+    B: CLI, for scripting and automation capabilities.
+    C: Both are equally efficient.
+    D: It depends on the complexity of the tasks.
+  correct_answer: B
+- id: q35_hooks_debugging
+  question: A hook you created isn't executing as expected. What's the first thing
+    you should check?
+  options:
+    A: The Claude Code model version.
+    B: The hook's configuration and error logs.
+    C: The temperature setting.
+    D: The context window size.
+  correct_answer: B
+- id: q36_agent_skill_commands
+  question: You want to invoke a custom agent skill directly from a prompt. How do
+    you achieve this?
+  options:
+    A: By mentioning the skill's name in the prompt.
+    B: By using a specific command syntax defined for the skill.
+    C: By manually executing the skill's code.
+    D: By relying on Claude Code to automatically detect the skill's functionality.
+  correct_answer: B
+- id: q37_ralph_loop_benefits
+  question: How does a Ralph loop contribute to improving the quality of Claude Code's
+    output?
+  options:
+    A: It reduces the computational cost of the loop.
+    B: It allows for iterative refinement based on continuous feedback.
+    C: It eliminates the need for prompt engineering.
+    D: It automatically generates documentation.
+  correct_answer: B
+- id: q38_context_window_limitations
+  question: You're working with a very large codebase. What is a potential limitation
+    of Claude Code's context window?
+  options:
+    A: It can slow down Claude Code's execution.
+    B: It may not be able to process the entire codebase at once.
+    C: It can increase the cost of using Claude Code.
+    D: It can reduce the accuracy of Claude Code's code generation.
+  correct_answer: B
+- id: q39_mcps_security
+  question: How do MCP servers enhance the security of your Claude Code projects?
+  options:
+    A: By encrypting all communication with Claude Code.
+    B: By controlling access to sensitive data and functionalities.
+    C: By automatically backing up your code.
+    D: By optimizing Claude Code's performance.
+  correct_answer: B
+- id: q40_plugin_security
+  question: What is a critical security consideration when using third-party plugins
+    with Claude Code?
+  options:
+    A: The plugin's code complexity.
+    B: The plugin's permissions and access to your data.
+    C: The plugin's visual appearance.
+    D: The plugin's execution speed.
+  correct_answer: B
+- id: q41_undo_limitations
+  question: What is a potential limitation of the 'undo actions' feature in Claude
+    Code?
+  options:
+    A: It can only undo the last action.
+    B: It may not be able to undo complex or multi-step operations perfectly.
+    C: It requires a stable internet connection.
+    D: It automatically saves your work to a remote repository.
+  correct_answer: B
+- id: q42_prompt_specificity
+  question: Why is it important to be as specific as possible when writing prompts
+    for Claude Code?
+  options:
+    A: To make the prompt longer.
+    B: To reduce ambiguity and guide Claude Code towards the desired outcome.
+    C: To increase the computational cost of the prompt.
+    D: To eliminate the need for prompt engineering.
+  correct_answer: B
+- id: q43_agent_skill_testing
+  question: How should you test a newly created agent skill before deploying it to
+    a production environment?
+  options:
+    A: By running it on a small sample of data.
+    B: By manually reviewing its output for various inputs.
+    C: By integrating it into a comprehensive testing framework.
+    D: All of the above.
+  correct_answer: D
+- id: q44_docker_setup
+  question: What is a key prerequisite for successfully running Claude Code within
+    a Docker sandbox?
+  options:
+    A: A fast internet connection.
+    B: Docker installed and configured on your system.
+    C: A powerful graphics card.
+    D: A large amount of RAM.
+  correct_answer: B
+- id: q45_plan_mode_complexity
+  question: For what type of tasks is 'Plan Mode' LEAST suitable?
+  options:
+    A: Refactoring a complex module.
+    B: Generating a simple 'Hello, World!' program.
+    C: Designing a new API endpoint.
+    D: Automating a deployment pipeline.
+  correct_answer: B
+- id: q46_subagent_communication
+  question: How does Claude Code facilitate communication between a main agent and
+    its subagents?
+  options:
+    A: Through direct function calls.
+    B: Through structured prompts and responses.
+    C: Through a shared database.
+    D: Through a dedicated messaging queue.
+  correct_answer: B
+- id: q47_claude_md_best_practices
+  question: What information should be included in a `CLAUDE.MD` file for a new project?
+  options:
+    A: Project goals, key requirements, and coding conventions.
+    B: The entire codebase.
+    C: A list of all dependencies.
+    D: A detailed project timeline.
+  correct_answer: A
+- id: q48_feedback_loop_automation
+  question: How can you automate the feedback loop when using Claude Code for code
+    generation?
+  options:
+    A: By manually reviewing all code changes.
+    B: By integrating automated tests and using the results to refine prompts.
+    C: By increasing the temperature setting.
+    D: By reducing the context window size.
+  correct_answer: B
+- id: q49_web_interface_collaboration
+  question: What features of the Claude Code web interface facilitate team collaboration?
+  options:
+    A: Real-time code editing and shared sessions.
+    B: Automatic code formatting.
+    C: Built-in debugging tools.
+    D: Automated documentation generation.
+  correct_answer: A
+- id: q50_advanced_permissions_granularity
+  question: What level of granularity can you achieve when defining permissions using
+    MCP servers?
+  options:
+    A: Only allow or deny access to the entire Claude Code instance.
+    B: Control access to specific files, directories, and functionalities.
+    C: Only control access to specific AI models.
+    D: Only control the temperature setting.
+  correct_answer: B
