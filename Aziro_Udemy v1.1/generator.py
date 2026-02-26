@@ -1,7 +1,7 @@
 import json
 import yaml
 import os
-from google import genai 
+import google.generativeai as genai 
 
 def generate_assessments(content_file_path="extracted_content.txt", output_yaml_path="assessments.yaml"):
     # Read the extracted Udemy data
@@ -47,13 +47,11 @@ def generate_assessments(content_file_path="extracted_content.txt", output_yaml_
     print("Sending prompt to LLM... (This may take a minute for 50 complex questions)")
     
     # Initialize your client (ensure your API key is set in your environment variables)
-    client = genai.Client()
+    genai.configure(api_key="AIzaSyDMR_Kc8IMWPsV8xkUv-MhhYTnwu4NsWO0")
+    model = genai.GenerativeModel('gemma-3-27b-it')
     
     try:
-        response = client.models.generate_content(
-            model='', # Use a highly capable model for complex formatting and 50 items
-            contents=prompt
-        )
+        response = model.generate_content(prompt)
         
         raw_output = response.text.strip()
         
@@ -82,4 +80,4 @@ def generate_assessments(content_file_path="extracted_content.txt", output_yaml_
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    generate_assessments()
+    generate_assessments(content_file_path="Output/extracted_content.txt")
