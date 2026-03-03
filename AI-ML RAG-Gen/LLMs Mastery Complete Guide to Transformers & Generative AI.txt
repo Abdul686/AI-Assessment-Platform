@@ -1,3 +1,6 @@
+COURSE: LLMs Mastery: Complete Guide to Transformers & Generative AI
+URL: https://azirotechnologies.udemy.com/course/llms-mastery-complete-guide-to-transformers-generative-ai/
+
 --- TARGET AUDIENCE ---
 Who this course is for:
 Those who wish to understand the new world of LLMs, how chatGPT, GPT4 and Llama work, and how to build their own powerful language models.

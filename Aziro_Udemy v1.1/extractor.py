@@ -94,7 +94,7 @@ def scrape_udemy_course(course_url, email, password):
 
 if __name__ == "__main__":
     # Test with the specific URL provided
-    target_url = "https://azirotechnologies.udemy.com/course/llms-mastery-complete-guide-to-transformers-generative-ai/?kw=LLMs+Mastery%3A+Complete+Guide+to+Transformers+%26+Generative+AI&src=sac"
+    target_url = "https://azirotechnologies.udemy.com/course/langchain/"
     # target_url = "https://azirotechnologies.udemy.com/course/claude-code-the-practical-guide/"
     # target_url = "https://azirotechnologies.udemy.com/course/claudecode/"
     # Credentials used only if the persistent session is invalid

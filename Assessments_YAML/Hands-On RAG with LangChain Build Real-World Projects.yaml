@@ -1,0 +1,443 @@
+- id: 1
+  question: You are building a RAG pipeline for a large document corpus. Initial tests
+    show high retrieval latency. Which indexing strategy would likely provide the
+    fastest retrieval at the cost of increased storage?
+  options:
+    A: IVF Flat
+    B: HNSW
+    C: Flat
+    D: Disk-based Index
+  correct_answer: B
+- id: 2
+  question: When implementing semantic caching in a RAG pipeline, what is the primary
+    benefit of caching embeddings versus caching the entire response from the LLM?
+  options:
+    A: Reduced LLM API costs and faster response times.
+    B: Improved retrieval accuracy due to re-ranking.
+    C: Simplified metadata filtering.
+    D: Enhanced support for agentic RAG.
+  correct_answer: A
+- id: 3
+  question: You've implemented a RAG pipeline and are evaluating its performance using
+    Ragas. The 'faithfulness' score is consistently low. What is the most likely cause?
+  options:
+    A: The retrieval component is not finding relevant documents.
+    B: The LLM is generating answers not supported by the retrieved context.
+    C: The embedding model is not capturing semantic similarity effectively.
+    D: The chunk size is too large.
+  correct_answer: B
+- id: 4
+  question: In a production RAG system, you need to dynamically update the vector
+    store with new documents. Which approach is most suitable for minimizing downtime
+    and ensuring data consistency?
+  options:
+    A: Re-index the entire vector store nightly.
+    B: Use incremental indexing with batch updates.
+    C: Delete and re-insert all documents.
+    D: Use a separate vector store for new documents.
+  correct_answer: B
+- id: 5
+  question: You are using metadata filtering to refine retrieval results. A user query
+    includes a date range. How should you structure the metadata to enable efficient
+    filtering based on this date range?
+  options:
+    A: Store the date as a string.
+    B: Store the date as a Unix timestamp (integer).
+    C: Store the date as a list of strings.
+    D: Store the date as a JSON object.
+  correct_answer: B
+- id: 6
+  question: When implementing a cross-encoder for re-ranking, what is the key difference
+    compared to using similarity scores from the embedding model?
+  options:
+    A: Cross-encoders consider the query and document context jointly.
+    B: Cross-encoders are faster to compute.
+    C: Cross-encoders require less memory.
+    D: Cross-encoders are more suitable for large datasets.
+  correct_answer: A
+- id: 7
+  question: You observe that your RAG pipeline performs well on general queries but
+    struggles with highly specific, nuanced questions. What technique could improve
+    performance in these cases?
+  options:
+    A: Increase the chunk size.
+    B: Implement LLM-based re-ranking.
+    C: Use a different embedding model.
+    D: Reduce the number of retrieved documents.
+  correct_answer: B
+- id: 8
+  question: What is the primary purpose of using LangSmith in a RAG pipeline?
+  options:
+    A: To manage the vector database.
+    B: To debug, test, and evaluate the pipeline's performance.
+    C: To generate embeddings.
+    D: To deploy the RAG application.
+  correct_answer: B
+- id: 9
+  question: You're building an e-commerce semantic search application. What metadata
+    fields would be most crucial for effective filtering and retrieval?
+  options:
+    A: Document ID, Title, Content
+    B: Product Category, Price Range, Brand
+    C: Author, Publication Date, Keywords
+    D: File Name, File Size, Modification Date
+  correct_answer: B
+- id: 10
+  question: Which of the following is a key consideration when choosing a chunk size
+    for your documents in a RAG pipeline?
+  options:
+    A: The maximum context window of the LLM.
+    B: The size of the vector database.
+    C: The length of the user query.
+    D: The number of documents in the corpus.
+  correct_answer: A
+- id: 11
+  question: You've implemented an agentic RAG pipeline. The agent is failing to use
+    the provided tools effectively. What is a common debugging step?
+  options:
+    A: Increase the temperature of the LLM.
+    B: Review the agent's tool selection logic and prompt.
+    C: Reduce the chunk size.
+    D: Change the embedding model.
+  correct_answer: B
+- id: 12
+  question: What is the benefit of using a disk-based index over an in-memory index
+    for very large datasets?
+  options:
+    A: Faster retrieval speeds.
+    B: Lower memory requirements.
+    C: Simplified indexing process.
+    D: Improved embedding quality.
+  correct_answer: B
+- id: 13
+  question: You are experiencing high latency in your RAG pipeline. Profiling reveals
+    that the embedding generation is the bottleneck. What optimization strategy would
+    be most effective?
+  options:
+    A: Increase the chunk size.
+    B: Implement embedding caching.
+    C: Use a different vector database.
+    D: Reduce the number of retrieved documents.
+  correct_answer: B
+- id: 14
+  question: When evaluating a RAG pipeline with Ragas, a low 'relevance' score indicates
+    what issue?
+  options:
+    A: The LLM is generating factually incorrect answers.
+    B: The retrieved documents are not related to the user query.
+    C: The retrieval process is too slow.
+    D: The embedding model is not capturing semantic meaning.
+  correct_answer: B
+- id: 15
+  question: You need to integrate a RAG pipeline into an existing application. What
+    is a key consideration when designing the API for the RAG service?
+  options:
+    A: The API should only accept text queries.
+    B: The API should support metadata filtering.
+    C: The API should handle all data ingestion tasks.
+    D: The API should directly access the vector database.
+  correct_answer: B
+- id: 16
+  question: What is the purpose of the 'return_chunks' parameter when using Evals?
+  options:
+    A: To specify the number of documents to retrieve.
+    B: To include the retrieved documents in the evaluation results for inspection.
+    C: To control the chunk size.
+    D: To enable caching.
+  correct_answer: B
+- id: 17
+  question: You are using PostgreSQL with pgvector. What data type is typically used
+    to store embeddings?
+  options:
+    A: TEXT
+    B: INTEGER
+    C: VECTOR
+    D: JSONB
+  correct_answer: C
+- id: 18
+  question: What is the primary advantage of using HNSW indexing over IVF Flat indexing?
+  options:
+    A: Lower memory usage.
+    B: Faster query speeds for high-dimensional data.
+    C: Simpler implementation.
+    D: Better support for metadata filtering.
+  correct_answer: B
+- id: 19
+  question: You've noticed that your RAG pipeline is consistently retrieving the same
+    few documents regardless of the query. What could be the cause?
+  options:
+    A: The embedding model is biased.
+    B: The chunk size is too small.
+    C: The vector database is not properly configured.
+    D: The LLM is generating similar queries.
+  correct_answer: A
+- id: 20
+  question: In an agentic RAG pipeline, what role does the LLM play in the tool selection
+    process?
+  options:
+    A: The LLM randomly selects tools.
+    B: The LLM analyzes the user query and determines which tools are most appropriate.
+    C: The agent always uses the same tool.
+    D: The tools select themselves based on the query.
+  correct_answer: B
+- id: 21
+  question: You are building a RAG pipeline for a legal document corpus. What is a
+    critical consideration regarding data privacy and security?
+  options:
+    A: Using a public vector database.
+    B: Ensuring data encryption at rest and in transit.
+    C: Storing sensitive data in plain text.
+    D: Sharing the vector database credentials publicly.
+  correct_answer: B
+- id: 22
+  question: What is the purpose of the 'k' parameter in vector database searches?
+  options:
+    A: The chunk size.
+    B: The number of documents to retrieve.
+    C: The embedding dimension.
+    D: The temperature of the LLM.
+  correct_answer: B
+- id: 23
+  question: You are using LangSmith to trace a RAG pipeline execution. What information
+    can you gain from the trace?
+  options:
+    A: The cost of the LLM API calls.
+    B: The retrieved documents and their similarity scores.
+    C: The LLM's reasoning process.
+    D: All of the above.
+  correct_answer: D
+- id: 24
+  question: What is the main difference between similarity scores and relevance scores
+    in the context of RAG?
+  options:
+    A: Similarity scores measure semantic similarity, while relevance scores assess
+      the usefulness of the document to the query.
+    B: Relevance scores are faster to compute.
+    C: Similarity scores are more accurate.
+    D: There is no difference.
+  correct_answer: A
+- id: 25
+  question: You want to add support for filtering documents by author in your RAG
+    pipeline. How would you modify the metadata schema?
+  options:
+    A: Add a 'author' field to the metadata for each document.
+    B: Add a 'author_id' field to the metadata for each document.
+    C: Store the author information in the document content.
+    D: Use a separate database to store author information.
+  correct_answer: A
+- id: 26
+  question: What is the role of a 'prompt' in an agentic RAG pipeline?
+  options:
+    A: To define the initial user query.
+    B: To instruct the LLM on how to use the available tools.
+    C: To specify the chunk size.
+    D: To configure the vector database.
+  correct_answer: B
+- id: 27
+  question: You are using a flat index. What is the primary limitation of this approach
+    as your dataset grows?
+  options:
+    A: Increased memory usage.
+    B: Decreased retrieval accuracy.
+    C: Increased query latency.
+    D: Difficulty in updating the index.
+  correct_answer: C
+- id: 28
+  question: What is the purpose of using a 'response synthesizer' in a RAG pipeline?
+  options:
+    A: To generate embeddings.
+    B: To combine information from multiple retrieved documents into a coherent answer.
+    C: To filter the retrieved documents.
+    D: To evaluate the pipeline's performance.
+  correct_answer: B
+- id: 29
+  question: You've implemented a RAG pipeline and are seeing inconsistent results.
+    What is a good first step in debugging?
+  options:
+    A: Change the embedding model.
+    B: Review the logs and trace the execution of the pipeline.
+    C: Increase the chunk size.
+    D: Reduce the number of retrieved documents.
+  correct_answer: B
+- id: 30
+  question: What is the benefit of using a cross-encoder for re-ranking compared to
+    a bi-encoder?
+  options:
+    A: Cross-encoders are faster and more scalable.
+    B: Cross-encoders consider the interaction between the query and document.
+    C: Cross-encoders require less training data.
+    D: Cross-encoders are easier to implement.
+  correct_answer: B
+- id: 31
+  question: You are building a RAG pipeline for a dataset with a complex hierarchical
+    structure. How can you leverage metadata to improve retrieval accuracy?
+  options:
+    A: Store the entire hierarchy as a single string.
+    B: Store each level of the hierarchy as a separate metadata field.
+    C: Ignore the hierarchical structure.
+    D: Use a different embedding model.
+  correct_answer: B
+- id: 32
+  question: What is the purpose of the 'MCP Client' in the Agentic RAG project?
+  options:
+    A: To manage the vector database.
+    B: To provide a user interface for interacting with the agent.
+    C: To generate embeddings.
+    D: To deploy the RAG application.
+  correct_answer: B
+- id: 33
+  question: You are using IVF Flat indexing. What is the 'nlist' parameter and how
+    does it affect performance?
+  options:
+    A: The number of chunks per document; higher values increase accuracy.
+    B: The number of clusters; higher values improve recall but increase query time.
+    C: The embedding dimension; higher values require more memory.
+    D: The number of documents to retrieve; higher values increase latency.
+  correct_answer: B
+- id: 34
+  question: What is the primary goal of 'faithfulness' evaluation in RAG?
+  options:
+    A: Measuring the relevance of retrieved documents to the query.
+    B: Ensuring the LLM's response is grounded in the retrieved context.
+    C: Evaluating the speed of the retrieval process.
+    D: Assessing the overall quality of the generated answer.
+  correct_answer: B
+- id: 35
+  question: You are experiencing issues with the LLM hallucinating information not
+    present in the retrieved context. What is a potential solution?
+  options:
+    A: Increase the temperature of the LLM.
+    B: Implement stricter metadata filtering.
+    C: Use a more conservative prompt that emphasizes grounding in the context.
+    D: Reduce the chunk size.
+  correct_answer: C
+- id: 36
+  question: What is the benefit of using LangSmith for debugging RAG pipelines?
+  options:
+    A: It automatically fixes errors in the code.
+    B: It provides detailed traces of each step in the pipeline, allowing you to identify
+      bottlenecks and issues.
+    C: It optimizes the vector database.
+    D: It generates embeddings.
+  correct_answer: B
+- id: 37
+  question: You are building a RAG pipeline for a dataset with a large number of short
+    documents. What chunking strategy would be most appropriate?
+  options:
+    A: Fixed-size chunks with a large overlap.
+    B: Fixed-size chunks with no overlap.
+    C: Recursive character text splitting.
+    D: Sentence splitting.
+  correct_answer: A
+- id: 38
+  question: What is the purpose of the 'Tool' concept in Agentic RAG?
+  options:
+    A: To define the user query.
+    B: To provide the agent with access to external functionalities and data sources.
+    C: To generate embeddings.
+    D: To configure the vector database.
+  correct_answer: B
+- id: 39
+  question: You are using a vector database that supports approximate nearest neighbor
+    (ANN) search. What is a trade-off you need to consider?
+  options:
+    A: ANN search is always slower than exact search.
+    B: ANN search may return results that are not the true nearest neighbors.
+    C: ANN search requires more memory.
+    D: ANN search is only suitable for small datasets.
+  correct_answer: B
+- id: 40
+  question: What is the role of the 'relevance' score in a RAG pipeline?
+  options:
+    A: To measure the semantic similarity between the query and the document.
+    B: To indicate how well the document answers the user's question.
+    C: To determine the order in which documents are retrieved.
+    D: To evaluate the performance of the embedding model.
+  correct_answer: B
+- id: 41
+  question: You've implemented caching in your RAG pipeline, but are still experiencing
+    high latency. What could be the issue?
+  options:
+    A: The cache hit rate is low.
+    B: The embedding model is slow.
+    C: The vector database is overloaded.
+    D: The LLM API is down.
+  correct_answer: A
+- id: 42
+  question: What is the purpose of the 'Evals' framework in the context of RAG?
+  options:
+    A: To generate embeddings.
+    B: To evaluate the performance of the RAG pipeline using predefined metrics.
+    C: To manage the vector database.
+    D: To deploy the RAG application.
+  correct_answer: B
+- id: 43
+  question: You are using a bi-encoder for embedding generation. What is a limitation
+    of this approach?
+  options:
+    A: Bi-encoders are computationally expensive.
+    B: Bi-encoders do not consider the interaction between the query and document.
+    C: Bi-encoders require a large amount of training data.
+    D: Bi-encoders are difficult to implement.
+  correct_answer: B
+- id: 44
+  question: What is the benefit of using metadata filtering in a RAG pipeline?
+  options:
+    A: To improve the accuracy of the embedding model.
+    B: To reduce the number of retrieved documents and focus on relevant information.
+    C: To speed up the retrieval process.
+    D: To generate more coherent answers.
+  correct_answer: B
+- id: 45
+  question: In an agentic RAG pipeline, how does the agent determine which tool to
+    use?
+  options:
+    A: Based on a predefined rule set.
+    B: By prompting the LLM to analyze the user query and select the appropriate tool.
+    C: Randomly.
+    D: Based on the similarity between the query and the tool's description.
+  correct_answer: B
+- id: 46
+  question: What is the primary advantage of using HNSW over Flat indexing for large
+    datasets?
+  options:
+    A: Lower memory consumption.
+    B: Faster query speeds.
+    C: Simpler implementation.
+    D: Better support for metadata filtering.
+  correct_answer: B
+- id: 47
+  question: You are evaluating your RAG pipeline and notice a low 'answer_relevancy'
+    score. What does this indicate?
+  options:
+    A: The retrieved documents are not relevant to the query.
+    B: The LLM is generating answers that are not relevant to the retrieved context.
+    C: The embedding model is not capturing semantic similarity effectively.
+    D: The chunk size is too large.
+  correct_answer: B
+- id: 48
+  question: What is the purpose of the 'LangSmith' dashboard in the context of RAG?
+  options:
+    A: To manage the vector database.
+    B: To monitor, debug, and evaluate the performance of RAG pipelines.
+    C: To generate embeddings.
+    D: To deploy the RAG application.
+  correct_answer: B
+- id: 49
+  question: You are building a RAG pipeline for a dataset with a lot of noise and
+    irrelevant information. What technique could help improve retrieval accuracy?
+  options:
+    A: Increase the chunk size.
+    B: Implement a more sophisticated re-ranking strategy.
+    C: Use a simpler embedding model.
+    D: Reduce the number of retrieved documents.
+  correct_answer: B
+- id: 50
+  question: What is the key benefit of using Ragas for evaluating RAG pipelines compared
+    to manual evaluation?
+  options:
+    A: Ragas is faster and more scalable.
+    B: Ragas provides more objective and consistent results.
+    C: Ragas is cheaper.
+    D: All of the above.
+  correct_answer: D

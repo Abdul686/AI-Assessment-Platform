@@ -1,0 +1,144 @@
+COURSE: Zero to Hero in LangChain: Build GenAI apps using LangChain
+URL: https://azirotechnologies.udemy.com/course/zero-to-hero-in-langchain/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Aspiring AI developers who want to build and deploy advanced Generative AI applications using LangChain
+Data scientists aiming to enhance their AI models with memory, retrieval-augmented generation (RAG), and custom tool integrations
+Software engineers looking to master LangChain for creating dynamic and interactive AI-driven applications
+Tech enthusiasts eager to explore the latest frameworks and techniques for developing cutting-edge AI solutions
+AI researchers interested in applying LangChain's features to improve conversational AI and data retrieval systems
+Product managers who want to understand the capabilities of LangChain to lead AI-driven product development effectively
+
+--- DESCRIPTION ---
+Description
+
+Are you ready to transform your ideas into powerful Generative AI applications? Do you want to master a cutting-edge framework that can revolutionize how you interact with AI models? If you're an aspiring AI developer, data scientist, or tech enthusiast eager to build advanced AI applications from scratch, then this course is designed for you.
+
+"Zero to Hero in LangChain: Build GenAI apps using LangChain" is your comprehensive guide to mastering LangChain, an innovative framework that streamlines the creation of sophisticated AI-driven applications. Whether you're a beginner or someone with some experience in AI, this course will take you on a journey from understanding the basics to implementing complex applications that leverage memory, retrieval-augmented generation (RAG), tools, agents, and more.
+
+In this course, you will:
+
+Develop your first LangChain application and set up a robust development environment.
+
+Master the use of Prompt Templates, Chains, and Runnables to create versatile AI interactions.
+
+Implement dynamic execution flows and output parsing to enhance your AI models.
+
+Harness the power of memory in LangChain to build conversational AI with context retention.
+
+Create a fully functional RAG pipeline to maximize the value of your data retrieval processes.
+
+Build custom tools and agents, and learn how to integrate them into your applications.
+
+Monitor and optimize your applications using LangSmith.
+
+Design user-friendly interfaces for your AI apps with Streamlit.
+
+Why should you learn LangChain? As the AI landscape rapidly evolves, the ability to build applications that can interact intelligently with vast datasets and maintain coherent conversations is a game-changer. LangChain offers a powerful, flexible framework that simplifies this process, making it accessible even if you're just getting started.
+
+Throughout the course, you'll complete hands-on projects that reinforce your learning, ensuring you not only understand the theory but can apply it effectively. From building conversational AI with memory to creating sophisticated RAG applications, you'll gain practical experience in every aspect of LangChain.
+
+This course stands out because it not only covers the "how" but also the "why" behind every feature of LangChain. As an expert in the field, I'll guide you through each step, ensuring you gain the skills and confidence needed to build impactful AI applications.
+
+Don't miss this opportunity to become a LangChain expert and take your AI skills to the next level. Enroll now and start building the future of AI applications!
+
+Who this course is for:
+Aspiring AI developers who want to build and deploy advanced Generative AI applications using LangChain
+Data scientists aiming to enhance their AI models with memory, retrieval-augmented generation (RAG), and custom tool integrations
+Software engineers looking to master LangChain for creating dynamic and interactive AI-driven applications
+Tech enthusiasts eager to explore the latest frameworks and techniques for developing cutting-edge AI solutions
+AI researchers interested in applying LangChain's features to improve conversational AI and data retrieval systems
+Product managers who want to understand the capabilities of LangChain to lead AI-driven product development effectively
+Show more
+
+--- CURRICULUM ---
+Course content
+12 sections • 54 lectures • 5h 26m total length
+Collapse all sections
+Introduction to LangChain
+5 lectures • 32min
+Introduction and Course Resources
+What is LangChain and Why it is used
+Demonstration of LangChain based Applications
+This is a milestone
+Setting up the development environment
+3 questions
+Getting Started with LangChain
+4 lectures • 25min
+Creating your first LangChain Application
+Difference between LLM models and Chat models
+Model parameters for customizing the LLM Models
+Image generation and other tools
+3 questions
+Prompt Templates
+4 lectures • 24min
+Introduction to Prompt Templates in LangChain
+Creating a Prompt Template
+Chat prompt template
+Few shot prompt template
+3 questions
+Chains
+4 lectures • 29min
+Introduction to Chains in LangChain
+LangChain's LLMChain - General Purpose Chain
+LangChain's Utility Chains - LLM Math Chain
+Sequential Chains
+5 questions
+Chains and Runnables (LangChain Expressions Language)
+7 lectures • 47min
+Pipe operator
+Understanding Runnables - Theory lecture
+Runnable Parallel, Runnable Passthrough and Runnable Lambda
+Example: Controlling execution flow using LCEL
+Understanding dynamic routing of flow
+Implementing dynamic routing
+About the upcoming role play.
+Explaining the Transition from LLM Models to Chat Models in a Technical Interview
+Output Parsing in LangChain
+4 lectures • 16min
+Introduction to Output Parsers in LangChain
+Stroutputparser - String Output
+Structured Output Parser
+CSV and DateTime Parser
+2 questions
+Memory in LangChain
+7 lectures • 37min
+Introduction to memory in LangChain
+Conversation Buffer Memory
+Customizing memory - memory key and adding messages
+Conversation Chain
+Conversation Buffer Window Memory
+Conversation Summary Memory
+Runnable with Message History
+Retrieval Augmented Generation using LangChain (RAG)
+6 lectures • 49min
+Understanding RAG concepts
+Reading the documents - RAG step 1
+Creating chunks - RAG step 2
+Embedding - RAG step 3
+Storing in Vector Database - RAG step 4
+Retrieving and building complete RAG application
+Tools and Agents using LangChain
+6 lectures • 40min
+Introduction to Tools and Agents
+Making your own custom tool in LangChain
+LangChain In-built tools - DuckDuckGo Search and Wikipedia
+Agents in LangChain
+Creating an Agent with memory in LangChain
+1 question
+New AI Features in LangChain (The Latest Updates You Must Know)
+LangSmith for monitoring our Application
+2 lectures • 11min
+Introduction to LangSmith
+Running application and monitoring using LangSmith
+Creating Graphical UI using Streamlit for our LangChain application
+3 lectures • 15min
+What is Streamlit
+Making GUI for our GenAI app using Streamlit
+The final milestone!
+Simulating an Interview About LangChain Applications
+Conclusion
+2 lectures • 2min
+About your certificate
+Bonus lecture

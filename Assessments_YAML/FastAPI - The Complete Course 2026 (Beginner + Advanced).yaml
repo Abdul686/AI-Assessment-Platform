@@ -1,0 +1,441 @@
+- id: 1
+  question: You've implemented a POST endpoint with Pydantic validation. A request
+    arrives with a field exceeding the defined `max_length` in the Pydantic model.
+    What exception will FastAPI automatically raise?
+  options:
+    A: ValueError
+    B: ValidationError
+    C: TypeError
+    D: HTTPException
+  correct_answer: B
+- id: 2
+  question: When using SQLAlchemy with FastAPI, what is the primary benefit of using
+    a Session object?
+  options:
+    A: Automatic database schema creation.
+    B: Managing database connections and transactions.
+    C: Directly mapping Pydantic models to database tables.
+    D: Caching query results for improved performance.
+  correct_answer: B
+- id: 3
+  question: You need to implement rate limiting for a specific endpoint. Which middleware
+    approach is most suitable within the FastAPI ecosystem?
+  options:
+    A: Using a custom exception handler.
+    B: Implementing a dependency injection with a rate-limiting decorator.
+    C: Modifying the `app.router` directly.
+    D: Utilizing a global interceptor for all requests.
+  correct_answer: B
+- id: 4
+  question: In a FastAPI application using JWT authentication, what is the purpose
+    of the `refresh_token`?
+  options:
+    A: To invalidate the access token immediately.
+    B: To obtain a new access token without re-authenticating.
+    C: To store user profile information.
+    D: To encrypt the access token.
+  correct_answer: B
+- id: 5
+  question: You're designing an API endpoint that requires both query parameters and
+    path parameters. How does FastAPI handle potential conflicts or ambiguities?
+  options:
+    A: Path parameters always take precedence.
+    B: Query parameters always take precedence.
+    C: FastAPI raises an error if there's a conflict.
+    D: You must explicitly define the order of parameter parsing.
+  correct_answer: A
+- id: 6
+  question: What is the key difference between `uvicorn` and `gunicorn` when deploying
+    a FastAPI application?
+  options:
+    A: Uvicorn is an ASGI server, while Gunicorn is a WSGI server.
+    B: Gunicorn is an ASGI server, while Uvicorn is a WSGI server.
+    C: They are interchangeable and offer identical performance.
+    D: Uvicorn is only for development, while Gunicorn is for production.
+  correct_answer: A
+- id: 7
+  question: You've defined a Pydantic model with a field annotated as `Optional[int]`.
+    A request arrives with this field as a string. How does FastAPI handle this?
+  options:
+    A: It automatically converts the string to an integer.
+    B: It raises a `TypeError`.
+    C: It assigns `None` to the field.
+    D: It raises a `ValidationError`.
+  correct_answer: D
+- id: 8
+  question: When using database relationships (e.g., one-to-many) with SQLAlchemy,
+    what does the `cascade` argument control?
+  options:
+    A: The order in which related records are retrieved.
+    B: The propagation of changes (e.g., deletion) to related records.
+    C: The size of the database table.
+    D: The caching behavior of related records.
+  correct_answer: B
+- id: 9
+  question: You want to implement custom logging in your FastAPI application. What
+    is the recommended approach?
+  options:
+    A: Directly using Python's `print()` function.
+    B: Using the `logging` module and configuring a custom handler.
+    C: Overriding FastAPI's internal logging functions.
+    D: Relying on Uvicorn's default logging configuration.
+  correct_answer: B
+- id: 10
+  question: What is the purpose of using a `BaseModel` from Pydantic when defining
+    data models in FastAPI?
+  options:
+    A: To automatically generate database schemas.
+    B: To provide data validation and serialization/deserialization.
+    C: To define API documentation.
+    D: To handle authentication and authorization.
+  correct_answer: B
+- id: 11
+  question: You're experiencing performance issues with a database query in your FastAPI
+    application. What is a common optimization technique?
+  options:
+    A: Increasing the database connection pool size.
+    B: Using eager loading to reduce the number of queries.
+    C: Disabling database indexing.
+    D: Switching to a synchronous database driver.
+  correct_answer: B
+- id: 12
+  question: How can you ensure that a specific dependency is only executed if the
+    user is authenticated in FastAPI?
+  options:
+    A: Using a global exception handler.
+    B: Using a security dependency with `OAuth2PasswordBearer`.
+    C: Checking the user's session directly within the endpoint function.
+    D: Using a middleware to intercept all requests.
+  correct_answer: B
+- id: 13
+  question: What is the benefit of using FastAPI's automatic API documentation (Swagger
+    UI and ReDoc)?
+  options:
+    A: It automatically generates database schemas.
+    B: It provides a user-friendly interface for testing and exploring the API.
+    C: It improves the performance of the API.
+    D: It handles authentication and authorization.
+  correct_answer: B
+- id: 14
+  question: You need to handle file uploads in your FastAPI application. Which parameter
+    type should you use in your endpoint function?
+  options:
+    A: str
+    B: int
+    C: UploadFile
+    D: bytes
+  correct_answer: C
+- id: 15
+  question: What is the purpose of using a virtual environment in a FastAPI project?
+  options:
+    A: To improve the performance of the application.
+    B: To isolate project dependencies from the global Python environment.
+    C: To automatically deploy the application.
+    D: To generate API documentation.
+  correct_answer: B
+- id: 16
+  question: You've implemented a PUT request that updates a database record. What
+    HTTP status code should you return on successful update?
+  options:
+    A: 200 OK
+    B: 201 Created
+    C: 204 No Content
+    D: 404 Not Found
+  correct_answer: A
+- id: 17
+  question: What is the role of `async def` in FastAPI?
+  options:
+    A: It defines a synchronous function.
+    B: It defines a coroutine that can be executed concurrently.
+    C: It defines a function that automatically generates API documentation.
+    D: It defines a function that handles database connections.
+  correct_answer: B
+- id: 18
+  question: You want to implement a custom exception handler for a specific type of
+    error. How do you register it in FastAPI?
+  options:
+    A: Using the `@app.exception_handler` decorator.
+    B: Adding it to the `app.router`.
+    C: Defining it within the Pydantic model.
+    D: Using a global `try-except` block.
+  correct_answer: A
+- id: 19
+  question: What is the difference between `HTTPException` and raising a standard
+    Python exception in a FastAPI endpoint?
+  options:
+    A: They are identical.
+    B: '`HTTPException` automatically formats the response as JSON with an appropriate
+      status code.'
+    C: Standard Python exceptions are only for debugging.
+    D: Standard Python exceptions automatically generate API documentation.
+  correct_answer: B
+- id: 20
+  question: You're using pytest to test your FastAPI application. How do you mock
+    a database connection?
+  options:
+    A: Using the `unittest.mock` module.
+    B: Using a dedicated testing database.
+    C: Using a fixture to provide a mock database session.
+    D: Disabling the database connection during testing.
+  correct_answer: C
+- id: 21
+  question: What is the purpose of using a `Router` in FastAPI?
+  options:
+    A: To handle database connections.
+    B: To organize and group related endpoints.
+    C: To generate API documentation.
+    D: To manage authentication and authorization.
+  correct_answer: B
+- id: 22
+  question: You need to implement a background task in your FastAPI application. What
+    is the recommended approach?
+  options:
+    A: Using a separate thread.
+    B: Using FastAPI's `BackgroundTasks` class.
+    C: Using a message queue.
+    D: Using a cron job.
+  correct_answer: B
+- id: 23
+  question: What is the benefit of using type hints in FastAPI?
+  options:
+    A: They improve the performance of the application.
+    B: They enable automatic data validation and code completion.
+    C: They automatically generate database schemas.
+    D: They handle authentication and authorization.
+  correct_answer: B
+- id: 24
+  question: You're deploying your FastAPI application to a cloud provider. What considerations
+    should you make regarding database connections?
+  options:
+    A: Use a local database connection string.
+    B: Use environment variables to store database credentials.
+    C: Hardcode the database credentials in the application code.
+    D: Use a public database connection string.
+  correct_answer: B
+- id: 25
+  question: How does FastAPI handle CORS (Cross-Origin Resource Sharing)?
+  options:
+    A: It automatically disables CORS.
+    B: It requires manual configuration using middleware.
+    C: It automatically enables CORS for all origins.
+    D: It relies on the browser to handle CORS.
+  correct_answer: B
+- id: 26
+  question: You've defined a Pydantic model with a `List[int]` field. A request arrives
+    with a string instead of a list. What happens?
+  options:
+    A: The string is automatically converted to a list of integers.
+    B: A `TypeError` is raised.
+    C: A `ValidationError` is raised.
+    D: The field is ignored.
+  correct_answer: C
+- id: 27
+  question: What is the purpose of Alembic in the context of FastAPI and SQLAlchemy?
+  options:
+    A: To manage database connections.
+    B: To perform database migrations and schema updates.
+    C: To generate API documentation.
+    D: To handle authentication and authorization.
+  correct_answer: B
+- id: 28
+  question: You want to implement a custom middleware to log all incoming requests.
+    Where should you register this middleware?
+  options:
+    A: In the Pydantic model.
+    B: In the `main.py` file before the application instance is created.
+    C: In the endpoint function.
+    D: In the database connection code.
+  correct_answer: B
+- id: 29
+  question: What is the difference between `GET` and `HEAD` requests in FastAPI?
+  options:
+    A: They are identical.
+    B: '`HEAD` requests only retrieve the headers, not the body.'
+    C: '`GET` requests only retrieve the headers, not the body.'
+    D: '`HEAD` requests are used for authentication.'
+  correct_answer: B
+- id: 30
+  question: You're using a MySQL database with FastAPI. What library is commonly used
+    to connect to the database?
+  options:
+    A: psycopg2
+    B: sqlite3
+    C: pymysql
+    D: sqlalchemy
+  correct_answer: C
+- id: 31
+  question: What is the purpose of using a dependency injection system in FastAPI?
+  options:
+    A: To automatically generate database schemas.
+    B: To manage and reuse code components.
+    C: To handle authentication and authorization.
+    D: To improve the performance of the application.
+  correct_answer: B
+- id: 32
+  question: You need to implement a WebSocket endpoint in your FastAPI application.
+    What is the primary difference from a traditional HTTP endpoint?
+  options:
+    A: WebSockets use a different protocol (ws/wss) and provide full-duplex communication.
+    B: WebSockets are only for authentication.
+    C: WebSockets are only for file uploads.
+    D: WebSockets are faster than HTTP.
+  correct_answer: A
+- id: 33
+  question: What is the role of the `Depends` function in FastAPI?
+  options:
+    A: It defines a database model.
+    B: It injects dependencies into an endpoint function.
+    C: It generates API documentation.
+    D: It handles authentication and authorization.
+  correct_answer: B
+- id: 34
+  question: You're using a PostgreSQL database with FastAPI. What is the purpose of
+    an ORM (Object-Relational Mapper) like SQLAlchemy?
+  options:
+    A: To directly execute SQL queries.
+    B: To map Python objects to database tables and vice versa.
+    C: To generate API documentation.
+    D: To handle authentication and authorization.
+  correct_answer: B
+- id: 35
+  question: What is the benefit of using Pydantic's `Config` class?
+  options:
+    A: To define database schemas.
+    B: To customize the behavior of Pydantic models.
+    C: To handle authentication and authorization.
+    D: To improve the performance of the application.
+  correct_answer: B
+- id: 36
+  question: You're experiencing slow response times for a specific endpoint. What
+    tools can you use to profile and debug the performance?
+  options:
+    A: Python's `cProfile` module.
+    B: FastAPI's built-in performance monitoring tools.
+    C: Browser developer tools.
+    D: All of the above.
+  correct_answer: D
+- id: 37
+  question: What is the purpose of using a `BaseModel` from Pydantic when defining
+    data models in FastAPI?
+  options:
+    A: To automatically generate database schemas.
+    B: To provide data validation and serialization/deserialization.
+    C: To define API documentation.
+    D: To handle authentication and authorization.
+  correct_answer: B
+- id: 38
+  question: You want to implement a custom error message for a specific validation
+    error in a Pydantic model. How can you achieve this?
+  options:
+    A: Using the `error_msg` parameter in the field definition.
+    B: Using a custom exception handler.
+    C: Overriding the `validate()` method of the model.
+    D: Using a global error handler.
+  correct_answer: A
+- id: 39
+  question: What is the purpose of using a `Security` dependency in FastAPI?
+  options:
+    A: To encrypt data.
+    B: To handle authentication and authorization.
+    C: To generate API documentation.
+    D: To manage database connections.
+  correct_answer: B
+- id: 40
+  question: You're using FastAPI with a Docker container. What is the benefit of using
+    a Dockerfile?
+  options:
+    A: To automatically deploy the application.
+    B: To create a reproducible and isolated environment for the application.
+    C: To generate API documentation.
+    D: To handle authentication and authorization.
+  correct_answer: B
+- id: 41
+  question: What is the purpose of the `include_all_models` parameter in FastAPI's
+    OpenAPI schema generation?
+  options:
+    A: To include all Pydantic models in the API documentation.
+    B: To exclude all Pydantic models from the API documentation.
+    C: To only include specific Pydantic models in the API documentation.
+    D: To automatically generate database schemas.
+  correct_answer: A
+- id: 42
+  question: You need to implement a feature that allows users to upload multiple files
+    at once. How would you modify your FastAPI endpoint?
+  options:
+    A: Use a `List[UploadFile]` as the parameter type.
+    B: Use a single `UploadFile` parameter and handle multiple files within the function.
+    C: Use a dictionary of `UploadFile` objects.
+    D: It's not possible to upload multiple files with FastAPI.
+  correct_answer: A
+- id: 43
+  question: What is the primary advantage of using asynchronous programming (async/await)
+    in FastAPI?
+  options:
+    A: Improved code readability.
+    B: Increased performance and scalability, especially for I/O-bound operations.
+    C: Automatic database schema generation.
+    D: Simplified authentication and authorization.
+  correct_answer: B
+- id: 44
+  question: You're using SQLAlchemy to interact with a database. What is the purpose
+    of the `session.commit()` method?
+  options:
+    A: To close the database connection.
+    B: To save the changes made to the database.
+    C: To query the database.
+    D: To create a new database table.
+  correct_answer: B
+- id: 45
+  question: What is the role of the `__init__.py` file in a FastAPI project?
+  options:
+    A: It contains the main application logic.
+    B: It defines the database models.
+    C: It marks a directory as a Python package.
+    D: It generates API documentation.
+  correct_answer: C
+- id: 46
+  question: You want to implement a custom response header in your FastAPI application.
+    How can you achieve this?
+  options:
+    A: Using the `Response` class and setting the `headers` attribute.
+    B: Using a global exception handler.
+    C: Modifying the `app.router` directly.
+    D: Using a middleware to intercept all requests.
+  correct_answer: A
+- id: 47
+  question: What is the purpose of using a `BaseSettings` class from Pydantic for
+    managing application settings?
+  options:
+    A: To automatically generate database schemas.
+    B: To load settings from environment variables and configuration files.
+    C: To handle authentication and authorization.
+    D: To improve the performance of the application.
+  correct_answer: B
+- id: 48
+  question: You're using FastAPI with a load balancer. What considerations should
+    you make regarding session management?
+  options:
+    A: Use sticky sessions to ensure requests from the same user are routed to the
+      same server.
+    B: Use a shared session store (e.g., Redis) to store session data.
+    C: Disable session management altogether.
+    D: All of the above.
+  correct_answer: D
+- id: 49
+  question: What is the benefit of using FastAPI's dependency injection system for
+    testing?
+  options:
+    A: It allows you to easily mock dependencies and isolate units of code.
+    B: It automatically generates test cases.
+    C: It improves the performance of the tests.
+    D: It handles authentication and authorization during testing.
+  correct_answer: A
+- id: 50
+  question: You've implemented a DELETE endpoint. What HTTP status code should you
+    return if the resource to be deleted is not found?
+  options:
+    A: 200 OK
+    B: 204 No Content
+    C: 404 Not Found
+    D: 500 Internal Server Error
+  correct_answer: C
