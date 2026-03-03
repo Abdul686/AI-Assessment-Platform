@@ -1,0 +1,440 @@
+- id: 1
+  question: You are building a chain that requires performing a mathematical calculation
+    based on LLM output. Which LangChain utility chain is most appropriate?
+  options:
+    A: LLMChain
+    B: LLMMathChain
+    C: SequentialChain
+    D: SimpleSequentialChain
+  correct_answer: B
+- id: 2
+  question: When using `LCEL` (LangChain Expression Language), what is the primary
+    purpose of the `|` (pipe) operator?
+  options:
+    A: To define a conditional branch in the execution flow.
+    B: To pass the output of one Runnable to the input of the next.
+    C: To parallelize the execution of multiple Runnables.
+    D: To specify the LLM model to be used.
+  correct_answer: B
+- id: 3
+  question: You need to parse the output of an LLM into a structured format (e.g.,
+    a dictionary). Which output parser would be most suitable if the LLM consistently
+    returns JSON?
+  options:
+    A: StringOutputParser
+    B: StructuredOutputParser
+    C: CSVParser
+    D: DateTimeParser
+  correct_answer: B
+- id: 4
+  question: In a RAG pipeline, what is the primary function of the 'embedding' step?
+  options:
+    A: To split the documents into smaller chunks.
+    B: To convert text into numerical vector representations.
+    C: To store the documents in a vector database.
+    D: To retrieve relevant documents based on a query.
+  correct_answer: B
+- id: 5
+  question: You're building a conversational agent and want to retain context from
+    previous turns, but limit the memory to the last 'n' interactions. Which memory
+    type is best suited?
+  options:
+    A: ConversationBufferMemory
+    B: ConversationBufferWindowMemory
+    C: ConversationSummaryMemory
+    D: ConversationTokenBufferMemory
+  correct_answer: B
+- id: 6
+  question: What is the key benefit of using LangSmith for monitoring LangChain applications?
+  options:
+    A: Automated code refactoring.
+    B: Real-time tracing, debugging, and evaluation of application runs.
+    C: Automatic prompt engineering.
+    D: Simplified deployment to cloud platforms.
+  correct_answer: B
+- id: 7
+  question: You want to create a custom tool that interacts with a proprietary API.
+    What is the minimum requirement for this tool to be compatible with LangChain
+    agents?
+  options:
+    A: It must return a JSON response.
+    B: It must implement a `_run()` method that takes an input and returns an output.
+    C: It must be a RESTful API.
+    D: It must be documented using OpenAPI.
+  correct_answer: B
+- id: 8
+  question: When using a `ChatPromptTemplate`, how does it differ from a standard
+    `PromptTemplate`?
+  options:
+    A: It's designed specifically for chat models and handles message roles (system,
+      user, assistant).
+    B: It's more efficient for generating long-form text.
+    C: It automatically handles output parsing.
+    D: It's only compatible with OpenAI models.
+  correct_answer: A
+- id: 9
+  question: You're experiencing issues with an agent getting stuck in a loop. What
+    is a common strategy to mitigate this?
+  options:
+    A: Increase the LLM's temperature.
+    B: Implement a maximum number of iterations or steps for the agent.
+    C: Reduce the size of the context window.
+    D: Use a different vector database.
+  correct_answer: B
+- id: 10
+  question: What is the purpose of 'few-shot' prompting in LangChain?
+  options:
+    A: To reduce the cost of LLM calls.
+    B: To provide the LLM with examples of desired input-output pairs.
+    C: To increase the speed of LLM inference.
+    D: To automatically generate prompts.
+  correct_answer: B
+- id: 11
+  question: You need to dynamically route the execution flow of a chain based on the
+    LLM's output. Which `LCEL` feature would you utilize?
+  options:
+    A: RunnableParallel
+    B: RunnablePassthrough
+    C: Conditional Routing
+    D: RunnableLambda
+  correct_answer: C
+- id: 12
+  question: What is the primary advantage of using a vector database in a RAG pipeline?
+  options:
+    A: It allows for faster document loading.
+    B: It enables efficient similarity search for relevant documents.
+    C: It automatically summarizes the documents.
+    D: It reduces the cost of embedding generation.
+  correct_answer: B
+- id: 13
+  question: You've created a custom tool, but the agent consistently fails to use
+    it. What's a likely cause?
+  options:
+    A: The tool's description is unclear or doesn't align with the agent's capabilities.
+    B: The LLM is too powerful.
+    C: The vector database is corrupted.
+    D: The prompt template is too complex.
+  correct_answer: A
+- id: 14
+  question: Which memory type is most suitable for long conversations where you want
+    to avoid exceeding the LLM's context window?
+  options:
+    A: ConversationBufferMemory
+    B: ConversationBufferWindowMemory
+    C: ConversationSummaryMemory
+    D: ConversationTokenBufferMemory
+  correct_answer: C
+- id: 15
+  question: What is the role of a 'Runnable' in LangChain Expression Language (LCEL)?
+  options:
+    A: It defines the LLM model to be used.
+    B: It represents a single step or component in a chain.
+    C: It handles the output parsing.
+    D: It manages the memory.
+  correct_answer: B
+- id: 16
+  question: You are building a RAG application and notice that the retrieved documents
+    are often irrelevant. What is a potential solution?
+  options:
+    A: Increase the chunk size.
+    B: Use a different embedding model.
+    C: Reduce the number of retrieved documents.
+    D: All of the above.
+  correct_answer: D
+- id: 17
+  question: What is the purpose of the `RunnableParallel` in LCEL?
+  options:
+    A: To execute Runnables sequentially.
+    B: To execute multiple Runnables concurrently.
+    C: To dynamically route execution flow.
+    D: To parse the output of a Runnable.
+  correct_answer: B
+- id: 18
+  question: You want to extract specific information (e.g., dates, names) from an
+    LLM's output. Which output parser is most appropriate?
+  options:
+    A: StringOutputParser
+    B: StructuredOutputParser
+    C: CSVParser
+    D: DateTimeParser
+  correct_answer: B
+- id: 19
+  question: What is the primary benefit of using LangChain's chains over directly
+    calling an LLM?
+  options:
+    A: Chains automatically handle error handling.
+    B: Chains provide a structured way to combine multiple LLM calls and other components.
+    C: Chains reduce the cost of LLM calls.
+    D: Chains improve the accuracy of LLM responses.
+  correct_answer: B
+- id: 20
+  question: You're using Streamlit to create a UI for your LangChain app. How can
+    you display the intermediate steps of an agent's reasoning?
+  options:
+    A: Use Streamlit's `st.write()` function to print the agent's thoughts.
+    B: Enable logging in LangSmith and display the logs in Streamlit.
+    C: Use Streamlit's caching mechanism.
+    D: Streamlit doesn't support displaying agent reasoning.
+  correct_answer: B
+- id: 21
+  question: What is the role of the `memory_key` parameter when customizing memory
+    in LangChain?
+  options:
+    A: It specifies the LLM model to use.
+    B: It defines the key used to store the conversation history in the memory object.
+    C: It sets the maximum length of the conversation history.
+    D: It determines the embedding model to use.
+  correct_answer: B
+- id: 22
+  question: You're building a tool that requires authentication. How would you securely
+    handle API keys within a LangChain agent?
+  options:
+    A: Hardcode the API key directly in the tool's code.
+    B: Store the API key in environment variables and access them within the tool.
+    C: Store the API key in a public repository.
+    D: Prompt the user for the API key each time the tool is used.
+  correct_answer: B
+- id: 23
+  question: What is the difference between an LLM and a Chat model in LangChain?
+  options:
+    A: LLMs are designed for text completion, while Chat models are designed for conversational
+      interactions.
+    B: Chat models are more expensive to use than LLMs.
+    C: LLMs can only generate text, while Chat models can also process images.
+    D: There is no difference between LLMs and Chat models.
+  correct_answer: A
+- id: 24
+  question: You want to create a chain that performs multiple operations sequentially,
+    but you need to handle potential errors at each step. Which chain type is most
+    suitable?
+  options:
+    A: LLMChain
+    B: SequentialChain
+    C: SimpleSequentialChain
+    D: RouterChain
+  correct_answer: B
+- id: 25
+  question: In RAG, what is the purpose of 'chunking' documents?
+  options:
+    A: To reduce the size of the vector database.
+    B: To improve the accuracy of the embedding model.
+    C: To break down large documents into smaller, manageable pieces for retrieval.
+    D: To summarize the documents.
+  correct_answer: C
+- id: 26
+  question: What is the primary function of `RunnableLambda` in LCEL?
+  options:
+    A: To execute a Python function as a Runnable.
+    B: To parallelize the execution of Runnables.
+    C: To dynamically route execution flow.
+    D: To parse the output of a Runnable.
+  correct_answer: A
+- id: 27
+  question: You're using a `CSVParser` to extract data from an LLM's output. What
+    format should the LLM's output be in?
+  options:
+    A: JSON
+    B: XML
+    C: CSV
+    D: Plain text
+  correct_answer: C
+- id: 28
+  question: What is the benefit of using `ConversationSummaryMemory` compared to `ConversationBufferMemory`?
+  options:
+    A: It retains the entire conversation history.
+    B: It summarizes the conversation history to avoid exceeding the context window.
+    C: It's faster to process.
+    D: It's more accurate.
+  correct_answer: B
+- id: 29
+  question: You've integrated a DuckDuckGo Search tool into your agent, but it's consistently
+    returning irrelevant results. What could be the issue?
+  options:
+    A: The search query generated by the agent is not specific enough.
+    B: The DuckDuckGo API is down.
+    C: The LLM is not powerful enough.
+    D: The vector database is corrupted.
+  correct_answer: A
+- id: 30
+  question: What is the purpose of the `temperature` parameter when configuring an
+    LLM?
+  options:
+    A: To control the length of the generated text.
+    B: To control the randomness of the generated text.
+    C: To control the cost of the LLM call.
+    D: To control the speed of the LLM inference.
+  correct_answer: B
+- id: 31
+  question: You are building a chain that requires multiple LLM calls, and you want
+    to ensure that each call uses the same prompt template. How can you achieve this
+    efficiently?
+  options:
+    A: Copy and paste the prompt template into each LLMChain.
+    B: Create a single prompt template and pass it to each LLMChain.
+    C: Use a SequentialChain.
+    D: Use a RouterChain.
+  correct_answer: B
+- id: 32
+  question: What is the role of a vector database in a RAG pipeline?
+  options:
+    A: To store the original documents.
+    B: To store the embedding vectors of the documents.
+    C: To generate the embeddings.
+    D: To retrieve the documents.
+  correct_answer: B
+- id: 33
+  question: You want to create a tool that can access a website and extract information.
+    Which approach is most suitable?
+  options:
+    A: Use the built-in Wikipedia tool.
+    B: Create a custom tool using a library like `requests` and `BeautifulSoup`.
+    C: Use the DuckDuckGo Search tool.
+    D: Use the LLMChain directly.
+  correct_answer: B
+- id: 34
+  question: What is the primary advantage of using LangChain's agents over simple
+    chains?
+  options:
+    A: Agents can dynamically choose which tools to use based on the input.
+    B: Agents are faster to execute.
+    C: Agents are cheaper to use.
+    D: Agents require less code.
+  correct_answer: A
+- id: 35
+  question: You're using `ConversationTokenBufferMemory` and are concerned about exceeding
+    the LLM's token limit. How can you mitigate this?
+  options:
+    A: Increase the `max_tokens` parameter.
+    B: Reduce the `token_limit` parameter.
+    C: Use a different memory type.
+    D: Increase the LLM's temperature.
+  correct_answer: B
+- id: 36
+  question: What is the purpose of the `LangSmith` monitoring tool?
+  options:
+    A: To automatically generate prompts.
+    B: To debug and evaluate LangChain applications.
+    C: To deploy LangChain applications.
+    D: To train LLMs.
+  correct_answer: B
+- id: 37
+  question: You've created a custom tool, but the agent is ignoring its description.
+    What should you check?
+  options:
+    A: The tool's `_run()` method.
+    B: The tool's description in the `tools` list.
+    C: The LLM's temperature.
+    D: The vector database.
+  correct_answer: B
+- id: 38
+  question: What is the role of the `top_p` parameter when configuring an LLM?
+  options:
+    A: To control the length of the generated text.
+    B: To control the diversity of the generated text.
+    C: To control the cost of the LLM call.
+    D: To control the speed of the LLM inference.
+  correct_answer: B
+- id: 39
+  question: You want to create a chain that conditionally executes different branches
+    based on the LLM's output. Which chain type is most suitable?
+  options:
+    A: LLMChain
+    B: SequentialChain
+    C: RouterChain
+    D: SimpleSequentialChain
+  correct_answer: C
+- id: 40
+  question: In RAG, what is the purpose of embedding models?
+  options:
+    A: To summarize the documents.
+    B: To convert text into numerical vector representations.
+    C: To store the documents in a vector database.
+    D: To retrieve relevant documents based on a query.
+  correct_answer: B
+- id: 41
+  question: What is the primary benefit of using LCEL over traditional LangChain chains?
+  options:
+    A: LCEL is simpler to use.
+    B: LCEL offers more flexibility and control over execution flow.
+    C: LCEL is faster.
+    D: LCEL is cheaper.
+  correct_answer: B
+- id: 42
+  question: You are using Streamlit to build a UI for your LangChain application.
+    How can you handle user input?
+  options:
+    A: Use Streamlit's `st.text_input()` function.
+    B: Use Streamlit's `st.button()` function.
+    C: Use Streamlit's `st.slider()` function.
+    D: All of the above.
+  correct_answer: D
+- id: 43
+  question: What is the purpose of the `RunnablePassthrough` in LCEL?
+  options:
+    A: To execute a Python function as a Runnable.
+    B: To pass the input directly to the next Runnable without modification.
+    C: To dynamically route execution flow.
+    D: To parse the output of a Runnable.
+  correct_answer: B
+- id: 44
+  question: You're building a RAG application and want to improve the relevance of
+    the retrieved documents. What is a potential strategy?
+  options:
+    A: Increase the chunk size.
+    B: Use a more sophisticated embedding model.
+    C: Reduce the number of retrieved documents.
+    D: All of the above.
+  correct_answer: B
+- id: 45
+  question: What is the role of the `agent_executor` in LangChain?
+  options:
+    A: It defines the LLM model to be used.
+    B: It manages the execution of the agent and its tools.
+    C: It handles the output parsing.
+    D: It manages the memory.
+  correct_answer: B
+- id: 46
+  question: You're experiencing slow performance in your LangChain application. What
+    is a potential optimization strategy?
+  options:
+    A: Use a smaller LLM model.
+    B: Cache the results of LLM calls.
+    C: Reduce the size of the context window.
+    D: All of the above.
+  correct_answer: D
+- id: 47
+  question: What is the purpose of the `max_iterations` parameter when creating an
+    agent?
+  options:
+    A: To control the length of the generated text.
+    B: To limit the number of steps the agent can take.
+    C: To control the cost of the LLM call.
+    D: To control the speed of the LLM inference.
+  correct_answer: B
+- id: 48
+  question: You want to create a chain that combines multiple LLM calls with different
+    prompts. How can you achieve this efficiently?
+  options:
+    A: Use a single LLMChain with a complex prompt.
+    B: Use a SequentialChain with multiple LLMChain steps.
+    C: Use a RouterChain.
+    D: Use a SimpleSequentialChain.
+  correct_answer: B
+- id: 49
+  question: In RAG, what is the purpose of a vector database?
+  options:
+    A: To store the original documents.
+    B: To store the embedding vectors of the documents and enable efficient similarity
+      search.
+    C: To generate the embeddings.
+    D: To retrieve the documents based on keywords.
+  correct_answer: B
+- id: 50
+  question: You've noticed that your agent is hallucinating (generating incorrect
+    information). What is a potential mitigation strategy?
+  options:
+    A: Increase the LLM's temperature.
+    B: Improve the quality of the retrieved documents in a RAG pipeline.
+    C: Reduce the size of the context window.
+    D: Use a different vector database.
+  correct_answer: B

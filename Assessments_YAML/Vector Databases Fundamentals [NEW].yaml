@@ -1,0 +1,465 @@
+- id: 1
+  question: You are building a semantic search application. After vectorizing your
+    documents with OpenAI embeddings, you observe that similar documents are not consistently
+    ranked highly. What is the most likely cause?
+  options:
+    A: The OpenAI embedding model is outdated.
+    B: The chosen distance metric (e.g., cosine similarity) is not appropriate for
+      the embedding space.
+    C: The vector database index is corrupted.
+    D: The documents are too short.
+  correct_answer: B
+- id: 2
+  question: When persisting a Chroma vector database, what is the primary benefit
+    of using a persistent directory instead of relying solely on in-memory storage?
+  options:
+    A: Reduced latency for similarity searches.
+    B: Data durability and the ability to restart the database without re-embedding.
+    C: Automatic index optimization.
+    D: Increased embedding dimensionality.
+  correct_answer: B
+- id: 3
+  question: You're using LangChain with Chroma and notice slow query performance.
+    You've confirmed the index is built correctly. What optimization should you investigate
+    first?
+  options:
+    A: Increase the number of replicas in Chroma.
+    B: Reduce the chunk size of the documents before embedding.
+    C: Switch to a different embedding model.
+    D: Implement caching of frequently accessed vectors.
+  correct_answer: B
+- id: 4
+  question: Which of the following best describes the trade-off between Euclidean
+    distance (L2 norm) and Cosine similarity when measuring vector similarity?
+  options:
+    A: Euclidean distance is computationally cheaper but less accurate.
+    B: Cosine similarity is sensitive to vector magnitude, while Euclidean distance
+      is not.
+    C: Euclidean distance is sensitive to vector magnitude, while Cosine similarity
+      is not.
+    D: Both metrics are equally effective in all scenarios.
+  correct_answer: C
+- id: 5
+  question: You are designing a system for personalized content recommendations. You've
+    vectorized user profiles and content items. What is a key consideration when choosing
+    the embedding dimensionality?
+  options:
+    A: Higher dimensionality always leads to better accuracy.
+    B: Lower dimensionality reduces storage costs but may sacrifice accuracy.
+    C: Dimensionality should match the number of users in the system.
+    D: Dimensionality is irrelevant as long as the distance metric is appropriate.
+  correct_answer: B
+- id: 6
+  question: In the context of vector databases and LLMs, what is the purpose of 'chunking'
+    documents before embedding?
+  options:
+    A: To reduce the overall size of the vector database.
+    B: To improve the relevance of search results by focusing on smaller, more specific
+      segments of text.
+    C: To simplify the embedding process.
+    D: To ensure all documents have the same length.
+  correct_answer: B
+- id: 7
+  question: You're using Pinecone and encounter rate limits when upserting a large
+    batch of vectors. What is the most effective strategy to mitigate this?
+  options:
+    A: Increase the batch size.
+    B: Implement exponential backoff with retries.
+    C: Switch to a different vector database.
+    D: Reduce the embedding dimensionality.
+  correct_answer: B
+- id: 8
+  question: What is the primary advantage of using a vector database over a traditional
+    relational database for similarity search?
+  options:
+    A: Vector databases support complex SQL queries.
+    B: Vector databases are optimized for finding data points that are semantically
+      similar, not just exact matches.
+    C: Vector databases offer better data integrity.
+    D: Vector databases are easier to scale horizontally.
+  correct_answer: B
+- id: 9
+  question: You've implemented a RAG (Retrieval-Augmented Generation) pipeline using
+    LangChain, Chroma, and OpenAI. The LLM is generating irrelevant responses. What
+    is a likely cause?
+  options:
+    A: The OpenAI API key is invalid.
+    B: The retrieved context from Chroma is not relevant to the user's query.
+    C: The LangChain framework is outdated.
+    D: The embedding model is too complex.
+  correct_answer: B
+- id: 10
+  question: When choosing between Pinecone and Chroma, which factor would most strongly
+    favor Pinecone for a production application requiring high scalability and availability?
+  options:
+    A: Chroma's open-source nature.
+    B: Pinecone's managed service and built-in scalability features.
+    C: Chroma's support for a wider range of embedding models.
+    D: Pinecone's lower cost.
+  correct_answer: B
+- id: 11
+  question: You are using OpenAI embeddings. How does increasing the `temperature`
+    parameter affect the resulting vector representations?
+  options:
+    A: It increases the vector dimensionality.
+    B: It introduces more randomness and diversity in the embeddings.
+    C: It reduces the computational cost of embedding.
+    D: It normalizes the vector magnitudes.
+  correct_answer: B
+- id: 12
+  question: What is the purpose of a 'retriever' object in LangChain when working
+    with vector databases?
+  options:
+    A: To generate embeddings from text.
+    B: To query the vector database and retrieve relevant documents.
+    C: To interact with the OpenAI API.
+    D: To split documents into chunks.
+  correct_answer: B
+- id: 13
+  question: You've noticed that your Chroma database is consuming a significant amount
+    of disk space. What is a potential optimization strategy?
+  options:
+    A: Increase the embedding dimensionality.
+    B: Use a more efficient data type for storing the vectors.
+    C: Reduce the number of replicas.
+    D: Compress the vector data.
+  correct_answer: D
+- id: 14
+  question: What is the role of the 'index' in a vector database like Pinecone?
+  options:
+    A: It stores the embedding model.
+    B: It organizes the vectors for efficient similarity search.
+    C: It manages user authentication.
+    D: It handles data backups.
+  correct_answer: B
+- id: 15
+  question: You are building a document clustering application. Which distance metric
+    would be most appropriate if you want to prioritize clusters with a high density
+    of points?
+  options:
+    A: Cosine similarity.
+    B: Euclidean distance.
+    C: Dot product.
+    D: Manhattan distance.
+  correct_answer: B
+- id: 16
+  question: When using LangChain's `DocumentLoader` to load documents, what is the
+    benefit of specifying a `recursive` parameter set to `True`?
+  options:
+    A: It automatically generates embeddings for the documents.
+    B: It loads documents from all subdirectories within a specified path.
+    C: It splits the documents into smaller chunks.
+    D: It validates the document format.
+  correct_answer: B
+- id: 17
+  question: You are experiencing slow query times in Pinecone. You've already optimized
+    your index configuration. What should you investigate next?
+  options:
+    A: The network latency between your application and Pinecone.
+    B: The size of the embedding vectors.
+    C: The number of concurrent queries.
+    D: All of the above.
+  correct_answer: D
+- id: 18
+  question: What is the primary difference between vectors and embeddings in the context
+    of vector databases?
+  options:
+    A: Vectors are numerical representations of data, while embeddings are the process
+      of creating those representations.
+    B: Embeddings are numerical representations of data, while vectors are the process
+      of creating those representations.
+    C: Vectors are only used for text data, while embeddings can be used for any data
+      type.
+    D: There is no difference; the terms are interchangeable.
+  correct_answer: A
+- id: 19
+  question: You are using Chroma and want to ensure your data is not lost if the server
+    crashes. What is the recommended approach?
+  options:
+    A: Regularly export the vectors to a CSV file.
+    B: Enable persistence by specifying a directory to store the database.
+    C: Increase the number of replicas.
+    D: Use a different vector database.
+  correct_answer: B
+- id: 20
+  question: What is the purpose of the `k` parameter in a k-nearest neighbors (k-NN)
+    search within a vector database?
+  options:
+    A: It specifies the dimensionality of the vectors.
+    B: It determines the number of nearest neighbors to retrieve.
+    C: It controls the temperature of the embedding model.
+    D: It defines the size of the chunks used for embedding.
+  correct_answer: B
+- id: 21
+  question: You're building a system to detect duplicate questions. What is a crucial
+    step in preparing the data for vectorization?
+  options:
+    A: Removing stop words.
+    B: Stemming or lemmatization.
+    C: Normalizing the text (e.g., lowercasing, removing punctuation).
+    D: All of the above.
+  correct_answer: D
+- id: 22
+  question: When evaluating the performance of a vector database, what metric is most
+    relevant for measuring the accuracy of similarity search?
+  options:
+    A: Query latency.
+    B: Recall.
+    C: Throughput.
+    D: Storage cost.
+  correct_answer: B
+- id: 23
+  question: You are using LangChain to create a question-answering system. What is
+    the role of the `OpenAIChat` wrapper?
+  options:
+    A: It loads documents from various sources.
+    B: It splits documents into chunks.
+    C: It interacts with the OpenAI API to generate responses.
+    D: It creates the Chroma vector database.
+  correct_answer: C
+- id: 24
+  question: What is the potential drawback of using very small chunk sizes when embedding
+    documents for a RAG pipeline?
+  options:
+    A: Increased storage costs.
+    B: Loss of context and difficulty in understanding the overall meaning of the
+      document.
+    C: Slower embedding process.
+    D: Reduced accuracy of similarity search.
+  correct_answer: B
+- id: 25
+  question: You've implemented a vector database solution and are observing high query
+    latency. What is a potential optimization technique related to indexing?
+  options:
+    A: Reducing the number of dimensions in the vectors.
+    B: Using a different distance metric.
+    C: Exploring approximate nearest neighbor (ANN) indexing algorithms.
+    D: Increasing the batch size for upserts.
+  correct_answer: C
+- id: 26
+  question: What is the primary benefit of using a managed vector database service
+    like Pinecone over self-hosting a vector database?
+  options:
+    A: Lower cost.
+    B: Greater control over the infrastructure.
+    C: Simplified operations and scalability.
+    D: Support for a wider range of embedding models.
+  correct_answer: C
+- id: 27
+  question: You are using Chroma and want to update an existing vector. What is the
+    recommended approach?
+  options:
+    A: Delete the existing vector and insert a new one with the updated data.
+    B: Directly modify the vector in place.
+    C: Use the `update` method (if available) or re-index the entire collection.
+    D: Chroma does not support updating existing vectors.
+  correct_answer: A
+- id: 28
+  question: What is the purpose of the `DocumentSplitter` class in LangChain?
+  options:
+    A: To generate embeddings from text.
+    B: To load documents from various sources.
+    C: To split long documents into smaller, manageable chunks.
+    D: To query the vector database.
+  correct_answer: C
+- id: 29
+  question: You are designing a system for image similarity search. What is a crucial
+    step before storing the images in a vector database?
+  options:
+    A: Resizing the images to a standard resolution.
+    B: Extracting feature vectors from the images using a pre-trained model.
+    C: Converting the images to grayscale.
+    D: Compressing the images using JPEG.
+  correct_answer: B
+- id: 30
+  question: What is the significance of the 'filter' parameter when querying a vector
+    database?
+  options:
+    A: It specifies the distance metric to use.
+    B: It allows you to retrieve only vectors that match certain metadata criteria.
+    C: It limits the number of results returned.
+    D: It sorts the results by similarity score.
+  correct_answer: B
+- id: 31
+  question: You're using Pinecone and notice inconsistent query results. What could
+    be a potential cause?
+  options:
+    A: The index is not properly configured.
+    B: The data is not evenly distributed across shards.
+    C: The query vector is not normalized.
+    D: All of the above.
+  correct_answer: D
+- id: 32
+  question: What is the role of the OpenAI API key in a LangChain-based RAG pipeline?
+  options:
+    A: To authenticate access to the Chroma vector database.
+    B: To authenticate access to the OpenAI embedding and LLM models.
+    C: To manage user permissions.
+    D: To track API usage.
+  correct_answer: B
+- id: 33
+  question: You are building a system to recommend similar products based on their
+    descriptions. What is a key consideration when choosing the embedding model?
+  options:
+    A: The size of the model.
+    B: The model's ability to capture semantic meaning and relationships between words.
+    C: The model's training data.
+    D: All of the above.
+  correct_answer: D
+- id: 34
+  question: What is the purpose of 'vector quantization' in the context of vector
+    databases?
+  options:
+    A: To reduce the dimensionality of the vectors.
+    B: To compress the vectors to reduce storage costs.
+    C: To group similar vectors together to speed up similarity search.
+    D: To normalize the vectors.
+  correct_answer: C
+- id: 35
+  question: You are using Chroma and want to delete a specific document from the database.
+    How do you achieve this?
+  options:
+    A: Use the `delete` method with the document ID.
+    B: Re-index the entire collection without the document.
+    C: Chroma does not support deleting specific documents.
+    D: Use the `update` method with an empty value.
+  correct_answer: A
+- id: 36
+  question: What is the primary advantage of using LangChain's `RetrievalQA` chain?
+  options:
+    A: It automatically generates embeddings.
+    B: It simplifies the process of retrieving relevant documents and generating answers
+      using an LLM.
+    C: It manages the vector database infrastructure.
+    D: It provides a user interface for querying the database.
+  correct_answer: B
+- id: 37
+  question: You are experiencing slow upsert performance in Pinecone. What is a potential
+    optimization strategy?
+  options:
+    A: Increase the batch size.
+    B: Reduce the dimensionality of the vectors.
+    C: Use a different index configuration.
+    D: All of the above.
+  correct_answer: D
+- id: 38
+  question: What is the difference between 'recall' and 'precision' in the context
+    of vector database evaluation?
+  options:
+    A: Recall measures the percentage of relevant documents retrieved, while precision
+      measures the percentage of retrieved documents that are relevant.
+    B: Precision measures the percentage of relevant documents retrieved, while recall
+      measures the percentage of retrieved documents that are relevant.
+    C: Both metrics measure the same thing but use different formulas.
+    D: Recall is only relevant for text data, while precision is only relevant for
+      image data.
+  correct_answer: A
+- id: 39
+  question: You are using Chroma and want to persist the database to disk. What file
+    extension is typically used for the persisted data?
+  options:
+    A: .csv
+    B: .json
+    C: .db
+    D: .pkl
+  correct_answer: .db
+- id: 40
+  question: What is the purpose of the `VectorStoreRetriever` class in LangChain?
+  options:
+    A: To generate embeddings from text.
+    B: To load documents from various sources.
+    C: To retrieve relevant documents from a vector database based on a query.
+    D: To split documents into chunks.
+  correct_answer: C
+- id: 41
+  question: You're building a system for fraud detection. What type of embedding would
+    be most suitable for representing transaction data?
+  options:
+    A: Word embeddings.
+    B: Sentence embeddings.
+    C: Numerical feature embeddings.
+    D: Image embeddings.
+  correct_answer: C
+- id: 42
+  question: What is the role of metadata in a vector database?
+  options:
+    A: To store the embedding model.
+    B: To provide additional information about the vectors that can be used for filtering
+      and querying.
+    C: To manage user authentication.
+    D: To track API usage.
+  correct_answer: B
+- id: 43
+  question: You are using Pinecone and want to monitor the health of your index. What
+    metrics should you track?
+  options:
+    A: Query latency, upsert success rate, and storage usage.
+    B: CPU usage, memory usage, and network bandwidth.
+    C: Number of users, API requests, and error rates.
+    D: All of the above.
+  correct_answer: A
+- id: 44
+  question: What is the primary benefit of using approximate nearest neighbor (ANN)
+    indexing algorithms in vector databases?
+  options:
+    A: Guaranteed to find the exact nearest neighbors.
+    B: Reduced storage costs.
+    C: Faster query performance with a trade-off in accuracy.
+    D: Improved data integrity.
+  correct_answer: C
+- id: 45
+  question: You are using Chroma and want to query the database for vectors that are
+    similar to a given query vector. What is the typical workflow?
+  options:
+    A: Embed the query vector, then use the `query` method with the embedding and
+      the desired number of results.
+    B: Use the `search` method with the raw query text.
+    C: Use the `filter` method with metadata criteria.
+    D: Re-index the entire collection with the query vector.
+  correct_answer: A
+- id: 46
+  question: What is the purpose of the `LangChain` framework in the context of vector
+    databases?
+  options:
+    A: To provide a low-level API for interacting with vector databases.
+    B: To simplify the development of applications that leverage vector databases
+      and LLMs.
+    C: To manage the vector database infrastructure.
+    D: To generate embeddings from text.
+  correct_answer: B
+- id: 47
+  question: You are building a system for detecting plagiarism. What is a crucial
+    consideration when choosing the chunk size for embedding documents?
+  options:
+    A: Larger chunks are always better for capturing context.
+    B: Smaller chunks are better for identifying subtle similarities.
+    C: The chunk size should be equal to the length of the document.
+    D: The chunk size is irrelevant.
+  correct_answer: B
+- id: 48
+  question: What is the primary difference between a 'local' and a 'cloud' vector
+    database?
+  options:
+    A: Local databases are faster, while cloud databases are more scalable.
+    B: Local databases are self-hosted, while cloud databases are managed services.
+    C: Local databases support a wider range of embedding models.
+    D: Cloud databases are cheaper than local databases.
+  correct_answer: B
+- id: 49
+  question: You are using Pinecone and want to delete an entire index. What is the
+    recommended approach?
+  options:
+    A: Use the `delete` method with the index name.
+    B: Manually delete all vectors from the index.
+    C: Re-create the index with a different name.
+    D: Pinecone automatically deletes unused indexes.
+  correct_answer: A
+- id: 50
+  question: When evaluating different vector databases, what factor is most important
+    for a real-time application with strict latency requirements?
+  options:
+    A: Storage capacity.
+    B: Query latency.
+    C: Cost.
+    D: Number of supported embedding models.
+  correct_answer: B

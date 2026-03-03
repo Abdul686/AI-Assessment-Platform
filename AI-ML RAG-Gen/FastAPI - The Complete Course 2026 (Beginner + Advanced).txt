@@ -1,0 +1,434 @@
+COURSE: FastAPI - The Complete Course 2026 (Beginner + Advanced)
+URL: https://azirotechnologies.udemy.com/course/fastapi-the-complete-course/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Beginner Python developers curious about FastAPI
+Python developers wanting to develop high performing APIs
+Web developers that want to get into backend APIs using Python
+Anyone that is curious about how APIs are developed using FastAPI
+
+--- DESCRIPTION ---
+Description
+
+Welcome to the #1 BEST SELLING FASTAPI course on Udemy!
+
+Learn how to BUILD and DEPLOY FastAPI applications from scratch! Including RESTful APIs and Full Stack applications!
+
+---
+
+FastAPI and Python are two of the hottest technologies in the market for building high performing APIs.
+
+By the end of this course, you will have built production ready RESTful APIs, a production ready Full Stack application, full authentication/ authorization, setup production ready databases, and deployed your FastAPI application so the world can use YOUR app.
+
+---
+
+Understanding and knowing how to build APIs with FastAPI and Python can improve the job you have, get you a new job or even create multiple contract roles! These skills are are needed everywhere, and some of the highest paying job postings are asking for Python developers with FastAPI experience.
+
+In this complete FastAPI course I will quickly get you up to speed, by walking you through the FastAPI framework from the beginning to the end! Whether you are interested in expanding your current craft, want to change careers or simply wanting to learn a very popular topic, then this course is for you! You will be using modern technologies including: PyCharm, Python, FastAPI, bcrypt password hashing, and  JSON Web Tokens (JWT)
+
+Why is FastAPI the fastest growing Python web development framework in the market?
+
+To make it simple, FastAPI covers all aspects of APIs. FastAPI comes with a lot out of the box, and is one of the fastest and highest performing web frameworks available. This makes web development rapid, while making use of one of the most popular programming languages in the world, Python.
+
+This course is designed with beginners in mind! This means no matter what kind of background you come from, you will be able to learn one of the hottest frameworks in the market. All you need is some basic python knowledge, and you will be off creating APIs from scratch protected behind JSON Web Tokens (JWT)
+
+---
+
+In this course, you will get (not only):
+
+- All source code is available for download
+
+- Responsive Instructor: All questions answered within 24 hours
+
+- Professional video and audio recordings (check the free previews)
+
+- High quality closed-captions / subtitles available for English (new!)
+
+---
+
+Content and Overview:
+
+Install & Setup Python, IDE & FastAPI
+
+Overview of FastAPI Projects
+
+Installation of a virtual environment for your FastAPI project
+
+Create the HTTP Request Methods (GET, POST, PUT, DELETE)
+
+Data Validation
+
+HTTP Response Status Codes
+
+Working with dynamic data and models
+
+Save dynamic data to Database
+
+Handling user input & forms
+
+Advanced features like Registration, Authentication (bcrypt) & Authorization (JWT)
+
+Database relationships (CASCADE, etc)
+
+Setup production database (MySQL)
+
+Routing
+
+Testing (Unit & Integration) pytest library
+
+Full Stack Development
+
+Deploy your application so the world can use it
+
+And more!
+
+Course videos are regularly updated to keep up with the newest updates and information. The codingwithroby community is very active, so always know that if you have a question you will receive an answer within 24 hours!
+
+---
+
+See what other students are saying about my courses!
+
+"I have been looking for a good API and Web Services course and this has by far exceeded my expectations. Thank you for creating an information, easy to follow course."
+
+"The instructor makes the concept easy to understand and learn."
+
+"Eric is a great instructor and broke down everything about Django to get me started with building my first web application. I highly recommend this course. I have learned more than I was expecting and easier than I thought!"
+
+"The course taught me the basics needed to be able to program using python. All the things taught here are very helpful to me and I used them regularly."
+
+"Clear, crisp and covered a wide array of topics on python. Thanks Eric for the course."
+
+"Eric has done a great job explaining core concepts and how they relate with Django and Python."
+
+---
+
+
+
+
+No Risk – Money-Back Guarantee
+
+Finally, there is no risk. Once you purchase the course, if for some reason you are not happy with the course, Udemy offers a 30-day money back guarantee.
+
+So you have nothing to lose, sign up for this course and learn how to build APIs using FastAPI and Python!
+
+It is time to level up your career and become a Python API developer!
+
+
+
+
+Target Audience
+
+Basic Python knowledge
+
+No experience required for FastAPI. I will teach you FastAPI from the beginning.
+
+
+
+
+Who this course is for:
+Beginner Python developers curious about FastAPI
+Python developers wanting to develop high performing APIs
+Web developers that want to get into backend APIs using Python
+Anyone that is curious about how APIs are developed using FastAPI
+Show more
+
+--- CURRICULUM ---
+Course content
+19 sections • 241 lectures • 21h 28m total length
+Collapse all sections
+Introduction
+6 lectures • 10min
+Introduction
+Course Content
+How To Get The Most Out Of This Course
+Items to help you get started
+Download Slides
+Download Source Code
+Python Installation & Refresher
+54 lectures • 3hr 58min
+Introduction to section
+Python Installation Overview
+Python Setup (Windows)
+Python Setup (Mac)
+Python Integrated Development Environment Overview
+Setup Integrated Development Environment
+Download Python Refresher Source Code
+Variables in Python
+Create your own Python Variables
+1 question
+Comments
+Assignment
+Assignment Solution
+String formatting in Python
+Getting User Input
+String Assignment
+String Assignment Solution (Together)
+Lists in Python
+Sets and Tuples
+Lists Assignment
+Lists Assignment Solution
+Booleans and Operators
+If Else Statements
+If Else Assignment
+If Else Assignment Solution
+Loops in Python
+Loops Assignment
+Loops Assignment Solution
+Dictionaries in Python
+Dictionaries Assignment
+Dictionaries Assignment Solution
+Functions in Python
+Functions Assignment
+Functions Assignment Solution
+Imports in Python
+Object Oriented Programming Overview
+What will we be Creating?
+Object Oriented Programming in Python
+Abstraction in Python Overview
+Abstraction in Python
+Constructors in Python Overview
+Constructors in Python
+Encapsulation in Python Overview
+Encapsulation in Python
+Inheritance in Python Overview
+Self vs Super
+How we will Implement Inheritance
+Inheritance in Python
+Polymorphism in Python Overview
+How we will Implement Polymorphism
+Polymorphism in Python
+Time to Battle Overview
+Time to battle
+Composition Overview
+Hero Battle Overview
+Composition and Hero Battle
+FastAPI Overview
+1 lecture • 5min
+FastAPI Overview
+FastAPI Setup & Installation
+3 lectures • 14min
+Virtual Environments Overview
+FastAPI and Virtual Environment Installation (Windows)
+FastAPI and Virtual Environment Installation (Mac)
+Let's check your understanding
+2 questions
+Project 1 - FastAPI Request Method Logic
+17 lectures • 1hr 20min
+Books Project Introduction
+Download Source Code
+GET Request Method Overview
+Create FastAPI Endpoint
+FastAPI Project: Enhance Get Request
+FastAPI Project: Path Parameters Overview
+FastAPI Project: Path Parameters
+FastAPI Project: Query Parameters Overview
+FastAPI Project: Query Parameters
+FastAPI Project: Post Request Overview
+FastAPI Project: Post Request
+FastAPI Project: Put Request Overview
+FastAPI Project: Put Request
+FastAPI Project: Delete Request Overview
+FastAPI Project: Delete Request
+FastAPI Assignment
+FastAPI Assignment Solution
+Let's check your understanding
+3 questions
+Project 2 - Move Fast with FastAPI
+19 lectures • 1hr 33min
+Books 2 Project Overview
+Pydantic v1 vs Pydantic v2
+FastAPI Project: Setup Books 2 Project
+FastAPI Project: Post Request before Validation
+FastAPI Project: Pydantics and Data Validation Overview
+FastAPI Project: Pydantic Book Request Validation
+FastAPI Project: Fields - Data Validation
+FastAPI Project: Pydantic Configurations
+Let's check your understanding
+2 questions
+FastAPI Project: Fetch Book
+FastAPI Project: Fetch Books by Rating
+FastAPI Project: Update Book with Put Request
+FastAPI Project: Delete Book with Delete Request
+Assignment Problem
+FastAPI Project: Assignment Solution
+FastAPI Project: Data Validation Path Parameters
+FastAPI Project: Data Validation Query Parameters
+FastAPI Project: Status Codes Overview
+FastAPI Project: HTTP Exceptions
+FastAPI Project: Explicit Status Code Responses
+Let's check your understanding
+1 question
+Project 3: Complete RESTful APIs
+2 lectures • 3min
+Project 3: Overview
+Pydantic v1 vs Pydantic v2
+Setup Database
+8 lectures • 51min
+FastAPI Project: SQL Database Introduction
+FastAPI Project: Database Connection with ORM SQLAlchemy
+FastAPI Project: Database Tables (Models)
+FastAPI Project: Main (Create Database Connection for API)
+FastAPI Project: Installation of SQLite3 Terminal (Windows)
+FastAPI Project: Installation of SQLite3 Terminal (Mac)
+FastAPI Project: SQL Queries Introduction
+FastAPI Project: SQLite3 Setting Up Todos
+API Request Methods
+5 lectures • 34min
+FastAPI Project: Get All Todos from Database
+FastAPI Project: Get Todo by ID
+FastAPI Project: Post Request (Todo Project)
+FastAPI Project: Put Request (Todo Project)
+FastAPI Project: Delete Request (Todo Project)
+Let's check your understanding
+1 question
+Authentication & Authorization
+14 lectures • 1hr 36min
+FastAPI Project: Starting Authentication & Authorization
+FastAPI Project: Routers Scale Authentication File
+FastAPI Project: Router Scale Todos File
+FastAPI Project: One to Many Relationship
+FastAPI Project: Foreign Keys
+FastAPI Project: Users Table Creation
+FastAPI Project: Create First User
+FastAPI Project: Hash User's Password
+FastAPI Project: Save User to Database
+FastAPI Project: Authenticate a User
+JSON Web Token (JWT) Overview
+FastAPI Project: Encode a JSON Web Token (JWT)
+FastAPI Project: Decode a JSON Web Token (JWT)
+FastAPI Project: Authentication Enhancements
+Authenticate Requests
+8 lectures • 44min
+FastAPI Project: Post Todo (User ID)
+FastAPI Project: Get All Todos (User ID)
+FastAPI Project: Get Todo (ID + User ID)
+FastAPI Project: Put Todo (User ID)
+FastAPI Project: Delete Todo (User ID)
+FastAPI Project: Admin Router
+Assignment Problem
+FastAPI Project: Assignment Solution (Users Route)
+Let's check your understanding
+3 questions
+Large Production Database Setup
+11 lectures • 58min
+FastAPI Project: Production DBMS
+PostgreSQL Introduction
+FastAPI Project: PostgreSQL Windows Installation
+FastAPI Project: PostgreSQL Mac Installation
+FastAPI Project: PostgreSQL Create Database Table
+FastAPI Project: PostgreSQL Connect to FastAPI
+MySQL Introduction
+FastAPI Project: MySQL Installation (Windows)
+FastAPI Project: MySQL Installation (Mac)
+FastAPI Project: Create Database Tables
+FastAPI Project: Connect FastAPI to MySQL
+Project 3.5 - Alembic Data Migration
+8 lectures • 37min
+Alembic Data Migration Overview
+Alembic Introduction
+Alembic Installation and Setup
+Alembic Revisions Overview
+Alembic Revision Upgrade
+Alembic Revision Downgrade
+Alembic Assignment
+Alembic Solution
+Let's check your understanding
+2 questions
+Project 4 - Unit & Integration Testing
+25 lectures • 2hr 21min
+Testing Overview
+Getting Started with Testing Overview
+Pytest Introduction
+Pytest Basics Overview
+Pytest Basics
+Pytest Objects Overview
+Pytest Objects
+Create FastAPI Test
+Root Package
+Pytest - Setup Dependencies Overview
+Pytest - Setup Dependencies
+Pytest - Setup Dependencies Part 2
+Pytest - FastAPI Test Complete
+Pytest - FastAPI Project Test
+Pytest - FastAPI Project Test Part 2
+Pytest - FastAPI Project Test Part 3
+Pytest - FastAPI Project Test Part 4
+Pytest - FastAPI Project Test Part 5
+Pytest - FastAPI Project Test Part 6
+Pytest - FastAPI Project Test Part 7
+Pytest - FastAPI Project Test Part 8
+Pytest - FastAPI Project Test Part 9
+Pytest - FastAPI Project Test Part 10
+Pytest - FastAPI Project Test Part 11
+Pytest - FastAPI Project Test Part 12
+Project 5 - Full Stack Application
+16 lectures • 1hr 46min
+Full Stack Introduction
+Setup our FastAPI Application
+FastAPI Full Stack - Jinja Overview
+FastAPI Full Stack - Installation of Requirements
+FastAPI Full Stack - Setup CSS
+FastAPI Full Stack - CSS & JS
+FastAPI Full Stack - Login Page
+FastAPI Full Stack - Register Page
+FastAPI Full Stack - Layout Page (Inheritance)
+FastAPI Full Stack - JS Implementation
+FastAPI Full Stack - Add Todo Page
+FastAPI Full Stack - Navigation Bar
+FastAPI Full Stack - Add New Todo
+FastAPI Full Stack - Edit Todo
+FastAPI Full Stack - Delete Todo
+FastAPI Full Stack - Home Page Redirection
+Git - Version Control
+10 lectures • 1hr 5min
+Git Introduction
+Git: Windows Installation
+Git: Mac Installation
+Git Basics Overview
+Git Basics Practice
+Git Branches Overview
+Git Branches Practice
+GitHub Intro
+Git: Remote Commands Slides
+GitHub: Create Account & Remote Repository
+Deploying FastAPI Applications
+4 lectures • 17min
+Deployment: Render Introduction
+Deployment: Add Requirements File
+Deployment: Render Setup
+Deployment PostgreSQL: Production Database
+(deprecated / optional) FastAPI < 0.100.0 Full Stack Application
+29 lectures • 3hr 15min
+Legacy Video Content
+FastAPI Full Stack - Pip Requirements and Templates
+FastAPI Full Stack - Static and CSS
+Download Full Stack Code
+FastAPI Full Stack - Adding CSS & JS to Static Files
+Full Stack Full Stack - Jinja Templating Overview
+FastAPI Full Stack - Full Guide: HTML Part 1
+FastAPI Full Stack - Full Guide: HTML Part 2
+FastAPI Full Stack - Full Guide: HTML Part 3
+FastAPI Full Stack - Full Guide: HTML Part 4
+FastAPI Full Stack - Full Guide: HTML Part 5
+FastAPI Full Stack - Quick Guide: COPY HTML
+FastAPI Full Stack - APIs for HTML
+FastAPI Full Stack - Layout
+FastAPI Full Stack - Navbar
+FastAPI Full Stack - Update Todos using a User
+FastAPI Full Stack - Add Todo
+FastAPI Full Stack - Edit Todo
+FastAPI Full Stack - Edit Todo POST
+FastAPI Full Stack - Delete Todo
+FastAPI Full Stack - Complete Functionality
+FastAPI Full Stack - Login Functionality
+FastAPI Full Stack - Login Updates
+FastAPI Full Stack - Logout
+FastAPI Full Stack - Register
+FastAPI Full Stack - Code Clean Up
+FastAPI Full Stack - Code Clean Up Part 2
+FastAPI Assignment
+FastAPI Solution
+Summary
+1 lecture • 1min
+Bonus Lecture

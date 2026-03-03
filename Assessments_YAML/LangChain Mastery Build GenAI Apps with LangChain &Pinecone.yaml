@@ -1,0 +1,456 @@
+- id: 1
+  question: You are building a RAG application with LangChain and Pinecone. After
+    indexing a large document set, you observe that the similarity search results
+    often return irrelevant documents. What is the MOST likely cause and how would
+    you address it?
+  options:
+    A: The embedding model is too small; increase its dimensionality.
+    B: The chunk size used during document splitting is too large; reduce it.
+    C: Pinecone's index type is not optimized for semantic search; switch to a different
+      type.
+    D: The LLM is not properly interpreting the retrieved context; refine the prompt.
+  correct_answer: B
+- id: 2
+  question: When using LangChain's `SequentialChain`, what is the primary benefit
+    of using multiple chains in sequence compared to a single, complex chain?
+  options:
+    A: Improved performance due to parallel execution.
+    B: Increased modularity and easier debugging.
+    C: Reduced token usage and cost.
+    D: Automatic prompt optimization.
+  correct_answer: B
+- id: 3
+  question: You've implemented a LangChain Agent with the ReAct framework. The agent
+    is consistently getting stuck in loops. What is a common debugging strategy to
+    resolve this?
+  options:
+    A: Increase the `temperature` parameter of the LLM.
+    B: Reduce the `max_iterations` parameter of the agent.
+    C: Add more tools to the agent's toolkit.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 4
+  question: You are using LangChain's `ChatPromptTemplate` and need to dynamically
+    insert a list of items into the prompt. Which formatting technique is MOST appropriate?
+  options:
+    A: String concatenation.
+    B: f-strings.
+    C: Using the `.format()` method.
+    D: Using the `.join()` method on the list.
+  correct_answer: D
+- id: 5
+  question: You're using Pinecone for vector storage. You need to update the embedding
+    of a specific document without re-indexing the entire dataset. What is the recommended
+    approach?
+  options:
+    A: Delete the existing vector and re-insert it with the new embedding.
+    B: Use Pinecone's update API (if available) or upsert functionality.
+    C: Re-index the entire dataset.
+    D: Manually modify the vector in Pinecone's database.
+  correct_answer: B
+- id: 6
+  question: When implementing a summarization chain with LangChain's `map_reduce`
+    method, what is the purpose of the `combine_document_chain`?
+  options:
+    A: To split the original document into smaller chunks.
+    B: To generate individual summaries for each chunk.
+    C: To combine the individual summaries into a final, cohesive summary.
+    D: To select the most important sentences from the original document.
+  correct_answer: C
+- id: 7
+  question: You are using LangChain's `ConversationBufferMemory`. What is a potential
+    drawback of this memory type when dealing with very long conversations?
+  options:
+    A: It does not store any conversation history.
+    B: The context window of the LLM can be exceeded, leading to performance degradation.
+    C: It is not compatible with all LLMs.
+    D: It requires significant computational resources.
+  correct_answer: B
+- id: 8
+  question: You've integrated Gemini with LangChain. You want to utilize Gemini's
+    multimodal capabilities (e.g., processing images). What is the first step to ensure
+    compatibility?
+  options:
+    A: Install the `langchain-gemini` package.
+    B: Select a Gemini model that supports multimodal input (e.g., Gemini Pro Vision).
+    C: Enable streaming for faster processing.
+    D: Configure safety settings to allow image processing.
+  correct_answer: B
+- id: 9
+  question: You are using Jupyter AI to assist with code generation. You notice it
+    frequently suggests outdated LangChain syntax. What is the MOST effective way
+    to address this?
+  options:
+    A: Restart the Jupyter kernel.
+    B: Update Jupyter AI to the latest version.
+    C: Specify the LangChain version in a comment or prompt.
+    D: Switch to a different AI coding assistant.
+  correct_answer: B
+- id: 10
+  question: In a RAG application, you've chosen a chunk size of 512 tokens. What is
+    a potential trade-off of using a smaller chunk size?
+  options:
+    A: Increased computational cost for embedding.
+    B: Loss of contextual information.
+    C: Reduced similarity search accuracy.
+    D: Higher latency in retrieval.
+  correct_answer: B
+- id: 11
+  question: You are building a chatbot with LangChain and want to implement a 'forget'
+    functionality. Which memory type would be MOST suitable for this?
+  options:
+    A: ConversationBufferMemory
+    B: ConversationSummaryMemory
+    C: ConversationBufferWindowMemory
+    D: ConversationTokenBufferMemory
+  correct_answer: C
+- id: 12
+  question: What is the primary purpose of using namespaces in Pinecone?
+  options:
+    A: To encrypt the vector data.
+    B: To logically separate different datasets within the same Pinecone index.
+    C: To improve the speed of similarity search.
+    D: To reduce the storage cost of vectors.
+  correct_answer: B
+- id: 13
+  question: You are using LangChain's `StuffDocumentsChain` for summarization. What
+    happens if the combined length of the retrieved documents exceeds the LLM's context
+    window?
+  options:
+    A: The chain automatically splits the documents into smaller chunks.
+    B: The chain throws an error.
+    C: The chain truncates the documents.
+    D: The chain uses a different summarization strategy.
+  correct_answer: B
+- id: 14
+  question: When using Streamlit for the front-end of your LLM application, what is
+    the purpose of `st.session_state`?
+  options:
+    A: To store the LLM's API key.
+    B: To manage the application's layout.
+    C: To persist data across user interactions and re-runs.
+    D: To handle user authentication.
+  correct_answer: C
+- id: 15
+  question: You've noticed that your LangChain application is making excessive API
+    calls to OpenAI. What is a potential optimization technique to reduce costs?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Implement caching of LLM responses.
+    C: Use a smaller LLM model.
+    D: Disable streaming.
+  correct_answer: B
+- id: 16
+  question: What is the key difference between `PromptTemplate` and `ChatPromptTemplate`
+    in LangChain?
+  options:
+    A: '`ChatPromptTemplate` is only for use with Gemini.'
+    B: '`ChatPromptTemplate` is designed for conversational models and handles roles
+      (system, user, assistant).'
+    C: '`PromptTemplate` supports streaming, while `ChatPromptTemplate` does not.'
+    D: '`ChatPromptTemplate` is more efficient for long prompts.'
+  correct_answer: B
+- id: 17
+  question: You are using LangChain Agents and want to provide the agent with access
+    to a custom tool. What interface must your tool implement?
+  options:
+    A: A Python class with a `run()` method.
+    B: A function that takes a string as input and returns a string.
+    C: A LangChain `Tool` object with `name` and `func` attributes.
+    D: A REST API endpoint.
+  correct_answer: C
+- id: 18
+  question: You are building a RAG application and want to evaluate its performance.
+    What metric is MOST relevant for assessing the quality of the retrieved documents?
+  options:
+    A: Latency of the similarity search.
+    B: Precision and recall of the retrieved documents.
+    C: Token usage of the LLM.
+    D: Cost of the API calls.
+  correct_answer: B
+- id: 19
+  question: What is the purpose of the `refine` combine document chain in LangChain's
+    `map_reduce` summarization method?
+  options:
+    A: To iteratively refine a summary by adding information from each chunk.
+    B: To select the most important sentences from each chunk.
+    C: To generate a summary for each chunk independently.
+    D: To combine summaries using a simple concatenation.
+  correct_answer: A
+- id: 20
+  question: You are using LangChain to interact with a Wikipedia API. Which LangChain
+    tool is MOST suitable for this purpose?
+  options:
+    A: DuckDuckGo Search Run
+    B: Wikipedia
+    C: SerpAPI
+    D: Google Search API
+  correct_answer: B
+- id: 21
+  question: When using LangChain's `load_document` function, what is the purpose of
+    specifying a `document_loaders`?
+  options:
+    A: To specify the embedding model to use.
+    B: To specify the vector database to use.
+    C: To specify the file type and parsing method for loading documents.
+    D: To specify the chunk size for splitting documents.
+  correct_answer: C
+- id: 22
+  question: You've implemented a RAG system and are experiencing slow response times.
+    You've already optimized the LLM and prompt. What is the next area to investigate?
+  options:
+    A: The embedding model.
+    B: The vector database indexing strategy.
+    C: The document splitting strategy.
+    D: All of the above.
+  correct_answer: D
+- id: 23
+  question: What is the primary benefit of using LangChain's `ConversationSummaryMemory`?
+  options:
+    A: It stores the entire conversation history.
+    B: It summarizes the conversation history to maintain context within the LLM's
+      token limit.
+    C: It only stores the most recent messages.
+    D: It automatically detects and removes irrelevant information.
+  correct_answer: B
+- id: 24
+  question: You are using LangChain to build a chatbot and want to ensure that the
+    chatbot does not generate harmful or inappropriate responses. What is a crucial
+    step to take?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Implement safety settings and content filtering.
+    C: Use a smaller LLM model.
+    D: Disable streaming.
+  correct_answer: B
+- id: 25
+  question: You are using LangChain's `Chroma` vector database. What is a key advantage
+    of using Chroma compared to Pinecone?
+  options:
+    A: Chroma offers better scalability for large datasets.
+    B: Chroma is an in-memory vector database, making it easier to set up and use
+      for smaller projects.
+    C: Chroma provides more advanced filtering options.
+    D: Chroma has a lower cost per query.
+  correct_answer: B
+- id: 26
+  question: You are using LangChain to summarize a very large document. You choose
+    to use the `map_reduce` chain. What is the role of the 'map' step?
+  options:
+    A: To combine the summaries of individual chunks.
+    B: To split the document into smaller chunks and generate a summary for each chunk.
+    C: To select the most important sentences from the document.
+    D: To refine the overall summary iteratively.
+  correct_answer: B
+- id: 27
+  question: In Streamlit, what does the `st.sidebar` object allow you to do?
+  options:
+    A: Display data in a table format.
+    B: Create a navigation menu on the side of the application.
+    C: Add interactive widgets to the main application area.
+    D: Define the application's layout.
+  correct_answer: B
+- id: 28
+  question: You are using LangChain's `load_document` function with a PDF document.
+    You notice that the text extraction is inaccurate. What can you do to improve
+    the results?
+  options:
+    A: Change the embedding model.
+    B: Try a different document loader (e.g., `PyPDFLoader`, `UnstructuredPDFLoader`).
+    C: Increase the chunk size.
+    D: Disable text splitting.
+  correct_answer: B
+- id: 29
+  question: What is the purpose of the `callback_manager` in LangChain?
+  options:
+    A: To manage the LLM's API key.
+    B: To track and log events during the execution of a chain or agent.
+    C: To handle user authentication.
+    D: To optimize the prompt for the LLM.
+  correct_answer: B
+- id: 30
+  question: You are building a chatbot and want to store the chat history in a way
+    that allows for efficient retrieval of past messages. Which memory type is MOST
+    suitable?
+  options:
+    A: ConversationBufferMemory
+    B: ConversationSummaryMemory
+    C: ConversationBufferWindowMemory
+    D: ConversationTokenBufferMemory
+  correct_answer: C
+- id: 31
+  question: You're using LangChain to build a question-answering system. You've noticed
+    that the LLM sometimes hallucinates information not present in the provided context.
+    What technique can help mitigate this?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Use a more restrictive prompt that emphasizes grounding in the provided context.
+    C: Use a smaller LLM model.
+    D: Disable streaming.
+  correct_answer: B
+- id: 32
+  question: What is the primary advantage of using LangChain's `VectorStoreIndexCreator`?
+  options:
+    A: It automatically optimizes the embedding model.
+    B: It simplifies the process of creating a vector store index from documents.
+    C: It provides a built-in user interface for managing the index.
+    D: It automatically handles document splitting and chunking.
+  correct_answer: B
+- id: 33
+  question: You are using LangChain's `map_reduce` chain for summarization and want
+    to customize the prompts used for both the mapping and combining steps. How do
+    you achieve this?
+  options:
+    A: Pass custom prompts to the `map_prompt` and `combine_prompt` parameters of
+      the chain.
+    B: Modify the default prompts directly in the LangChain library.
+    C: Use a different summarization chain.
+    D: Use a system prompt.
+  correct_answer: A
+- id: 34
+  question: In Streamlit, what is the purpose of `st.cache_data`?
+  options:
+    A: To cache the LLM's API key.
+    B: To cache the results of expensive function calls, improving performance.
+    C: To manage the application's layout.
+    D: To handle user authentication.
+  correct_answer: B
+- id: 35
+  question: You are using LangChain to build a chatbot and want to implement a mechanism
+    to save and load chat history. What is a common approach?
+  options:
+    A: Store the chat history in a text file.
+    B: Store the chat history in a database (e.g., SQLite, PostgreSQL).
+    C: Store the chat history in the LLM's context window.
+    D: Store the chat history in a cookie.
+  correct_answer: B
+- id: 36
+  question: What is the role of the `k` parameter in a similarity search with Pinecone?
+  options:
+    A: It specifies the dimensionality of the embedding vectors.
+    B: It specifies the number of nearest neighbors to retrieve.
+    C: It specifies the size of the vector index.
+    D: It specifies the distance metric to use.
+  correct_answer: B
+- id: 37
+  question: You are using LangChain's `refine` chain for summarization. What is a
+    potential drawback of this approach?
+  options:
+    A: It is not suitable for long documents.
+    B: It can be slower than other summarization methods.
+    C: It requires a large amount of memory.
+    D: It is not compatible with all LLMs.
+  correct_answer: B
+- id: 38
+  question: In Streamlit, what does `st.file_uploader` allow you to do?
+  options:
+    A: Display images.
+    B: Upload files from the user's computer.
+    C: Create a sidebar.
+    D: Display data in a table.
+  correct_answer: B
+- id: 39
+  question: You are using LangChain to build a RAG application and want to improve
+    the relevance of the retrieved documents. What is a potential strategy?
+  options:
+    A: Increase the chunk size.
+    B: Use a more sophisticated embedding model.
+    C: Reduce the number of retrieved documents.
+    D: Disable text splitting.
+  correct_answer: B
+- id: 40
+  question: What is the purpose of the `system_message` in a LangChain `ChatPromptTemplate`?
+  options:
+    A: To define the user's input.
+    B: To define the LLM's role and behavior.
+    C: To define the assistant's response.
+    D: To define the conversation history.
+  correct_answer: B
+- id: 41
+  question: You are using LangChain Agents and want to limit the number of steps the
+    agent can take to prevent infinite loops. How do you achieve this?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Set the `max_iterations` parameter.
+    C: Add more tools to the agent's toolkit.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 42
+  question: What is the primary benefit of using LangChain's `VectorStoreRetriever`?
+  options:
+    A: It automatically optimizes the embedding model.
+    B: It simplifies the process of retrieving relevant documents from a vector store.
+    C: It provides a built-in user interface for managing the vector store.
+    D: It automatically handles document splitting and chunking.
+  correct_answer: B
+- id: 43
+  question: You are using LangChain's `map_reduce` chain for summarization and want
+    to customize the prompt used for combining the summaries. What parameter should
+    you modify?
+  options:
+    A: map_prompt
+    B: combine_prompt
+    C: summarize_prompt
+    D: system_prompt
+  correct_answer: B
+- id: 44
+  question: In Streamlit, what does `st.session_state` allow you to do?
+  options:
+    A: Store the LLM's API key.
+    B: Persist data across user interactions and re-runs.
+    C: Manage the application's layout.
+    D: Handle user authentication.
+  correct_answer: B
+- id: 45
+  question: You are building a RAG application and want to evaluate its performance.
+    What metric is MOST relevant for assessing the quality of the generated answers?
+  options:
+    A: Latency of the similarity search.
+    B: Precision and recall of the retrieved documents.
+    C: Fidelity and relevance of the generated answer.
+    D: Cost of the API calls.
+  correct_answer: C
+- id: 46
+  question: What is the purpose of the `ConversationTokenBufferMemory` in LangChain?
+  options:
+    A: It stores the entire conversation history.
+    B: It summarizes the conversation history to maintain context within the LLM's
+      token limit.
+    C: It stores a fixed number of tokens from the conversation history.
+    D: It only stores the most recent messages.
+  correct_answer: C
+- id: 47
+  question: You are using LangChain to interact with a search engine API. Which LangChain
+    tool is MOST suitable for this purpose?
+  options:
+    A: DuckDuckGo Search Run
+    B: Wikipedia
+    C: SerpAPI
+    D: Google Search API
+  correct_answer: C
+- id: 48
+  question: What is the primary advantage of using LangChain's `load_document` function
+    with different loaders?
+  options:
+    A: It automatically optimizes the embedding model.
+    B: It allows you to load documents from various sources and formats.
+    C: It provides a built-in user interface for managing the documents.
+    D: It automatically handles document splitting and chunking.
+  correct_answer: B
+- id: 49
+  question: What is the role of the `callback_manager` in LangChain?
+  options:
+    A: To manage the LLM's API key.
+    B: To track and log events during the execution of a chain or agent.
+    C: To handle user authentication.
+    D: To optimize the prompt for the LLM.
+  correct_answer: B
+- id: 50
+  question: You are using LangChain to build a chatbot and want to implement a mechanism
+    to clear the chat history. How can you achieve this using Streamlit?
+  options:
+    A: Delete the chat history from the database.
+    B: Clear the `st.session_state` variable that stores the chat history.
+    C: Restart the Streamlit application.
+    D: Disable the chatbot.
+  correct_answer: B

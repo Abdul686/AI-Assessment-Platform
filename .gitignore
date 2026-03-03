@@ -4,3 +4,4 @@ __pycache__
 auth.json
 playwright_udemy_session/
 generator.py
+.env
