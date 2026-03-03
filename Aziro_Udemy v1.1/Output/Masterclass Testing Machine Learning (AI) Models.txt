@@ -1,0 +1,264 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Citizen Developer
+Software testers
+quality engineers
+Engineering Directors
+
+--- DESCRIPTION ---
+Description
+
+Welcome to "Testing AI: Foundation Models, LLMs, Chatbots & More," your comprehensive guide to understanding the fundamentals of testing advanced AI systems. Whether you're a developer, a data scientist, or simply an AI enthusiast, this course will equip you with the knowledge and skills necessary to assess and improve the reliability, performance, and safety of AI technologies.
+
+What You Will Learn:
+
+Introduction to AI Testing: Understand the importance of testing AI systems, including ethical considerations and the potential impacts of AI failures.
+
+Testing Basics: Learn about different types of testing methodologies like unit testing, integration testing, and system testing as applied to AI.
+
+Special Focus on Foundation Models and LLMs: Dive deep into the challenges and techniques for testing large language models and foundational AI systems that are reshaping numerous industries.
+
+Chatbot Testing: Explore the unique aspects of testing conversational AI, ensuring they respond accurately and appropriately in varied scenarios.
+
+AI System Evaluations: Learn how to design and implement effective testing regimes for different AI-based systems, using both manual and automated tools.
+
+K - Folding of Data: Understand how to split all your data into : Training, Evaluation and testing data. Get more out of your data by splitting and training it on the same data, but with different validation subsets each time, ensuring that your model learns from multiple perspectives. This technique helps improve generalization, reduces overfitting, and provides a more reliable estimate of model performance.
+
+Case Studies: Gain insights from real-world scenarios that highlight common pitfalls and best practices in AI testing.
+
+Ethical AI: understand the risk with AI and the ethics behind AI. How can and should you test for this
+
+Benchmarking: Understand how to test the AI against some common benchmarking models such as: BLUE, HellaSWAG, MMLU, HumanEval and other.
+
+Testing ChatGPT / Chatbots  with the help of an API and integration this into MLOPS chain.
+
+Adversarial AI: understand how to test for robustness in AI Models
+
+Who This Course Is For:
+
+This course is ideal for anyone looking to gain a solid grounding in the techniques and practices essential for testing AI systems. Whether you’re starting a career in AI, looking to enhance your professional skills, or interested in the mechanisms behind AI system reliability, this course has valuable insights for you.
+
+Course Features:
+
+Engaging video lectures
+
+Practical assignments and hands-on projects
+
+Quizzes and exams to test your knowledge
+
+Access to a community forum for discussion and collaboration
+
+Lifetime access to course materials
+
+Enroll now to start mastering the crucial skill of testing AI systems and ensure you’re prepared to contribute to the development of safe and reliable AI technologies!
+
+Who this course is for:
+Citizen Developer
+Software testers
+quality engineers
+Engineering Directors
+Show more
+
+--- CURRICULUM ---
+Course content
+19 sections • 145 lectures • 13h 22m total length
+Collapse all sections
+Introduction
+3 lectures • 15min
+Introduction to Material
+5 Minute Fast AI Testing Challenge
+History of AI from 1950 to 2024
+Setting up Environment
+8 lectures • 36min
+Install VS Code
+Installing Python
+Install Python Dependencies - PIP
+Installing Conda - Environment Isolator tool
+Install NodeJS and NPM
+Introduction to Hugging Face Community Page
+Hugging Face Transformers Python Package
+How to load and use any model from Huggingface
+Introduction to Artificial Intelligence -optional if you know the basics of AI
+9 lectures • 32min
+What makes up AI
+Natural Language Processing
+Types of Machine Learning
+Machine Learning - Supervised ML
+Machine Learning - Unsupervised ML
+Machine Learning - Reinforced ML
+Importance of Training Data
+What actually is GEN AI
+Transformer Architecture Model
+Chapter
+3 questions
+Overview of Machine Learning Model Testing
+6 lectures • 26min
+Types of Testing in Software
+Understand how ML models are tuned - General View
+Fine tunning techniques for AI and any LLM foundation model
+Overall Testing Approach to LLMs
+Testing Types for LLMs | Foundation Models
+Introduction to Benchmarking for LLMs
+Common Traditional Metrics for ML Models and how to calculate them
+10 lectures • 34min
+Understanding how to compute any score
+Ground Truth Table - source of Truth | Test Oracle
+Obtain the Prediction table from the LLM - Google Gemini
+Machine Learning Metrics - Accuracy
+Machine Learning Metrics - Precision
+Machine Learning Metrics - Recall
+Machine Learning Metrics - F1 Score
+Machine Learning Metrics - Perplexity
+Demo - Evaluate - Calculate Metrics with Python
+Demo - Pytorch - Calculate Perplexity for a Model
+Chapter
+4 questions
+RAG and Retrieval Augmented Generation Testing
+7 lectures • 54min
+What is RAG
+4 Types of RAG - Simple, Speculative, Graph, Corrective
+Create a RAG application with FAISS
+RAGAs Validation Framework - Retrieval
+RAGAs Validation Framework - Retrieval - Augmentation - Generation
+Rag framework - Coherence, Fluency and Relevance
+RAG Benchmarking - Nugget Coverage
+Evaluate Machine Learning Model based on DATA Split
+5 lectures • 40min
+Introduction to Splitting Data for AI/ML Models
+Demo - Python - Scikit - Split Data for Testing
+K-Fold Cross Validation
+Model Overfitting and underfitting testing approaches
+Laboratory - Python K Fold Training and Demo
+Performance Characteristics for AI Models
+5 lectures • 19min
+Criteria 1- Model Training Time
+Criteria 2 - Inference Time
+Criteria 3 - Model Drifting
+Criteria 4 - Infrastructure to run Model - Model Distillation
+Criteria 5 - Memory and Token Limits
+GLUE - Benchmark against NLP
+5 lectures • 29min
+What is GLUE NLP Benchmark
+What are the 11 benchmark Tasks of GLUE
+How to run a GLUE benchmark test
+Glue benchmarking on Bert Huggingface Model
+Demo - Python GLUE benchmark against GHATGPT
+Other benchmarks that are used today to benchmark AI
+11 lectures • 1hr 12min
+7 Benchmarking Models
+TruthfulQA - Truthfulness
+Python - Demo - Benchmarking Open AI CHAT GPT - TruthfulQA
+Python - Demo - Benchmarking Open AI CHAT GPT - MMLU
+Python - Demo - Benchmarking CHATGPT with BLEU Metrics
+Python - Demo - Benchmarking CHATGPT with TER Metrics
+What Is GPQA - Graduate Level Q&A
+Demo - Benchmarking - GPQA with Python
+Hellaswag - Can a model finish your sentence?
+Demo - Benchmark - HellaSwag
+Python - Demo - Benchmarking Open AI CHAT GPT - HumanEval
+Chapter
+3 questions
+LLM Functional Testing - Traditional Software Perspective
+16 lectures • 1hr 28min
+Basic Content Generation Testing for LLMs
+Temperature Testing of LLMs
+Functional Completeness for AI Models
+Testing Functional Correctness of AI Models
+Testing for Accuracy in case of ML Models
+Repeatability Testing for ML Models
+Multimodal Testing of AI Models | LLMs
+Invariance Testing for ML Models
+Python Demo - Invariance Testing Gemini and ChatGPT and hugging face models
+Bidirectional Testing for ML Models
+Efficiency and Simplicity Validations
+Learning Ability- Chat GPT and Google Vertex AI
+Statistical Correctness for ML Models
+LLM AI Testing - Long-Term Drift Testing
+[Demo ] - Vertex AI Learning Ability - Model Training - Manual
+[Demo ] - Vertex AI Learning Ability - Model Training - Json
+Chapter
+4 questions
+LLM AI Adversarial Testing - Security Testing
+8 lectures • 1hr 24min
+Adversarial attacks for LLMS and Red Team
+Adversarial AI Testing - Prompt Injection attacks
+Adversarial AI Testing - FUZZ Testing
+Adversarial AI Testing - Denial of Service Attacks DoS
+Adversarial Attack Examples
+Adversarial AI Testing - Poisoning attack
+Adversarial AI Testing - Privacy Leakage Testing
+Adversarial AI Testing - Evasion Attacks
+Chapter
+5 questions
+LLM AI Reasoning | Intelligence Testing
+7 lectures • 37min
+Creative Logical Abilities - A bit of fun
+Reasoning - Causal Reasoning
+Reasoning Ability | Deductive | Abductive | Inductive Logic
+Reasoning - Reverse Reasoning
+Reasoning - Counterfactual Reasoning
+Reasoning - Abstract Reasoning
+Reasoning - Generative Reasoning
+Chapter
+2 questions
+Implement reasoning benchmark Methods for AI/ML Models
+3 questions
+NLP - Style and Emotions
+4 lectures • 14min
+Text Capability - Named Entity Recognition (NER)
+Text Capability - Style Transfer
+Text Capability - Sarcasm and Humor Detection
+Text Capability - Discourse Coherence
+Chapter
+1 question
+Laboratory - Testing a LLM with Postman and API Calls
+10 lectures • 38min
+What is a token in LLMs
+Chat GPT-API - Create Subscription
+Get an OPENAI API Key
+Chat GPT-API - Completion API Call
+Chat GPT-API - DALL-E API Call
+Installing Postman and first API Test
+API Collections and making Results Deterministic
+Installing Newman and Running with the CLI
+Understand what is MLOPS
+Demo - GitHub - Adding Tests in ML OPS Pipeline
+Chatbot Testing
+9 lectures • 1hr 2min
+Understand Task Based vs AI Based Chatbots
+Understanding Chatbots based on LLM
+Functional Testing for chatbots
+Understanding Conversational Flow
+Conversational Flows Types
+Context and Memory Testing
+Blabber Testing | Context forcing
+Voice Agents Testing - Testing bots that can talk
+Fallback Testing for Chatbots
+Behave Like a Human | Testing LLMS | ML Models
+7 lectures • 53min
+What is non functional Testing for LLMs
+Disclaimer on Non Functional Testing
+Non functional Testing AI Models | LLMs - Ethical Alignment
+Non functional Testing AI Models | LLMs - Explainability
+Non functional Testing AI Models | LLMs - User Interaction Robustness
+Non functional Testing AI Models | LLMs - Context Preservation
+Non functional Testing AI Models | LLMs - Creativity and Novelty
+Bias in BIOS Benchmark Testing - Fairness and Bias Testing
+6 lectures • 28min
+About Bias in Bios evaluation benchmark
+Model Selection and Download
+Understand BiasinBios Data structure
+Data Download and Tokenization
+Run untrained BERT Model Benchmark
+Run Fine Tuned Bert Model Benchmark
+Testing of Ethical AI - LLM Non functional Testing
+9 lectures • 43min
+AI Ethics - EU Regulation of AI Systems
+AI Ethics - AI and Biases
+AI Ethics - GEN AI and Privacy
+AI Ethics - GEN AI and Intellectual Property
+AI Ethics - Hallucinations
+Gen AI and Misinformation or Disinformation
+Google Moderation Service
+OPENAI-CHAT GPT Moderation Service
+AI Ethics - GEN AI and Deep Fake

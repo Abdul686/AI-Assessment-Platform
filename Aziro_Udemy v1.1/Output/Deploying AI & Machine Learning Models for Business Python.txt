@@ -1,0 +1,115 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Anyone willing to venture into the realm of data science
+Anyone who would be interested in deploying a Data Science Solution, can be Regression, NLP or even Deep Learning Models
+
+--- DESCRIPTION ---
+Description
+
+Machine Learning, as we know it is the new buzz word in the industry today. This is practiced in every sector of business imaginable to provide data-driven solutions to complex business problems. This poses the challenge of deploying the solution, built by the Machine Learning technique so that it can be used across the intended Business Unit and not operated in silos.
+
+This is an extensive and well-thought course created & designed by UNP's elite team of Data Scientists from around the world to focus on the challenges that are being faced by Data Scientists and Computational Solution Architects across the industry  which is summarized the below  sentence :
+
+"I HAVE THE MACHINE LEARNING MODEL, IT IS WORKING AS EXPECTED !! NOW, WHAT ?????" 
+
+This course will help you create a solid foundation of the essential topics of data science along with a solid foundation of deploying those created solutions through Docker containers which eventually will expose your model as a service (API) which can be used by all who wish for it.
+
+At the end of this course, you will be able to:
+
+Learn about Docker, Docker Files, Docker Containers
+
+Learn Flask Basics & Application Program Interface (API)
+
+Build a Random Forest Model and deploy it.
+
+Build a Natural Language Processing based Test Clustering Model (K-Means) and visualize it.
+
+Build an API for Image Processing and Recognition with a Deep Learning Model under the hood (Convolutional Neural Network: CNN)
+
+ This course is a perfect blend of foundations of data science, industry standards, broader understanding of machine learning and practical applications and most importantly deploying them.
+
+Who this course is for:
+Anyone willing to venture into the realm of data science
+Anyone who would be interested in deploying a Data Science Solution, can be Regression, NLP or even Deep Learning Models
+Show more
+
+--- CURRICULUM ---
+Course content
+8 sections • 54 lectures • 4h 12m total length
+Collapse all sections
+Course Overview
+4 lectures • 4min
+Introduction
+I have a model. Now what?
+Skills Checklist
+Learning Goals
+Docker basics
+5 lectures • 8min
+Why docker?
+What are docker containers?
+Importance of docker containers in machine learning
+Where devops meets data science
+Summary
+Flask basics
+6 lectures • 20min
+Introduction
+Setting up a Flask Project
+Simple Flask API to add two numbers
+Taking user input with GET requests
+POST request with Flask
+Using Flask in the context of Machine Learning
+Exposing a Random Forest Machine Learning service as an API
+9 lectures • 38min
+Introduction
+API & Dataset Overview
+Training the Random Forest model
+Pickling the Random Forest model
+Exposing the Random Forest model as a Flask API
+Testing the API model
+Providing file input to Flask API
+Flasgger for autogenerating UI
+Summary
+Writing and building the Dockerfile
+8 lectures • 40min
+Introduction
+Base Image & FROM command
+COPY and EXPOSE commands
+WORKDIR, RUN and CMD commands
+Preparing the flask scripts for dockerizing
+Writing the Dockerfile
+Building the docker image
+Running the Random Forest model on Docker
+Building a production grade Docker application
+5 lectures • 34min
+Introduction
+Overall Architecture
+Configuring the WSGI file
+Writing a production grade Dockerfile
+Running and debugging a docker container in production
+Docker  1 – Basic Concepts, Commands
+10 questions
+Building NLP based Text Clustering application
+9 lectures • 1hr 3min
+Introduction
+Stemming & Lemmatization for cleaner text
+Converting unstructured to structured data
+KMeans Clustering
+Preparing the excel output
+Making the output Downloadable
+Finding top keywords for kmeans clusters
+Final output with charts
+Summary
+Dockerizing the text clustering app
+2 questions
+API for image recognition with deep learning
+8 lectures • 45min
+Introduction
+Visualizing the input images
+Preparing the input images
+Building the deep learning model
+Training and saving the trained deep learning model
+Generating test images
+Flask API wrapper for making predictions
+Summary
+Dockerizing the deep learning app
+2 questions

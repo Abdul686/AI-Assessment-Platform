@@ -2,6 +2,11 @@ import re
 import os
 from playwright.sync_api import sync_playwright
 
+# helper function to strip invalid characters from filenames (Windows)
+def sanitize_filename(name: str) -> str:
+    # remove any character that Windows forbids in filenames
+    return re.sub(r'[<>:"/\\|?*]', '', name)
+
 def clean_syllabus_text(raw_text):
     """Removes timestamps and empty lines to leave only clean topics."""
     # Remove timestamps like 05:41 or 1:23:45
@@ -94,14 +99,14 @@ def scrape_udemy_course(course_url, email, password):
 
 if __name__ == "__main__":
     # Test with the specific URL provided
-    target_url = "https://azirotechnologies.udemy.com/course/langchain/"
+    target_url = "https://azirotechnologies.udemy.com/course/the-ai-ethics-course-2025-work-with-ai-responsibly/learn/"
     # target_url = "https://azirotechnologies.udemy.com/course/claude-code-the-practical-guide/"
     # target_url = "https://azirotechnologies.udemy.com/course/claudecode/"
     # Credentials used only if the persistent session is invalid
     data = scrape_udemy_course(target_url, "your_email@aziro.com", "your_password")
     
     # Save Output
-    output_file = "LLMs Mastery_Complete Guide to Transformers and Gen AI.txt"
+    output_file = "The AI Ethics Course 2026.txt"
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"--- TARGET AUDIENCE ---\n{data['target_audience']}\n\n")
         f.write(f"--- DESCRIPTION ---\n{data['description']}\n\n")

@@ -1,0 +1,73 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Data Scientists looking to transition their models from experimentation to production.
+Machine Learning Engineers aiming to master end-to-end ML workflows.
+DevOps Professionals interested in integrating ML workflows into CI/CD pipelines.
+AI Enthusiasts eager to understand how to scale and monitor ML models effectively.
+Software Engineers who want to add MLOps skills to their toolkit.
+Technical Project Managers overseeing AI/ML projects and workflows.
+Students and Beginners curious about building real-world ML systems.
+IT Professionals aiming to specialize in AI infrastructure and deployment.
+Entrepreneurs planning to deploy AI products efficiently at scale.
+Anyone Passionate About AI & ML Operations looking to gain practical, hands-on experience in MLOps tools and practices.
+
+--- DESCRIPTION ---
+Description
+
+In today’s AI-driven world, the demand for efficient, reliable, and scalable Machine Learning (ML) systems has never been higher. MLOps (Machine Learning Operations) bridges the critical gap between ML model development and real-world deployment, ensuring seamless workflows, reproducibility, and robust monitoring. This comprehensive course, Mastering MLOps: From Model Development to Deployment, is designed to equip learners with hands-on expertise in building, automating, and scaling ML pipelines using industry-standard tools and best practices.
+
+Throughout this course, you will dive deep into the key principles of MLOps, learning how to manage the entire ML lifecycle — from data preprocessing, model training, and evaluation to deployment, monitoring, and scaling in production environments. You’ll explore the core differences between MLOps and traditional DevOps, gaining clarity on how ML workflows require specialized tools and techniques to handle model experimentation, versioning, and performance monitoring effectively.
+
+You’ll gain hands-on experience with essential tools such as Docker for containerization, Kubernetes for orchestrating ML workloads, and Git for version control. You’ll also learn to integrate cloud platforms like AWS, GCP, and Azure into your MLOps pipelines, enabling scalable deployments in production environments. These skills are indispensable for anyone aiming to bridge the gap between AI experimentation and real-world scalability.
+
+One of the key highlights of this course is the practical, hands-on projects included in every chapter. From building end-to-end ML pipelines in Python to setting up cloud infrastructure and deploying models locally using Kubernetes, you’ll gain actionable skills that can be directly applied in real-world AI and ML projects.
+
+In addition to mastering MLOps tools and workflows, you'll learn how to address common challenges in ML deployment, including scalability issues, model drift, and monitoring performance in dynamic environments. By the end of this course, you’ll be able to confidently transition ML models from Jupyter notebooks to robust production systems, ensuring they deliver consistent and reliable results.
+
+Whether you are a Data Scientist, Machine Learning Engineer, DevOps Professional, or an AI enthusiast, this course will provide you with the skills and knowledge necessary to excel in the evolving field of MLOps.
+
+Don’t just build Machine Learning models — learn how to deploy, monitor, and scale them with confidence. Join us in this transformative journey to Master MLOps: From Model Development to Deployment, and position yourself at the forefront of AI innovation.
+
+This course is your gateway to mastering the intersection of AI, ML, and operational excellence, empowering you to deliver impactful and scalable AI solutions in real-world production environments.
+
+Who this course is for:
+Data Scientists looking to transition their models from experimentation to production.
+Machine Learning Engineers aiming to master end-to-end ML workflows.
+DevOps Professionals interested in integrating ML workflows into CI/CD pipelines.
+AI Enthusiasts eager to understand how to scale and monitor ML models effectively.
+Software Engineers who want to add MLOps skills to their toolkit.
+Technical Project Managers overseeing AI/ML projects and workflows.
+Students and Beginners curious about building real-world ML systems.
+IT Professionals aiming to specialize in AI infrastructure and deployment.
+Entrepreneurs planning to deploy AI products efficiently at scale.
+Anyone Passionate About AI & ML Operations looking to gain practical, hands-on experience in MLOps tools and practices.
+Show more
+
+--- CURRICULUM ---
+Course content
+3 sections • 18 lectures • 1h 48m total length
+Collapse all sections
+Introduction to MLOps
+7 lectures • 27min
+Certificate of Completion
+Introduction to Section
+Overview of MLOps and its Importance
+Evolution of Machine Learning Operations
+Key Concepts in MLOps: Versioning, Automation, and Monitoring
+MLOps vs. DevOps: Similarities and Differences
+Hands-on: Set up a basic MLOps Project Structure (Git, Docker, Model Pipeline)
+Data Science to Production Pipeline
+5 lectures • 28min
+Introduction to Section
+Overview of the ML Workflow: Data Preparation to Deployment
+Experimentation vs. Production
+Challenges in Deploying ML Models
+Hands-on: Build an end-to-end pipeline for an ML model
+Infrastructure for MLOps
+6 lectures • 55min
+Introduction to Section
+Introduction to Cloud Platforms (AWS, GCP, Azure)
+Containerization with Docker
+Kubernetes for Orchestrating ML Workloads
+Setting up Local MLOps Environments
+Hands-on: Containerize a simple ML model and deploy it locally using Kubernetes
