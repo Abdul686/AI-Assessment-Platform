@@ -1,0 +1,165 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Engineers
+Quality Assurance Engineers
+Software Testers
+
+--- DESCRIPTION ---
+Description
+
+LLMs are everywhere! Every business is building its own custom AI-based RAG-LLMs to improve customer service. But how are engineers testing them? Unlike traditional software testing, AI-based systems need a special methodology for evaluation.
+
+This course starts from the ground up, explaining the architecture of how AI systems (LLMs) work behind the scenes. Then, it dives deep into LLM evaluation metrics.
+
+This course shows you how to effectively use the RAGAS framework library to evaluate LLM metrics through scripted examples. This allows you to use Pytest assertions to check metric benchmark scores and design a robust LLM Test/evaluation automation framework.
+
+
+
+
+What will you learn from the course?
+
+High level overview on Large Language Models (LLM)
+
+Understand how Custom LLM’s are built using Retrieval Augmented Generation (RAG) Architecture
+
+Common Benchmarks/Metrics used in Evaluating RAG based LLM’s
+
+Introduction to RAGAS Evaluation framework for evaluating/test LLM’s
+
+Practical Scripts generation to automate and assert the Metrics Score of LLM’s.
+
+Automate Scenarios such as Single turn interactions and Multi turn interactions with LLM’s using RAGAS Framework
+
+Generate Test Data for evaluating the Metrics of LLM using RAGAS Framework.
+
+
+
+
+By end of the course, you will be able to create RAGAS Pytest Evaluation Framework to assert the Metrics of RAG- (Custom) LLM’s
+
+
+
+
+Important Note:
+
+This course covers Top 7 Metrics which are commonly used to Evaluate and test the LLM’s. Same logic can be applied to rest of any other metric evaluations.
+
+
+
+
+Handson Experience:
+
+Course provides Practice RAG -LLM for you for Handson, but at scripting phase, you need a basic subscription of Open AI to access their API’s (Minimal 10$ credit will suffice)
+
+
+
+
+Course Prerequisites:
+
+Python, PyTest basics are required to understand the Framework.
+
+We have 2 dedicated sections at the end of this course which gives you necessary knowledge on Python & Pytest required to follow the course.
+
+Basic knowledge on API Testing.
+
+
+
+
+
+
+
+Who this course is for:
+Software Engineers
+Quality Assurance Engineers
+Software Testers
+Show more
+
+--- CURRICULUM ---
+Course content
+13 sections • 59 lectures • 8h 43m total length
+Collapse all sections
+Introduction to AI concepts - LLM's & RAG LLM's
+6 lectures • 44min
+What this course offers? FAQ"s -Must Watch
+Course outcome - Setting the stage of expectation
+Introduction to Artificial Intelligence and LLM's - How they work
+Overview of popular LLM"s and Challenges with these general LLM's
+What is Retrieval Augmented Generation (RAG)? Understand its Architecture
+End to end flow in RAG Architecture and its key advantages
+Understand RAG (Retrieval Augmented Generation) - LLM Architecture with Usecase
+3 lectures • 19min
+Misconceptions - Why RAG LLM's - cant we solve problem with traditional methods?
+Should I use LLM data if the information in RAG is missing? - Best Practices
+Optional - Overview how code looks in building RAG LLM's applications
+Getting started with Practice LLM's and the approach to evaluate /Test
+5 lectures • 30min
+Course resources download
+Demo of Practice RAG LLM's to evaluate and write test automation scripts
+Understanding implementation part of practice RAG LLM's to understand context
+Understand conversational LLM scenarios and how they are applied to RAG Arch
+Understand the Metric benchmarks for Document Retrieval system in LLM
+Setup Python & Pytest Environment with RAGAS LLM Evaluation Package Libraries
+4 lectures • 31min
+Install and set the path of Python in windows OS
+Install and set the path of Python in MAC OS
+Install RAGAS Framework packages and setup the LLM Test project
+Python & Pytest Basics - Where to find them in the tutorial?
+Programmatic solution to evaluate LLM Metrics with Langchain and RAGAS Libraries
+5 lectures • 1hr
+Making connection with OpenAI using Langchain Framework for RAGAS
+End to end -Evaluate LLM for ContextPrecision metric with SingleTurn Test data
+Metrics document download
+Communicate with LLM's using API Post call to dynamically get responses
+Evaluate LLM for Context Recall Metric with RAGAS Pytest Test example
+Optimize LLM Evaluation tests with Pytest Fixtures & Parameterization techniques
+3 lectures • 31min
+Build Pytest fixtures to isolate OpenAI and LLM Wrapper common utils from test
+Introduction to Pytest Parameterization fixtures to drive test data externally
+Reusable utils to isolate API calls of LLM and have test only on Metric logic
+Evaluate LLM Core Metrics and importance of EvalDataSet in RAGAS Framework
+5 lectures • 47min
+Understand LLM's Faithfulness and Response relevance metrics conceptually
+Build LLM Evaluation script to test Faithfulness benchmarks using RAGAS
+Reading Test data from external json file to LLM evaluation scripts
+Understand how Metrics are used at different places of RAG LLM Architecture
+Factual Correctness - Build a single Test to evaluate multiple LLM metrics
+Upload LLM Evaluation results & Test LLM for Multi Conversational Chat History
+5 lectures • 44min
+Understand EvaluationDataSet and how it help in evaluating Multiple metrics
+Important Note
+Upload the LLM Metrics evaluation results into RAGAS dashboard portal visually
+How to evaluate RAG LLM with multi conversational history chat
+Build LLM Evaluation Test which can evaluate multi conversation - example
+Create Test Data dynamically to evaluate LLM & Generate Rubrics Evaluation Score
+4 lectures • 56min
+How to Create Test Data using RAGAS Framework to evaluate LLM
+Load the external docs into Langchain utils to analyze and extract test data
+Install and configure NLTK package to scan the LLM documents & generating tests
+Generate Rubrics based Criteria Scoring to evaluate the quality of LLM responses
+Conclusion and next steps!
+1 lecture • 4min
+1 slide Recap of concepts learned from the course
+Optional - Learn Python Fundamentals with examples
+14 lectures • 2hr 4min
+Python hello world Program with Basics
+Datatypes in python and how to get the Type at run time
+List Datatype and its operations to manipulate
+Tuple and Dictionary Data types in Python with examples
+If else condition in python with working examples
+How to Create Dictionaries at run time and add data into it
+How loops work in Python and importance of code idendation
+Programming examples using for loop - 1
+Programming examples using While loop - 2
+What are functions? How to use them in Python
+OOPS Principles : Classes and objects in Python
+What is Constructor and its role in Object oriented programming
+Inheritance concepts with examples in Python
+Strings and its functions in python
+Optional - Overview of Pytest Framework basics with examples
+3 lectures • 32min
+What are pytest fixtures and how it help in enhancing tests
+Understand scopes in Pytest fixtures with examples
+Setup and teardown setup using Python fixtures with yield keyword
+Bonus Lecture
+1 lecture • 1min
+Bonus Lecture

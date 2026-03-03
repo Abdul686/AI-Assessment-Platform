@@ -3,7 +3,7 @@ import yaml
 import os
 import google.generativeai as genai 
 
-def generate_assessments(content_file_path="extracted_content.txt", output_yaml_path="assessments.yaml"):
+def generate_assessments(content_file_path="LLMs Mastery_Complete Guide to Transformers and Gen AI.txt", output_yaml_path="Assessments_LLMs Mastery_Complete Guide to Transformers and Gen AI.yaml"):
     # Read the extracted Udemy data
     with open(content_file_path, "r", encoding="utf-8") as f:
         course_context = f.read()
@@ -80,4 +80,4 @@ def generate_assessments(content_file_path="extracted_content.txt", output_yaml_
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    generate_assessments(content_file_path="Output/extracted_content.txt")
+    generate_assessments(content_file_path="LLMs Mastery_Complete Guide to Transformers and Gen AI.txt")
