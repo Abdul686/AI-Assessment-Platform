@@ -3,7 +3,12 @@ import yaml
 import os
 import google.generativeai as genai 
 
-def generate_assessments(content_file_path="LLMs Mastery_Complete Guide to Transformers and Gen AI.txt", output_yaml_path="Assessments_LLMs Mastery_Complete Guide to Transformers and Gen AI.yaml"):
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR = os.path.join(SCRIPT_DIR, "Output")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "Assessments_YAML")
+
+
+def generate_assessments(content_file_path, output_yaml_path):
     # Read the extracted Udemy data
     with open(content_file_path, "r", encoding="utf-8") as f:
         course_context = f.read()
@@ -79,5 +84,29 @@ def generate_assessments(content_file_path="LLMs Mastery_Complete Guide to Trans
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
+def generate_assessments_for_all_txt_files(input_dir=INPUT_DIR, output_dir=OUTPUT_DIR):
+    if not os.path.isdir(input_dir):
+        print(f"Input folder not found: {input_dir}")
+        return
+
+    os.makedirs(output_dir, exist_ok=True)
+    txt_files = sorted([f for f in os.listdir(input_dir) if f.lower().endswith(".txt")])
+
+    if not txt_files:
+        print(f"No .txt files found in: {input_dir}")
+        return
+
+    print(f"Found {len(txt_files)} text files in {input_dir}")
+
+    for idx, filename in enumerate(txt_files, start=1):
+        content_file_path = os.path.join(input_dir, filename)
+        course_name = os.path.splitext(filename)[0]
+        output_yaml_path = os.path.join(output_dir, f"{course_name}.yaml")
+
+        print(f"\n[{idx}/{len(txt_files)}] Processing: {filename}")
+        generate_assessments(content_file_path=content_file_path, output_yaml_path=output_yaml_path)
+
+
 if __name__ == "__main__":
-    generate_assessments(content_file_path="LLMs Mastery_Complete Guide to Transformers and Gen AI.txt")
+    generate_assessments_for_all_txt_files()
