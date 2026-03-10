@@ -1,0 +1,450 @@
+- id: q1_rag_architecture
+  question: In a RAG architecture, what is the primary purpose of the 'Retrieval'
+    component?
+  options:
+    A: To generate human-like text responses based on a prompt.
+    B: To identify and extract relevant documents from a knowledge base.
+    C: To fine-tune the LLM for specific downstream tasks.
+    D: To translate user queries into a format understandable by the LLM.
+  correct_answer: B
+- id: q2_context_precision
+  question: A RAG system returns a context containing irrelevant information alongside
+    the correct answer. How would this most significantly impact the Context Precision
+    metric?
+  options:
+    A: Increase Context Precision, as more information is provided.
+    B: Decrease Context Precision, as irrelevant information dilutes the score.
+    C: Have no impact, as Context Precision only measures answer correctness.
+    D: Increase Context Recall, as more context is retrieved.
+  correct_answer: B
+- id: q3_faithfulness
+  question: You observe low Faithfulness scores in your RAG evaluation. What is the
+    most likely underlying issue?
+  options:
+    A: The LLM is unable to generate coherent responses.
+    B: The LLM is hallucinating or generating information not supported by the retrieved
+      context.
+    C: The retrieval component is failing to find relevant documents.
+    D: The evaluation dataset is poorly constructed.
+  correct_answer: B
+- id: q4_pytest_fixtures
+  question: Why are Pytest fixtures particularly useful when evaluating LLMs with
+    RAGAS?
+  options:
+    A: They allow for dynamic test data generation.
+    B: They help manage and reuse common resources like OpenAI API connections and
+      LLM wrappers, reducing code duplication.
+    C: They automatically generate evaluation reports.
+    D: They simplify the process of uploading metrics to the RAGAS dashboard.
+  correct_answer: B
+- id: q5_parameterization
+  question: You want to test your RAG system with multiple different user queries.
+    How can Pytest parameterization help you achieve this efficiently?
+  options:
+    A: By automatically generating new test cases based on existing ones.
+    B: By allowing you to run the same test function with different input data without
+      code duplication.
+    C: By creating separate test files for each query.
+    D: By dynamically adjusting the LLM's parameters during testing.
+  correct_answer: B
+- id: q6_ragas_evaldataset
+  question: What is the primary role of the `EvalDataSet` in the RAGAS framework?
+  options:
+    A: To store the LLM's training data.
+    B: To provide a structured format for input questions, contexts, and ground truth
+      answers for evaluation.
+    C: To manage the connection to the OpenAI API.
+    D: To define the scoring rubrics for LLM responses.
+  correct_answer: B
+- id: q7_multi_turn_interactions
+  question: When evaluating RAG systems with multi-turn conversational history, what
+    is a key challenge not present in single-turn interactions?
+  options:
+    A: Ensuring the LLM generates grammatically correct responses.
+    B: Maintaining context and coherence across multiple turns of dialogue.
+    C: Retrieving relevant documents from the knowledge base.
+    D: Calculating the Context Precision metric.
+  correct_answer: B
+- id: q8_dynamic_test_data
+  question: You need to evaluate your RAG system with a large and diverse set of test
+    questions. What is the benefit of generating test data dynamically using RAGAS?
+  options:
+    A: It reduces the cost of OpenAI API calls.
+    B: It ensures the test data is representative of real-world user queries and avoids
+      bias.
+    C: It simplifies the process of creating evaluation reports.
+    D: It automatically optimizes the LLM's parameters.
+  correct_answer: B
+- id: q9_langchain_integration
+  question: How does Langchain typically facilitate the integration of LLMs and retrieval
+    components in a RAG pipeline?
+  options:
+    A: By providing a built-in LLM evaluation framework.
+    B: By offering a standardized interface for connecting to various LLMs and vector
+      databases.
+    C: By automatically generating test data for LLM evaluation.
+    D: By handling the deployment of LLMs to production environments.
+  correct_answer: B
+- id: q10_response_relevance
+  question: A high Response Relevance score indicates what about the LLM's output?
+  options:
+    A: The response is factually accurate.
+    B: The response directly addresses the user's query.
+    C: The response is free of hallucinations.
+    D: The response is concise and easy to understand.
+  correct_answer: B
+- id: q11_open_api_connection
+  question: What is the purpose of isolating the OpenAI API connection within a Pytest
+    fixture?
+  options:
+    A: To improve the performance of the tests.
+    B: To prevent tests from interfering with each other and to manage API usage efficiently.
+    C: To simplify the process of uploading metrics to the RAGAS dashboard.
+    D: To automatically generate test data.
+  correct_answer: B
+- id: q12_factual_correctness
+  question: When evaluating Factual Correctness, what is the primary source of truth
+    used to determine the accuracy of the LLM's response?
+  options:
+    A: The LLM's internal knowledge base.
+    B: The retrieved context documents.
+    C: A separate, verified knowledge source.
+    D: The user's initial query.
+  correct_answer: B
+- id: q13_rag_vs_traditional
+  question: Why might a RAG approach be preferred over traditional methods for knowledge-intensive
+    tasks?
+  options:
+    A: RAG systems are always more accurate than traditional methods.
+    B: RAG allows leveraging pre-trained LLMs without extensive fine-tuning on specific
+      knowledge domains.
+    C: RAG systems are easier to deploy and maintain.
+    D: RAG systems require less computational resources.
+  correct_answer: B
+- id: q14_context_recall
+  question: A low Context Recall score suggests what issue with the RAG system?
+  options:
+    A: The LLM is generating irrelevant responses.
+    B: The retrieval component is failing to retrieve all relevant documents.
+    C: The LLM is hallucinating information.
+    D: The evaluation dataset is biased.
+  correct_answer: B
+- id: q15_nltk_usage
+  question: In the context of generating test data with RAGAS, what is the primary
+    purpose of using NLTK?
+  options:
+    A: To connect to the OpenAI API.
+    B: To analyze and extract key information from documents to create targeted test
+      questions.
+    C: To evaluate the LLM's response relevance.
+    D: To upload metrics to the RAGAS dashboard.
+  correct_answer: B
+- id: q16_rubrics_scoring
+  question: What is the benefit of using rubrics-based criteria scoring when evaluating
+    LLM responses?
+  options:
+    A: It automates the entire evaluation process.
+    B: It provides a standardized and objective way to assess the quality of responses
+      based on predefined criteria.
+    C: It reduces the cost of OpenAI API calls.
+    D: It simplifies the process of generating test data.
+  correct_answer: B
+- id: q17_api_post_calls
+  question: Why might you use API POST calls to dynamically get responses from an
+    LLM during testing?
+  options:
+    A: To bypass the need for a Langchain integration.
+    B: To simulate real-world user interactions and test the LLM's responsiveness.
+    C: To reduce the cost of OpenAI API calls.
+    D: To automatically generate evaluation reports.
+  correct_answer: B
+- id: q18_llm_challenges
+  question: What is a significant challenge associated with using general LLMs without
+    RAG?
+  options:
+    A: They are too expensive to use.
+    B: They may lack specific knowledge about a particular domain or organization.
+    C: They are difficult to integrate with existing systems.
+    D: They are not capable of generating coherent responses.
+  correct_answer: B
+- id: q19_ragas_dashboard
+  question: What is the primary benefit of uploading LLM evaluation results to the
+    RAGAS dashboard?
+  options:
+    A: It automatically fixes any issues identified during evaluation.
+    B: It provides a visual and interactive way to track and analyze LLM performance
+      over time.
+    C: It simplifies the process of generating test data.
+    D: It reduces the cost of OpenAI API calls.
+  correct_answer: B
+- id: q20_python_basics
+  question: Which Python data structure is best suited for storing a collection of
+    unique items without a specific order?
+  options:
+    A: List
+    B: Tuple
+    C: Set
+    D: Dictionary
+  correct_answer: C
+- id: q21_llm_architecture
+  question: In the RAG architecture, what is the role of the LLM?
+  options:
+    A: To store and retrieve documents.
+    B: To generate a response based on the retrieved context and the user's query.
+    C: To preprocess the user's query.
+    D: To evaluate the relevance of the retrieved documents.
+  correct_answer: B
+- id: q22_pytest_scopes
+  question: What is the purpose of different scopes in Pytest fixtures (e.g., 'session',
+    'module', 'function')?
+  options:
+    A: To control the order in which tests are executed.
+    B: To determine the lifetime and visibility of the fixture's resources.
+    C: To automatically generate test data.
+    D: To simplify the process of uploading metrics to the RAGAS dashboard.
+  correct_answer: B
+- id: q23_llm_metrics_importance
+  question: Why is it important to evaluate multiple LLM metrics (e.g., Faithfulness,
+    Relevance, Context Precision) rather than relying on a single metric?
+  options:
+    A: A single metric cannot capture the full complexity of LLM performance.
+    B: Evaluating multiple metrics is required by the RAGAS framework.
+    C: It reduces the cost of OpenAI API calls.
+    D: It simplifies the process of generating test data.
+  correct_answer: A
+- id: q24_data_types_python
+  question: In Python, what is the difference between a list and a tuple?
+  options:
+    A: Lists are immutable, while tuples are mutable.
+    B: Lists are mutable, while tuples are immutable.
+    C: Lists can only store numbers, while tuples can store any data type.
+    D: Lists are ordered, while tuples are unordered.
+  correct_answer: B
+- id: q25_loops_python
+  question: What is the primary difference between a 'for' loop and a 'while' loop
+    in Python?
+  options:
+    A: A 'for' loop is used for iterating over a sequence, while a 'while' loop continues
+      as long as a condition is true.
+    B: A 'for' loop is used for conditional execution, while a 'while' loop is used
+      for iteration.
+    C: A 'for' loop can only iterate over numbers, while a 'while' loop can iterate
+      over any data type.
+    D: A 'for' loop is more efficient than a 'while' loop.
+  correct_answer: A
+- id: q26_functions_python
+  question: What is the main benefit of using functions in Python?
+  options:
+    A: To reduce the amount of code you need to write.
+    B: To improve code readability and reusability.
+    C: To automatically generate test data.
+    D: To simplify the process of debugging.
+  correct_answer: B
+- id: q27_classes_objects_python
+  question: What is the fundamental concept behind Object-Oriented Programming (OOP)
+    in Python?
+  options:
+    A: Writing code in a procedural manner.
+    B: Organizing code around data and the operations that can be performed on that
+      data.
+    C: Using only built-in functions.
+    D: Avoiding the use of loops and conditional statements.
+  correct_answer: B
+- id: q28_inheritance_python
+  question: What is the purpose of inheritance in Python?
+  options:
+    A: To create multiple instances of the same class.
+    B: To allow a class to inherit properties and methods from another class.
+    C: To define the constructor of a class.
+    D: To create a new data type.
+  correct_answer: B
+- id: q29_strings_python
+  question: Which of the following is a common string operation in Python?
+  options:
+    A: Addition
+    B: Subtraction
+    C: Concatenation
+    D: Multiplication
+  correct_answer: C
+- id: q30_ragas_test_data
+  question: When creating test data for RAG evaluation, what is a crucial consideration
+    to ensure the tests are meaningful?
+  options:
+    A: The test data should be as large as possible.
+    B: The test data should cover a diverse range of user queries and scenarios.
+    C: The test data should only include questions with known answers.
+    D: The test data should be generated randomly.
+  correct_answer: B
+- id: q31_context_precision_impact
+  question: How does the length of the retrieved context impact the Context Precision
+    metric?
+  options:
+    A: Longer contexts always improve Context Precision.
+    B: Shorter contexts always improve Context Precision.
+    C: Excessively long contexts with irrelevant information can decrease Context
+      Precision.
+    D: Context length has no impact on Context Precision.
+  correct_answer: C
+- id: q32_llm_hallucinations
+  question: What is a 'hallucination' in the context of LLMs?
+  options:
+    A: The LLM generating responses that are too long.
+    B: The LLM generating responses that are grammatically incorrect.
+    C: The LLM generating responses that are not supported by the retrieved context.
+    D: The LLM failing to respond to a user query.
+  correct_answer: C
+- id: q33_pytest_yield
+  question: What is the purpose of the `yield` keyword in Pytest fixtures?
+  options:
+    A: To define the scope of the fixture.
+    B: To allow the fixture to be used as a generator, providing resources on demand
+      and cleaning up afterwards.
+    C: To automatically generate test data.
+    D: To skip the fixture if it fails to initialize.
+  correct_answer: B
+- id: q34_ragas_metrics_architecture
+  question: How do RAGAS metrics relate to the different components of the RAG architecture?
+  options:
+    A: Metrics only evaluate the LLM component.
+    B: Metrics evaluate the performance of the entire RAG pipeline, including retrieval,
+      LLM generation, and relevance.
+    C: Metrics only evaluate the retrieval component.
+    D: Metrics are independent of the RAG architecture.
+  correct_answer: B
+- id: q35_python_dictionaries
+  question: What is the key characteristic of a Python dictionary?
+  options:
+    A: It stores elements in a specific order.
+    B: It stores elements as key-value pairs.
+    C: It only stores numbers.
+    D: It is immutable.
+  correct_answer: B
+- id: q36_rag_missing_info
+  question: If information is missing in the RAG knowledge base, should you rely on
+    the LLM's internal data?
+  options:
+    A: Yes, the LLM's data is always more accurate.
+    B: No, relying on the LLM's data can introduce inaccuracies and inconsistencies.
+    C: It depends on the specific LLM being used.
+    D: Only if the missing information is not critical.
+  correct_answer: B
+- id: q37_ragas_evaldataset_structure
+  question: What information is typically included in an `EvalDataSet` for RAGAS?
+  options:
+    A: Only the user's query.
+    B: The user's query, the retrieved context, and the ground truth answer.
+    C: Only the retrieved context.
+    D: The LLM's response.
+  correct_answer: B
+- id: q38_python_list_operations
+  question: Which of the following is a valid operation on a Python list?
+  options:
+    A: Adding an element.
+    B: Removing an element.
+    C: Sorting the list.
+    D: All of the above.
+  correct_answer: D
+- id: q39_rag_benefits
+  question: What is a key advantage of using RAG over fine-tuning an LLM for a specific
+    task?
+  options:
+    A: RAG is always more accurate than fine-tuning.
+    B: RAG allows you to leverage the LLM's existing knowledge without retraining
+      it on new data.
+    C: RAG is easier to implement than fine-tuning.
+    D: RAG requires less computational resources than fine-tuning.
+  correct_answer: B
+- id: q40_llm_response_relevance_scoring
+  question: How is Response Relevance typically scored in RAGAS?
+  options:
+    A: Based on the length of the response.
+    B: Based on the similarity between the response and the user's query.
+    C: Based on the factual correctness of the response.
+    D: Based on the number of citations in the response.
+  correct_answer: B
+- id: q41_ragas_dynamic_data_generation
+  question: What is the primary advantage of using RAGAS to dynamically generate test
+    data?
+  options:
+    A: It reduces the cost of OpenAI API calls.
+    B: It ensures the test data is diverse and representative of real-world user queries.
+    C: It simplifies the process of creating evaluation reports.
+    D: It automatically optimizes the LLM's parameters.
+  correct_answer: B
+- id: q42_python_if_else
+  question: What is the purpose of the `if-else` statement in Python?
+  options:
+    A: To repeat a block of code multiple times.
+    B: To execute a block of code only if a certain condition is true.
+    C: To define a function.
+    D: To create a loop.
+  correct_answer: B
+- id: q43_rag_context_length
+  question: What is a potential drawback of using very long contexts in a RAG system?
+  options:
+    A: It can increase the speed of retrieval.
+    B: It can decrease the relevance of the retrieved information.
+    C: It can reduce the cost of OpenAI API calls.
+    D: It can simplify the evaluation process.
+  correct_answer: B
+- id: q44_ragas_metrics_correlation
+  question: How are different RAGAS metrics often correlated?
+  options:
+    A: They are completely independent of each other.
+    B: Low Faithfulness often leads to low Response Relevance.
+    C: High Context Precision always leads to high Context Recall.
+    D: There is no predictable correlation between the metrics.
+  correct_answer: B
+- id: q45_python_tuples
+  question: What is the key difference between a list and a tuple in Python regarding
+    mutability?
+  options:
+    A: Lists are immutable, while tuples are mutable.
+    B: Lists are mutable, while tuples are immutable.
+    C: Both lists and tuples are mutable.
+    D: Both lists and tuples are immutable.
+  correct_answer: B
+- id: q46_rag_architecture_benefits
+  question: What is a primary benefit of the RAG architecture compared to directly
+    prompting an LLM?
+  options:
+    A: RAG systems are always faster.
+    B: RAG systems can access and incorporate external knowledge sources.
+    C: RAG systems require less computational power.
+    D: RAG systems are easier to debug.
+  correct_answer: B
+- id: q47_ragas_dashboard_usage
+  question: What is the main purpose of visualizing LLM evaluation results in the
+    RAGAS dashboard?
+  options:
+    A: To automatically fix any issues identified during evaluation.
+    B: To track performance trends and identify areas for improvement.
+    C: To generate test data.
+    D: To reduce the cost of OpenAI API calls.
+  correct_answer: B
+- id: q48_python_functions_return
+  question: What is the purpose of the `return` statement in a Python function?
+  options:
+    A: To define the function's parameters.
+    B: To execute the function's code.
+    C: To specify the value that the function should return.
+    D: To call another function.
+  correct_answer: C
+- id: q49_rag_context_retrieval
+  question: What is a common technique used to improve the efficiency of context retrieval
+    in a RAG system?
+  options:
+    A: Retrieving all documents in the knowledge base.
+    B: Using vector embeddings and similarity search.
+    C: Randomly selecting documents from the knowledge base.
+    D: Ignoring the user's query.
+  correct_answer: B
+- id: q50_ragas_test_data_quality
+  question: What is the most important factor to consider when creating test data
+    for RAG evaluation?
+  options:
+    A: The size of the test dataset.
+    B: The diversity and representativeness of the test cases.
+    C: The complexity of the test cases.
+    D: The length of the test cases.
+  correct_answer: B
