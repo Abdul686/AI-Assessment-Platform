@@ -1,0 +1,232 @@
+COURSE: Basic to Advanced: Retreival-Augmented Generation (RAG)
+URL: https://azirotechnologies.udemy.com/course/basic-to-advanced-retreival-augmented-generation-rag-course/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software developers looking to specialize in AI applications
+AI engineers wanting to master RAG implementation
+Backend developers interested in building intelligent chatbots
+Technical professionals seeking hands-on LLM experience
+Software Engineers Data Scientists, AI Engineers, Machine Learning Engineers
+
+--- DESCRIPTION ---
+Description
+
+Transform your development skills with our comprehensive course on Retrieval-Augmented Generation (RAG) and LangChain. Whether you're a developer looking to break into AI or an experienced programmer wanting to master RAG, this course provides the perfect blend of theory and hands-on practice to help you build production-ready AI applications.
+
+What You'll Learn
+
+Build three professional-grade chatbots: Website, SQL, and Multimedia PDF
+
+Master RAG architecture and implementation from fundamentals to advanced techniques
+
+Run and optimize both open-source and commercial LLMs
+
+Implement vector databases and embeddings for efficient information retrieval
+
+Create sophisticated AI applications using LangChain framework
+
+Deploy advanced techniques like prompt caching and query expansion
+
+Course Content
+
+Section 1: RAG Fundamentals
+
+Understanding Retrieval-Augmented Generation architecture
+
+Core components and workflow of RAG systems
+
+Best practices for RAG implementation
+
+Real-world applications and use cases
+
+Section 2: Large Language Models (LLMs) - Hands-on Practice
+
+Setting up and running open-source LLMs with Ollama
+
+Model selection and optimization techniques
+
+Performance tuning and resource management
+
+Practical exercises with local LLM deployment
+
+Section 3: Vector Databases & Embeddings
+
+Deep dive into embedding models and their applications
+
+Hands-on implementation of FAISS, ANNOY, and HNSW methods
+
+Speed vs. accuracy optimization strategies
+
+Integration with Pinecone managed database
+
+Practical vector visualization and analysis
+
+Section 4: LangChain Framework
+
+Text chunking strategies and optimization
+
+LangChain architecture and components
+
+Advanced chain composition techniques
+
+Integration with vector stores and LLMs
+
+Hands-on exercises with real-world data
+
+Section 5: Advanced RAG Techniques
+
+Query expansion and optimization
+
+Result re-ranking strategies
+
+Prompt caching implementation
+
+Performance optimization techniques
+
+Advanced indexing methods
+
+Section 6: Building Production-Ready Chatbots
+
+Website Chatbot
+
+Architecture and implementation
+
+Content indexing and retrieval
+
+Response generation and optimization
+
+SQL Chatbot
+
+Natural language to SQL conversion
+
+Query optimization and safety
+
+Database integration best practices
+
+Multimedia PDF Chatbot
+
+Multi-modal content processing
+
+PDF parsing and indexing
+
+Rich media response generation
+
+Who This Course is For
+
+Software developers looking to specialize in AI applications
+
+AI engineers wanting to master RAG implementation
+
+Backend developers interested in building intelligent chatbots
+
+Technical professionals seeking hands-on LLM experience
+
+Prerequisites
+
+Basic Python programming knowledge
+
+Familiarity with REST APIs
+
+Understanding of basic database concepts
+
+Basic understanding of machine learning concepts (helpful but not required)
+
+Why Take This Course
+
+Industry-relevant skills currently in high demand
+
+Hands-on experience with real-world examples
+
+Practical implementation using Tesla Motors database
+
+Complete coverage from fundamentals to advanced concepts
+
+Production-ready code and best practices
+
+Workshop-tested content with proven results
+
+What You'll Build
+
+By the end of this course, you'll have built three professional-grade chatbots and gained practical experience with:
+
+RAG system implementation
+
+Vector database integration
+
+LLM optimization
+
+Advanced retrieval techniques
+
+Production-ready AI applications
+
+Join us on this exciting journey to master RAG and LangChain, and position yourself at the forefront of AI development.
+
+Who this course is for:
+Software developers looking to specialize in AI applications
+AI engineers wanting to master RAG implementation
+Backend developers interested in building intelligent chatbots
+Technical professionals seeking hands-on LLM experience
+Software Engineers Data Scientists, AI Engineers, Machine Learning Engineers
+Show more
+
+--- CURRICULUM ---
+Course content
+9 sections • 38 lectures • 2h 38m total length
+Collapse all sections
+Introduction
+2 lectures • 7min
+Introduction
+Outline
+RAG Fundamentals
+5 lectures • 14min
+Section Intro
+Intro to RAG & Core Concepts
+Principles, Traditional Methods vs RAG
+Real-world applications and use cases
+Understanding Retrieval-Augmented Generation architecture
+Introduction to Large Language Models (LLMs)
+6 lectures • 31min
+Section Intro
+Basics of LLMs and Closed Source Models
+Closed Source & Open Source LLMs (Continued)
+Closed vs Open Source Models & Software
+What does Retrieval-Augmented Generation (RAG) do to LLMs?
+Let's run an Open Source LLM locally!
+VS Code & Github Repo Setup
+3 lectures • 4min
+Downloading Python, VS Code, Git and more
+Cloning and accessing all Projects
+PDF for entire course
+Vector Databases & Embeddings
+7 lectures • 37min
+Section Intro
+What are Vectors and Why we use them?
+What are Embeddings?
+Setting up over VS Code Project
+Audio, Graph, Text and Image Vectors & Embeddings
+Vector DB Indexing and Pinecone Setup
+Image, Text and Paragraph Indexing and Matching
+LangChain Framework & Building a Simple RAG Pipeline
+5 lectures • 22min
+Section Intro
+Components of Basic RAG Pipeline, LangChain and Loaders
+Create a Website Chatbot
+Add a Memory to your Website Chatbot
+Building a CSV / Excel Data Chatbot
+LangChain / RAG Advanced
+3 lectures • 8min
+Section Intro
+Advanced Text Splitting, Re-ranking, Chunking Techniques
+Building Query Expansion Workflow
+Advanced Projects with LangChain
+5 lectures • 28min
+Section Intro
+SQL / Database Chatbot using LangChain
+Prompt Caching (In Memory and DB)
+Multi-modal Chatbot
+DeepSeek-R1 RAG Chatbot
+Completion!
+2 lectures • 8min
+2025 AI Roadmap
+Congratulations!

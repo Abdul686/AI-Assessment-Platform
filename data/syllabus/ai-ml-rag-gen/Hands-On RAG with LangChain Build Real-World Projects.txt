@@ -1,0 +1,167 @@
+COURSE: Hands-On RAG with LangChain: Build Real-World Projects
+URL: https://azirotechnologies.udemy.com/course/hands-on-rag-with-langchain-build-real-world-projects/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Students who have completed my LangChain course and now want to dive deeper into advanced RAG use cases.
+Python developers who want to integrate LLMs and vector search into real-world apps.
+Data engineers & ML practitioners curious about Retrieval-Augmented Generation.
+Backend developers exploring LangChain, RAG pipelines, and vector databases.
+Anyone with basics of RAG and wants hands-on projects and not just theory.
+
+--- DESCRIPTION ---
+Description
+
+Retrieval-Augmented Generation (RAG) is one of the most powerful ways to make Large Language Models (LLMs) smarter, more reliable, and production-ready. Instead of depending only on what the model “knows,” RAG allows us to fetch relevant knowledge from external sources and provide precise, up-to-date answers.
+
+In this hands-on course, you’ll go beyond the basics and actually build RAG pipelines step by step using LangChain, the leading framework for LLM applications. Whether you are a developer, data scientist, or AI enthusiast, this course will give you the practical skills to design, implement, and optimize real-world RAG projects.
+
+
+
+
+What You’ll Learn
+
+Real-World Project: Build two end-to-end RAG Projects on Company Data and E-Commerce Semantic Search.
+
+Caching Strategies: Use embedding and response caching to reduce cost, latency, and improve efficiency.
+
+Indexing: Explore Flat, IVF Flat, HNSW, and disk-based indexes; learn which one to use for your dataset.
+
+Reranking: Improve answer precision using similarity scores, cross-encoders, and LLM-based reranking.
+
+Evaluations (Evals & Ragas): Measure faithfulness, relevance, and retrieval quality with Ragas metrics.
+
+Metadata: Use metadata filters to make retrieval precise, context-aware, and production-ready.
+
+
+
+
+Why Take This Course?
+
+It’s hands-on — you won’t just learn theory; you’ll build working RAG pipelines.
+
+You’ll learn best practices for scaling from demo to production.
+
+Content is designed for real-world applications in enterprise, startups, and research.
+
+You’ll walk away with code, skills, and confidence to build your own RAG-powered apps.
+
+Who This Course Is For
+
+Developers and data scientists interested in LangChain and LLM applications.
+
+AI/ML engineers who want to deploy production-ready RAG systems.
+
+Professionals curious about vector databases, embeddings, and retrieval systems.
+
+Anyone who wants to go beyond ChatGPT and build AI that leverages their own data.
+
+By the end of this course, you’ll have the knowledge and hands-on experience to design and implement efficient RAG pipelines with LangChain — and the skills to apply them to your own projects or business use cases.
+
+Who this course is for:
+Students who have completed my LangChain course and now want to dive deeper into advanced RAG use cases.
+Python developers who want to integrate LLMs and vector search into real-world apps.
+Data engineers & ML practitioners curious about Retrieval-Augmented Generation.
+Backend developers exploring LangChain, RAG pipelines, and vector databases.
+Anyone with basics of RAG and wants hands-on projects and not just theory.
+Show more
+
+--- CURRICULUM ---
+Course content
+9 sections • 53 lectures • 2h 43m total length
+Collapse all sections
+Introduction
+6 lectures • 9min
+Introduction
+Private Course Feedback Link
+Software Setup
+Download Slides
+Download Projects
+Why PostgreSQL for Vector Search?
+Real-World RAG Implementation
+16 lectures • 59min
+Usecase and Project Walkthrough
+Install Requirements Locally
+Connect to vector db
+Use PGAdmin
+Load Docs
+Chunk
+Ingest
+Implement Ingest API
+Test Ingest
+E-Commerce Semantic Search Assignment Walkthrough
+Implement RAG Pipeline - Build Chain
+Implement RAG Pipeline - Answer
+Implement RAG API
+Test RAG
+LangSmith Intro
+Langsmith Dashboard
+Connect To Vector Store
+1 question
+Vectorization
+1 question
+RAG
+1 question
+Indexes
+3 lectures • 11min
+Introduction
+Code Walkthrough
+Create Index
+Indexing
+3 questions
+Indexes
+1 question
+Caching
+3 lectures • 11min
+Introduction
+Semantic Cache In Action
+Test Cache
+Caching
+3 questions
+Caching
+1 question
+Evals
+5 lectures • 16min
+Introduction
+Code Walkthrough
+Return Chunks
+Implement Evals
+Trace with langsmith
+Evaluations (Evals & Ragas)
+3 questions
+Evals
+1 question
+Re-Ranking
+2 lectures • 6min
+Introduction
+Re-Ranking Implementation
+Re-Ranking
+3 questions
+Re-Ranking
+1 question
+Using Metadata
+6 lectures • 15min
+Introduction
+Update Schema
+Ingest Metadata
+Use Metadata Filtering
+Add API Support
+Test
+Metadata
+3 questions
+Agentic RAG
+11 lectures • 27min
+Introduction
+Update Data
+API Update
+Project Setup
+Install Requirements
+Implement Tools
+Install Postman
+Test Using Postman
+MCP Client Code Walkthrough
+Create Agent
+Test
+Wrap Up
+1 lecture • 1min
+Bonus Lecture

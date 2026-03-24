@@ -1,0 +1,135 @@
+COURSE: Advanced LangChain Techniques: Mastering RAG Applications
+URL: https://azirotechnologies.udemy.com/course/advanced-langchain-techniques-mastering-rag-applications/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Engineers and Data Scientists with Experience in Langchain who want to bring RAG applications to the next level
+
+--- DESCRIPTION ---
+Description
+
+What to Expect from This Course
+
+Welcome to our course on Advanced Retrieval-Augmented Generation (RAG) with the LangChain Framework!
+
+In this course, we dive into advanced techniques for Retrieval-Augmented Generation, leveraging the powerful LangChain framework to enhance your AI-powered language tasks. LangChain is an open-source tool that connects large language models (LLMs) with other components, making it an essential resource for developers and data scientists working with AI.
+
+Course Highlights
+
+Focus on RAG Techniques: This course provides a deep understanding of Retrieval-Augmented Generation, guiding you through the intricacies of the LangChain framework. We cover a range of topics from basic concepts to advanced implementations, ensuring you gain comprehensive knowledge.
+
+Comprehensive Content: The course is designed for developers, software engineers, and data scientists with some experience in the world of LLMs and LangChain. Throughout the course, you'll explore:
+
+LCEL Deepdive and Runnables
+
+Chat with History
+
+Indexing API
+
+RAG Evaluation Tools
+
+Advanced Chunking Techniques
+
+Other Embedding Models
+
+Query Formulation and Retrieval
+
+Cross-Encoder Reranking
+
+Routing
+
+Agents
+
+Tool Calling
+
+NeMo Guardrails
+
+Langfuse Integration
+
+Additional Resources
+
+Helper Scripts: Scripts for data ingestion, inspection, and cleanup to streamline your workflow.
+
+Full-Stack App and Docker: A comprehensive chatbot application with a React frontend and FastAPI backend, complete with Docker support for easy setup and deployment.
+
+Additional resources are available to support your learning.
+
+Happy Learning! :-)
+
+Who this course is for:
+Software Engineers and Data Scientists with Experience in Langchain who want to bring RAG applications to the next level
+Show more
+
+--- CURRICULUM ---
+Course content
+15 sections • 39 lectures • 3h 40m total length
+Collapse all sections
+Before we start...
+9 lectures • 24min
+How to get started
+Why should you take THIS course?
+Requirements for this course
+IMPORTANT! - Quick note about the installation of the packages
+Clone the repository and set up the virtual environment
+Repository Walkthrough
+Full Stack App Walkthrough
+Why NOT to take this course
+2026 Course Revision – Core Content (LangChain 1.0.x)
+LangChain Expression Language (LCEL): A Deep Dive
+5 lectures • 35min
+LCEL - The Runnable Interface
+Building Our Own Small Version of LCEL
+The most important Runnables of LangChain
+LCEL - Real World Examples
+LCEL - Pipelines with Chat History
+Indexing API
+1 lecture • 12min
+Indexing API - keep your raw data in sync with your vectorstore
+RAGAS - Framework for Evaluating RAG Performance
+3 lectures • 19min
+Creating an AI Augmented Testset (RAGAS 0.1.x)
+Evaluating RAG Performance with an LLM (RAGAS 0.1.x)
+Migration from v0.1 to v0.2 (most important changes)
+Chunking Techniques
+1 lecture • 9min
+From CharacterTextSplitter to custom LLM based Splitter
+Embedding models
+1 lecture • 6min
+Open Source vs Proprietary models (incl. Gen-3 models of OpenAI)
+Improving queries for better retrieval
+2 lectures • 8min
+MultiQuery Retrieval
+HyDE
+Parent Document Retriever - Two-Stage-Retrieval
+2 lectures • 17min
+Parent Document Retrieve with InMemory DocStore
+Custom Postgres DocStore built with BaseStore Interface
+Agentic RAG
+1 lecture • 4min
+RAG with Agents (LLM + Tools)
+Retrieval - Postprocessing Documents
+2 lectures • 14min
+Reranking with a Cross Encoder Model
+LLM based Document Compression / Filtering
+Routing
+4 lectures • 24min
+Routing with Embeddings vs. LLM based Routing
+SQL Chain - Write SQL queries with an LLM
+Prevent SQL Injection
+Routing between Table & Vectorstore
+NeMo Guardrails
+4 lectures • 23min
+Introduction to Guardrails & Colang
+Guardrails & LangChain - Register Actions
+Integrate Guardrails into LangChain with RunnableRails
+Chat History with LangChain & Guardrails
+LangFuse
+1 lecture • 8min
+Trace chains with LangFuse
+Tool Calling
+2 lectures • 15min
+Introduction to Tool Calling
+Use Tool Calling to get data from an API
+Congratulations!
+1 lecture • 1min
+You did it! - what´s next?

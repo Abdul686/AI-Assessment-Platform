@@ -1,6 +1,9 @@
 .venv/
+.tmp/
+tmp/
 __pycache__
 *.pyc
 auth.json
 playwright_udemy_session/
 generator.py
+.env

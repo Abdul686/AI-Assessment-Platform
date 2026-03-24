@@ -1,0 +1,279 @@
+COURSE: LLMs Mastery: Complete Guide to Transformers & Generative AI
+URL: https://azirotechnologies.udemy.com/course/llms-mastery-complete-guide-to-transformers-generative-ai/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Those who wish to understand the new world of LLMs, how chatGPT, GPT4 and Llama work, and how to build their own powerful language models.
+
+--- DESCRIPTION ---
+Description
+
+Welcome to "LLMs Mastery: Complete Guide to Generative AI & Transformers"!
+
+This practical course is designed to equip you with the knowledge and skills to build efficient, production-ready Large Language Models using cutting-edge technologies.
+
+
+
+
+Key Topics Covered:
+
+Generative AI: Understand the principles and applications of Generative AI in creating new data instances.
+
+ChatGPT & GPT4: Dive into the workings of advanced AI models like ChatGPT and GPT4.
+
+LLMs: Start with the basics of LLMs, learning how they decode, process inputs and outputs, and how they are taught to communicate effectively.
+
+Encoder-Decoders: Master the concept of encoder-decoder models in the context of Transformers.
+
+T5, GPT2, BERT: Get hands-on experience with popular Transformer models such as T5, GPT2, and BERT.
+
+Machine Learning & Data: Understand the role of machine learning and data in training robust AI models.
+
+Advanced Techniques: Sophisticated training strategies like PeFT, LoRa, managing data memory and merging adapters.
+
+Specialised Skills:  Cutting-edge training techniques, including 8-bit, 4-bit training and Flash-Attention.
+
+Scalable Solutions: Master the use of advanced tools like DeepSpeed and FSDP to efficiently scale model training.
+
+
+
+
+Course Benefits:
+
+• Career Enhancement: Position yourself as a valuable asset in tech teams, capable of tackling significant AI challenges and projects.
+
+• Practical Application: Learn by doing—build projects that demonstrate your ability to apply advanced LLM techniques in real-world situations.
+
+• Innovative Approach: Stay at the forefront of AI technology by mastering techniques that are shaping the future of machine learning.
+
+
+
+
+
+
+
+What You Will Learn:
+
+Natural Language Processing Basics
+
+• Journey Through NLP Evolution: From rule-based systems to advanced embeddings.
+
+• Foundation in NLP: Set the stage for advanced learning in natural language processing.
+
+
+
+
+Introduction to Transformers
+
+• Transformer Architecture: Learn about encoders, decoders, and attention mechanisms.
+
+• Model Strategies: Understand pre-training, fine-tuning, tokenization, and embeddings.
+
+
+
+
+Popular Transformer Models
+
+• Explore Key Models: Dive into BERT, GPT, and T5 and their unique capabilities.
+
+• Deepen Model Insights: Uncover the potential and versatility of Transformer technology.
+
+
+
+
+Using Transformers (Practical)
+
+• Hands-On Experience: Apply Transformers in real-world scenarios.
+
+• Advanced Techniques: Master tokenization, embeddings, and MLMs.
+
+• Project Implementation: Build a Semantic Search Index.
+
+
+
+
+NLP Tasks and Applications (Practical)
+
+• Real-World Applications: Use BERT for question answering, GPT for personal assistants, and T5 for writing reviews.
+
+• Practical NLP Skills: Experience the direct application of NLP tasks.
+
+
+
+
+Foundations of Large Language Models
+
+• Introduction to LLMs: Understand basic architecture and functionalities.
+
+• Communication Techniques: Enhance model responsiveness with RLHF.
+
+• Input/Output Processes: Explore how LLMs handle data for AI interactions.
+
+
+
+
+Advanced Configuration and Optimization
+
+• Chat Template Design: Practical experience in structuring LLM interactions.
+
+• Model Selection Frameworks: Strategic decision-making for choosing LLMs.
+
+• Generation Techniques: Tailor LLM outputs through interactive learning.
+
+
+
+
+Specialized Training Techniques
+
+• Advanced Model Training: Focus on sequence length, token counts, and numerical precision.
+
+• Efficiency Methods: Learn 8-bit and 4-bit training to adapt models to constraints.
+
+• Scaling Tools: Implement DeepSpeed and FSDP for efficient model scaling.
+
+
+
+
+Practical Applications of LLMs
+
+• Application in Contexts: Apply LLM skills in simulated real-world projects.
+
+• Task-Specific Training: Optimize models for specific tasks like memory management and efficiency.
+
+
+
+
+
+
+
+
+
+
+Who This Course Is For:
+
+Tech Professionals: Enhance your skills and knowledge in cutting-edge AI technologies.
+
+Aspiring AI Practitioners: Get a comprehensive education in LLMs from basic principles to advanced applications.
+
+Researchers and Students: Gain a deep understanding of the latest developments and how they can be applied to solve complex problems.
+
+
+Ready to dive into the world of Generative AI and Transformers?
+
+Enroll today and start your journey to mastery!
+
+
+
+
+Who this course is for:
+Those who wish to understand the new world of LLMs, how chatGPT, GPT4 and Llama work, and how to build their own powerful language models.
+Show more
+
+--- CURRICULUM ---
+Course content
+12 sections • 52 lectures • 7h 30m total length
+Collapse all sections
+1.1 Introduction: Course Overview + What You'll Learn
+2 lectures • 17min
+Introduction to Part 1 of the Course: Transformers Fundamentals
+Introduction to Part 2 of The Course: LLMs
+1.2 Getting Started: How to Make the Best Use of this Course
+2 lectures • 7min
+Course Structure: How to get the Most out of this Course
+Environment Setup: Prepare and Use the Resource of this Course Right
+1.3 Overview of Natural Language Processing: Bring Transformers into Perspective
+4 lectures • 22min
+Rule-Based Systems Era
+Statistical Era
+Machine Learning Era
+Embeddings Era
+Embeddings Era
+2 questions
+1.4 Transformers Introduction: Important Concepts and Use-cases
+3 lectures • 37min
+Encoders, Decoders and The Attention Mechanism
+Understanding the Transformer Architecture
+2 questions
+Pre-training & Fine-tunning
+Tokenisation & Embeddings
+Pre-training and Fine-tuning Transformers
+1 question
+1.5 Popular Transformers Models: Choose the Best Model for the Job
+3 lectures • 33min
+BERT
+GPT
+T5
+Exploring T5: The Text-to-Text Transfer Transformer
+2 questions
+1.6 Using Transformers: Building Blocks and Hidden Gems (Practical)
+5 lectures • 45min
+Building Blocks
+Tokenizers
+Understanding Tokenizers for Transformers
+2 questions
+Word Embeddings
+Masked Language Modeling (MLM)
+Masked Language Modeling z
+2 questions
+Semantic Search Index
+1.7 Mastering Real-World Scenarios with Transformers and LLMs (Practical)
+3 lectures • 44min
+BERT (Encoder-model) for Extractive Question Answering
+GPT (Decoder-model) for Instruction Following
+Understanding GPT Instruct
+2 questions
+T5 (Encoder-Decoder-model) for Writing Product Reviews
+NLP Evolution and Fundamentals
+30 questions
+2.1 Introduction to Large Language Models
+6 lectures • 48min
+Decoding Large Language Models: An Introduction
+Introduction to Large Language Models (LLMs)
+2 questions
+RLHF: Teaching LLMs to Communicate Effectively
+Understanding Input/Output in Language Models
+Chat Templates: Hands On Overview
+Decision Frameworks for LLM Selection
+Generation: An Interactive Guide
+2.2 Preparing for LLM Training (Practical)
+7 lectures • 56min
+Comprehensive Dive into Sequence Length
+Token Counts: Practical Intuition & Impact
+Precision Matters: Numerical Precision in Training
+Sequences and Tokens
+6 questions
+Navigating GPU Selection: A Guide to Hardware Platforms
+Practice Fundamentals: Most Basic Form of Training LLMs
+Practice Fundamentals: Most Basic Form of Training LLMs - Part 2
+Practice Fundamentals: Most Basic Form of Training LLMs - Part 3
+2.3 Advanced LLM Training Techniques (Practical)
+6 lectures • 59min
+Understanding Practical Limitations
+Boosting Efficiency: PeFT and LoRa in Depth
+Managing Data Memory: Batch Size & Sequence Length
+Advanced Solutions: Gradient Accumulation & Checkpointing
+Fitting Giants: Practical Introduction to LoRA for Large Models
+Expanding LoRA: Adapter Merging and Effective Evaluations
+Advanced Techniques
+8 questions
+2.4 Exploring Specialised LLM Training Techniques (Practical)
+5 lectures • 38min
+Level-Up Giants: 8-bit Training for Massive Models
+Task-Focused Training: Aim for Better Learning - Part 1
+Task-Focused Training: Aim for Better Learning - Part 2
+Edge of Hardware Limits: Scaling Inputs with Flash Attention 2
+Edge of Hardware Limits: Reaching 4bit Training with QLoRA
+Specialised Techniques
+6 questions
+2.5 Scale LLM Training with Advanced Tools (Practical)
+6 lectures • 45min
+Starting Strong: Introductory Concepts for at Scale Training
+Understanding DeepSpeed: A Theoretical Overview
+Implementing DeepSpeed: A Hands-On Approach
+Scaling Training
+3 questions
+FSDP Explained: Theoretical Insights
+Applying FSDP: Real-World Usage and Best Practices
+Wrapping Up: Course Conclusion, Recap, and Future Directions
+LLM Mastery Practice Test
+31 questions

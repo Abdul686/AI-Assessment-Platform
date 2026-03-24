@@ -1,0 +1,150 @@
+COURSE: Master Vector Database with Python for AI & LLM Use Cases
+URL: https://azirotechnologies.udemy.com/course/vector-db/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Data engineers, database administrators and data professionals curious about the emerging field of vector databases.
+Data scientists and analysts interested in exploring advanced AI techniques.
+Machine learning engineers seeking to enhance their knowledge of vector databases and their applications.
+AI researchers and practitioners looking to leverage vector databases for generative AI models.
+Software developers interested in integrating vector databases into their applications.
+Students and academics studying AI, machine learning, or data science who want to expand their knowledge in this specialized area.
+Individuals with a technical background or a strong interest in AI and databases, eager to explore cutting-edge technologies shaping the future of AI and ML.
+
+--- DESCRIPTION ---
+Description
+
+In this comprehensive course on Vector Databases, you will delve into the exciting world of cutting-edge technologies that are transforming the field of artificial intelligence (AI), particularly in generative AI. With a focus on Future-Proofing Generative AI, this course will equip you with the knowledge and skills to harness the power of Vector Databases for advanced applications, including Language Model Models (LLM), Generative Pretrained Transformers (GPT) like ChatGPT, and Artificial General Intelligence (AGI) development.
+
+Starting from the foundations, you will learn the fundamentals of Vector Databases and their role in revolutionizing AI workflows. Through practical examples and hands-on coding exercises, you will explore techniques such as vector data indexing, storage, retrieval, and conditionality reduction. You will also gain proficiency in integrating Pinecone Vector Data Base with other tools like LangChain, OpenAI API using Python to implement real-world use cases and unleash the full potential of Vector Databases.
+
+Throughout the course, we will uncover the limitless possibilities of Vector Databases in generative AI. You will discover how these databases enable content generation, recommendation systems, language translation, and more. Additionally, we will discuss performance optimization, scalability considerations, and best practices for efficient implementation.
+
+Led by an expert instructor with a PhD in computational nano science and extensive experience as a data scientist at leading companies, you will benefit from their deep knowledge, practical insights, and passion for teaching AI and Machine Learning (ML). Join us now to embark on this transformative learning journey and position yourself at the forefront of Future-Proofing Generative AI with Vector Databases. Enroll today and unlock a world of AI innovation!
+
+Who this course is for:
+Data engineers, database administrators and data professionals curious about the emerging field of vector databases.
+Data scientists and analysts interested in exploring advanced AI techniques.
+Machine learning engineers seeking to enhance their knowledge of vector databases and their applications.
+AI researchers and practitioners looking to leverage vector databases for generative AI models.
+Software developers interested in integrating vector databases into their applications.
+Students and academics studying AI, machine learning, or data science who want to expand their knowledge in this specialized area.
+Individuals with a technical background or a strong interest in AI and databases, eager to explore cutting-edge technologies shaping the future of AI and ML.
+Show more
+
+--- CURRICULUM ---
+Course content
+11 sections • 74 lectures • 8h 50m total length
+Collapse all sections
+Introduction to Vector Database
+4 lectures • 19min
+Course Overview
+Introduction to Vector Database
+Why Vector Database
+Vector Database Use Cases
+on Introduction to Vector Database
+4 questions
+Vector Database Foundations
+7 lectures • 1hr
+Section Overview
+Fundamentals of Vector Database
+SQLite Database
+Storing and Retrieving Vector Data in SQLite
+Vector Similarity Search
+Chroma DB-Local Vector Data Base - Part 1: Setup & Data Insertion
+Chroma DB-Local Vector Data Base - Part 2: Query
+Vector database foundation knowledge check
+3 questions
+Pinecone Vector Database Environment Setup
+7 lectures • 28min
+Pinecone Account Setup
+Pinecone DB Console Overview
+Setting Up Development Environment in Windows
+Setting Up Development Environment in Ubuntu
+A note on Pinecone upgrade (v-2.2.1 to v-5.0.0)
+"Hello World" Script for Vector DB - [Pinecone v-5.0.0]
+[Older version] "Hello World" Script for Vector DB - [Pinecone v-2.2.1]
+Environment Setup
+3 questions
+Database Operations using Pinecone v5.0.0 [latest as of Oct 2024]
+6 lectures • 30min
+Database Operations: Create, Retrieve, Update and Deletion (CRUD)
+Insert Vectors
+Upsert: Insert and Update [updated for Pinecone v5.0.0]
+Query Vector Data
+Fetch Vectors by ID
+Delete Vector
+[Will be archived] Database Operations using Pinecone v2.2.1 (May 2023)
+6 lectures • 26min
+Database Operations: Create, Retrieve, Update and Deletion (CRUD)
+Insert Vectors
+Upsert: Insert and Update
+Query Vector Data
+Fetch Vectors by ID
+Delete Vector
+Data Base Management
+7 lectures • 59min
+Concepts of Index and Collection
+Index Management [pinecone 5.0]
+Partitioning Vectors
+Upsert using Namespace [pinecone v5.0.0]
+Vector Partitioning Using Metadata [v5.0.0]
+Distance Metrics
+Reading Assignment on "Understanding Indexes"
+3 questions
+on concepts of Pinecone database management
+2 questions
+Index Management [pinecone v2.2.1]
+Project 1: Application in Semantic Search
+5 lectures • 40min
+Introduction to Semantic Search
+Medium Posts Data Obtaining
+Data Preprocessing
+Preparing for Upsert
+Vector Query: "Semantic Search"
+on Semantic Search
+4 questions
+Reading Assignment: Read Hugging Face Documents on a sentence transformer
+2 questions
+Project 2: Semantic Search Powered by Named Entity
+11 lectures • 1hr 38min
+Concept of Named Entity Recognition (NER)
+NER Implementation Examples
+Setting up Environment for NER based Semantic Search
+Vector Embedding Models and Load Data
+Data Preparation
+Developing NER Helper Function
+Vector Embedding in Batches
+NER Extraction in Batches
+Metadata Processing
+Vector Upsert
+Vector Query: Semantic Search with NER
+Project 3: Building AI Chat Agent with LangChain and OpenAI
+12 lectures • 1hr 39min
+Building an Retrieval AI Agent with LangChain and OpenAI
+Obtaining OpenAI API
+Data Load
+Vector Embedding Function
+Setup Vector DB
+Processing for Meta Data
+Embedding and OpenAI Rate Limit Workaround
+Indexing
+Semantic Search with OpenAI
+Embedding with OpenAI and LangChain
+Retrieval QA Agent- an example of retrieval augmented generation (RAG)
+Chat Agent
+Project 4: Audio Similarity Search
+9 lectures • 1hr 11min
+Environment Setup
+Loading Audio Data
+Exploring Audio Data
+Embedding Audio Data
+Setting up Vector Database for Audio
+Vector Indexing
+Vector Querying
+Audio Search with your Own Data: Out of sample search
+[older code, will be archived soon] Audio Search out of sample example
+Project 5: Capstone
+0 lectures • 0min
+Build a video search engine based on audio content where "text" is search input.
+11 questions

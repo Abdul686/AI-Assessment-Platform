@@ -1,0 +1,448 @@
+- id: 1
+  question: 'You''ve implemented asynchronous LLM calls with `asyncio` and are experiencing
+    intermittent `RuntimeError: Event loop is closed` errors. What is the most likely
+    cause?'
+  options:
+    A: The OpenAI API is experiencing outages.
+    B: A callback function is attempting to interact with the event loop after it's
+      been closed.
+    C: Insufficient system memory is causing the event loop to crash.
+    D: The `asyncio.sleep()` function is being called with a negative duration.
+  correct_answer: B
+- id: 2
+  question: When caching LLM responses, what is the primary trade-off between cache
+    size and cache eviction policy (e.g., LRU, FIFO)?
+  options:
+    A: Larger caches always improve performance, regardless of eviction policy.
+    B: Cache size impacts memory usage, while eviction policy affects hit rate and
+      staleness.
+    C: Eviction policy only matters for very small cache sizes.
+    D: Cache size and eviction policy are independent and have no interaction.
+  correct_answer: B
+- id: 3
+  question: You are generating synthetic data for RAG evaluation. Your initial prompt
+    produces questions that are too similar to the source documents. What prompt engineering
+    technique would be most effective to increase diversity?
+  options:
+    A: Increase the `temperature` parameter in the LLM call.
+    B: Add constraints to the prompt, explicitly requesting novel questions.
+    C: Reduce the `top_p` parameter in the LLM call.
+    D: Shorten the prompt to reduce context.
+  correct_answer: B
+- id: 4
+  question: You've implemented a retry decorator with exponential backoff for handling
+    OpenAI rate limits. What is a potential drawback of using a purely exponential
+    backoff strategy?
+  options:
+    A: It can lead to excessive delays during periods of sustained high load.
+    B: It doesn't handle transient errors effectively.
+    C: It requires manual configuration of the base delay.
+    D: It's incompatible with asynchronous code.
+  correct_answer: A
+- id: 5
+  question: When using tracing to debug LLM calls, what information is *most* valuable
+    to capture?
+  options:
+    A: The exact timestamp of each API call.
+    B: The full input prompt and the complete LLM response.
+    C: The CPU and memory usage of the application.
+    D: The network latency between your server and the OpenAI API.
+  correct_answer: B
+- id: 6
+  question: You're using `python-dotenv` to manage API keys. What is the best practice
+    for preventing accidental exposure of these keys in your codebase?
+  options:
+    A: Commit the `.env` file to your Git repository.
+    B: Add the `.env` file to your `.gitignore` file.
+    C: Hardcode the API keys directly into your Python scripts.
+    D: Store the `.env` file in a publicly accessible directory.
+  correct_answer: B
+- id: 7
+  question: You've noticed that your LLM is consistently generating responses in an
+    unstructured format, even when you've provided clear instructions. What is the
+    most likely cause?
+  options:
+    A: The LLM is not capable of generating structured outputs.
+    B: The prompt is ambiguous or lacks sufficient examples of the desired structure.
+    C: The `temperature` parameter is set too low.
+    D: The OpenAI API is malfunctioning.
+  correct_answer: B
+- id: 8
+  question: What is the primary benefit of using structured outputs in conjunction
+    with agentic patterns?
+  options:
+    A: Reduced API costs.
+    B: Improved LLM response time.
+    C: Enhanced reliability and predictability of agent actions.
+    D: Simplified prompt engineering.
+  correct_answer: C
+- id: 9
+  question: You are deduplicating synthetic questions using embeddings and cosine
+    similarity. What threshold value for cosine similarity would be most appropriate
+    for identifying near-duplicates?
+  options:
+    A: '0.1'
+    B: '0.3'
+    C: '0.8'
+    D: '0.95'
+  correct_answer: C
+- id: 10
+  question: When using LanceDB for full-text search, what is the importance of sanitizing
+    term queries?
+  options:
+    A: To improve query performance.
+    B: To prevent SQL injection attacks.
+    C: To handle special characters and ensure accurate matching.
+    D: To reduce the size of the LanceDB index.
+  correct_answer: C
+- id: 11
+  question: You're implementing caching for LLM calls. What data structure is most
+    suitable for a Least Recently Used (LRU) cache?
+  options:
+    A: A Python list.
+    B: A Python dictionary.
+    C: An OrderedDict.
+    D: A set.
+  correct_answer: C
+- id: 12
+  question: What is the purpose of the `dedent` function from the `textwrap` module
+    when creating prompts?
+  options:
+    A: To remove leading whitespace from multi-line strings.
+    B: To encrypt sensitive information in the prompt.
+    C: To automatically translate the prompt into different languages.
+    D: To format the prompt as JSON.
+  correct_answer: A
+- id: 13
+  question: You're using Jinja templating for prompt creation. What is a key advantage
+    of this approach?
+  options:
+    A: It automatically optimizes prompts for LLM performance.
+    B: It allows for dynamic prompt generation with variables and logic.
+    C: It eliminates the need for prompt engineering.
+    D: It reduces the size of the prompt.
+  correct_answer: B
+- id: 14
+  question: You've implemented tracing and notice a significant delay between your
+    API call and the LLM response. What is the first thing you should investigate?
+  options:
+    A: The CPU usage of your server.
+    B: The network latency between your server and the OpenAI API.
+    C: The size of the prompt.
+    D: The `temperature` parameter setting.
+  correct_answer: B
+- id: 15
+  question: What is the role of a reranker (e.g., Cross Encoder, ColBERT) in a RAG
+    system?
+  options:
+    A: To generate synthetic data.
+    B: To improve the relevance of retrieved documents.
+    C: To cache LLM responses.
+    D: To sanitize user input.
+  correct_answer: B
+- id: 16
+  question: You are experiencing OpenAI rate limits despite implementing caching and
+    retrying. What additional strategy could you employ?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Implement request queuing and throttling.
+    C: Reduce the size of the prompt.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 17
+  question: When generating synthetic data, what metric is most important to monitor
+    to assess the quality of the generated questions?
+  options:
+    A: The length of the questions.
+    B: The similarity between the questions and the source documents.
+    C: The diversity of the questions.
+    D: The number of questions generated.
+  correct_answer: B
+- id: 18
+  question: You've implemented a caching mechanism. What is the potential downside
+    of using an excessively long cache expiration time?
+  options:
+    A: Increased memory usage.
+    B: Stale data and reduced accuracy.
+    C: Slower cache lookup times.
+    D: Increased API costs.
+  correct_answer: B
+- id: 19
+  question: What is the purpose of using a backoff decorator when implementing retries?
+  options:
+    A: To reduce the frequency of retry attempts.
+    B: To increase the delay between retry attempts exponentially.
+    C: To log retry attempts.
+    D: To automatically switch to a different LLM provider.
+  correct_answer: B
+- id: 20
+  question: You're using asynchronous code and need to process a large number of LLM
+    calls. What is the benefit of using `asyncio.gather()`?
+  options:
+    A: It automatically caches LLM responses.
+    B: It allows you to execute multiple coroutines concurrently.
+    C: It simplifies error handling.
+    D: It reduces API costs.
+  correct_answer: B
+- id: 21
+  question: What is the primary purpose of full-text search (FTS) in a RAG system?
+  options:
+    A: To generate synthetic data.
+    B: To efficiently find relevant documents based on keyword matching.
+    C: To cache LLM responses.
+    D: To sanitize user input.
+  correct_answer: B
+- id: 22
+  question: You've implemented tracing and observe that the LLM is consistently misinterpreting
+    a specific phrase in your prompts. What should you do?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Rephrase the prompt to avoid the problematic phrase.
+    C: Reduce the `top_p` parameter.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 23
+  question: What is the role of embeddings in deduplicating synthetic data?
+  options:
+    A: To encrypt the data.
+    B: To represent the semantic meaning of the data as vectors.
+    C: To compress the data.
+    D: To translate the data into different languages.
+  correct_answer: B
+- id: 24
+  question: You are using LanceDB. What is a benefit of using a vector database like
+    LanceDB over a traditional relational database for RAG?
+  options:
+    A: Better support for structured data.
+    B: More efficient similarity search for semantic relevance.
+    C: Lower storage costs.
+    D: Simplified data modeling.
+  correct_answer: B
+- id: 25
+  question: What is the purpose of cosine similarity when comparing embeddings?
+  options:
+    A: To measure the distance between two vectors.
+    B: To measure the angle between two vectors, indicating semantic similarity.
+    C: To calculate the magnitude of a vector.
+    D: To normalize the vectors.
+  correct_answer: B
+- id: 26
+  question: You've noticed that your LLM is generating responses that are factually
+    incorrect. What is a potential cause?
+  options:
+    A: The LLM is hallucinating.
+    B: The prompt is too short.
+    C: The `temperature` parameter is set too high.
+    D: The OpenAI API is malfunctioning.
+  correct_answer: A
+- id: 27
+  question: What is the primary benefit of using a virtual environment for your RAG
+    project?
+  options:
+    A: To improve code readability.
+    B: To isolate project dependencies and avoid conflicts.
+    C: To automatically deploy your application.
+    D: To reduce API costs.
+  correct_answer: B
+- id: 28
+  question: You're using a prompt template with Jinja. What is the purpose of the
+    `{{ variable }}` syntax?
+  options:
+    A: To define a loop.
+    B: To insert a variable into the prompt.
+    C: To define a function.
+    D: To comment out a section of the prompt.
+  correct_answer: B
+- id: 29
+  question: What is the significance of 'tokens' in the context of LLMs?
+  options:
+    A: They represent the number of API calls made.
+    B: They represent the units of text processed by the LLM.
+    C: They represent the amount of memory used by the LLM.
+    D: They represent the accuracy of the LLM's responses.
+  correct_answer: B
+- id: 30
+  question: You're building an agentic system. Why are structured outputs crucial
+    for reliable operation?
+  options:
+    A: They reduce API costs.
+    B: They allow the agent to parse and interpret LLM responses consistently.
+    C: They improve LLM response time.
+    D: They simplify prompt engineering.
+  correct_answer: B
+- id: 31
+  question: When choosing between different LLM providers, what factor is most important
+    to consider for a RAG application?
+  options:
+    A: Price per token.
+    B: Model size.
+    C: API rate limits.
+    D: Support for different languages.
+  correct_answer: C
+- id: 32
+  question: You've implemented caching, tracing, and retrying. What is the next step
+    to further improve the robustness of your LLM application?
+  options:
+    A: Implement rate limiting on your own server.
+    B: Monitor the system for errors and performance bottlenecks.
+    C: Reduce the size of the prompt.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 33
+  question: What is the purpose of sanitizing term queries for full-text search?
+  options:
+    A: To improve query performance.
+    B: To prevent SQL injection attacks.
+    C: To handle special characters and ensure accurate matching.
+    D: To reduce the size of the LanceDB index.
+  correct_answer: C
+- id: 34
+  question: You are using a reranker to improve retrieval performance. What is the
+    primary difference between a cross-encoder and a bi-encoder?
+  options:
+    A: Cross-encoders are faster but less accurate.
+    B: Bi-encoders process the query and documents jointly, while cross-encoders process
+      them separately.
+    C: Cross-encoders are more computationally expensive but generally more accurate.
+    D: Bi-encoders require more memory.
+  correct_answer: C
+- id: 35
+  question: What is the benefit of using a progress bar when generating a large synthetic
+    dataset?
+  options:
+    A: It improves the quality of the generated data.
+    B: It provides visual feedback on the progress of the generation process.
+    C: It reduces the memory usage of the application.
+    D: It automatically caches the generated data.
+  correct_answer: B
+- id: 36
+  question: You've identified duplicate questions in your synthetic dataset. What
+    is the best way to handle them?
+  options:
+    A: Keep all the questions, as they provide redundancy.
+    B: Remove the duplicates to improve the efficiency of the evaluation.
+    C: Modify the duplicates slightly to make them unique.
+    D: Ignore the duplicates, as they have minimal impact.
+  correct_answer: B
+- id: 37
+  question: What is the role of the `top_p` parameter in LLM generation?
+  options:
+    A: It controls the temperature of the generated text.
+    B: It controls the diversity of the generated text by limiting the set of possible
+      tokens.
+    C: It controls the length of the generated text.
+    D: It controls the frequency of specific words in the generated text.
+  correct_answer: B
+- id: 38
+  question: You're using a LanceDB table with full-text search. What data type is
+    most appropriate for the text field?
+  options:
+    A: Integer.
+    B: Float.
+    C: String.
+    D: Boolean.
+  correct_answer: C
+- id: 39
+  question: What is the purpose of the `backoff` library in the context of retrying
+    API calls?
+  options:
+    A: To encrypt API keys.
+    B: To implement exponential backoff and jitter for retry attempts.
+    C: To cache API responses.
+    D: To trace API calls.
+  correct_answer: B
+- id: 40
+  question: You've implemented a caching mechanism and are observing a low cache hit
+    rate. What is a potential reason?
+  options:
+    A: The cache size is too small.
+    B: The cache expiration time is too long.
+    C: The cache key is not unique.
+    D: The LLM is malfunctioning.
+  correct_answer: A
+- id: 41
+  question: What is the primary benefit of using structured outputs with LLMs?
+  options:
+    A: Reduced API costs.
+    B: Improved LLM response time.
+    C: Easier parsing and interpretation of LLM responses.
+    D: Simplified prompt engineering.
+  correct_answer: C
+- id: 42
+  question: You are generating synthetic data and want to ensure the generated questions
+    are relevant to the source documents. What prompt engineering technique would
+    be most effective?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Provide the source document as context in the prompt.
+    C: Reduce the `top_p` parameter.
+    D: Shorten the prompt.
+  correct_answer: B
+- id: 43
+  question: What is the purpose of the `autocompletion` feature in a caching function?
+  options:
+    A: To automatically generate cache keys.
+    B: To provide suggestions for cache keys.
+    C: To improve the performance of cache lookups.
+    D: To encrypt cache keys.
+  correct_answer: B
+- id: 44
+  question: You've implemented tracing and notice that the LLM is consistently generating
+    responses that are too verbose. What should you do?
+  options:
+    A: Increase the `temperature` parameter.
+    B: Add constraints to the prompt to limit the response length.
+    C: Reduce the `top_p` parameter.
+    D: Switch to a different LLM provider.
+  correct_answer: B
+- id: 45
+  question: What is the primary advantage of using LanceDB over other vector databases?
+  options:
+    A: It's open-source and designed for fast analytical queries.
+    B: It's a fully managed service.
+    C: It's the cheapest vector database.
+    D: It has the largest community support.
+  correct_answer: A
+- id: 46
+  question: You're experiencing OpenAI rate limits. What is the purpose of adding
+    jitter to the backoff strategy?
+  options:
+    A: To reduce the frequency of retry attempts.
+    B: To introduce randomness to avoid synchronized retries.
+    C: To log retry attempts.
+    D: To automatically switch to a different LLM provider.
+  correct_answer: B
+- id: 47
+  question: What is the role of the `dendend` function from the `textwrap` module?
+  options:
+    A: To remove leading whitespace from multi-line strings.
+    B: To encrypt sensitive information in the prompt.
+    C: To automatically translate the prompt into different languages.
+    D: To format the prompt as JSON.
+  correct_answer: A
+- id: 48
+  question: You've implemented a retry decorator. What is the best practice for logging
+    retry attempts?
+  options:
+    A: Log all retry attempts, regardless of success or failure.
+    B: Log only failed retry attempts.
+    C: Log only successful retry attempts.
+    D: Do not log retry attempts.
+  correct_answer: A
+- id: 49
+  question: What is the purpose of using a `.gitignore` file in your RAG project?
+  options:
+    A: To track changes to your code.
+    B: To exclude specific files and directories from version control.
+    C: To automatically deploy your application.
+    D: To manage API keys.
+  correct_answer: B
+- id: 50
+  question: You're building a RAG system and want to evaluate its performance. What
+    metrics are most important to consider?
+  options:
+    A: API costs and response time.
+    B: Precision, recall, and F1-score.
+    C: Code complexity and maintainability.
+    D: Number of lines of code.
+  correct_answer: B

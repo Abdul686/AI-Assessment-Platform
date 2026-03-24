@@ -1,0 +1,441 @@
+- id: 1
+  question: You are building a RAG application with LangChain and encounter 'hallucinations'
+    where the LLM generates information not present in the retrieved documents. Which
+    technique would be MOST effective to mitigate this?
+  options:
+    A: Increase the temperature parameter of the LLM.
+    B: Implement a re-ranking strategy for retrieved documents based on relevance.
+    C: Decrease the number of retrieved documents.
+    D: Use a different embedding model.
+  correct_answer: B
+- id: 2
+  question: When using LangChain's `create_retrieval_chain`, what is the primary purpose
+    of the `retriever` argument?
+  options:
+    A: To define the LLM used for generating responses.
+    B: To specify the chain type (e.g., 'stuff', 'map_reduce').
+    C: To handle the retrieval of relevant documents from a vectorstore.
+    D: To parse the output of the LLM.
+  correct_answer: C
+- id: 3
+  question: You've implemented a LangChain agent with multiple tools. A user query
+    consistently fails to activate the correct tool. What is the MOST likely cause?
+  options:
+    A: The LLM's temperature is set too low.
+    B: The tool descriptions in the agent's prompt are ambiguous or incomplete.
+    C: The vectorstore is not properly indexed.
+    D: The OpenAI API key is invalid.
+  correct_answer: B
+- id: 4
+  question: Which LangChain component is specifically designed for parsing the output
+    of an LLM into structured data, such as a Python object?
+  options:
+    A: PromptTemplate
+    B: OutputParser
+    C: Chain
+    D: Vectorstore
+  correct_answer: B
+- id: 5
+  question: You are using Pydantic Output Parsers. The LLM consistently returns output
+    that doesn't fully conform to the Pydantic model. What is a common debugging step?
+  options:
+    A: Reduce the `max_tokens` parameter in the LLM call.
+    B: Inspect the LLM's raw output and refine the Pydantic model or prompt.
+    C: Switch to a different LLM provider.
+    D: Increase the `temperature` parameter.
+  correct_answer: B
+- id: 6
+  question: What is the primary benefit of using LangGraph over LangChain for complex
+    agentic workflows?
+  options:
+    A: LangGraph offers a simpler API for basic chains.
+    B: LangGraph provides a more structured and composable way to define and manage
+      agent logic using graphs.
+    C: LangGraph is optimized for faster LLM inference.
+    D: LangGraph automatically handles tool discovery.
+  correct_answer: B
+- id: 7
+  question: In LangGraph, what is the role of a `Node`?
+  options:
+    A: A connection between two Runnables.
+    B: A self-contained unit of computation, such as an LLM call or tool execution.
+    C: The overall graph structure.
+    D: A method for tracing agent execution.
+  correct_answer: B
+- id: 8
+  question: You're building a documentation helper using RAG. You notice the LLM struggles
+    with very long documents. What text splitting strategy would be MOST appropriate?
+  options:
+    A: CharacterTextSplitter with a large chunk size.
+    B: RecursiveCharacterTextSplitter with overlapping chunks.
+    C: SimpleSplitter with a fixed chunk size.
+    D: TokenTextSplitter with a small chunk size.
+  correct_answer: B
+- id: 9
+  question: What is the purpose of the `LCEL` (LangChain Expression Language) introduced
+    in LangChain v1?
+  options:
+    A: To simplify prompt engineering.
+    B: To provide a more declarative and composable way to define chains and agents.
+    C: To improve the performance of vectorstore searches.
+    D: To automatically generate documentation for LangChain applications.
+  correct_answer: B
+- id: 10
+  question: You are using LangSmith for agent tracing. What information is MOST valuable
+    for debugging a failed agent run?
+  options:
+    A: The total execution time of the agent.
+    B: The LLM's raw output for each step in the agent's reasoning process.
+    C: The number of tokens used by the LLM.
+    D: The user's initial query.
+  correct_answer: B
+- id: 11
+  question: When implementing a custom agent in LangChain, what is the primary responsibility
+    of the `_execute` method?
+  options:
+    A: To define the tools available to the agent.
+    B: To handle the agent's reasoning and tool selection process.
+    C: To parse the LLM's output.
+    D: To initialize the agent's memory.
+  correct_answer: B
+- id: 12
+  question: What is the key difference between `OpenAI Functions` and `LangChain Tools`?
+  options:
+    A: OpenAI Functions are only available with the OpenAI API, while LangChain Tools
+      are more general.
+    B: LangChain Tools provide more control over the tool's input and output schema.
+    C: OpenAI Functions automatically handle tool discovery, while LangChain Tools
+      require manual configuration.
+    D: There is no significant difference; they are interchangeable.
+  correct_answer: B
+- id: 13
+  question: You're using a vectorstore (e.g., Pinecone, Chroma) to store document
+    embeddings. What is the impact of the embedding dimension on performance and cost?
+  options:
+    A: Higher dimensions always improve performance but increase cost.
+    B: Lower dimensions always improve performance and reduce cost.
+    C: Higher dimensions can improve performance but also increase storage and query
+      costs.
+    D: Embedding dimension has no impact on performance or cost.
+  correct_answer: C
+- id: 14
+  question: What is the purpose of 'Chain of Thought' prompting?
+  options:
+    A: To provide the LLM with a few examples of input-output pairs.
+    B: To encourage the LLM to explain its reasoning process step-by-step.
+    C: To reduce the LLM's temperature.
+    D: To simplify the prompt structure.
+  correct_answer: B
+- id: 15
+  question: You've noticed your LangChain application is exceeding the LLM's token
+    limit. What is a common strategy to address this?
+  options:
+    A: Increase the LLM's `max_tokens` parameter.
+    B: Reduce the chunk size during text splitting.
+    C: Use a different embedding model.
+    D: Disable memory.
+  correct_answer: B
+- id: 16
+  question: What is the role of `Memory` in LangChain agents?
+  options:
+    A: To store the LLM's weights.
+    B: To store the conversation history and provide context for subsequent interactions.
+    C: To cache the results of API calls.
+    D: To manage the agent's tools.
+  correct_answer: B
+- id: 17
+  question: You are using LangChain's `create_stuff_documents_chain`. What is a limitation
+    of this chain type?
+  options:
+    A: It cannot handle long documents.
+    B: It is not suitable for question answering.
+    C: It requires a large number of documents.
+    D: It can be slow for large numbers of documents due to the entire context being
+      passed to the LLM.
+  correct_answer: D
+- id: 18
+  question: What is the purpose of 'Context Engineering'?
+  options:
+    A: To optimize the LLM's parameters.
+    B: To carefully craft the system prompt and other contextual information provided
+      to the LLM.
+    C: To improve the performance of vectorstore searches.
+    D: To automate the process of prompt creation.
+  correct_answer: B
+- id: 19
+  question: You are building a search agent. You want to use a search API that is
+    not directly supported by LangChain. How would you integrate it?
+  options:
+    A: Use a pre-built LangChain tool.
+    B: Create a custom tool that wraps the API.
+    C: Modify the LangChain source code.
+    D: Use a different search API.
+  correct_answer: B
+- id: 20
+  question: What is the benefit of using a `ToolKit` in LangChain?
+  options:
+    A: It automatically discovers and registers tools.
+    B: It provides a standardized interface for accessing multiple tools.
+    C: It simplifies the process of creating custom tools.
+    D: All of the above.
+  correct_answer: D
+- id: 21
+  question: You're using LangChain to build a chatbot over Python package documentation.
+    What is the MOST important consideration when choosing a vectorstore?
+  options:
+    A: The vectorstore's cost.
+    B: The vectorstore's scalability and query speed.
+    C: The vectorstore's ease of use.
+    D: The vectorstore's support for different data types.
+  correct_answer: B
+- id: 22
+  question: What is the purpose of the `Model Context Protocol (MCP)`?
+  options:
+    A: To standardize the communication between LLMs and tools.
+    B: To improve the performance of LLM inference.
+    C: To simplify prompt engineering.
+    D: To manage the agent's memory.
+  correct_answer: A
+- id: 23
+  question: When using LangGraph's `ReActAgentExecutor`, what is the role of the `Runnable`?
+  options:
+    A: It defines the agent's overall goal.
+    B: It represents a single step in the agent's reasoning process.
+    C: It manages the agent's memory.
+    D: It handles the agent's tool selection.
+  correct_answer: B
+- id: 24
+  question: You are debugging a LangChain agent that is stuck in an infinite loop.
+    What is a useful technique to identify the issue?
+  options:
+    A: Increase the LLM's temperature.
+    B: Enable agent tracing with LangSmith and examine the execution history.
+    C: Reduce the number of tools available to the agent.
+    D: Disable memory.
+  correct_answer: B
+- id: 25
+  question: What is the primary advantage of using `ReAct` prompting?
+  options:
+    A: It reduces the LLM's token usage.
+    B: It enables the LLM to reason step-by-step and interact with tools.
+    C: It simplifies prompt engineering.
+    D: It improves the LLM's accuracy.
+  correct_answer: B
+- id: 26
+  question: You're building a RAG application and notice that the LLM is retrieving
+    irrelevant documents. What could be a cause?
+  options:
+    A: The embedding model is not capturing the semantic meaning of the documents.
+    B: The chunk size is too large.
+    C: The LLM's temperature is too high.
+    D: The vectorstore is not properly indexed.
+  correct_answer: A
+- id: 27
+  question: What is the purpose of a `TextSplitter` in LangChain?
+  options:
+    A: To embed text into vectors.
+    B: To divide long documents into smaller chunks.
+    C: To parse the output of an LLM.
+    D: To generate prompts.
+  correct_answer: B
+- id: 28
+  question: You are using LangChain's `Streamlit` integration. What is the primary
+    benefit of using Streamlit?
+  options:
+    A: To improve the performance of the LLM.
+    B: To create a user-friendly web interface for your LangChain application.
+    C: To simplify prompt engineering.
+    D: To manage the agent's memory.
+  correct_answer: B
+- id: 29
+  question: What is the role of a `PromptTemplate` in LangChain?
+  options:
+    A: To define the LLM used for generating responses.
+    B: To create dynamic prompts with placeholders for variables.
+    C: To parse the output of the LLM.
+    D: To store the conversation history.
+  correct_answer: B
+- id: 30
+  question: You've implemented a LangChain agent with a custom tool. The tool consistently
+    returns errors. What is a good debugging practice?
+  options:
+    A: Increase the LLM's temperature.
+    B: Test the tool independently of the agent to ensure it functions correctly.
+    C: Reduce the number of tools available to the agent.
+    D: Disable memory.
+  correct_answer: B
+- id: 31
+  question: What is the purpose of 'Few-Shot Prompting'?
+  options:
+    A: To provide the LLM with a single example of input-output pair.
+    B: To provide the LLM with multiple examples of input-output pairs.
+    C: To reduce the LLM's temperature.
+    D: To simplify the prompt structure.
+  correct_answer: B
+- id: 32
+  question: You are using LangChain's `LCEL` to build a complex chain. What is the
+    benefit of using LCEL's declarative syntax?
+  options:
+    A: It improves the performance of the LLM.
+    B: It makes the chain more readable and maintainable.
+    C: It simplifies prompt engineering.
+    D: It automatically generates documentation.
+  correct_answer: B
+- id: 33
+  question: What is the primary difference between `Pinecone` and `FAISS` as vectorstores?
+  options:
+    A: Pinecone is a cloud-based vectorstore, while FAISS is a local library.
+    B: FAISS is a cloud-based vectorstore, while Pinecone is a local library.
+    C: Pinecone is only suitable for small datasets, while FAISS can handle large
+      datasets.
+    D: FAISS is only suitable for small datasets, while Pinecone can handle large
+      datasets.
+  correct_answer: A
+- id: 34
+  question: You are building an agentic RAG application with LangGraph. What is the
+    role of the `GraphState`?
+  options:
+    A: It stores the LLM's weights.
+    B: It manages the conversation history.
+    C: It holds the intermediate results and context as the agent traverses the graph.
+    D: It defines the agent's tools.
+  correct_answer: C
+- id: 35
+  question: What is the purpose of 'Self RAG'?
+  options:
+    A: To automatically generate prompts.
+    B: To allow the LLM to evaluate the relevance of retrieved documents and refine
+      the search process.
+    C: To improve the performance of vectorstore searches.
+    D: To simplify prompt engineering.
+  correct_answer: B
+- id: 36
+  question: You are using LangChain's `Cursor IDE`. What is its primary function?
+  options:
+    A: To debug LangChain applications.
+    B: To create and manage LangChain projects with a focus on agent development.
+    C: To generate prompts.
+    D: To manage the agent's memory.
+  correct_answer: B
+- id: 37
+  question: What is the benefit of using LangChain's `CopilotKit`?
+  options:
+    A: To improve the performance of the LLM.
+    B: To create a generative UI/UX for your LangChain application.
+    C: To simplify prompt engineering.
+    D: To manage the agent's memory.
+  correct_answer: B
+- id: 38
+  question: You are building a documentation assistant with RAG. You want to ensure
+    the LLM only uses information from the provided documents. What technique is MOST
+    effective?
+  options:
+    A: Increase the LLM's temperature.
+    B: Use a strict retrieval strategy and a well-defined system prompt.
+    C: Decrease the number of retrieved documents.
+    D: Use a different embedding model.
+  correct_answer: B
+- id: 39
+  question: What is the purpose of 'Adaptive RAG'?
+  options:
+    A: To automatically generate prompts.
+    B: To dynamically adjust the retrieval strategy based on the query and context.
+    C: To improve the performance of vectorstore searches.
+    D: To simplify prompt engineering.
+  correct_answer: B
+- id: 40
+  question: You are using LangChain's `MultiServerMCPClient`. What is its primary
+    function?
+  options:
+    A: To manage multiple LLM providers.
+    B: To connect to multiple MCP servers.
+    C: To generate prompts.
+    D: To manage the agent's memory.
+  correct_answer: B
+- id: 41
+  question: What is the role of a 'Revisor Agent' in LangGraph?
+  options:
+    A: To generate prompts.
+    B: To evaluate and refine the output of another agent.
+    C: To manage the agent's tools.
+    D: To retrieve documents from a vectorstore.
+  correct_answer: B
+- id: 42
+  question: You are building a LangGraph agent that needs to execute tools. What is
+    the purpose of a `ToolNode`?
+  options:
+    A: To define the agent's overall goal.
+    B: To represent the execution of a specific tool.
+    C: To manage the agent's memory.
+    D: To handle the agent's tool selection.
+  correct_answer: B
+- id: 43
+  question: What is the primary benefit of using LangChain's `TokenTextSplitter`?
+  options:
+    A: It splits text based on characters.
+    B: It splits text based on tokens, ensuring chunks stay within the LLM's token
+      limit.
+    C: It splits text based on sentences.
+    D: It splits text based on paragraphs.
+  correct_answer: B
+- id: 44
+  question: You are using LangChain's `OpenAIEmbeddings`. What is the purpose of the
+    `model_name` parameter?
+  options:
+    A: To specify the LLM used for generating responses.
+    B: To select the embedding model used to create vector representations of the
+      text.
+    C: To parse the output of the LLM.
+    D: To store the conversation history.
+  correct_answer: B
+- id: 45
+  question: What is the purpose of LangChain's `Memory` component?
+  options:
+    A: To store the LLM's weights.
+    B: To store and manage conversation history for context.
+    C: To cache API responses.
+    D: To manage the agent's tools.
+  correct_answer: B
+- id: 46
+  question: You are building a LangChain application and encounter token limitation
+    issues. What is a strategy to handle this?
+  options:
+    A: Increase the LLM's `max_tokens` parameter.
+    B: Reduce the chunk size during text splitting.
+    C: Use a different embedding model.
+    D: All of the above.
+  correct_answer: D
+- id: 47
+  question: What is the role of a `Document` object in LangChain?
+  options:
+    A: To store the LLM's weights.
+    B: To represent a single piece of text data with associated metadata.
+    C: To cache API responses.
+    D: To manage the agent's tools.
+  correct_answer: B
+- id: 48
+  question: You are using LangChain's `RecursiveCharacterTextSplitter`. What is the
+    benefit of using overlapping chunks?
+  options:
+    A: It reduces the LLM's token usage.
+    B: It helps maintain context between chunks.
+    C: It simplifies prompt engineering.
+    D: It improves the LLM's accuracy.
+  correct_answer: B
+- id: 49
+  question: What is the purpose of LangChain's `LangSmith` integration?
+  options:
+    A: To improve the performance of the LLM.
+    B: To debug, trace, and evaluate LangChain applications.
+    C: To simplify prompt engineering.
+    D: To manage the agent's memory.
+  correct_answer: B
+- id: 50
+  question: You are building a LangChain agent and want to ensure predictable responses.
+    Which technique is MOST effective?
+  options:
+    A: Increase the LLM's temperature.
+    B: Use structured output parsing with Pydantic.
+    C: Decrease the number of tools available to the agent.
+    D: Disable memory.
+  correct_answer: B

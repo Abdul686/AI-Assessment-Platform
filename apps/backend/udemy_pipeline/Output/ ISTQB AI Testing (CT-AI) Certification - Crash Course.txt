@@ -1,0 +1,228 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Testers
+Business Analsysts
+Freshers
+Scrum Masters
+
+--- DESCRIPTION ---
+Description
+
+A complete practical course to make you understand AI Testing with ISTQB exam readiness.
+Traditional software testing assumes predictable logic and fixed expected outputs. AI systems don’t work that way. They learn from data, evolve over time, behave probabilistically, and often operate as black boxes. This shift breaks many traditional testing assumptions. In this course, you will learn how to test AI-based systems the right way, using globally accepted ISTQB AI Testing (CT-AI) principles, explained clearly and practically for testers.
+
+This course starts by building strong foundations. You will first understand what AI really is, how AI-based systems differ from conventional software, and why new testing strategies are required. You’ll then learn machine learning fundamentals — supervised, unsupervised, and reinforcement learning — not as a data scientist, but from a tester’s mindset.
+
+As the course progresses, you’ll explore the complete ML lifecycle, focusing on what testers must validate at each stage: data preparation, training, validation, testing, deployment, and ongoing monitoring. You’ll learn how poor data quality, bias, imbalance, and mislabeling directly impact model behavior and test outcomes.
+
+You will deeply understand ML performance metrics, their limitations, and how to detect overfitting and underfitting. The course then moves into testing AI-specific quality characteristics such as fairness, ethics, safety, transparency, interpretability, and explainability (XAI).
+
+Finally, you’ll apply AI-specific testing techniques like adversarial testing, metamorphic testing, data poisoning, A/B testing, and exploratory testing, and also learn how AI itself can be used to enhance testing through test generation and defect prediction.
+
+This course strictly follows the ISTQB CT-AI syllabus and prepares you with both conceptual clarity and exam confidence, making it ideal for testers, QA engineers, and test managers moving into AI-driven systems.
+
+
+
+
+Course FAQs
+
+ISTQB Syllabus-Oriented
+
+Course content prepared entirely based on the official ISTQB syllabus.
+
+Practical Approach
+
+Concepts explained with real-world examples so you can easily relate them to your work.
+
+Comprehensive Learning Structure
+
+Each concept is followed by supplementary reading materials.
+
+Chapter-by-chapter exam simulation quizzes to build confidence.
+
+Full-length quiz tests at the end to ensure complete preparation.
+
+Designed to familiarize you with the actual exam pattern.
+
+Success Strategy
+
+A thorough understanding of the course content, combined with consistent practice of all quizzes, will set you up to successfully clear the ISTQB exam.
+
+Finally, I strongly encourage you to dedicate quality time to the quizzes—not just to find the right answer, but to carefully analyze why all the other options are incorrect. This will sharpen your reasoning process, improve conceptual clarity, and build the confidence needed to succeed in the real exam
+
+Who this course is for:
+Software Testers
+Business Analsysts
+Freshers
+Scrum Masters
+Show more
+
+--- CURRICULUM ---
+Course content
+20 sections • 109 lectures • 8h 52m total length
+Collapse all sections
+Introduction to Course
+2 lectures • 9min
+Certification FAQ's & How this course is designed?
+Important Note : Course Strategy to speed up on AI basics
+Foundational understanding of AI & Machine Learning with examples
+11 lectures • 1hr 43min
+Introduction to Artificial Intelligence Systems with examples
+What is Machine Learning and how it is related to Artificial Intelligence family
+Examples of commonly used Machine Learning Models and their usage
+Understand Machine Learning Model Life cycle stages with online/offline modes
+How Machine Learning models works in nutshell -Learn terminologies used
+Understand how OverFitting Testng & UnderFitting works with Trained data sets
+Predicting House Prices (ML Model) Demo to show how internally Algorithms works
+Revision on Supervised Learning Model Testing with Overfitting/UnderFitting ex
+Introduction to Unsupervised Learning in the ML models with example
+Testing scope on Unsupervised Learning with Data point patterns&Cluster scores
+Introduction to Reinforcement Learning in ML Model with examples
+Chapter 1 - Introduction to AI
+4 lectures • 30min
+Differences between General AI & Super AI & Narrow AI
+AI vs Conventional Systems - Technologies & Frameworks overview
+AI as Hardware & SaaS service - Benefits and Risks
+Pre Trained AI Models vs Hosted AI Models as Service
+zes & Supplementary Articles for Chapter - 1
+5 lectures • 10min
+Strengthening Learning with Supplementary Articles and zes
+Narrow, General, and Super AI: Understanding Levels of Artificial Intelligence
+AI-Based and Conventional Systems
+Hardware for AI-Based Systems & AI as a Service (AIaaS)
+Pre-Trained Models: A Comprehensive Guide for AI Testing Professionals
+Section-3
+18 questions
+Chapter 2 - Quality Characteristics of AI based Systems
+4 lectures • 24min
+How Models can be in Flexible , Adaptable & play role of Autonomy
+Evolution & Self Learning capabilities for AI Models
+What are Bias & Ethics in AI context ? How to identify them with in AI Systems
+What are Side effects of AI & Reward Hacking Strategy to self learn capability
+zes & Supplementary Articles for Chapter - 2
+5 lectures • 17min
+Article: Flexibility and Adaptability
+Article: Autonomy
+Evolution (in AI-based systems and what it means for testing)
+Article: Bias and Ethics
+Article: Side Effects and Reward Hacking
+Section-5
+18 questions
+Chapter 3 & 4 - Machine Learning(ML) Overview and its Data Preparation
+4 lectures • 25min
+Forms of Machine learning & Understand difference between them
+Understand Machine Learning Workflow & its objectives from exam perspective
+Understand ML Data Preparation & its Dataset Quality issues
+What is Data labelling & how you decide if Model is overfitting/Underfitting
+zes & Supplementary Articles for Chapter - 3 & 4
+10 lectures • 33min
+Article: Forms of ML (Supervised, Unsupervised, Reinforcement Learning)
+Article: ML Workflow
+Article: Selecting a Form of ML
+Article: Factors Involved in ML Algorithm Selection
+Article: Overfitting and Underfitting
+Article: Data Preparation as Part of the ML Workflow
+Article: Training, Validation and Test Datasets in the ML Workflow
+Article: Dataset Quality Issues
+Article: Data Quality and its Effect on the ML Model
+Article: Data Labelling for Supervised Learning
+Section-7
+18 questions
+Chapter 5 - ML Functional Performance Metrics
+5 lectures • 49min
+What is Confusion Matrix -Learn with example inputs
+Understand the calculation of Accuracy & Precision with examples
+Understand the calculation of Recall & F1 Score - Revise with an example
+Understand the concept of Regression Metrics & Clustering Metrics
+Limitations of AI Metrics & Selecting the right Metric
+Chapter 6 - Neural Networks & Neurons Test Coverage
+5 lectures • 38min
+What is Neural network? How AI Internally process data
+Understand Deep Neural network Architecture with an real time example
+Key Concepts Summary - Weight, Bias, Activation Values & Functions
+How Coverage in Neural networks is measured? Introduction
+Understand 5 types of Neural network coverages for comprehensive Testing
+zes & Supplementary Articles for Chapter - 5 & 6
+7 lectures • 15min
+Article: Confusion Matrix
+Article: Performance Metrics for Classification, Regression, and Clustering
+Article: Limitations of ML Functional Performance Metrics
+Article: Selecting ML Functional Performance Metrics
+Article: Benchmark Suites for Machine Learning
+Article: Neural Networks in AI Testing: Structure, Function and Testing Techniqe
+Article: Coverage Measures for Neural Networks
+Section-9
+15 questions
+Chapter 7 - Testing AI based Systems - Overview
+5 lectures • 36min
+Specific Challenges in Testing AI systems vs Traditional Systems
+Test Levels for AI - Detailed overview of Testing types
+Test Data Challenges - Understand with Scenario example
+Documenting AI components & understand Concept Drift with example
+Identifying Risk in the AI Testing and apply Mitigation Techniques
+zes & Supplementary Articles for Chapter - 7
+7 lectures • 15min
+Article : Specification of AI-Based Systems
+Article: Test Levels for AI-Based Systems
+Article: Test Data for Testing AI-based Systems
+Article: Testing for Automation Bias in AI-Based Systems
+Article: Documenting an AI Component: A Key to Effective AI Testing
+Article: Testing for Concept Drift in AI-Based Systems
+Article: Selecting a Test Approach for an ML System
+Section-11
+8 questions
+Chapter 8 - AI Technologies used in Testing
+4 lectures • 21min
+Challenges in Testing Self Learning Systems -Examples
+Testing Autonomous AI - Testing edge cases to decide when to handover control
+Testing Bias in AI - Recap the facts & Testing techniques
+Transparency, Interpretability & Explainability - Key things to check for AI
+zes & Supplementary Articles for Chapter - 8
+8 lectures • 20min
+Article: Challenges Testing Self-Learning Systems
+Article: Testing Autonomous AI-Based Systems
+Article:Testing for Algorithmic, Sample, & Inappropriate Bias in AI-Based System
+Article: Challenges Testing Probabilistic and Non-Deterministic AI-Based Systems
+Article: Challenges Testing Complex AI-Based Systems
+Testing the Transparency, Interpretability,and Explainability of AI-Based System
+Article: Test Oracles for AI-Based Systems
+Article: Test Objectives and Acceptance Criteria in AI Testing
+Chapter 9 - Methods & Techniques for Testing AI biased Systems
+5 lectures • 29min
+Why do we need special AI Testing? - Adversarial Attacks
+What are Data poisoning Attacks & Detection Methods (How testers defend)
+Pairwise & Back 2 Back Testing - Scenarios where we choose this testing types
+Metamorphic Testing & A/B Testing in AI with examples
+Experience based Testing & Recap of all testing types in AI with examples
+zes & Supplementary Articles for Chapter - 9
+7 lectures • 14min
+Article: Adversarial Attacks and Data Poisoning in AI Testing
+Article: Pairwise Testing in AI-Based Systems
+Article: Back-to-Back Testing in AI-Based Systems
+Article: A/B Testing in AI-Based Systems
+Article: Metamorphic Testing (MT) in AI-Based Systems
+Article: Experience-Based Testing of AI-Based Systems
+Article: Selecting Test Techniques for AI-Based Systems
+7 questions
+Chapter 10 & 11 - Test environments & AI Technologies used for AI Systems
+3 lectures • 24min
+What are virtual test environments for AI applications/systems?
+How AI systems are certified - Safety, Transparency & Side effectd
+Learn Probabilistic methods, Classification Prediction, Search optimization
+zes & Supplementary Articles for Chapter - 10 & 11
+8 lectures • 19min
+Article: Test Environments for AI-Based Systems
+Article: Virtual Test Environments for Testing AI-Based Systems
+Article: AI Technologies for Testing
+Article: Using AI to Analyze Reported Defects
+Article: Using AI for Test Case Generation
+Article: Using AI for the Optimization of Regression Test Suites
+Article: Using AI for Defect Prediction
+Article: Using AI for Testing User Interfaces
+4 questions
+Final Exam
+0 lectures • 0min
+Final Exam-1
+49 questions
+Final Exam-2
+11 questions

@@ -1,0 +1,442 @@
+- id: 1
+  question: During fine-tuning of a BERT model for sentiment analysis, you observe
+    consistently low performance on a specific class. Which technique would be most
+    effective to address this class imbalance?
+  options:
+    A: Increase the learning rate for all parameters.
+    B: Implement class weighting during loss calculation.
+    C: Reduce the batch size to improve gradient stability.
+    D: Remove the under-represented class from the dataset.
+  correct_answer: B
+- id: 2
+  question: You are building a semantic search index using Transformers. Which tokenizer
+    strategy is generally preferred for handling out-of-vocabulary (OOV) words effectively?
+  options:
+    A: WordPiece
+    B: Byte-Pair Encoding (BPE)
+    C: Character-level tokenization
+    D: Simple whitespace tokenization
+  correct_answer: B
+- id: 3
+  question: When using DeepSpeed for distributed training, what is the primary benefit
+    of ZeRO-Offload?
+  options:
+    A: Increased communication bandwidth between GPUs.
+    B: Reduced memory footprint on GPUs by offloading optimizer states to CPU.
+    C: Automatic gradient accumulation for larger effective batch sizes.
+    D: Improved data parallelism efficiency.
+  correct_answer: B
+- id: 4
+  question: You've implemented LoRA for fine-tuning a 7B parameter LLM. You notice
+    the adapter weights are converging very slowly. What adjustment could you make
+    to potentially accelerate training?
+  options:
+    A: Decrease the LoRA rank.
+    B: Increase the LoRA rank.
+    C: Reduce the learning rate for the base model.
+    D: Increase the dropout rate in the adapter layers.
+  correct_answer: B
+- id: 5
+  question: Which of the following best describes the primary function of FlashAttention
+    2?
+  options:
+    A: Reducing the precision of attention weights to 4-bit.
+    B: Optimizing attention computation for faster processing and reduced memory usage.
+    C: Implementing sparse attention patterns to reduce computational complexity.
+    D: Automatically selecting the optimal attention head configuration.
+  correct_answer: B
+- id: 6
+  question: You are using T5 for a text-to-text task. You observe that the generated
+    output is often repetitive. What decoding strategy could help mitigate this issue?
+  options:
+    A: Greedy decoding
+    B: Beam search with length penalty
+    C: Top-k sampling with a high temperature
+    D: Nucleus sampling with a low temperature
+  correct_answer: B
+- id: 7
+  question: In the context of RLHF, what is the role of the reward model?
+  options:
+    A: To generate diverse text samples for the LLM to learn from.
+    B: To provide a scalar reward signal based on the quality of the LLM's output.
+    C: To pre-train the LLM on a large corpus of text data.
+    D: To fine-tune the LLM using supervised learning.
+  correct_answer: B
+- id: 8
+  question: You are training an LLM and encounter an 'out of memory' error on your
+    GPU. Which of the following is the *least* effective strategy to address this?
+  options:
+    A: Reduce the batch size.
+    B: Enable gradient checkpointing.
+    C: Increase the sequence length.
+    D: Use mixed precision training (e.g., FP16).
+  correct_answer: C
+- id: 9
+  question: What is the primary difference between GPT and BERT in terms of their
+    architecture and pre-training objective?
+  options:
+    A: GPT uses a bidirectional encoder, while BERT uses a unidirectional decoder.
+    B: GPT uses a unidirectional decoder, while BERT uses a bidirectional encoder.
+    C: GPT is primarily used for classification, while BERT is used for generation.
+    D: GPT requires less data for pre-training than BERT.
+  correct_answer: B
+- id: 10
+  question: You are designing a chat template for an LLM. What is the purpose of including
+    a 'system' message?
+  options:
+    A: To provide the user's input to the LLM.
+    B: To define the LLM's persona and behavior.
+    C: To specify the desired output format.
+    D: To track the conversation history.
+  correct_answer: B
+- id: 11
+  question: When using 8-bit training, what is the main trade-off you are making?
+  options:
+    A: Increased training speed at the cost of reduced model accuracy.
+    B: Reduced memory usage at the cost of potential accuracy loss.
+    C: Improved model generalization at the cost of increased training time.
+    D: Simplified model architecture at the cost of reduced expressiveness.
+  correct_answer: B
+- id: 12
+  question: You are implementing gradient accumulation. If your effective batch size
+    is 64 and you accumulate gradients for 4 steps, what is the actual batch size
+    used in each forward pass?
+  options:
+    A: 64
+    B: 16
+    C: 256
+    D: 4
+  correct_answer: B
+- id: 13
+  question: What is the purpose of 'adapter merging' in the context of LoRA?
+  options:
+    A: To combine multiple LoRA adapters trained on different tasks into a single
+      model.
+    B: To reduce the size of the LoRA adapters for faster inference.
+    C: To improve the training stability of LoRA adapters.
+    D: To automatically select the best LoRA adapter for a given task.
+  correct_answer: A
+- id: 14
+  question: You are using FSDP for model parallelism. What is the key benefit of sharding
+    the model parameters across multiple GPUs?
+  options:
+    A: Increased communication bandwidth.
+    B: Reduced memory footprint per GPU.
+    C: Faster gradient computation.
+    D: Automatic hyperparameter tuning.
+  correct_answer: B
+- id: 15
+  question: Which of the following is a key advantage of using a text-to-text framework
+    like T5?
+  options:
+    A: It is specifically designed for image generation.
+    B: It can handle a wide range of NLP tasks with a single model and objective.
+    C: It requires less data for pre-training than other Transformer models.
+    D: It is more efficient for real-time inference.
+  correct_answer: B
+- id: 16
+  question: You are fine-tuning a GPT-2 model for text generation. You notice the
+    model is generating text that is off-topic. What could be a potential cause?
+  options:
+    A: The learning rate is too low.
+    B: The training data is not representative of the desired output.
+    C: The batch size is too large.
+    D: The model architecture is too complex.
+  correct_answer: B
+- id: 17
+  question: What is the role of the 'temperature' parameter in decoding strategies
+    like Top-k and Nucleus sampling?
+  options:
+    A: It controls the maximum length of the generated text.
+    B: It adjusts the randomness of the sampling process.
+    C: It determines the number of beams to use in beam search.
+    D: It specifies the vocabulary size for token generation.
+  correct_answer: B
+- id: 18
+  question: You are building a question answering system using BERT. What type of
+    Transformer architecture is BERT best suited for?
+  options:
+    A: Sequence-to-sequence tasks.
+    B: Text classification and understanding.
+    C: Text generation.
+    D: Machine translation.
+  correct_answer: B
+- id: 19
+  question: What is the primary purpose of masking in Masked Language Modeling (MLM)?
+  options:
+    A: To prevent the model from overfitting.
+    B: To encourage the model to learn contextual representations of words.
+    C: To reduce the computational cost of training.
+    D: To improve the model's ability to generate text.
+  correct_answer: B
+- id: 20
+  question: You are selecting an LLM for a resource-constrained environment. Which
+    factor would be *most* important to consider?
+  options:
+    A: The model's performance on a benchmark dataset.
+    B: The model's size (number of parameters).
+    C: The model's training data size.
+    D: The model's licensing terms.
+  correct_answer: B
+- id: 21
+  question: What is the main benefit of using a sequence length of 2048 instead of
+    512 during LLM training?
+  options:
+    A: Faster training speed.
+    B: Reduced memory consumption.
+    C: Ability to capture longer-range dependencies in the text.
+    D: Improved model generalization.
+  correct_answer: C
+- id: 22
+  question: You are observing that your LLM is generating outputs that are factually
+    incorrect. What technique could help improve the model's factual accuracy?
+  options:
+    A: Increase the temperature parameter.
+    B: Fine-tune the model on a dataset of verified facts.
+    C: Reduce the learning rate.
+    D: Increase the batch size.
+  correct_answer: B
+- id: 23
+  question: What is the purpose of 'QLoRA'?
+  options:
+    A: Quantizing the LoRA adapters to reduce their size.
+    B: Quantizing the entire LLM to 4-bit precision for efficient fine-tuning.
+    C: Improving the training speed of LoRA adapters.
+    D: Merging multiple LoRA adapters into a single model.
+  correct_answer: B
+- id: 24
+  question: When using DeepSpeed, what does 'pipeline parallelism' aim to achieve?
+  options:
+    A: Distributing the model layers across multiple GPUs.
+    B: Replicating the model across multiple GPUs.
+    C: Increasing the batch size.
+    D: Reducing the communication overhead between GPUs.
+  correct_answer: A
+- id: 25
+  question: You are using a Transformer model for machine translation. What is the
+    role of the encoder in this scenario?
+  options:
+    A: To generate the translated text.
+    B: To encode the source language text into a contextualized representation.
+    C: To decode the target language text.
+    D: To perform tokenization.
+  correct_answer: B
+- id: 26
+  question: What is the primary difference between pre-training and fine-tuning?
+  options:
+    A: Pre-training uses labeled data, while fine-tuning uses unlabeled data.
+    B: Pre-training is done on a specific task, while fine-tuning is done on a general
+      corpus.
+    C: Pre-training learns general language representations, while fine-tuning adapts
+      the model to a specific task.
+    D: Pre-training is faster than fine-tuning.
+  correct_answer: C
+- id: 27
+  question: You are experiencing slow training speeds with a large LLM. Which of the
+    following would likely have the *most* significant impact on improving training
+    speed?
+  options:
+    A: Increasing the learning rate.
+    B: Switching to a different optimizer.
+    C: Implementing mixed precision training and data parallelism.
+    D: Reducing the sequence length.
+  correct_answer: C
+- id: 28
+  question: What is the purpose of the 'system' prompt in a chat application powered
+    by an LLM?
+  options:
+    A: To provide the user's input.
+    B: To define the LLM's role and behavior.
+    C: To store the conversation history.
+    D: To control the length of the generated response.
+  correct_answer: B
+- id: 29
+  question: You are using a Transformer model for text classification. What is the
+    typical role of the classification layer?
+  options:
+    A: To generate text.
+    B: To encode the input text.
+    C: To map the Transformer's output to a probability distribution over the classes.
+    D: To tokenize the input text.
+  correct_answer: C
+- id: 30
+  question: What is the main advantage of using embeddings in NLP?
+  options:
+    A: They reduce the dimensionality of the data.
+    B: They capture semantic relationships between words.
+    C: They improve the speed of training.
+    D: They eliminate the need for tokenization.
+  correct_answer: B
+- id: 31
+  question: You've noticed that your LLM is consistently generating biased outputs.
+    What is a crucial step to mitigate this issue?
+  options:
+    A: Increase the model's size.
+    B: Curate a more diverse and representative training dataset.
+    C: Reduce the learning rate.
+    D: Use a different activation function.
+  correct_answer: B
+- id: 32
+  question: What is the purpose of 'gradient checkpointing' during LLM training?
+  options:
+    A: To speed up gradient computation.
+    B: To reduce memory usage by recomputing activations during the backward pass.
+    C: To improve the accuracy of the gradients.
+    D: To automatically tune the learning rate.
+  correct_answer: B
+- id: 33
+  question: You are using DeepSpeed and observe high communication overhead. What
+    strategy could help reduce this overhead?
+  options:
+    A: Increase the batch size.
+    B: Enable ZeRO-Offload.
+    C: Reduce the number of GPUs.
+    D: Disable gradient accumulation.
+  correct_answer: B
+- id: 34
+  question: What is the primary function of the attention mechanism in Transformers?
+  options:
+    A: To reduce the dimensionality of the input.
+    B: To allow the model to focus on different parts of the input sequence when processing
+      each element.
+    C: To perform tokenization.
+    D: To generate text.
+  correct_answer: B
+- id: 35
+  question: You are fine-tuning a model for a specific task and observe overfitting.
+    What regularization technique could help?
+  options:
+    A: Increase the learning rate.
+    B: Decrease the batch size.
+    C: Add dropout layers.
+    D: Reduce the number of layers.
+  correct_answer: C
+- id: 36
+  question: What is the role of the 'stop tokens' in LLM generation?
+  options:
+    A: To specify the maximum length of the generated text.
+    B: To signal the model to stop generating text.
+    C: To control the temperature of the generation.
+    D: To define the vocabulary of the model.
+  correct_answer: B
+- id: 37
+  question: You are using FSDP and encounter issues with memory fragmentation. What
+    could be a potential solution?
+  options:
+    A: Increase the batch size.
+    B: Reduce the number of shards.
+    C: Enable data parallelism.
+    D: Use a different memory allocator.
+  correct_answer: B
+- id: 38
+  question: What is the key benefit of using 4-bit quantization for LLM training?
+  options:
+    A: Increased model accuracy.
+    B: Reduced memory footprint and faster training.
+    C: Improved model generalization.
+    D: Simplified model architecture.
+  correct_answer: B
+- id: 39
+  question: You are building a semantic search index. Which embedding model would
+    generally provide the best performance?
+  options:
+    A: Word2Vec
+    B: GloVe
+    C: Sentence Transformers
+    D: FastText
+  correct_answer: C
+- id: 40
+  question: What is the purpose of 'RLHF' (Reinforcement Learning from Human Feedback)?
+  options:
+    A: To pre-train the LLM on a large corpus of text data.
+    B: To fine-tune the LLM to align with human preferences.
+    C: To generate diverse text samples.
+    D: To evaluate the performance of the LLM.
+  correct_answer: B
+- id: 41
+  question: You are using DeepSpeed and notice that the training process is bottlenecked
+    by communication. What DeepSpeed feature could help alleviate this?
+  options:
+    A: ZeRO-Offload
+    B: Pipeline Parallelism
+    C: Mixed Precision Training
+    D: Gradient Accumulation
+  correct_answer: B
+- id: 42
+  question: What is the primary advantage of using LoRA over full fine-tuning?
+  options:
+    A: LoRA achieves higher accuracy.
+    B: LoRA requires less computational resources and storage.
+    C: LoRA is faster to train.
+    D: LoRA is more robust to overfitting.
+  correct_answer: B
+- id: 43
+  question: You are using a Transformer model for question answering. What is the
+    typical input format?
+  options:
+    A: Question only.
+    B: Context and question.
+    C: Answer only.
+    D: Context, question, and answer.
+  correct_answer: B
+- id: 44
+  question: What is the role of the 'decoder' in a Transformer-based machine translation
+    model?
+  options:
+    A: To encode the source language text.
+    B: To generate the translated text.
+    C: To perform tokenization.
+    D: To align the source and target languages.
+  correct_answer: B
+- id: 45
+  question: You are training an LLM and observe that the loss is not decreasing. What
+    could be a potential cause?
+  options:
+    A: The learning rate is too high.
+    B: The batch size is too small.
+    C: The model architecture is too simple.
+    D: The training data is not diverse enough.
+  correct_answer: A
+- id: 46
+  question: What is the purpose of 'FlashAttention 2' compared to standard attention?
+  options:
+    A: To improve the accuracy of attention weights.
+    B: To reduce the memory footprint and increase the speed of attention computation.
+    C: To enable sparse attention patterns.
+    D: To automatically select the optimal attention head configuration.
+  correct_answer: B
+- id: 47
+  question: You are using FSDP with a large LLM. What is the impact of increasing
+    the number of shards?
+  options:
+    A: Reduced memory usage per GPU, but increased communication overhead.
+    B: Increased memory usage per GPU, but reduced communication overhead.
+    C: Faster training speed.
+    D: Improved model accuracy.
+  correct_answer: A
+- id: 48
+  question: What is the primary benefit of using mixed precision training (e.g., FP16)?
+  options:
+    A: Increased model accuracy.
+    B: Reduced memory usage and faster training.
+    C: Improved model generalization.
+    D: Simplified model architecture.
+  correct_answer: B
+- id: 49
+  question: You are fine-tuning a GPT model for code generation. What type of data
+    would be most effective for this task?
+  options:
+    A: A large corpus of general text.
+    B: A dataset of code examples in the target programming language.
+    C: A dataset of natural language descriptions of code.
+    D: A dataset of mathematical equations.
+  correct_answer: B
+- id: 50
+  question: What is the purpose of 'adapter merging' in the context of LoRA?
+  options:
+    A: To reduce the size of the LoRA adapters for faster inference.
+    B: To combine multiple LoRA adapters trained on different tasks into a single
+      model.
+    C: To improve the training stability of LoRA adapters.
+    D: To automatically select the best LoRA adapter for a given task.
+  correct_answer: B

@@ -1,0 +1,150 @@
+COURSE: OWASP Top 10 LLM 2025: AI Security Essentials
+URL: https://azirotechnologies.udemy.com/course/owasp-llm-security-learnit/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software developers who integrate LLMs into applications and want to avoid common pitfalls
+Security engineers and penetration testers interested in the newest category of AI threats
+AI/ML engineers who need to secure LLM-powered pipelines, APIs, and RAG systems
+Solution architects designing enterprise systems that include AI components
+Product managers and tech leads who want to understand risks before deploying LLMs in production
+DevOps and MLOps professionals responsible for monitoring and governance of AI systems
+Cybersecurity students and researchers exploring adversarial AI and AI ethics
+Compliance and risk management professionals looking to align AI use with security standards
+Business leaders and decision-makers seeking to make informed choices about adopting LLMs securely
+Anyone curious about the OWASP Top 10 for LLMs (2025) and eager to learn practical defense strategies
+
+--- DESCRIPTION ---
+Description
+
+Artificial Intelligence is no longer a buzzword - it’s a critical part of modern software systems. Large Language Models (LLMs) like GPT, Claude, and others are being embedded into chatbots, customer support systems, code assistants, knowledge management platforms, and even critical business applications.
+
+But here’s the problem: while adoption of AI is skyrocketing, security hasn’t kept up. Most organizations are deploying LLM-powered systems without fully understanding the new risks that come with them. Attackers are already discovering creative ways to exploit these models - through prompt injection, data leakage, model extraction, unbounded resource consumption, embedding inversion, and more.
+
+This is why the OWASP Top 10 for LLMs (2025) was created: a global standard designed to help professionals understand and defend against the most dangerous vulnerabilities in AI systems. And this course is your step-by-step guide to mastering it.
+
+Why this course? Why now?
+
+First-mover advantage: Few professionals truly understand LLM security today. By mastering it now, you position yourself as a forward-thinking expert in one of the fastest-growing fields in cybersecurity.
+
+Comprehensive coverage: We don’t just list vulnerabilities - we analyze real-world attacks, case studies, and live demonstrations so you can see how threats work in practice.
+
+Practical defense strategies: Every risk is paired with concrete mitigation techniques that you can apply immediately in your own systems.
+
+Bridging AI and security worlds: Whether you come from a software, security, or AI background, this course gives you a common language and actionable playbook to secure LLM deployments.
+
+Career impact: AI security skills are in massive demand. Adding “OWASP Top 10 for LLMs (2025)” expertise to your CV instantly makes you stand out to employers, clients, and organizations racing to secure their AI.
+
+What you will learn inside this course
+
+The OWASP Top 10 for LLMs (2025) explained in depth.
+
+The unique risks of LLMs compared to traditional web apps and APIs.
+
+How to detect and defend against prompt injection and data exfiltration attacks.
+
+Strategies to mitigate denial-of-wallet, resource exhaustion, and abuse of compute cycles.
+
+Techniques for protecting against model extraction and inversion attacks.
+
+Risks in multi-tenant vector databases and retrieval-augmented generation (RAG) setups.
+
+Implementing secure design patterns, RBAC, and least-privilege principles for AI apps.
+
+Building monitoring, logging, anomaly detection, and governance systems for AI pipelines.
+
+Hands-on insights into adversarial robustness, red teaming, and continuous security testing.
+
+Best practices for compliance, ethics, and legal frameworks when deploying AI responsibly.
+
+Who should take this course?
+
+This course is designed for a wide range of professionals:
+
+Software developers embedding LLMs into applications.
+
+Security engineers & penetration testers who want to expand into AI.
+
+AI/ML engineers needing to harden their models against adversaries.
+
+Solution architects & tech leads responsible for secure design.
+
+MLOps and DevOps professionals maintaining AI pipelines.
+
+Business leaders & product managers making decisions about AI adoption.
+
+Cybersecurity students, researchers, and compliance officers looking for cutting-edge knowledge.
+
+Why this course is the best choice for you
+
+Unlike generic AI or security training, this course is laser-focused on the intersection of LLMs and cybersecurity. It’s built around the official OWASP Top 10 for LLMs (2025), the first global framework for addressing AI-specific vulnerabilities. You’ll not only gain theoretical knowledge but also actionable skills you can use immediately.
+
+By enrolling, you’re not just learning about threats - you’re learning how to future-proof your career, protect your projects, and become a trusted expert in one of the most urgent topics in technology today.
+
+Don’t wait until the next security breach makes headlines. Enroll now, master the OWASP Top 10 for LLMs (2025), and be at the forefront of AI security.
+
+Who this course is for:
+Software developers who integrate LLMs into applications and want to avoid common pitfalls
+Security engineers and penetration testers interested in the newest category of AI threats
+AI/ML engineers who need to secure LLM-powered pipelines, APIs, and RAG systems
+Solution architects designing enterprise systems that include AI components
+Product managers and tech leads who want to understand risks before deploying LLMs in production
+DevOps and MLOps professionals responsible for monitoring and governance of AI systems
+Cybersecurity students and researchers exploring adversarial AI and AI ethics
+Compliance and risk management professionals looking to align AI use with security standards
+Business leaders and decision-makers seeking to make informed choices about adopting LLMs securely
+Anyone curious about the OWASP Top 10 for LLMs (2025) and eager to learn practical defense strategies
+Show more
+
+--- CURRICULUM ---
+Course content
+5 sections • 38 lectures • 12h 9m total length
+Collapse all sections
+Introduction
+4 lectures • 25min
+Communication plan
+Tips to Improve Your Course Taking Experience
+Learn IT Bot – Your Free AI Learning Assistant
+Free AI Bot for My Students Only – No Sign-Up, FREE, Just Practice
+OWASP Top 10 2025: LLM
+11 lectures • 4hr 5min
+Introduction to OWASP Top 10 2025: LLM
+LLM01:2025 Prompt Injection
+LLM02:2025 Sensitive Information Disclosure
+LLM03:2025 Supply Chain
+LLM04:2025 Data and Model Poisoning
+LLM05:2025 Improper Output Handling
+LLM06:2025 Excessive Agency
+LLM07:2025 System Prompt Leakage
+LLM08:2025 Vector and Embedding Weaknesses
+LLM09:2025 Misinformation
+LLM10:2025 Unbounded Consumption
+Extra Materials: AI Cybersecurity Solutions
+15 lectures • 5hr 40min
+Welcome & Learning Section Map
+The GenAI Threat Landscape
+Anatomy of a GenAI Application (Reference Architecture)
+Governance, Policy, and Compliance for AI Systems
+Threat Modeling for GenAI Systems
+Secure AI Software Development Lifecycle (AI-SDLC)
+AI Firewalls and Runtime Protection
+API, Identity & Access for AI Systems
+AI Security Posture Management (SPM)
+Data Security and Governance in AI Systems
+Common Vulnerability Classes & Mitigations
+Observability and AI Evaluation Tools
+Case Studies: AI Security in Practice
+Buy vs Build: Choosing AI Security Solutions
+AI Security Control Stack Design
+Extra Materials: Threat Modeling for Agentic AI
+7 lectures • 1hr 56min
+Foundations of Agentic AI
+Agentic AI Threat Landscape
+Threat Modeling for Agentic Systems
+Memory Threat Modeling
+Tooling Threat Modeling
+Privilege and Policy Controls
+Case Studies: Real-World Agentic Failures
+Bonus Section
+1 lecture • 3min
+Bonus Lesson
