@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Aziro L&D</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    /* Help icon tooltip */
+    .help-wrap { position: relative; display: inline-flex; }
+    .help-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--surface2); border: 1px solid var(--border);
+      color: var(--text2); font-size: 15px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all var(--t); font-family: 'Syne', sans-serif;
+    }
+    .help-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
+    .help-tooltip {
+      position: absolute; top: calc(100% + 12px); right: 0;
+      width: 290px; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 18px;
+      box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none;
+      transform: translateY(-6px); transition: all 0.2s ease; z-index: 999;
+    }
+    .help-wrap:hover .help-tooltip { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .help-tooltip::before {
+      content: ''; position: absolute; top: -6px; right: 14px;
+      width: 10px; height: 10px; background: var(--surface);
+      border-left: 1px solid var(--border); border-top: 1px solid var(--border);
+      transform: rotate(45deg);
+    }
+    .help-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .help-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+    .help-step:last-child { margin-bottom: 0; }
+    .help-step-num {
+      width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+      color: white; font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .help-step-text { font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .help-step-text strong { color: var(--text); font-weight: 600; }
+    .help-arrow { text-align: center; color: var(--text3); font-size: 12px; margin: 3px 0 3px 32px; }
+
+    /* Topbar user avatar */
+    .topbar-user { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    .topbar-user-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--accent4); color: white;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .topbar-user-name { font-size: 13px; font-weight: 600; color: var(--text); }
+    .topbar-search {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 8px 14px; min-width: 200px;
+    }
+    .topbar-search input {
+      background: transparent; border: none; outline: none;
+      font-size: 13px; color: var(--text); font-family: 'DM Sans', sans-serif; width: 100%;
+    }
+    .topbar-search input::placeholder { color: var(--text3); }
+  </style>
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="breadcrumb">🏠 Home › Dashboard</div>
+        <div class="page-title">Dashboard</div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <span style="color:var(--text3)">🔍</span>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- ? Help icon -->
+        <div class="help-wrap">
+          <button class="help-btn" aria-label="Help">?</button>
+          <div class="help-tooltip">
+            <div class="help-title">📋 How to use this platform</div>
+            <div class="help-step"><div class="help-step-num">1</div><div class="help-step-text"><strong>Create Test</strong> — Select course, set questions & time limit, enter employee name + email</div></div>
+            <div class="help-arrow">↓</div>
+            <div class="help-step"><div class="help-step-num">2</div><div class="help-step-text"><strong>Generate Link</strong> — System creates a unique test link and sends via Outlook email</div></div>
+            <div class="help-arrow">↓</div>
+            <div class="help-step"><div class="help-step-num">3</div><div class="help-step-text"><strong>Employee Takes Test</strong> — Employee opens link and completes the assessment</div></div>
+            <div class="help-arrow">↓</div>
+            <div class="help-step"><div class="help-step-num">4</div><div class="help-step-text"><strong>Evaluate Results</strong> — View scores & pass/fail in Evaluation page</div></div>
+            <div class="help-arrow">↓</div>
+            <div class="help-step"><div class="help-step-num">5</div><div class="help-step-text"><strong>Download Reports</strong> — Export branch-wise analytics from Reports page</div></div>
+          </div>
+        </div>
+
+        <div class="topbar-user">
+          <div class="topbar-user-avatar" id="tbAvatar">A</div>
+          <span class="topbar-user-name" id="tbName">HR Admin</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE CONTENT — only one instance -->
+    <div class="content">
+
+      <!-- Welcome + time filters row -->
+      <div class="flex justify-between items-center mb-lg anim-1">
+        <div>
+          <div class="text-faint text-sm" id="welcomeMsg">Welcome back, HR Admin</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:4px">
+            <span style="font-size:22px">📊</span>
+            <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800">Dashboard</span>
+            <span style="font-size:12px;color:var(--text3);background:var(--surface2);padding:3px 10px;border-radius:20px">2 minutes ago</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-md">
+          <div class="time-filters">
+            <button class="tf-btn active">Today</button>
+            <button class="tf-btn">Last 24h</button>
+            <button class="tf-btn">Last 7 Days</button>
+            <button class="tf-btn">Last 28 Days</button>
+          </div>
+          <a href="create_test.html" class="btn btn-primary" style="background:var(--accent4);border:none">+ Create Test</a>
+        </div>
+      </div>
+
+      <!-- OVERVIEW BANNER CARDS -->
+      <div class="grid-2 mb-lg anim-2">
+        <div class="overview-card-blue">
+          <div class="oc-head">
+            <div class="oc-title">🌐 Today's Overview — All Branches</div>
+            <div class="oc-tag">● Live</div>
+          </div>
+          <div class="oc-big">47</div>
+          <div class="oc-sub">Total Employees Tested Today</div>
+          <div class="oc-metrics">
+            <div><div class="oc-metric-val">32</div><div class="oc-metric-label">Total Tests</div></div>
+            <div><div class="oc-metric-val">28</div><div class="oc-metric-label">Completed</div></div>
+            <div><div class="oc-metric-val">4</div><div class="oc-metric-label">Pending</div></div>
+          </div>
+        </div>
+        <div class="overview-card-orange">
+          <div class="oc-head">
+            <div class="oc-title">👤 My Activity Today</div>
+            <div class="oc-tag">Personal</div>
+          </div>
+          <div class="oc-big">12</div>
+          <div class="oc-sub">My Candidates Assigned</div>
+          <div class="oc-metrics">
+            <div><div class="oc-metric-val">8</div><div class="oc-metric-label">Tests Created</div></div>
+            <div><div class="oc-metric-val">6</div><div class="oc-metric-label">Completed</div></div>
+            <div><div class="oc-metric-val">2</div><div class="oc-metric-label">Pending</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="grid-4 mb-lg anim-3">
+        <div class="stat-card">
+          <div class="stat-icon icon-blue">📚</div>
+          <div>
+            <div class="stat-val">24</div>
+            <div class="stat-label">Active Courses</div>
+            <div class="stat-change change-up">↑ 3 this week</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-green">✅</div>
+          <div>
+            <div class="stat-val">186</div>
+            <div class="stat-label">Tests Completed</div>
+            <div class="stat-change change-up">↑ 12 today</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-amber">⏳</div>
+          <div>
+            <div class="stat-val">31</div>
+            <div class="stat-label">Pending Tests</div>
+            <div class="stat-change change-down">↓ 5 cleared</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-purple">📈</div>
+          <div>
+            <div class="stat-val">78%</div>
+            <div class="stat-label">Avg. Score</div>
+            <div class="stat-change change-up">↑ 4% vs last week</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHARTS ROW -->
+      <div class="grid-col-2-1 mb-lg anim-4">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Test Performance — Weekly</div>
+              <div class="card-subtitle">Score distribution across all courses</div>
+            </div>
+            <div class="legend">
+              <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Completed</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div>Passed</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Pending</div>
+            </div>
+          </div>
+          <canvas id="barChart" height="90"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Pass / Fail</div>
+              <div class="card-subtitle">All tests this month</div>
+            </div>
+          </div>
+          <canvas id="donutChart" height="160"></canvas>
+          <div class="legend" style="justify-content:center;margin-top:14px">
+            <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div>Pass 68%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>Fail 18%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>Pending 14%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW -->
+      <div class="grid-col-3-2 anim-5">
+
+        <!-- Recent Activity Table -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Recent Test Activity</div>
+              <div class="card-subtitle">Latest assignments &amp; completions across all branches</div>
+            </div>
+            <a href="generated_tests.html" style="font-size:12px;color:var(--accent4);font-weight:600;text-decoration:none">View all →</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Course</th>
+                <th>Branch</th>
+                <th>Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="td-primary">Ananya Sharma</td><td>Python Fundamentals</td><td>Mumbai</td><td class="text-success fw-600">88%</td><td><span class="badge badge-completed">Completed</span></td></tr>
+              <tr><td class="td-primary">Rajesh Kumar</td><td>Docker Basics</td><td>Delhi HQ</td><td class="text-faint">—</td><td><span class="badge badge-pending">Pending</span></td></tr>
+              <tr><td class="td-primary">Priya Mehta</td><td>Linux Administration</td><td>Pune</td><td class="text-success fw-600">92%</td><td><span class="badge badge-completed">Completed</span></td></tr>
+              <tr><td class="td-primary">Vikram Nair</td><td>AWS Cloud Basics</td><td>Bangalore</td><td class="text-faint">—</td><td><span class="badge badge-sent">Sent</span></td></tr>
+              <tr><td class="td-primary">Kavitha Reddy</td><td>DevOps CI/CD</td><td>Hyderabad</td><td class="text-faint">—</td><td><span class="badge badge-sent">Sent</span></td></tr>
+              <tr><td class="td-primary">Sneha Patel</td><td>Python Advanced</td><td>Chennai</td><td class="text-faint">—</td><td><span class="badge badge-draft">Draft</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right column: Quick Actions + Session -->
+        <div style="display:flex;flex-direction:column;gap:14px">
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">⚡ Quick Actions</div>
+                <div class="card-subtitle">Jump to common tasks</div>
+              </div>
+            </div>
+            <div class="qa-list">
+              <a href="create_test.html" class="qa-item">
+                <div class="qa-icon-wrap icon-orange">➕</div>
+                <div><div class="qa-label">Create Test</div><div class="qa-desc">Assign test via email link</div></div>
+                <div class="qa-arrow">›</div>
+              </a>
+              <a href="generated_tests.html" class="qa-item">
+                <div class="qa-icon-wrap icon-blue">📋</div>
+                <div><div class="qa-label">View Generated Tests</div><div class="qa-desc">See all test links sent</div></div>
+                <div class="qa-arrow">›</div>
+              </a>
+              <a href="evaluation.html" class="qa-item">
+                <div class="qa-icon-wrap icon-green">📊</div>
+                <div><div class="qa-label">Evaluate Results</div><div class="qa-desc">Review scores &amp; performance</div></div>
+                <div class="qa-arrow">›</div>
+              </a>
+              <a href="reports.html" class="qa-item">
+                <div class="qa-icon-wrap icon-amber">📁</div>
+                <div><div class="qa-label">View Reports</div><div class="qa-desc">Export &amp; share analytics</div></div>
+                <div class="qa-arrow">›</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title mb-sm" style="font-size:14px">🖥️ Session Info</div>
+            <div class="session-box" style="margin-top:0">
+              <div class="session-row">👤 <span id="sess-email">hr.admin@company.com</span></div>
+              <div class="session-row">🏢 <span>Branch: Delhi HQ</span></div>
+              <div class="session-row" style="font-size:11px;color:var(--text3)">🕐 Session scoped to today. See Reports for full history.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /content — ONE closing tag only -->
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  // Load user info from localStorage
+  (function() {
+    try {
+      const u = JSON.parse(localStorage.getItem('trainiq_user'));
+      if (!u) return;
+      const name = u.name || 'HR Admin';
+      if (document.getElementById('tbName'))    document.getElementById('tbName').textContent    = name;
+      if (document.getElementById('tbAvatar'))  document.getElementById('tbAvatar').textContent  = name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+      if (document.getElementById('welcomeMsg')) document.getElementById('welcomeMsg').textContent = 'Welcome back, ' + name;
+      if (document.getElementById('sess-email')) document.getElementById('sess-email').textContent = u.email || 'hr.admin@company.com';
+    } catch(_) {}
+  })();
+
+  // Bar chart
+  new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+      datasets: [
+        { label:'Completed', data:[12,19,8,15,22,10,18], backgroundColor:'rgba(37,99,235,0.75)',  borderRadius:6 },
+        { label:'Passed',    data:[9,15,6,12,18,8,14],   backgroundColor:'rgba(22,163,74,0.75)',  borderRadius:6 },
+        { label:'Pending',   data:[3,4,2,3,4,2,4],       backgroundColor:'rgba(249,115,22,0.65)', borderRadius:6 }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false } },
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  // Donut chart
+  new Chart(document.getElementById('donutChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Pass','Fail','Pending'],
+      datasets: [{
+        data: [68,18,14],
+        backgroundColor: ['#16a34a','#dc2626','#d97706'],
+        borderWidth: 0,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '72%',
+      plugins: { legend: { display: false } }
+    }
+  });
+</script>
+
+</body>
+</html>
