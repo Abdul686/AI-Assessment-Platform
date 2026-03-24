@@ -197,21 +197,21 @@ window.logout = function() {
 
 /* ── CHART.JS GLOBAL DEFAULTS ── */
 if (typeof Chart !== 'undefined') {
-  Chart.defaults.color          = '#64748b';
+  Chart.defaults.color          = '#7b7895';
   Chart.defaults.font.family    = "'DM Sans', sans-serif";
   Chart.defaults.font.size      = 12;
   Chart.defaults.plugins.legend.display = false;
-  Chart.defaults.plugins.tooltip.backgroundColor = '#1a2235';
-  Chart.defaults.plugins.tooltip.borderColor      = 'rgba(255,255,255,0.08)';
+  Chart.defaults.plugins.tooltip.backgroundColor = '#2a124e';
+  Chart.defaults.plugins.tooltip.borderColor      = 'rgba(255,255,255,0.12)';
   Chart.defaults.plugins.tooltip.borderWidth      = 1;
   Chart.defaults.plugins.tooltip.padding          = 10;
-  Chart.defaults.plugins.tooltip.titleColor       = '#f1f5f9';
-  Chart.defaults.plugins.tooltip.bodyColor        = '#94a3b8';
-  Chart.defaults.scale.grid.color                 = 'rgba(255,255,255,0.04)';
-  Chart.defaults.scale.ticks.color                = '#64748b';
+  Chart.defaults.plugins.tooltip.titleColor       = '#f6f2ff';
+  Chart.defaults.plugins.tooltip.bodyColor        = '#e7ddff';
+  Chart.defaults.scale.grid.color                 = 'rgba(31,22,51,0.08)';
+  Chart.defaults.scale.ticks.color                = '#7b7895';
 }
 
 /* ── SIDEBAR NAV ICON SVGs (injected via JS to keep HTML DRY) ── */
 // Not used here — icons are inline in each HTML file for clarity.
 
-console.log('%cTrainIQ L&D Platform loaded ✓', 'color:#3b82f6;font-weight:bold;font-size:13px');
+console.log('%cTrainIQ L&D Platform loaded ✓', 'color:#a435f0;font-weight:bold;font-size:13px');

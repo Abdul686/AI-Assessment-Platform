@@ -15,7 +15,7 @@
     /* LEFT PANEL */
     .login-left {
       flex: 1.1;
-      background: linear-gradient(145deg, #1a2a5e 0%, #0f1d45 50%, #0a1535 100%);
+      background: linear-gradient(145deg, #2a124e 0%, #3b1a66 50%, #4b1f85 100%);
       display: flex; align-items: center; justify-content: center;
       padding: 48px;
       position: relative; overflow: hidden;
@@ -24,14 +24,14 @@
       content: '';
       position: absolute; top: -80px; right: -80px;
       width: 420px; height: 420px;
-      background: rgba(249,115,22,0.08);
+      background: rgba(164,53,240,0.12);
       border-radius: 50%;
     }
     .login-left::after {
       content: '';
       position: absolute; bottom: -120px; left: -60px;
       width: 360px; height: 360px;
-      background: rgba(59,130,246,0.07);
+      background: rgba(91,92,226,0.12);
       border-radius: 50%;
     }
     .login-left-content { position: relative; z-index: 1; max-width: 420px; }
@@ -43,10 +43,10 @@
     }
     .brand-logo-wrap {
       width: 52px; height: 52px;
-      background: linear-gradient(135deg, #f97316, #ea580c);
+      background: linear-gradient(135deg, #a435f0, #7c1ec9);
       border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 16px rgba(249,115,22,0.4);
+      box-shadow: 0 4px 16px rgba(164,53,240,0.4);
       overflow: hidden;
     }
     .brand-logo-wrap img { width: 36px; height: 36px; object-fit: contain; }
@@ -67,7 +67,7 @@
       color: white; line-height: 1.2;
       margin-bottom: 16px;
     }
-    .login-headline span { color: #f97316; }
+    .login-headline span { color: #a435f0; }
     .login-tagline {
       font-size: 14px; color: rgba(255,255,255,0.6);
       line-height: 1.7; margin-bottom: 40px;
@@ -91,7 +91,7 @@
     /* RIGHT PANEL */
     .login-right {
       flex: 0.9;
-      background: #ffffff;
+      background: var(--surface);
       display: flex; align-items: center; justify-content: center;
       padding: 48px 40px;
     }
@@ -104,30 +104,30 @@
     }
     .login-logo-top .logo-img-wrap {
       width: 40px; height: 40px;
-      background: linear-gradient(135deg, #f97316, #ea580c);
+      background: linear-gradient(135deg, #a435f0, #7c1ec9);
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(249,115,22,0.3);
+      box-shadow: 0 2px 8px rgba(164,53,240,0.3);
     }
     .login-logo-top .logo-img-wrap img { width: 28px; height: 28px; object-fit: contain; }
     .login-logo-top .brand-name-dark {
       font-family: 'Syne', sans-serif;
       font-size: 20px; font-weight: 800;
-      color: #0f172a; letter-spacing: -0.3px;
+      color: var(--text); letter-spacing: -0.3px;
     }
 
     .login-title {
       font-family: 'Syne', sans-serif;
       font-size: 24px; font-weight: 800;
-      color: #0f172a; margin-bottom: 6px;
+      color: var(--text); margin-bottom: 6px;
     }
-    .login-sub { font-size: 13px; color: #64748b; margin-bottom: 28px; }
+    .login-sub { font-size: 13px; color: var(--text3); margin-bottom: 28px; }
 
     /* Error msg */
     .error-msg {
-      background: #fef2f2; border: 1px solid #fecaca;
-      color: #dc2626; padding: 10px 14px;
+      background: var(--danger-bg); border: 1px solid #fecaca;
+      color: var(--danger); padding: 10px 14px;
       border-radius: 8px; font-size: 12.5px;
       margin-bottom: 16px; display: none;
     }
@@ -137,28 +137,28 @@
     .field-label {
       display: block;
       font-size: 11.5px; font-weight: 700;
-      color: #374151; text-transform: uppercase;
+      color: var(--text2); text-transform: uppercase;
       letter-spacing: 0.6px; margin-bottom: 7px;
     }
     .field-wrap { position: relative; }
     .field-icon {
       position: absolute; left: 13px; top: 50%;
       transform: translateY(-50%);
-      color: #9ca3af; font-size: 14px; pointer-events: none;
+      color: var(--text3); font-size: 14px; pointer-events: none;
     }
     .field-input {
       width: 100%; padding: 12px 14px 12px 40px;
-      border: 1.5px solid #e5e7eb; border-radius: 8px;
+      border: 1.5px solid var(--border); border-radius: 8px;
       font-size: 13.5px; font-family: 'DM Sans', sans-serif;
-      color: #0f172a; background: #f9fafb;
+      color: var(--text); background: var(--surface2);
       outline: none; transition: all 0.15s;
     }
-    .field-input:focus { border-color: #f97316; background: white; box-shadow: 0 0 0 3px rgba(249,115,22,0.1); }
-    .field-input::placeholder { color: #9ca3af; }
+    .field-input:focus { border-color: var(--orange); background: white; box-shadow: 0 0 0 3px rgba(164,53,240,0.12); }
+    .field-input::placeholder { color: var(--text3); }
     .eye-btn {
       position: absolute; right: 12px; top: 50%;
       transform: translateY(-50%);
-      background: none; border: none; color: #9ca3af;
+      background: none; border: none; color: var(--text3);
       cursor: pointer; font-size: 14px; padding: 2px;
     }
 
@@ -168,39 +168,39 @@
       justify-content: space-between;
       margin-bottom: 20px; font-size: 13px;
     }
-    .remember-row label { display:flex; align-items:center; gap:7px; cursor:pointer; color:#374151; }
-    .remember-row a { color: #2563eb; text-decoration: none; font-weight: 500; }
+    .remember-row label { display:flex; align-items:center; gap:7px; cursor:pointer; color:var(--text2); }
+    .remember-row a { color: var(--blue); text-decoration: none; font-weight: 500; }
     .remember-row a:hover { text-decoration: underline; }
 
     /* Sign in button */
     .signin-btn {
       width: 100%; padding: 13px;
-      background: linear-gradient(135deg, #f97316, #ea580c);
+      background: linear-gradient(135deg, #a435f0, #7c1ec9);
       color: white; border: none; border-radius: 8px;
       font-size: 15px; font-weight: 700;
       cursor: pointer; transition: all 0.18s;
       font-family: 'DM Sans', sans-serif;
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      box-shadow: 0 4px 12px rgba(249,115,22,0.3);
+      box-shadow: 0 4px 12px rgba(164,53,240,0.3);
     }
-    .signin-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(249,115,22,0.4); }
+    .signin-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(164,53,240,0.4); }
     .signin-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
 
     /* Divider */
     .or-divider {
       display: flex; align-items: center; gap: 12px;
-      margin: 20px 0; color: #9ca3af; font-size: 12px;
+      margin: 20px 0; color: var(--text3); font-size: 12px;
     }
     .or-divider::before, .or-divider::after {
-      content: ''; flex: 1; height: 1px; background: #e5e7eb;
+      content: ''; flex: 1; height: 1px; background: var(--border);
     }
 
     /* Microsoft btn */
     .ms-btn {
       width: 100%; padding: 12px;
-      background: white; border: 1.5px solid #e5e7eb;
+      background: white; border: 1.5px solid var(--border);
       border-radius: 8px; font-size: 13.5px; font-weight: 500;
-      color: #374151; cursor: pointer; transition: all 0.15s;
+      color: var(--text2); cursor: pointer; transition: all 0.15s;
       display: flex; align-items: center; justify-content: center; gap: 10px;
       font-family: 'DM Sans', sans-serif;
     }
@@ -209,11 +209,11 @@
     .ms-logo span { border-radius: 1px; }
 
     .secure-note {
-      text-align: center; font-size: 11.5px; color: #9ca3af;
+      text-align: center; font-size: 11.5px; color: var(--text3);
       margin-top: 14px;
     }
     .login-footer-text {
-      text-align: center; font-size: 11.5px; color: #9ca3af;
+      text-align: center; font-size: 11.5px; color: var(--text3);
       margin-top: 8px;
     }
   </style>
@@ -276,7 +276,7 @@
       <!-- Aziro logo on right -->
       <div class="login-logo-top">
         <div class="logo-img-wrap">
-          <img src="../assets/images/logo.avif" alt="Aziro" onerror="this.style.display='none';this.parentElement.style.background='#f97316'">
+          <img src="../assets/images/logo.avif" alt="Aziro" onerror="this.style.display='none';this.parentElement.style.background='#a435f0'">
         </div>
         <div class="brand-name-dark">aziro</div>
       </div>
@@ -310,7 +310,7 @@
       <!-- Remember + Forgot -->
       <div class="remember-row">
         <label>
-          <input type="checkbox" style="accent-color:#f97316"> Remember me
+          <input type="checkbox" style="accent-color:var(--orange)"> Remember me
         </label>
         <a href="#">Forgot password?</a>
       </div>

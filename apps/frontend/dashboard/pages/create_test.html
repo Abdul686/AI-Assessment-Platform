@@ -18,7 +18,7 @@
       cursor: pointer; transition: all 0.15s; user-select: none;
     }
     .cpill:hover  { border-color: var(--accent4); color: var(--accent4); }
-    .cpill.active { background: rgba(249,115,22,0.12); border-color: var(--accent4); color: var(--accent4); }
+    .cpill.active { background: var(--orange-glow); border-color: var(--accent4); color: var(--accent4); }
 
     /* Candidate Table */
     .cand-section-header {
@@ -40,7 +40,7 @@
       font-size: 13px; font-weight: 600; cursor: pointer;
       transition: all 0.15s; font-family: 'DM Sans', sans-serif;
     }
-    .add-cand-top:hover { background: #d97706; transform: translateY(-1px); }
+    .add-cand-top:hover { background: var(--orange-dark); transform: translateY(-1px); }
 
     .cand-table-wrap {
       border: 1px solid var(--border); border-radius: var(--radius-sm);
@@ -96,17 +96,17 @@
       display: flex; align-items: center; gap: 8px;
       padding: 10px 14px; width: 100%;
       background: transparent;
-      border: 1.5px dashed rgba(249,115,22,0.3); border-radius: var(--radius-sm);
+      border: 1.5px dashed rgba(164,53,240,0.35); border-radius: var(--radius-sm);
       color: var(--accent4); font-size: 13px; font-weight: 500;
       cursor: pointer; transition: all 0.15s;
       font-family: 'DM Sans', sans-serif;
     }
-    .add-another-row:hover { background: rgba(249,115,22,0.05); border-color: var(--accent4); }
+    .add-another-row:hover { background: rgba(164,53,240,0.06); border-color: var(--accent4); }
 
     .info-tip {
       display: flex; align-items: flex-start; gap: 8px;
       padding: 10px 14px;
-      background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15);
+      background: rgba(91,92,226,0.08); border: 1px solid rgba(91,92,226,0.18);
       border-radius: var(--radius-sm); font-size: 12px; color: var(--text2);
       margin-bottom: 16px;
     }
@@ -142,7 +142,7 @@
       font-size: 14px; font-weight: 700; cursor: pointer;
       transition: all 0.18s; font-family: 'DM Sans', sans-serif;
     }
-    .btn-generate:hover { background: #d97706; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(249,115,22,0.35); }
+    .btn-generate:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(164,53,240,0.35); }
   </style>
 </head>
 <body>

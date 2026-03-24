@@ -12,7 +12,7 @@
     .kpi-block.green{border-left-color:var(--success)}
     .kpi-block.amber{border-left-color:var(--warning)}
     .kpi-block.red{border-left-color:var(--danger)}
-    .kpi-block.purple{border-left-color:#8b5cf6}
+    .kpi-block.purple{border-left-color:#7c3aed}
     .kpi-block.orange{border-left-color:var(--orange)}
     .kpi-val{font-size:28px;font-weight:800;color:var(--text);line-height:1}
     .kpi-label{font-size:12px;color:var(--text3);margin-top:4px}
@@ -81,10 +81,10 @@
 <script src="../js/sidebar.js"></script>
 <script src="../js/main.js"></script>
 <script>
-  new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:['W1','W2','W3','W4','W5','W6','W7','W8','W9','W10','W11','W12'],datasets:[{data:[8,14,10,18,22,16,24,20,28,19,26,32],borderColor:'#f97316',backgroundColor:'rgba(249,115,22,0.08)',tension:0.4,fill:true,pointRadius:4,pointBackgroundColor:'#f97316'}]},options:{responsive:true,plugins:{legend:{display:false}}}});
-  new Chart(document.getElementById('popularityChart'),{type:'bar',data:{labels:['Python Fund.','Docker','Linux Admin','AWS Cloud','DevOps','ML Basics','Cybersec.'],datasets:[{data:[42,35,28,24,20,15,12],backgroundColor:['#2563eb','#06b6d4','#16a34a','#f97316','#8b5cf6','#ec4899','#64748b'],borderRadius:6,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
-  new Chart(document.getElementById('distChart'),{type:'bar',data:{labels:['0-40%','41-50%','51-60%','61-70%','71-80%','81-90%','91-100%'],datasets:[{data:[3,5,9,14,22,18,8],backgroundColor:['#dc2626','#f87171','#d97706','#f59e0b','#60a5fa','#2563eb','#16a34a'],borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}}}});
-  new Chart(document.getElementById('branchChart'),{type:'bar',data:{labels:['Delhi HQ','Mumbai','Bangalore','Pune','Hyderabad','Chennai'],datasets:[{data:[82,75,61,88,67,54],backgroundColor:['#16a34a','#2563eb','#d97706','#16a34a','#d97706','#dc2626'],borderRadius:8}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{min:0,max:100,ticks:{callback:v=>v+'%'}}}}});
+  new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:['W1','W2','W3','W4','W5','W6','W7','W8','W9','W10','W11','W12'],datasets:[{data:[8,14,10,18,22,16,24,20,28,19,26,32],borderColor:'#a435f0',backgroundColor:'rgba(164,53,240,0.12)',tension:0.4,fill:true,pointRadius:4,pointBackgroundColor:'#a435f0'}]},options:{responsive:true,plugins:{legend:{display:false}}}});
+  new Chart(document.getElementById('popularityChart'),{type:'bar',data:{labels:['Python Fund.','Docker','Linux Admin','AWS Cloud','DevOps','ML Basics','Cybersec.'],datasets:[{data:[42,35,28,24,20,15,12],backgroundColor:['#5b5ce2','#2ec5d3','#16a34a','#a435f0','#7c3aed','#ec4899','#94a3b8'],borderRadius:6,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  new Chart(document.getElementById('distChart'),{type:'bar',data:{labels:['0-40%','41-50%','51-60%','61-70%','71-80%','81-90%','91-100%'],datasets:[{data:[3,5,9,14,22,18,8],backgroundColor:['#dc2626','#f87171','#d97706','#f59e0b','#c4b5fd','#5b5ce2','#16a34a'],borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}}}});
+  new Chart(document.getElementById('branchChart'),{type:'bar',data:{labels:['Delhi HQ','Mumbai','Bangalore','Pune','Hyderabad','Chennai'],datasets:[{data:[82,75,61,88,67,54],backgroundColor:['#16a34a','#5b5ce2','#d97706','#16a34a','#d97706','#dc2626'],borderRadius:8}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{min:0,max:100,ticks:{callback:v=>v+'%'}}}}});
 </script>
 </body>
 </html>

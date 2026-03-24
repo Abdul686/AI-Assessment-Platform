@@ -206,9 +206,9 @@
               <div class="card-subtitle">Score distribution across all courses</div>
             </div>
             <div class="legend">
-              <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Completed</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div>Passed</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Pending</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>Completed</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Passed</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--warning)"></div>Pending</div>
             </div>
           </div>
           <canvas id="barChart" height="90"></canvas>
@@ -222,9 +222,9 @@
           </div>
           <canvas id="donutChart" height="160"></canvas>
           <div class="legend" style="justify-content:center;margin-top:14px">
-            <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div>Pass 68%</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>Fail 18%</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>Pending 14%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Pass 68%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--danger)"></div>Fail 18%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--warning)"></div>Pending 14%</div>
           </div>
         </div>
       </div>
@@ -336,9 +336,9 @@
     data: {
       labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
       datasets: [
-        { label:'Completed', data:[12,19,8,15,22,10,18], backgroundColor:'rgba(37,99,235,0.75)',  borderRadius:6 },
+        { label:'Completed', data:[12,19,8,15,22,10,18], backgroundColor:'rgba(91,92,226,0.75)',  borderRadius:6 },
         { label:'Passed',    data:[9,15,6,12,18,8,14],   backgroundColor:'rgba(22,163,74,0.75)',  borderRadius:6 },
-        { label:'Pending',   data:[3,4,2,3,4,2,4],       backgroundColor:'rgba(249,115,22,0.65)', borderRadius:6 }
+        { label:'Pending',   data:[3,4,2,3,4,2,4],       backgroundColor:'rgba(217,119,6,0.65)', borderRadius:6 }
       ]
     },
     options: {
