@@ -29,7 +29,13 @@ def main() -> None:
             "Expected the UI at apps/frontend/dashboard."
         )
 
-    handler = partial(SimpleHTTPRequestHandler, directory=str(ui_dir))
+    class RootRedirectHandler(SimpleHTTPRequestHandler):
+        def do_GET(self):  # noqa: N802 - match base class signature
+            if self.path in ("", "/"):
+                self.path = "/pages/login.html"
+            return super().do_GET()
+
+    handler = partial(RootRedirectHandler, directory=str(ui_dir))
     server_address = ("0.0.0.0", args.port)
 
     try:
@@ -40,8 +46,7 @@ def main() -> None:
         ) from exc
 
     print("UI server started.")
-    print(f"Open: http://localhost:{args.port}/pages/login.html")
-    print(f"Open: http://localhost:{args.port}/pages/dashboard.html")
+    print(f"Open: http://localhost:{args.port}/")
     print("Press Ctrl+C to stop.")
 
     try:
