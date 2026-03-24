@@ -3,6 +3,7 @@ import os
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 
 def parse_args() -> argparse.Namespace:
@@ -29,10 +30,31 @@ def main() -> None:
             "Expected the UI at apps/frontend/dashboard."
         )
 
+    route_map = {
+        "/": "/pages/login.html",
+        "/login.html": "/pages/login.html",
+        "/dashboard.html": "/pages/dashboard.html",
+        "/dahsboard.html": "/pages/dahsboard.html",
+        "/create_test.html": "/pages/create_test.html",
+        "/generated_tests.html": "/pages/generated_tests.html",
+        "/evaluation.html": "/pages/evaluation.html",
+        "/reports.html": "/pages/reports.html",
+    }
+    favicon_path = "/assets/images/logo.avif"
+
     class RootRedirectHandler(SimpleHTTPRequestHandler):
         def do_GET(self):  # noqa: N802 - match base class signature
-            if self.path in ("", "/"):
-                self.path = "/pages/login.html"
+            parts = urlsplit(self.path)
+            new_path = route_map.get(parts.path)
+            if new_path is not None:
+                self.path = urlunsplit(("", "", new_path, parts.query, parts.fragment))
+            elif parts.path == "/favicon.ico":
+                if (ui_dir / favicon_path.lstrip("/")).exists():
+                    self.path = favicon_path
+                else:
+                    self.send_response(204)
+                    self.end_headers()
+                    return
             return super().do_GET()
 
     handler = partial(RootRedirectHandler, directory=str(ui_dir))
