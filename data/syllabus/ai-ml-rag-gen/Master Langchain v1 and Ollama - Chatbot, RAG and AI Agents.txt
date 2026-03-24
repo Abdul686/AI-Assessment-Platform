@@ -1,0 +1,412 @@
+COURSE: Master Langchain v1 and Ollama - Chatbot, RAG and AI Agents
+URL: https://azirotechnologies.udemy.com/course/ollama-and-langchain/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Developers who want to build AI-powered applications, chatbots, and intelligent automation tools.
+Data Scientists & ML Engineers who want hands-on experience with LangChain v1, LangGraph workflows, and real-world RAG systems.
+AI enthusiasts and students who want to go beyond theory and build practical GenAI projects using open-source LLMs.
+Professionals who want practical experience with tool calling, AI agents, retrieval systems, document processing, and production deployments.
+Anyone with basic Python knowledge looking to build end-to-end AI applications that run locally using Ollama.
+
+--- DESCRIPTION ---
+Description
+
+2026 Upgrade: Course completely re-recorded with LangChain v1 and LangGraph v1.
+All projects, agents, tools, and RAG pipelines rebuilt from scratch.
+
+**Perfect for developers, AI engineers, and serious learners who want production-grade GenAI skills.**
+
+This course is a comprehensive, practical guide to integrating Langchain v1 (latest release) and Ollama to build, automate, and deploy production-ready AI applications.
+
+Updated with the newest technologies and frameworks, you'll learn to set up these cutting-edge tools, create advanced prompt templates, build autonomous AI agents, implement RAG (Retrieval-Augmented Generation) systems, and deploy real-world applications on AWS.
+
+Each section is designed to provide you with hands-on skills and real-world experience with the latest AI development practices.
+
+
+
+
+What You Will Learn
+
+1. Ollama & Langchain Setup
+
+Complete installation and configuration of Ollama and Langchain
+
+Work with the latest models: GPT-OSS, Gemma3, Qwen3, DeepSeek R1, and LLAMA 3.2
+
+Master Ollama commands, custom model creation, and raw API integration
+
+Configure local LLM environments for optimal performance
+
+2. Advanced Prompt Engineering
+
+Design effective AI, human, and system message prompts
+
+Use ChatPromptTemplate and MessagesPlaceholder for dynamic conversations
+
+Master the invoke method and structured prompt patterns
+
+Implement best practices for prompt tuning and optimization
+
+3. LCEL Chains for Workflow Automation
+
+Build Sequential, Parallel, and Router Chains with Langchain Expression Language (LCEL)
+
+Create custom chains using RunnableLambda and RunnablePassthrough
+
+Implement chain decorators for simplified workflow automation
+
+Design conditional logic and dynamic chain routing for complex applications
+
+4. Structured Output Parsing
+
+Parse LLM outputs using Pydantic, JSON, CSV, and custom parsers
+
+Use with_structured_output method for type-safe responses
+
+Handle date-time parsing and structured data extraction
+
+Format data for downstream processing and integration
+
+5. Chat Memory and Conversation Management
+
+Implement chat history with BaseChatMessageHistory and InMemoryChatMessageHistory
+
+Use MessagesPlaceholder for dynamic conversation flow
+
+Build stateful conversational AI applications
+
+Manage long-term chat sessions efficiently
+
+6. Build Production-Ready Chatbots
+
+Create interactive chatbot applications using Streamlit
+
+Implement streaming responses like ChatGPT
+
+Maintain persistent chat history and session state
+
+Deploy user-friendly chat interfaces with real-time updates
+
+7. Document Processing with Multiple Loaders
+
+Process PDFs using PyMuPDF and create QA systems
+
+Work with Microsoft Office files (PPTX, DOCX, Excel)
+
+Use Microsoft's MarkItDown for universal document conversion
+
+Implement IBM's Docling for advanced OCR and document processing
+
+Extract tables, images, and figures from any document type
+
+8. Vector Stores and RAG Implementation
+
+Build Retrieval-Augmented Generation (RAG) systems with FAISS and Chroma
+
+Create and manage vector embeddings using OllamaEmbeddings
+
+Implement document chunking strategies with RecursiveTextSplitter
+
+Optimize chunk sizes for better retrieval performance
+
+Design RAG prompt templates for context-aware responses
+
+9. Agentic RAG Systems
+
+Build autonomous RAG agents that retrieve and reason
+
+Create custom tool decorators for agent capabilities
+
+Implement real-time streaming for agent responses
+
+Integrate vector stores with intelligent agent workflows
+
+10. Tool Calling and Function Execution
+
+Set up built-in tools: Tavily Search, DuckDuckGo, PubMed, Wikipedia
+
+Create custom tools and bind them to LLMs
+
+Implement tool calling loops for multi-step reasoning
+
+Pass tool results back to LLMs for informed responses
+
+11. AI Agents with Langchain
+
+Master the create_agent API for building intelligent agents
+
+Build web search agents with DuckDuckGo integration
+
+Implement agent state management and middleware
+
+Create dynamic model selection for intelligent agent routing
+
+Stream agent responses in real-time using values, updates, and messages
+
+12. Text-to-SQL Agent (MySQL Integration)
+
+Build natural language to SQL query systems
+
+Create schema inspection, query generation, and validation tools
+
+Implement automatic SQL error correction with LLMs
+
+Execute complex database queries from natural language
+
+13. Real-World AI Projects
+
+Stock Market News Analysis: Scrape web data and generate comprehensive reports
+
+LinkedIn Profile Scraper: Extract and parse profile data with LLMs
+
+Resume Parser: Build AI-powered CV analysis and JSON extraction system
+
+Health Supplements QA: Create domain-specific RAG question-answering systems
+
+14. Production Deployment on AWS
+
+Launch and configure AWS EC2 instances for LLM applications
+
+Install Ollama and Langchain on cloud servers
+
+Deploy Streamlit applications in production environments
+
+Connect VS Code to remote servers for seamless development
+
+
+
+
+By the end of this course, you'll have the expertise to build, deploy, and manage production-grade AI-powered applications using Langchain and Ollama. You'll be able to create intelligent chatbots, RAG systems, autonomous agents, and document processors that are ready for real-world deployment.
+
+Start building the future of AI applications today.
+
+Who this course is for:
+Developers who want to build AI-powered applications, chatbots, and intelligent automation tools.
+Data Scientists & ML Engineers who want hands-on experience with LangChain v1, LangGraph workflows, and real-world RAG systems.
+AI enthusiasts and students who want to go beyond theory and build practical GenAI projects using open-source LLMs.
+Professionals who want practical experience with tool calling, AI agents, retrieval systems, document processing, and production deployments.
+Anyone with basic Python knowledge looking to build end-to-end AI applications that run locally using Ollama.
+Show more
+
+--- CURRICULUM ---
+Course content
+23 sections • 171 lectures • 17h 29m total length
+Collapse all sections
+Introduction
+4 lectures • 24min
+Course Introduction
+AI Agent Mastery Learning Path | Must Watch
+Project Setup and Install Langchain v1 with Requirements.txt
+Code Files [Must]
+Ollama Setup
+16 lectures • 1hr 51min
+Installation and Introduction to Ollama and GPT-OSS
+Explore Ollama UI Interface and Models with Qwen3 and Gemma3
+Explore Context and Realtime Search Settings in Ollama
+Use Gemma3 on Ollama for Quick Documents Analysis
+Inspecting Qwen3 Model
+Qwen3 Benchmarking Overview
+Test Benchmark Questions Locally with Qwen3
+How to Select Model for a Specific Task or Project
+Ollama Commands - ollama pull and ollama run
+Ollama Commands - ollama serve, ollama rm and ollama show
+Ollama Commands - ollama cp and ollama ps
+Create and Run Ollama Model with Predefined Custom Settings
+Exploring Ollama Message Commands
+Create Ollama Model with Message Commands
+Ollama Raw API Requests
+Load Uncensored GGUF Models for Banned Content Generation [Only for Educational]
+Latest LLM Updates
+1 lecture • 10min
+Run Deep Seek R1 Models Locally with Ollama
+Getting Started with Langchain
+8 lectures • 46min
+Langchain Introduction | LangChain (Lang Chain) Intro
+Lanchain Installation | LangChain (Lang Chain) Intro
+Langsmith Logging Setup Changes with Langchain v1
+Langsmith Setup of LLM Observability | LangChain (Lang Chain) Intro
+Calling Your First Langchain Ollama API | LangChain (Lang Chain) Intro
+Generating Uncensored Content in Langchain [Educational Purpose]
+Trace LLM Input Output at Langsmith | LangChain (Lang Chain) Intro
+Going a lot Deeper in the Langchain | LangChain (Lang Chain) Intro
+Chat Prompt Templates
+6 lectures • 38min
+Why We Need Prompt Template
+Type of Messages Needed for LLM
+Circle Back to ChatOllama
+Use Langchain Message Types with ChatOllama
+Langchain Prompt Templates
+Prompt Templates with ChatOllama
+Chains
+12 lectures • 1hr 21min
+Introduction to LCEL
+Create Your First LCEL Chain
+Adding StrOutputParser with Your Chain
+Chaining Runnables (Chain Multiple Runnables)
+Run Chains in Parallel Part 1
+Run Chains in Parallel Part 2
+How Chain Router Works
+Creating Independent Chains for Positive and Negative Reviews
+Route Your Answer Generation to Correct Chain
+What is RunnableLambda and RunnablePassthrough
+Make Your Custom Runnable Chain
+Create Custom Chain with chain Decorator
+Output Parsing
+7 lectures • 38min
+What is Output Parsing
+What is Pydantic Parser
+Get Pydantic Parser Instruction
+Parse LLM Output Using Pydantic Parser
+Parsing with `.with_structured_output()` method
+JSON Output Parser
+CSV Output Parsing - CommaSeparatedListOutputParser
+Chat Message Memory | How to Keep Chat History
+5 lectures • 33min
+How to Save and Load Chat Message History (Concept)
+Simple Chain Setup
+Chat Message with History Part 1
+Chat Message with History Part 2
+Chat Message with History using MessagesPlaceholder
+Make Your Own Chatbot Application
+8 lectures • 42min
+Introduction
+Introduction To Streamlit and Our Chat Application
+Chat Bot Basic Code Setup
+Create Chat History in Streamlit Session State
+Create LLM Chat Input Area with Streamlit
+Update Historical Chat on Streamlit UI
+Complete Your Own Chat Bot Application
+Stream Output of Your Chat Bot like ChatGPT
+Document Loaders | Projects on PDF Documents
+9 lectures • 50min
+Introduction to PDF Document Loaders
+Load Single PDF Document with PyMuPDFLoader
+Load All PDFs from a Directory
+Combine All PDFs Data as Context Text
+How Many Tokens are There in Contex Data.
+Make Question Answer Prompt Templates and Chain
+Project 1 - Ask Questions from Your PDF Documents
+Project 2 - Summarize Your PDF Documents
+Project 3 - Generate Detailed Structured Report from the PDF Documents
+Document Loaders | Stock Market News Report Generation Project
+7 lectures • 37min
+Webpage Loaders - Introduction to Web Scraping
+Load Unstructured Stock Market Data from Web Sources
+Build LLM QnA Script for Stock Market Analysis
+Catastrophic Forgetting in LLMs - Context Window Limitations
+Text Chunking Strategies - Break Down Large Documents
+Chunk-by-Chunk Stock Market News Summarization
+Generate Final Stock Market Analysis Report with Langchain v1
+Document Loaders | Microsoft Office Files Reader and Projects
+7 lectures • 40min
+Unstructured Data Loader - Process Office Files in Langchain v1
+Load PowerPoint PPTX Files
+Process PPTX Data for LLM Consumption
+Generate Speaker Script for Your .PPTX Presentation
+Loading and Parsing Excel Data for LLM
+Ask Questions from LLM for given Excel Data
+Load .DOCX Document and Write Personalized Job Email
+Document Loaders | Process Any Kind of Documents with Microsoft's MarkItDown
+3 lectures • 22min
+MarkItDown Introduction - Convert Any Document to Markdown
+Convert PDF to Markdown with MarkItDown
+Universal Document Conversion - Process Any File Type with MarkItDown
+Document Loaders | Process Any Kind of Documents with IBM's Docling
+7 lectures • 45min
+IBM Docling Introduction - Unified Document Processor with OCR
+Process PDF Documents with Docling - Automatic OCR Integration
+Export Documents to Multiple Formats - Markdown, HTML, TEXT
+Process Any Document Type with Docling - Universal Processing
+Extract Tables from Documents - Structured Data Extraction
+Extract Figures and Pictures - Image Detection in Documents
+Image Extraction Pipeline - Save Document Images Separately
+Vector Stores and Retrievals
+8 lectures • 43min
+Introduction to RAG Project
+FAISS and Chroma Vector Databases - Langchain v1 Integration
+Load All PDF Documents
+Recursive Text Splitter (RecursiveTextSplitter) to Create Documents Chunk
+Chunk Size Selection - RAG Performance Optimization Guide
+OllamaEmbeddings in Langchain v1 - Generate Vector Embeddings
+Document Indexing - Store Documents in Vector Database
+Save and Search Vector Database - Persistent Storage
+RAG | Question Answer Over the Health Supplements Data
+6 lectures • 35min
+Load Vector Database for RAG
+Get Vector Store as Retriever
+Similarity Search Types - MMR, Similarity Score and Threshold
+Design RAG Prompt Template - Context-Aware Prompting
+Build LLM RAG Chain - Complete Langchain v1 Implementation
+RAG Prompt Tuning - Optimize Retrieval Quality and Responses
+Tool and Function Calling
+10 lectures • 55min
+What is Tool Calling
+Available Search Tools at Langchain
+Create Custom Tools - Define Your Own Functions for LLMs
+Bind tools with LLM
+Working with Tavily and DuckDuckGo Search Tools
+Working with Wikipedia and PubMed Tools
+Creating Tool Functions for In-Built Tools
+Calling Tools with LLM
+Passing Tool Calling Result to LLM Part 1
+Passing Tool Calling Result to LLM Part 2
+AI Agents with Langchain Version 1
+10 lectures • 1hr 12min
+Langchain v1 Agents Introduction - Autonomous AI Systems
+Getting Started with create_agent - Langchain v1 Agent API
+DuckDuckGo Search Tool - Free Web Search for AI Agents
+Build Your First AI Agent - Web Search Agent with Langchain v1
+Agent State Management - How Langchain v1 Tracks Conversation
+LLM Settings for Agents - Temperature, Top-P and Better Control
+Langchain v1 Middleware - Modify Agent State at Runtime
+Create Dynamic Model Selection Agent - Switch Models Intelligently
+Dynamic Agentic Model Selection Demo - Real-World Example
+Stream Agent Responses in Real-time - Values, Updates and Messages
+Agentic RAG with Langchain Version 1
+7 lectures • 45min
+Agentic RAG Explained - Autonomous Retrieval Systems
+LLM and Vector Store Setup for Agentic RAG
+Retrieve with Source Documents - Citations in RAG Responses
+Create FAISS retrieve_context @tool - Custom Agent Tool
+Agentic RAG in Action - Complete Langchain v1 Implementation
+Stream Agentic RAG Responses - Real-time Output
+Test Agentic RAG - Markdown Viewer for Formatted Output
+Text-to-SQL (MySQL) Agent with Langchain Version 1
+9 lectures • 57min
+MySQL Agent Introduction - Natural Language to SQL Queries
+MySQL Database Setup - Connect Employees Database to Langchain v1
+Create MySQL Schema Tool - LLM Instance and @tool Decorator
+Build SQL Query Generator Tool - Natural Language to SQL
+SQL Query Validator Tool - Validate Generated Queries
+SQL Query Executor Tool - Run Queries on MySQL Database
+SQL Error Fixer Tool - Automatic Query Error Correction
+Create MySQL Agent - Complete Text-to-SQL System
+MySQL Agent Demo - Natural Language Database Queries in Action
+LinkedIn Profile Scraping Using LLM
+11 lectures • 1hr 4min
+LinkedIn Scraping Project Introduction - Overview and Goals
+LinkedIn Profile Scraping - Legal and Ethical Considerations
+Selenium and BeautifulSoup Tutorial - Web Scraping Fundamentals
+Jupyter Notebook Setup - LinkedIn Scraping Environment
+Automated LinkedIn Login - Selenium WebDriver Tutorial
+Load LinkedIn Profile HTML - BeautifulSoup Data Extraction
+Extract Profile Sections - Parse Structured LinkedIn Data
+Text Cleaning for LLM - Prepare Scraped Data for Processing
+Parse LinkedIn Data with LLM - LLAMA Model Limitations
+Section-wise LinkedIn Parsing - Structured Data Extraction
+Two-Stage LinkedIn Parsing - Improve Accuracy with Second LLM Call
+Resume Parsing with LLM
+6 lectures • 37min
+Resume Parsing Project Introduction - AI-Powered CV Analysis
+Read Resume Data - Prepare Context and Questions for LLM
+Build Parsing and Validation Pipeline
+Parse Resume to JSON - Validate and Structure CV Data
+Streamlit Resume Parser - Build Web Application Interface
+Universal Resume Parser - Process Any CV Format with LLM
+Deploy Resume Parser AI App in Production - AWS EC2 for Langchain v1 Application
+4 lectures • 26min
+Launch AWS EC2 Instance - Deep Learning Ubuntu Server Setup
+Install Ollama and Langchain v1 on EC2 - Server Configuration
+Connect Your VS Code with Remote EC2 Server
+Deploy LLM Application (AI App) to Production

@@ -1,0 +1,449 @@
+- id: 1
+  question: You are evaluating a RAG system and observe consistently low Context Precision.
+    Which component is MOST likely contributing to this issue?
+  options:
+    A: The LLM's reasoning capabilities.
+    B: The retrieval component returning irrelevant documents.
+    C: The prompt engineering used to query the LLM.
+    D: The RAGAS framework configuration.
+  correct_answer: B
+- id: 2
+  question: When using Pytest fixtures to manage OpenAI API calls, what is the primary
+    benefit of using a fixture scope of 'session'?
+  options:
+    A: Each test function gets a fresh API connection.
+    B: The API connection is established once for all tests in the session, improving
+      performance.
+    C: The fixture is only executed if explicitly requested by a test.
+    D: The fixture is automatically re-run after each test failure.
+  correct_answer: B
+- id: 3
+  question: You've implemented a RAG pipeline and are using RAGAS to evaluate it.  The
+    Faithfulness metric is consistently low. What does this indicate?
+  options:
+    A: The retrieved documents are not relevant to the query.
+    B: The LLM is generating responses that contradict the retrieved context.
+    C: The LLM is unable to understand the query.
+    D: The retrieval component is too slow.
+  correct_answer: B
+- id: 4
+  question: Which of the following best describes the purpose of an EvaluationDataSet
+    in RAGAS?
+  options:
+    A: To store the LLM's weights and biases.
+    B: To provide a structured format for test questions, contexts, and expected answers.
+    C: To cache the results of previous evaluations.
+    D: To manage the API keys used for LLM access.
+  correct_answer: B
+- id: 5
+  question: You are parameterizing a Pytest test to evaluate an LLM with different
+    prompts. How would you define the parameters to iterate through a list of prompts?
+  options:
+    A: Using a `for` loop within the test function.
+    B: Using the `@pytest.mark.parametrize` decorator.
+    C: Using a dictionary to map prompt names to their values.
+    D: Using a fixture that returns a list of prompts.
+  correct_answer: B
+- id: 6
+  question: In a multi-turn conversation scenario, how does RAGAS handle maintaining
+    context across multiple turns?
+  options:
+    A: It automatically infers context from the previous turns.
+    B: The entire conversation history must be included in each evaluation request.
+    C: It uses a separate context vector for each turn.
+    D: It relies on the LLM's internal memory.
+  correct_answer: B
+- id: 7
+  question: You observe that your RAG system performs well on simple queries but struggles
+    with complex, multi-faceted questions. Which metric would be MOST useful to investigate?
+  options:
+    A: Context Precision.
+    B: Answer Relevancy.
+    C: Context Recall.
+    D: Faithfulness.
+  correct_answer: C
+- id: 8
+  question: What is the primary purpose of using NLTK when generating test data for
+    LLM evaluation?
+  options:
+    A: To translate the test data into different languages.
+    B: To analyze documents and extract potential questions and answers.
+    C: To validate the grammatical correctness of the test data.
+    D: To generate synthetic documents for retrieval.
+  correct_answer: B
+- id: 9
+  question: You've noticed that your LLM is frequently hallucinating information not
+    present in the retrieved context. Which RAGAS metric is most directly impacted?
+  options:
+    A: Context Recall.
+    B: Answer Relevancy.
+    C: Faithfulness.
+    D: Context Precision.
+  correct_answer: C
+- id: 10
+  question: When evaluating a RAG system, what is the difference between Context Precision
+    and Context Recall?
+  options:
+    A: Precision measures the relevance of retrieved documents, while Recall measures
+      the completeness of retrieval.
+    B: Precision measures the completeness of retrieval, while Recall measures the
+      relevance of retrieved documents.
+    C: Both measure relevance, but Precision focuses on positive cases and Recall
+      on negative cases.
+    D: Both measure completeness, but Precision focuses on positive cases and Recall
+      on negative cases.
+  correct_answer: A
+- id: 11
+  question: You are using Langchain to connect to OpenAI. What is the primary purpose
+    of using an LLM wrapper?
+  options:
+    A: To cache the LLM's responses.
+    B: To standardize the interface for interacting with different LLMs.
+    C: To encrypt the API key.
+    D: To compress the input data.
+  correct_answer: B
+- id: 12
+  question: How can you dynamically generate test data using the RAGAS framework?
+  options:
+    A: By manually creating JSON files with test cases.
+    B: By using the `ragas.generate_test_data` function.
+    C: By scraping data from the web.
+    D: By using a pre-trained language model to generate questions and answers.
+  correct_answer: B
+- id: 13
+  question: What is the role of 'rubrics' in evaluating LLM responses?
+  options:
+    A: They define the API key used for LLM access.
+    B: They provide a set of criteria for scoring the quality of the responses.
+    C: They specify the maximum length of the responses.
+    D: They determine the temperature setting for the LLM.
+  correct_answer: B
+- id: 14
+  question: You are debugging a failing RAGAS test. The error message indicates a
+    problem with the API call to OpenAI. What is the FIRST thing you should check?
+  options:
+    A: The RAGAS configuration file.
+    B: The OpenAI API key and rate limits.
+    C: The Langchain wrapper code.
+    D: The Pytest fixture setup.
+  correct_answer: B
+- id: 15
+  question: What is the benefit of using pytest fixtures to isolate common utilities
+    (like OpenAI API calls) from your test logic?
+  options:
+    A: It reduces the amount of code you need to write.
+    B: It improves the readability and maintainability of your tests.
+    C: It speeds up the execution of your tests.
+    D: All of the above.
+  correct_answer: D
+- id: 16
+  question: You want to evaluate your RAG system's ability to handle ambiguous queries.
+    What type of test data would be MOST effective?
+  options:
+    A: Simple factoid questions with clear answers.
+    B: Questions with multiple possible interpretations.
+    C: Questions that require complex reasoning.
+    D: Questions that are directly answered by the retrieved documents.
+  correct_answer: B
+- id: 17
+  question: What is the purpose of the `yield` keyword when defining a Pytest fixture?
+  options:
+    A: It indicates that the fixture is optional.
+    B: It allows the fixture to be executed multiple times within a single test session.
+    C: It defines the scope of the fixture.
+    D: It specifies the dependencies of the fixture.
+  correct_answer: B
+- id: 18
+  question: You are using RAGAS to evaluate a RAG system that retrieves documents
+    from a vector database. What is a potential limitation of relying solely on RAGAS
+    metrics?
+  options:
+    A: RAGAS cannot evaluate the quality of the vector embeddings.
+    B: RAGAS only supports OpenAI LLMs.
+    C: RAGAS does not provide any insights into the retrieval process.
+    D: RAGAS is too slow for large-scale evaluations.
+  correct_answer: A
+- id: 19
+  question: How does parameterization in Pytest help in LLM evaluation?
+  options:
+    A: It allows you to run the same test with different LLM models.
+    B: It allows you to run the same test with different input data (e.g., prompts,
+      queries).
+    C: It allows you to run the same test with different RAGAS metrics.
+    D: All of the above.
+  correct_answer: D
+- id: 20
+  question: You've identified that your RAG system has low Context Recall. What is
+    a potential strategy to improve this metric?
+  options:
+    A: Increase the temperature of the LLM.
+    B: Reduce the number of documents retrieved.
+    C: Improve the similarity search algorithm used for retrieval.
+    D: Simplify the prompts used to query the LLM.
+  correct_answer: C
+- id: 21
+  question: What is the significance of uploading LLM evaluation results to a RAGAS
+    dashboard?
+  options:
+    A: It allows for visual analysis and tracking of metric trends over time.
+    B: It automatically retrains the LLM.
+    C: It generates new test data.
+    D: It optimizes the retrieval component.
+  correct_answer: A
+- id: 22
+  question: You are building a RAG system for a customer support chatbot. Which metric
+    is MOST critical to ensure the chatbot provides accurate and helpful responses?
+  options:
+    A: Context Precision.
+    B: Faithfulness.
+    C: Answer Relevancy.
+    D: Context Recall.
+  correct_answer: B
+- id: 23
+  question: What is the purpose of using a 'wrapper' around the LLM API calls?
+  options:
+    A: To handle rate limiting and error handling.
+    B: To simplify the API calls.
+    C: To cache the API responses.
+    D: All of the above.
+  correct_answer: D
+- id: 24
+  question: You are evaluating a RAG system and notice that the LLM frequently ignores
+    the retrieved context. What could be the cause?
+  options:
+    A: The prompt is not effectively instructing the LLM to use the context.
+    B: The retrieved documents are irrelevant.
+    C: The LLM is too small.
+    D: The RAGAS framework is misconfigured.
+  correct_answer: A
+- id: 25
+  question: What is the role of the `EvalDataSet` in RAGAS?
+  options:
+    A: It stores the LLM's training data.
+    B: It defines the input questions, context, and expected answers for evaluation.
+    C: It manages the API keys for LLM access.
+    D: It caches the results of previous evaluations.
+  correct_answer: B
+- id: 26
+  question: You are using Pytest to run your RAGAS tests. How can you ensure that
+    tests are run in a specific order?
+  options:
+    A: Pytest does not guarantee test execution order.
+    B: Use the `@pytest.mark.run(order=n)` decorator.
+    C: Rename the test files to reflect the desired order.
+    D: Configure the `pytest.ini` file to specify the order.
+  correct_answer: B
+- id: 27
+  question: What is the primary advantage of using a modular approach (fixtures, utils)
+    when building a RAGAS test framework?
+  options:
+    A: It reduces the amount of code you need to write.
+    B: It improves the reusability and maintainability of your tests.
+    C: It speeds up the execution of your tests.
+    D: All of the above.
+  correct_answer: D
+- id: 28
+  question: You are evaluating a RAG system and observe that the Answer Relevancy
+    metric is low. What does this indicate?
+  options:
+    A: The retrieved documents are not relevant to the query.
+    B: The LLM is generating responses that are not relevant to the query.
+    C: The LLM is generating responses that contradict the retrieved context.
+    D: The retrieval component is too slow.
+  correct_answer: B
+- id: 29
+  question: What is the purpose of using NLTK to scan documents when generating test
+    data?
+  options:
+    A: To identify named entities and key phrases.
+    B: To translate the documents into different languages.
+    C: To validate the grammatical correctness of the documents.
+    D: To generate synthetic documents.
+  correct_answer: A
+- id: 30
+  question: You are using RAGAS to evaluate a RAG system with a limited OpenAI API
+    budget. What is a strategy to minimize API costs?
+  options:
+    A: Reduce the number of test cases.
+    B: Use a smaller LLM model.
+    C: Cache the LLM responses.
+    D: All of the above.
+  correct_answer: D
+- id: 31
+  question: What is the role of the prompt in a RAG system's performance?
+  options:
+    A: It solely determines the LLM's creativity.
+    B: It instructs the LLM on how to use the retrieved context.
+    C: It controls the retrieval process.
+    D: It has no impact on the system's performance.
+  correct_answer: B
+- id: 32
+  question: You've implemented a RAG pipeline and are using RAGAS to evaluate it.
+    The Context Precision is high, but the Faithfulness is low. What does this suggest?
+  options:
+    A: The retrieval is good, but the LLM is hallucinating.
+    B: The retrieval is poor, and the LLM is struggling.
+    C: The LLM is accurately reflecting the retrieved context, but the context isn't
+      helpful.
+    D: The RAGAS framework is misconfigured.
+  correct_answer: A
+- id: 33
+  question: What is the benefit of using a session-scoped fixture for OpenAI API access?
+  options:
+    A: It ensures each test has a unique API key.
+    B: It reduces API call overhead by reusing the connection.
+    C: It allows for parallel test execution.
+    D: It automatically handles API rate limits.
+  correct_answer: B
+- id: 34
+  question: You are evaluating a RAG system for a question answering task. Which metric
+    is most important for ensuring the system provides correct answers?
+  options:
+    A: Context Recall.
+    B: Answer Relevancy.
+    C: Faithfulness.
+    D: Context Precision.
+  correct_answer: C
+- id: 35
+  question: What is the purpose of generating rubrics when evaluating LLM responses?
+  options:
+    A: To automate the process of generating test data.
+    B: To provide a standardized scoring system for evaluating response quality.
+    C: To encrypt the LLM's responses.
+    D: To compress the LLM's responses.
+  correct_answer: B
+- id: 36
+  question: You are using RAGAS to evaluate a RAG system. You want to compare the
+    performance of two different LLM models. How would you achieve this?
+  options:
+    A: Run the evaluation separately for each model and compare the metrics.
+    B: Use pytest parameterization to run the evaluation with different LLM models.
+    C: Modify the RAGAS configuration file to switch between models.
+    D: All of the above.
+  correct_answer: D
+- id: 37
+  question: What is the primary challenge when evaluating multi-turn conversational
+    RAG systems?
+  options:
+    A: Maintaining context across multiple turns.
+    B: Handling long documents.
+    C: Dealing with ambiguous queries.
+    D: Ensuring the LLM is creative.
+  correct_answer: A
+- id: 38
+  question: You are debugging a failing RAGAS test and suspect the issue is with the
+    retrieved documents. How can you inspect the retrieved documents?
+  options:
+    A: Print the retrieved documents to the console.
+    B: Use a debugger to step through the retrieval code.
+    C: Log the retrieved documents to a file.
+    D: All of the above.
+  correct_answer: D
+- id: 39
+  question: What is the role of Langchain in the RAGAS evaluation process?
+  options:
+    A: It provides the LLM models.
+    B: It simplifies the interaction with LLM APIs and provides tools for building
+      RAG pipelines.
+    C: It generates the test data.
+    D: It analyzes the evaluation results.
+  correct_answer: B
+- id: 40
+  question: You are evaluating a RAG system and notice that the Context Recall is
+    consistently low. What is a potential cause?
+  options:
+    A: The retrieval component is not retrieving all relevant documents.
+    B: The LLM is ignoring the retrieved context.
+    C: The prompt is poorly designed.
+    D: The RAGAS framework is misconfigured.
+  correct_answer: A
+- id: 41
+  question: What is the purpose of using a fixture to isolate the OpenAI API wrapper?
+  options:
+    A: To prevent the tests from accessing the OpenAI API.
+    B: To allow for easy mocking and testing of the API wrapper.
+    C: To cache the API responses.
+    D: To encrypt the API key.
+  correct_answer: B
+- id: 42
+  question: You are building a RAG system for a legal document search application.
+    Which metric is MOST critical to ensure the system provides accurate and complete
+    results?
+  options:
+    A: Answer Relevancy.
+    B: Faithfulness.
+    C: Context Recall.
+    D: Context Precision.
+  correct_answer: C
+- id: 43
+  question: What is the benefit of using external JSON files to store test data for
+    RAGAS?
+  options:
+    A: It allows for easy modification and reuse of test cases.
+    B: It improves the performance of the tests.
+    C: It reduces the amount of code you need to write.
+    D: All of the above.
+  correct_answer: A
+- id: 44
+  question: You are using RAGAS to evaluate a RAG system. You want to track the performance
+    of the system over time. How can you achieve this?
+  options:
+    A: Manually record the metrics in a spreadsheet.
+    B: Upload the evaluation results to a RAGAS dashboard.
+    C: Use a version control system to track changes to the test data.
+    D: All of the above.
+  correct_answer: B
+- id: 45
+  question: What is the purpose of the `pytest.ini` file?
+  options:
+    A: To define the test cases.
+    B: To configure the Pytest runner.
+    C: To store the API keys.
+    D: To generate the test data.
+  correct_answer: B
+- id: 46
+  question: You are evaluating a RAG system and observe that the LLM is generating
+    responses that are factually incorrect. What metric is most directly impacted?
+  options:
+    A: Context Precision.
+    B: Faithfulness.
+    C: Answer Relevancy.
+    D: Context Recall.
+  correct_answer: B
+- id: 47
+  question: What is the role of the temperature parameter in the OpenAI API?
+  options:
+    A: It controls the maximum length of the response.
+    B: It controls the randomness of the response.
+    C: It controls the cost of the API call.
+    D: It controls the retrieval process.
+  correct_answer: B
+- id: 48
+  question: You are using RAGAS to evaluate a RAG system. You want to evaluate the
+    system's ability to handle complex, multi-faceted questions. What type of test
+    data would be MOST effective?
+  options:
+    A: Simple factoid questions with clear answers.
+    B: Questions that require complex reasoning and synthesis of information.
+    C: Questions that are directly answered by the retrieved documents.
+    D: Questions that are ambiguous and open-ended.
+  correct_answer: B
+- id: 49
+  question: What is the primary benefit of using a modular design when building a
+    RAGAS test framework?
+  options:
+    A: It reduces the amount of code you need to write.
+    B: It improves the reusability, maintainability, and testability of the framework.
+    C: It speeds up the execution of the tests.
+    D: It simplifies the configuration of the framework.
+  correct_answer: B
+- id: 50
+  question: You are evaluating a RAG system and notice that the LLM is consistently
+    generating responses that are too verbose and contain irrelevant information.
+    What could be the cause?
+  options:
+    A: The prompt is not effectively instructing the LLM to be concise.
+    B: The retrieved documents are too long.
+    C: The LLM is too small.
+    D: The RAGAS framework is misconfigured.
+  correct_answer: A

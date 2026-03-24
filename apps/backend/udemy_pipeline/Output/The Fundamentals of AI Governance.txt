@@ -1,0 +1,169 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Data scientists and AI engineers aiming to build fair, transparent, and privacy-conscious AI
+AI enthusiasts interested in AI ethics and its societal impact
+AI Users looking to understand ethical AI interactions and responsible usage
+Developers and tech professionals ensuring ethical AI development and deployment
+Business leaders and decision-makers integrating AI while managing ethical risks
+
+--- DESCRIPTION ---
+Description
+
+The AI Ethics Course: Preparing You for the Real-World Challenges of AI—Today and Tomorrow
+
+Do you want to gain critical AI skills while ensuring ethical and responsible use in your organization?
+
+If so, you’re in the right place!
+
+As AI grows more powerful and integrated into everyday life, building and using it responsibly has never been more important. This AI Ethics course offers an in-depth understanding of artificial intelligence's ethical challenges.
+
+Unlike other AI ethics courses, this one teaches you to identify and manage ethical risks throughout the entire AI lifecycle—from data collection and model development to deployment. Whether building language models, deploying generative AI, or using tools like ChatGPT, our resources ensure your work upholds key ethical principles: privacy, fairness, transparency, and accountability.
+
+Why Take This Course?
+
+Comprehensive Curriculum: Follow a structured journey—from AI basics to advanced ethical topics like regulatory compliance and digital equity.
+
+Practical + Philosophical: This isn’t just theory. You’ll explore real-life examples, apply ethical thinking to hands-on AI scenarios, and walk away with actionable strategies.
+
+Current and Global: Stay updated with the most recent developments in AI and data governance, including the EU AI Act, GDPR, HIPAA, and the future of global frameworks.
+
+ChatGPT Case Studies: Learn to apply ethical thinking to large language models use cases (LLMs). Explore such issues as data privacy, misinformation, inconsistency, and more.
+
+This AI Ethics course simplifies complex ethical issues from user, business, and developer perspectives. You'll learn to distinguish proprietary, public, and web-scraped data and understand their unique challenges. Key topics—including data bias, supervised fine-tuning, AI hallucinations, deepfakes, plagiarism, and risk management—are explored thoroughly. A key course component is the ChatGPT section—one of today's leading AI tools—highlighting real-world issues and engaging conversational examples.
+
+Are you ready to stand out as a professional who understands the latest AI trends and the ethical responsibilities that come with them?
+Today, nearly everyone interacts with AI. It’s essential to prepare your organization for responsible engagement. Don't fear emerging technology—lead by understanding, questioning, and using it ethically.
+
+The demand for AI ethics specialists is skyrocketing. Isn’t it time for you to become one?
+
+We’re so confident you'll love this course—we're offering a FULL 30-day money-back guarantee!
+
+Sign up today—ZERO risk, ALL reward!
+
+Click the 'Buy Now' button and embrace the AI-driven future of tomorrow.
+
+Who this course is for:
+Data scientists and AI engineers aiming to build fair, transparent, and privacy-conscious AI
+AI enthusiasts interested in AI ethics and its societal impact
+AI Users looking to understand ethical AI interactions and responsible usage
+Developers and tech professionals ensuring ethical AI development and deployment
+Business leaders and decision-makers integrating AI while managing ethical risks
+Show more
+
+--- CURRICULUM ---
+Course content
+10 sections • 51 lectures • 3h 0m total length
+Collapse all sections
+Welcome to the Course
+4 lectures • 16min
+What does the course cover
+Intro to AI
+AI vs Data science vs Machine learning
+The AI Lifecycle: From data collection to model application
+The AI Lifecycle
+1 question
+Introduction to AI and Data Ethics
+3 lectures • 17min
+The rise of generative AI and its ethical challenges
+Generative AI ethical challenges
+1 question
+Why AI Ethics matter more than ever
+Help your team understand the importance of AI ethics
+Ethics vs laws
+Ethics vs laws
+1 question
+The Core Principles of AI Ethics
+4 lectures • 15min
+Privacy
+AI Privacy
+1 question
+Transparency
+AI Transparency
+1 question
+Accountability
+AI Accountability
+1 question
+Fairness
+AI Fairness
+1 question
+The Core Principles of AI Ethics
+4 questions
+Ethical Data Collection
+6 lectures • 17min
+Ethical sourcing and types of data
+Proprietary data
+Proprietary data
+1 question
+Public data
+Web-scraped data
+Types of Data
+3 questions
+Dealing with sensitive and protected information
+Data bias and fair representation
+Sensitive information and data bias
+2 questions
+Ethical AI Development
+6 lectures • 23min
+Ethical challenges in working with labeled data
+Ethical considerations for unlabeled data
+Labeled and unlabeled data
+2 questions
+Ethical challenges in unsupervised training
+Ethical challenges in unsupervised training
+1 question
+Ethical considerations for supervised Fine-tuning
+Unsupervised training and supervised fine-tuning
+2 questions
+RLHF and ethical AI behavior
+RLHF
+1 question
+Inclusive and fair AI development practices
+Ethical AI Development
+4 questions
+Ethical AI Deployment
+6 lectures • 22min
+Intellectual property and user consent in AI interactions
+Ethical responsibilities of foundation model developers
+Common issues in foundation models: Open-source data
+Inconsistency
+Hallucination
+Ongoing monitoring and risk mitigation for deployed AI
+Ethical AI Deployment
+3 questions
+Help Susan understand the world of AI ethics
+Ethical AI for End-Users: Businesses
+4 lectures • 16min
+Access to AI technology for businesses of all sizes
+Transparency in AI decision-making processes
+Ethical use of AI outputs in business
+Responsible AI adoption and risk management for businesses
+Ethical AI for End-Users: Individuals
+3 lectures • 10min
+Equity in access to AI technology
+Ethical considerations in human-AI collaboration
+Responsible use of AI-generated outputs
+Ethical AI for End-Users
+3 questions
+ChatGPT Ethics
+7 lectures • 27min
+Understanding ChatGPT
+Privacy concerns with ChatGPT
+OpenAI’s privacy policies and data handling
+Misinformation and AI-generated content
+ChatGPT plagiarism
+Responsible use of ChatGPT: What you can and can't do
+ChatGPT and the environment
+ChatGPT Ethics
+4 questions
+Data and AI Regulatory Frameworks
+8 lectures • 18min
+Global AI and data regulations
+European Union: GDPR and the EU Artificial Intelligence Act
+United States: AI regulation across states
+Asia-Pacific region: Strong government control
+Africa's push for AI governance
+Data and AI Regulatory Frameworks
+2 questions
+International frameworks and standards
+The future of AI Ethics: What should we worry about
+Bonus lecture

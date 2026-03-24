@@ -1,0 +1,2202 @@
+[
+    {
+        "id": 1,
+        "question": "Which of the following is NOT a characteristic of Object-Oriented Programming?",
+        "options": {
+            "A": "Encapsulation",
+            "B": "Inheritance",
+            "C": "Procedural Decomposition",
+            "D": "Polymorphism"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 2,
+        "question": "What is the primary purpose of a Python IDE like PyCharm?",
+        "options": {
+            "A": "To run Python code directly from the command line.",
+            "B": "To provide a user-friendly interface for writing, debugging, and managing Python projects.",
+            "C": "To translate Python code into machine code.",
+            "D": "To create flowcharts for Python programs."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 3,
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": {
+            "A": "1st_variable",
+            "B": "myVariable",
+            "C": "my-variable",
+            "D": "var name"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 4,
+        "question": "What is the purpose of the `type()` function in Python?",
+        "options": {
+            "A": "To assign a data type to a variable.",
+            "B": "To convert a variable to a different data type.",
+            "C": "To determine the data type of a variable.",
+            "D": "To print the value of a variable."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 5,
+        "question": "What does PEP 8 refer to?",
+        "options": {
+            "A": "Python Enhancement Proposal 8, a guide for writing clean and readable Python code.",
+            "B": "The 8th version of the Python interpreter.",
+            "C": "A library for creating graphical user interfaces.",
+            "D": "A set of rules for naming variables."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 6,
+        "question": "In a flowchart, what does a diamond shape typically represent?",
+        "options": {
+            "A": "A process or action.",
+            "B": "A decision point.",
+            "C": "The start or end of the flowchart.",
+            "D": "Input/Output operation."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 7,
+        "question": "Which operator is used for assignment in Python?",
+        "options": {
+            "A": "==",
+            "B": "=",
+            "C": "!=",
+            "D": "+="
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 8,
+        "question": "What is the difference between `==` and `is` in Python?",
+        "options": {
+            "A": "`==` checks for equality of value, while `is` checks for identity (same object in memory).",
+            "B": "`is` checks for equality of value, while `==` checks for identity.",
+            "C": "They both do the same thing.",
+            "D": "`==` is used for string comparison, while `is` is used for numerical comparison."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 9,
+        "question": "What is the purpose of ChatGPT in the context of Python development?",
+        "options": {
+            "A": "To automatically execute Python code.",
+            "B": "To generate, debug, and explain Python code.",
+            "C": "To create graphical user interfaces.",
+            "D": "To manage Python packages."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 10,
+        "question": "What is a 'copilot' in the context of AI-assisted coding?",
+        "options": {
+            "A": "A physical robot that writes code.",
+            "B": "An AI tool that suggests code completions and generates code snippets.",
+            "C": "A debugging tool that automatically fixes errors.",
+            "D": "A project management tool for software development."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 11,
+        "question": "Which of the following is a string slicing example in Python?",
+        "options": {
+            "A": "my_string[0]",
+            "B": "my_string.length()",
+            "C": "my_string[2:5]",
+            "D": "my_string.append('a')"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 12,
+        "question": "What is the purpose of escape characters in strings?",
+        "options": {
+            "A": "To create new lines in the string.",
+            "B": "To represent special characters that cannot be directly typed in a string.",
+            "C": "To encrypt the string.",
+            "D": "To change the case of the string."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 13,
+        "question": "What is the difference between a global and a local variable?",
+        "options": {
+            "A": "Global variables are accessible from anywhere in the program, while local variables are only accessible within the function they are defined in.",
+            "B": "Local variables are accessible from anywhere in the program, while global variables are only accessible within the function they are defined in.",
+            "C": "Global variables are used for mathematical operations, while local variables are used for string manipulation.",
+            "D": "There is no difference between global and local variables."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 14,
+        "question": "Which of the following is a valid way to write a single-line comment in Python?",
+        "options": {
+            "A": "// This is a comment",
+            "B": "/* This is a comment */",
+            "C": "# This is a comment",
+            "D": "-- This is a comment"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 15,
+        "question": "What is the purpose of the `input()` function in Python?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To read input from the user.",
+            "C": "To calculate mathematical expressions.",
+            "D": "To define variables."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 16,
+        "question": "What is the output of the following code: `print(5 + '5')`?",
+        "options": {
+            "A": "10",
+            "B": "55",
+            "C": "TypeError",
+            "D": "None"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 17,
+        "question": "What is the purpose of a ternary operator?",
+        "options": {
+            "A": "To perform complex mathematical calculations.",
+            "B": "To provide a concise way to write conditional expressions.",
+            "C": "To loop through a sequence of numbers.",
+            "D": "To define functions."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 18,
+        "question": "What is the role of 'pseudocode' in programming?",
+        "options": {
+            "A": "It's the actual Python code that runs the program.",
+            "B": "It's a high-level description of an algorithm, written in plain language.",
+            "C": "It's a debugging tool used to find errors in code.",
+            "D": "It's a type of data structure used to store information."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 19,
+        "question": "Which of the following is a logical operator in Python?",
+        "options": {
+            "A": "+",
+            "B": "*",
+            "C": "and",
+            "D": "/"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 20,
+        "question": "What is the purpose of the `elif` keyword in Python?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To provide an alternative condition to check if the previous `if` condition is false.",
+            "C": "To end the program.",
+            "D": "To create a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 21,
+        "question": "What is the difference between a list and a tuple in Python?",
+        "options": {
+            "A": "Lists are mutable, while tuples are immutable.",
+            "B": "Tuples are mutable, while lists are immutable.",
+            "C": "Lists can only contain numbers, while tuples can contain any data type.",
+            "D": "There is no difference between lists and tuples."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 22,
+        "question": "What is the purpose of the `len()` function?",
+        "options": {
+            "A": "To calculate the length of a string.",
+            "B": "To find the largest element in a list.",
+            "C": "To determine the data type of a variable.",
+            "D": "To return the length of a sequence (string, list, tuple, etc.)."
+        },
+        "correct_answer": "D"
+    },
+    {
+        "id": 23,
+        "question": "What is the output of the following code: `print(2 ** 3)`?",
+        "options": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "23"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 24,
+        "question": "Which of the following is a membership operator?",
+        "options": {
+            "A": "+",
+            "B": "==",
+            "C": "in",
+            "D": ">"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 25,
+        "question": "What is the purpose of the `range()` function?",
+        "options": {
+            "A": "To create a list of random numbers.",
+            "B": "To generate a sequence of numbers.",
+            "C": "To calculate the square root of a number.",
+            "D": "To sort a list of numbers."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 26,
+        "question": "What is the purpose of the `import` statement in Python?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To include external modules or libraries in your code.",
+            "C": "To print output to the console.",
+            "D": "To create a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 27,
+        "question": "What is the difference between a 'programmer' and a 'developer'?",
+        "options": {
+            "A": "They are the same thing.",
+            "B": "A programmer focuses on writing code, while a developer is involved in the entire software development lifecycle.",
+            "C": "A developer focuses on writing code, while a programmer is involved in the entire software development lifecycle.",
+            "D": "A programmer works with hardware, while a developer works with software."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 28,
+        "question": "What is the purpose of the `try-except` block?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To handle exceptions (errors) that may occur during program execution.",
+            "C": "To create a loop.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 29,
+        "question": "What is the output of the following code: `print('Hello'.upper())`?",
+        "options": {
+            "A": "hello",
+            "B": "HELLO",
+            "C": "Hello",
+            "D": "None"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 30,
+        "question": "What is the purpose of the `def` keyword in Python?",
+        "options": {
+            "A": "To define a variable.",
+            "B": "To define a function.",
+            "C": "To define a class.",
+            "D": "To define a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 31,
+        "question": "What is the purpose of the `return` statement in a function?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To end the function execution and optionally return a value.",
+            "C": "To define a new variable.",
+            "D": "To create a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 32,
+        "question": "What is the purpose of the `pass` statement?",
+        "options": {
+            "A": "To terminate the program.",
+            "B": "To do nothing. It's often used as a placeholder.",
+            "C": "To print output to the console.",
+            "D": "To define a new function."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 33,
+        "question": "What is the output of the following code: `print(10 / 3)`?",
+        "options": {
+            "A": "3",
+            "B": "3.333...",
+            "C": "3.0",
+            "D": "Error"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 34,
+        "question": "What is the purpose of the `//` operator?",
+        "options": {
+            "A": "Division",
+            "B": "Floor division (integer division)",
+            "C": "Modulo",
+            "D": "Exponentiation"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 35,
+        "question": "What is the purpose of the `%` operator?",
+        "options": {
+            "A": "Division",
+            "B": "Floor division",
+            "C": "Modulo (remainder)",
+            "D": "Exponentiation"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 36,
+        "question": "What is the purpose of the `break` statement?",
+        "options": {
+            "A": "To end the program.",
+            "B": "To skip to the next iteration of a loop.",
+            "C": "To exit a loop prematurely.",
+            "D": "To define a new function."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 37,
+        "question": "What is the purpose of the `continue` statement?",
+        "options": {
+            "A": "To end the program.",
+            "B": "To exit a loop prematurely.",
+            "C": "To skip to the next iteration of a loop.",
+            "D": "To define a new function."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 38,
+        "question": "What is the purpose of the `while` loop?",
+        "options": {
+            "A": "To execute a block of code a fixed number of times.",
+            "B": "To execute a block of code as long as a condition is true.",
+            "C": "To define a new function.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 39,
+        "question": "What is the purpose of the `for` loop?",
+        "options": {
+            "A": "To execute a block of code as long as a condition is true.",
+            "B": "To execute a block of code for each item in a sequence.",
+            "C": "To define a new function.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 40,
+        "question": "What is the output of the following code: `print(5 > 3 and 2 < 1)`?",
+        "options": {
+            "A": "True",
+            "B": "False",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 41,
+        "question": "What is the output of the following code: `print(5 > 3 or 2 > 1)`?",
+        "options": {
+            "A": "True",
+            "B": "False",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 42,
+        "question": "What is the purpose of the `not` operator?",
+        "options": {
+            "A": "To perform addition.",
+            "B": "To negate a boolean value.",
+            "C": "To perform multiplication.",
+            "D": "To perform division."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 43,
+        "question": "What is the purpose of the `in` operator when used with strings?",
+        "options": {
+            "A": "To concatenate strings.",
+            "B": "To check if a substring is present in a string.",
+            "C": "To convert a string to lowercase.",
+            "D": "To convert a string to uppercase."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 44,
+        "question": "What is the purpose of the `replace()` method for strings?",
+        "options": {
+            "A": "To remove characters from a string.",
+            "B": "To replace occurrences of a substring with another substring.",
+            "C": "To convert a string to lowercase.",
+            "D": "To convert a string to uppercase."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 45,
+        "question": "What is the purpose of the `split()` method for strings?",
+        "options": {
+            "A": "To concatenate strings.",
+            "B": "To split a string into a list of substrings based on a delimiter.",
+            "C": "To convert a string to lowercase.",
+            "D": "To convert a string to uppercase."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 46,
+        "question": "What is the purpose of the `join()` method for strings?",
+        "options": {
+            "A": "To split a string into a list of substrings.",
+            "B": "To concatenate a list of strings into a single string using a delimiter.",
+            "C": "To convert a string to lowercase.",
+            "D": "To convert a string to uppercase."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 47,
+        "question": "What is the purpose of the `find()` method for strings?",
+        "options": {
+            "A": "To replace occurrences of a substring.",
+            "B": "To find the index of the first occurrence of a substring.",
+            "C": "To convert a string to lowercase.",
+            "D": "To convert a string to uppercase."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 48,
+        "question": "What is the purpose of the `lower()` method for strings?",
+        "options": {
+            "A": "To convert a string to uppercase.",
+            "B": "To convert a string to lowercase.",
+            "C": "To remove whitespace from a string.",
+            "D": "To reverse a string."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 49,
+        "question": "What is the purpose of the `upper()` method for strings?",
+        "options": {
+            "A": "To convert a string to lowercase.",
+            "B": "To convert a string to uppercase.",
+            "C": "To remove whitespace from a string.",
+            "D": "To reverse a string."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 50,
+        "question": "What is the purpose of the `strip()` method for strings?",
+        "options": {
+            "A": "To convert a string to lowercase.",
+            "B": "To convert a string to uppercase.",
+            "C": "To remove leading and trailing whitespace from a string.",
+            "D": "To reverse a string."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 51,
+        "question": "Which of the following is NOT a characteristic of Object-Oriented Programming?",
+        "options": {
+            "A": "Encapsulation",
+            "B": "Procedural Decomposition",
+            "C": "Inheritance",
+            "D": "Polymorphism"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 52,
+        "question": "What is the primary purpose of a Python IDE like PyCharm?",
+        "options": {
+            "A": "To run Python code directly from the command line.",
+            "B": "To provide a user-friendly interface for writing, debugging, and managing Python projects.",
+            "C": "To translate Python code into machine code.",
+            "D": "To create flowcharts for Python programs."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 53,
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": {
+            "A": "1st_variable",
+            "B": "myVariable",
+            "C": "my-variable",
+            "D": "var name"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 54,
+        "question": "What is the purpose of the `type()` function in Python?",
+        "options": {
+            "A": "To assign a data type to a variable.",
+            "B": "To convert a variable to a different data type.",
+            "C": "To determine the data type of a variable.",
+            "D": "To print the value of a variable."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 55,
+        "question": "What does PEP 8 refer to?",
+        "options": {
+            "A": "Python Enhancement Proposal 8, a guide for writing clean and readable Python code.",
+            "B": "A Python library for data analysis.",
+            "C": "A Python version number.",
+            "D": "A Python security protocol."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 56,
+        "question": "In a flowchart, what does a diamond shape typically represent?",
+        "options": {
+            "A": "A process or action.",
+            "B": "A decision point.",
+            "C": "The start or end of the flowchart.",
+            "D": "Input/Output operation."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 57,
+        "question": "Which operator is used for assignment in Python?",
+        "options": {
+            "A": "==",
+            "B": "=",
+            "C": "!=",
+            "D": "+="
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 58,
+        "question": "What is the difference between `==` and `is` in Python?",
+        "options": {
+            "A": "`==` checks for equality of value, while `is` checks for identity (same object in memory).",
+            "B": "`==` checks for identity, while `is` checks for equality of value.",
+            "C": "They both do the same thing.",
+            "D": "`==` is used for string comparison, while `is` is used for numerical comparison."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 59,
+        "question": "What is the purpose of ChatGPT in the context of Python development?",
+        "options": {
+            "A": "To automatically execute Python code.",
+            "B": "To generate, debug, and explain Python code.",
+            "C": "To create graphical user interfaces for Python applications.",
+            "D": "To optimize Python code for performance."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 60,
+        "question": "What is the difference between a paid and a free Copilot?",
+        "options": {
+            "A": "Free Copilot has limited features and access compared to the paid version.",
+            "B": "Paid Copilot is only available for specific IDEs.",
+            "C": "Free Copilot offers better code suggestions.",
+            "D": "There is no difference between the two."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 61,
+        "question": "Which of the following is a correct example of an `if-elif-else` statement?",
+        "options": {
+            "A": "if x > 5: print('A') else: print('B')",
+            "B": "if x > 5: print('A') elif x < 5: print('B') else: print('C')",
+            "C": "if x > 5 print('A') elif x < 5 print('B') else print('C')",
+            "D": "if x > 5 then print('A') else print('B')"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 62,
+        "question": "What is string slicing in Python?",
+        "options": {
+            "A": "Concatenating strings together.",
+            "B": "Extracting a portion of a string.",
+            "C": "Converting a string to uppercase.",
+            "D": "Finding the length of a string."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 63,
+        "question": "What is the purpose of escape characters in strings?",
+        "options": {
+            "A": "To create new lines in a string.",
+            "B": "To represent special characters that cannot be directly typed in a string.",
+            "C": "To encrypt strings for security purposes.",
+            "D": "To define string variables."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 64,
+        "question": "What is the difference between a global and a local variable?",
+        "options": {
+            "A": "Global variables are accessible from anywhere in the program, while local variables are only accessible within the function they are defined in.",
+            "B": "Local variables are accessible from anywhere in the program, while global variables are only accessible within the function they are defined in.",
+            "C": "Global variables are used for mathematical operations, while local variables are used for string manipulation.",
+            "D": "There is no difference between global and local variables."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 65,
+        "question": "Which of the following is a valid way to create a constant in Python?",
+        "options": {
+            "A": "CONSTANT = 10",
+            "B": "const 10 =",
+            "C": "constant = 10",
+            "D": "10 = constant"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 66,
+        "question": "What is the purpose of the `len()` function?",
+        "options": {
+            "A": "To convert a variable to a different data type.",
+            "B": "To find the length of a string, list, or other sequence.",
+            "C": "To print the value of a variable.",
+            "D": "To create a new variable."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 67,
+        "question": "What is pseudocode?",
+        "options": {
+            "A": "Actual Python code that can be executed.",
+            "B": "A high-level description of an algorithm, using plain language.",
+            "C": "A type of data structure.",
+            "D": "A debugging tool."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 68,
+        "question": "Which logical operator represents 'not'?",
+        "options": {
+            "A": "and",
+            "B": "or",
+            "C": "not",
+            "D": "xor"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 69,
+        "question": "What is the ternary operator in Python?",
+        "options": {
+            "A": "A mathematical operator for performing complex calculations.",
+            "B": "A shorthand way to write an `if-else` statement in a single line.",
+            "C": "An operator for comparing two variables.",
+            "D": "An operator for creating loops."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 70,
+        "question": "What is the purpose of regular expressions?",
+        "options": {
+            "A": "To perform mathematical calculations.",
+            "B": "To search, match, and manipulate text based on patterns.",
+            "C": "To create graphical user interfaces.",
+            "D": "To encrypt data."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 71,
+        "question": "What will be the output of the following code: `print(5 // 2)`?",
+        "options": {
+            "A": "2.5",
+            "B": "2",
+            "C": "3",
+            "D": "Error"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 72,
+        "question": "What is the difference between a list and a tuple in Python?",
+        "options": {
+            "A": "Lists are mutable, while tuples are immutable.",
+            "B": "Tuples are mutable, while lists are immutable.",
+            "C": "Lists can only contain numbers, while tuples can contain any data type.",
+            "D": "There is no difference between lists and tuples."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 73,
+        "question": "What is the purpose of the `input()` function?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To read input from the user.",
+            "C": "To create a new variable.",
+            "D": "To define a function."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 74,
+        "question": "What is the purpose of indentation in Python?",
+        "options": {
+            "A": "To make the code more readable.",
+            "B": "To define blocks of code.",
+            "C": "To comment out code.",
+            "D": "Both A and B"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "id": 75,
+        "question": "What is the output of `print('Hello'[2:5])`?",
+        "options": {
+            "A": "Hel",
+            "B": "llo",
+            "C": "llo ",
+            "D": "He"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 76,
+        "question": "Which of the following is a membership operator?",
+        "options": {
+            "A": "==",
+            "B": ">",
+            "C": "in",
+            "D": "+"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 77,
+        "question": "What is the purpose of the `try-except` block?",
+        "options": {
+            "A": "To define a function.",
+            "B": "To handle exceptions and errors.",
+            "C": "To create a loop.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 78,
+        "question": "What is the difference between `break` and `continue` in a loop?",
+        "options": {
+            "A": "`break` exits the loop entirely, while `continue` skips the current iteration.",
+            "B": "`continue` exits the loop entirely, while `break` skips the current iteration.",
+            "C": "They both do the same thing.",
+            "D": "`break` is used for `while` loops, while `continue` is used for `for` loops."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 79,
+        "question": "What is the purpose of a function in Python?",
+        "options": {
+            "A": "To store data.",
+            "B": "To organize and reuse code.",
+            "C": "To create graphical user interfaces.",
+            "D": "To encrypt data."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 80,
+        "question": "What is the output of the following code: `x = 10; y = 5; print(x > y and x < 15)`?",
+        "options": {
+            "A": "True",
+            "B": "False",
+            "C": "Error",
+            "D": "None"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 81,
+        "question": "What is the purpose of the `range()` function?",
+        "options": {
+            "A": "To create a list of random numbers.",
+            "B": "To generate a sequence of numbers.",
+            "C": "To calculate the square root of a number.",
+            "D": "To sort a list of numbers."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 82,
+        "question": "What is a dictionary in Python?",
+        "options": {
+            "A": "An ordered sequence of elements.",
+            "B": "A collection of key-value pairs.",
+            "C": "A type of loop.",
+            "D": "A mathematical operator."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 83,
+        "question": "What is the purpose of the `import` statement?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To include external modules and libraries in your code.",
+            "C": "To create a new variable.",
+            "D": "To comment out code."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 84,
+        "question": "What is the output of `print(type([1, 2, 3]))`?",
+        "options": {
+            "A": "<class 'tuple'>",
+            "B": "<class 'list'>",
+            "C": "<class 'set'>",
+            "D": "<class 'dict'>"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 85,
+        "question": "What is the purpose of the `pass` statement?",
+        "options": {
+            "A": "To terminate the program.",
+            "B": "To do nothing.",
+            "C": "To print output to the console.",
+            "D": "To define a function."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 86,
+        "question": "What is the difference between `while` and `for` loops?",
+        "options": {
+            "A": "`while` loops are used when the number of iterations is known, while `for` loops are used when the number of iterations is unknown.",
+            "B": "`for` loops are used when the number of iterations is known, while `while` loops are used when the number of iterations is unknown.",
+            "C": "They both do the same thing.",
+            "D": "`while` loops are only used for numerical operations, while `for` loops are used for string manipulation."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 87,
+        "question": "What is the purpose of the `def` keyword?",
+        "options": {
+            "A": "To define a variable.",
+            "B": "To define a function.",
+            "C": "To define a class.",
+            "D": "To define a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 88,
+        "question": "What is the output of the following code: `print(2**3)`?",
+        "options": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "23"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 89,
+        "question": "What is the purpose of the `return` statement in a function?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To exit the function and return a value.",
+            "C": "To create a new variable.",
+            "D": "To define a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 90,
+        "question": "What is the purpose of the `__init__` method in a class?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To initialize the attributes of an object.",
+            "C": "To create a new class.",
+            "D": "To delete an object."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 91,
+        "question": "What is the purpose of the `super()` function?",
+        "options": {
+            "A": "To call a function from another module.",
+            "B": "To call the parent class's method.",
+            "C": "To create a new object.",
+            "D": "To delete an object."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 92,
+        "question": "What is the difference between a class and an object?",
+        "options": {
+            "A": "A class is a blueprint, while an object is an instance of that blueprint.",
+            "B": "An object is a blueprint, while a class is an instance of that blueprint.",
+            "C": "They are the same thing.",
+            "D": "A class is used for numerical operations, while an object is used for string manipulation."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 93,
+        "question": "What is the purpose of the `try...finally` block?",
+        "options": {
+            "A": "To handle exceptions and errors.",
+            "B": "To ensure that a block of code is always executed, regardless of whether an exception occurs.",
+            "C": "To create a loop.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 94,
+        "question": "What is the output of the following code: `print(10 % 3)`?",
+        "options": {
+            "A": "3",
+            "B": "1",
+            "C": "0",
+            "D": "Error"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 95,
+        "question": "What is the purpose of the `assert` statement?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To test a condition and raise an exception if it is false.",
+            "C": "To create a new variable.",
+            "D": "To define a function."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 96,
+        "question": "What is the purpose of the `with` statement?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To simplify resource management (e.g., file handling).",
+            "C": "To create a new class.",
+            "D": "To delete an object."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 97,
+        "question": "What is the output of the following code: `print(str(123) + '456')`?",
+        "options": {
+            "A": "123456",
+            "B": "Error",
+            "C": "456123",
+            "D": "123 + 456"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 98,
+        "question": "What is the purpose of the `lambda` keyword?",
+        "options": {
+            "A": "To define a variable.",
+            "B": "To create an anonymous function.",
+            "C": "To define a class.",
+            "D": "To define a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 99,
+        "question": "What is the purpose of the `map()` function?",
+        "options": {
+            "A": "To create a new list.",
+            "B": "To apply a function to each item in an iterable.",
+            "C": "To sort a list.",
+            "D": "To filter a list."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 100,
+        "question": "What is the purpose of the `filter()` function?",
+        "options": {
+            "A": "To create a new list.",
+            "B": "To apply a function to each item in an iterable.",
+            "C": "To filter elements from an iterable based on a condition.",
+            "D": "To sort a list."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 101,
+        "question": "Which of the following is NOT a characteristic of Object-Oriented Programming?",
+        "options": {
+            "A": "Encapsulation",
+            "B": "Procedural Decomposition",
+            "C": "Inheritance",
+            "D": "Polymorphism"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 102,
+        "question": "What is the primary purpose of a Python IDE like PyCharm?",
+        "options": {
+            "A": "To run Python code directly from the command line.",
+            "B": "To provide a user-friendly interface for writing, debugging, and managing Python projects.",
+            "C": "To translate Python code into machine code.",
+            "D": "To create flowcharts for Python programs."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 103,
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": {
+            "A": "1st_variable",
+            "B": "my variable",
+            "C": "my_variable",
+            "D": "var-1"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 104,
+        "question": "What is the purpose of the `type()` function in Python?",
+        "options": {
+            "A": "To assign a data type to a variable.",
+            "B": "To convert a variable to a different data type.",
+            "C": "To determine the data type of a variable.",
+            "D": "To print the value of a variable."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 105,
+        "question": "In a flowchart, what does a diamond shape typically represent?",
+        "options": {
+            "A": "A process",
+            "B": "A decision",
+            "C": "A start/end point",
+            "D": "Input/Output"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 106,
+        "question": "Which operator is used for exponentiation in Python?",
+        "options": {
+            "A": "*",
+            "B": "//",
+            "C": "**",
+            "D": "%"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 107,
+        "question": "What is the difference between a programmer and a developer?",
+        "options": {
+            "A": "They are interchangeable terms.",
+            "B": "A programmer focuses on writing code, while a developer is involved in the entire software development lifecycle.",
+            "C": "A developer focuses on writing code, while a programmer is involved in the entire software development lifecycle.",
+            "D": "A programmer works with hardware, while a developer works with software."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 108,
+        "question": "What is the purpose of code comments in Python?",
+        "options": {
+            "A": "To execute specific parts of the code.",
+            "B": "To make the code run faster.",
+            "C": "To explain the code and make it more readable.",
+            "D": "To define variables."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 109,
+        "question": "Which of the following is a string slicing example that extracts the first 5 characters of a string 'Python'?",
+        "options": {
+            "A": "Python[5]",
+            "B": "Python[:5]",
+            "C": "Python[0:5]",
+            "D": "Python[5:]"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 110,
+        "question": "What does PEP 8 refer to?",
+        "options": {
+            "A": "Python Error Protocol 8",
+            "B": "Python Enhancement Proposal 8",
+            "C": "Python Style Guide",
+            "D": "Python Execution Process 8"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 111,
+        "question": "What is the purpose of the `if __name__ == '__main__':` block in Python?",
+        "options": {
+            "A": "It defines the main function of the program.",
+            "B": "It ensures that the code inside the block is only executed when the script is run directly, not when it's imported as a module.",
+            "C": "It imports all necessary modules.",
+            "D": "It defines global variables."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 112,
+        "question": "Which data type is used to represent whole numbers in Python?",
+        "options": {
+            "A": "float",
+            "B": "string",
+            "C": "int",
+            "D": "bool"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 113,
+        "question": "What is the purpose of the `else` statement in a conditional statement?",
+        "options": {
+            "A": "To execute a block of code if the condition is true.",
+            "B": "To execute a block of code if the condition is false.",
+            "C": "To terminate the program.",
+            "D": "To define a new variable."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 114,
+        "question": "What is the difference between `==` and `is` operators in Python?",
+        "options": {
+            "A": "`==` checks for equality of values, while `is` checks if two variables refer to the same object in memory.",
+            "B": "`is` checks for equality of values, while `==` checks if two variables refer to the same object in memory.",
+            "C": "They are interchangeable.",
+            "D": "`==` is used for assignment, while `is` is used for comparison."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 115,
+        "question": "What is the purpose of ChatGPT in the context of Python development?",
+        "options": {
+            "A": "To automatically run Python code.",
+            "B": "To generate code, debug programs, and provide explanations.",
+            "C": "To create graphical user interfaces.",
+            "D": "To manage Python packages."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 116,
+        "question": "What is the purpose of the `input()` function in Python?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To read input from the user.",
+            "C": "To define a variable.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 117,
+        "question": "Which of the following is a mutable data type in Python?",
+        "options": {
+            "A": "tuple",
+            "B": "string",
+            "C": "list",
+            "D": "int"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 118,
+        "question": "What is the purpose of the `elif` keyword in Python?",
+        "options": {
+            "A": "To define a new variable.",
+            "B": "To provide an alternative condition to check if the previous `if` condition is false.",
+            "C": "To terminate the program.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 119,
+        "question": "What is the role of a 'copilot' in programming?",
+        "options": {
+            "A": "A physical robot that writes code.",
+            "B": "An AI-powered tool that assists developers by suggesting code and completing tasks.",
+            "C": "A software testing tool.",
+            "D": "A project management tool."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 120,
+        "question": "What is the purpose of the `%` operator in Python?",
+        "options": {
+            "A": "Division",
+            "B": "Multiplication",
+            "C": "Modulus (remainder)",
+            "D": "Exponentiation"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 121,
+        "question": "What is the difference between global and local variables?",
+        "options": {
+            "A": "Global variables are only accessible within a specific function, while local variables are accessible throughout the program.",
+            "B": "Local variables are only accessible within a specific function, while global variables are accessible throughout the program.",
+            "C": "They are the same.",
+            "D": "Global variables are used for mathematical operations, while local variables are used for string manipulation."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 122,
+        "question": "Which of the following is a valid way to convert a string to an integer in Python?",
+        "options": {
+            "A": "str(10)",
+            "B": "int('10')",
+            "C": "float('10')",
+            "D": "bool('10')"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 123,
+        "question": "What is the purpose of a regular expression?",
+        "options": {
+            "A": "To perform mathematical calculations.",
+            "B": "To define data types.",
+            "C": "To search, match, and manipulate text based on patterns.",
+            "D": "To create graphical user interfaces."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 124,
+        "question": "What is the output of the following code: `print(5 + '5')`?",
+        "options": {
+            "A": "10",
+            "B": "55",
+            "C": "TypeError",
+            "D": "None"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 125,
+        "question": "What is the purpose of nested conditional statements?",
+        "options": {
+            "A": "To execute multiple blocks of code simultaneously.",
+            "B": "To create loops.",
+            "C": "To check for multiple conditions within another condition.",
+            "D": "To define functions."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 126,
+        "question": "What is the purpose of the `len()` function in Python?",
+        "options": {
+            "A": "To find the largest element in a list.",
+            "B": "To calculate the length of a string, list, or other sequence.",
+            "C": "To convert a string to lowercase.",
+            "D": "To sort a list."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 127,
+        "question": "What is the difference between a paid and a free Copilot?",
+        "options": {
+            "A": "They are identical.",
+            "B": "Paid Copilot offers more advanced features, faster response times, and access to more powerful models.",
+            "C": "Free Copilot is more accurate than the paid version.",
+            "D": "Paid Copilot only works with specific IDEs."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 128,
+        "question": "What is the purpose of the `and` operator in Python?",
+        "options": {
+            "A": "To check if two conditions are equal.",
+            "B": "To check if both conditions are true.",
+            "C": "To check if either condition is true.",
+            "D": "To negate a condition."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 129,
+        "question": "What is the purpose of the `try-except` block in Python?",
+        "options": {
+            "A": "To define a function.",
+            "B": "To handle exceptions (errors) that may occur during program execution.",
+            "C": "To create loops.",
+            "D": "To import modules."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 130,
+        "question": "What is the purpose of the `range()` function in Python?",
+        "options": {
+            "A": "To calculate the square root of a number.",
+            "B": "To generate a sequence of numbers.",
+            "C": "To sort a list.",
+            "D": "To convert a string to an integer."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 131,
+        "question": "What is the purpose of the `in` operator in Python?",
+        "options": {
+            "A": "To assign a value to a variable.",
+            "B": "To check if a value is present in a sequence (e.g., list, string).",
+            "C": "To perform mathematical calculations.",
+            "D": "To define a function."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 132,
+        "question": "What is the purpose of the `not` operator in Python?",
+        "options": {
+            "A": "To perform multiplication.",
+            "B": "To negate a boolean value.",
+            "C": "To check for equality.",
+            "D": "To assign a value."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 133,
+        "question": "What is the purpose of the `pass` statement in Python?",
+        "options": {
+            "A": "To terminate the program.",
+            "B": "To define a function.",
+            "C": "To do nothing; it's a placeholder.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 134,
+        "question": "What is the purpose of the `break` statement in Python?",
+        "options": {
+            "A": "To skip to the next iteration of a loop.",
+            "B": "To terminate the loop.",
+            "C": "To define a function.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 135,
+        "question": "What is the purpose of the `continue` statement in Python?",
+        "options": {
+            "A": "To terminate the loop.",
+            "B": "To skip the current iteration of a loop and proceed to the next.",
+            "C": "To define a function.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 136,
+        "question": "What is the purpose of the `return` statement in Python?",
+        "options": {
+            "A": "To terminate the program.",
+            "B": "To define a function.",
+            "C": "To return a value from a function.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 137,
+        "question": "What is the purpose of the `assert` statement in Python?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To define a function.",
+            "C": "To test a condition and raise an error if it's false.",
+            "D": "To import a module."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 138,
+        "question": "What is the purpose of the `del` statement in Python?",
+        "options": {
+            "A": "To define a variable.",
+            "B": "To delete a variable or item from a list.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 139,
+        "question": "What is the purpose of the `global` keyword in Python?",
+        "options": {
+            "A": "To define a global variable.",
+            "B": "To access and modify a global variable from within a function.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 140,
+        "question": "What is the purpose of the `nonlocal` keyword in Python?",
+        "options": {
+            "A": "To define a nonlocal variable.",
+            "B": "To access and modify a variable in the nearest enclosing scope that is not global.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 141,
+        "question": "What is the purpose of the `lambda` keyword in Python?",
+        "options": {
+            "A": "To define a named function.",
+            "B": "To create an anonymous function (a function without a name).",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 142,
+        "question": "What is the purpose of the `map()` function in Python?",
+        "options": {
+            "A": "To create a list.",
+            "B": "To apply a function to each item in an iterable and return a map object.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 143,
+        "question": "What is the purpose of the `filter()` function in Python?",
+        "options": {
+            "A": "To create a list.",
+            "B": "To filter elements from an iterable based on a function and return a filter object.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 144,
+        "question": "What is the purpose of the `reduce()` function in Python?",
+        "options": {
+            "A": "To create a list.",
+            "B": "To apply a function cumulatively to the items of an iterable, from left to right, so as to reduce the iterable to a single value.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 145,
+        "question": "What is the purpose of the `zip()` function in Python?",
+        "options": {
+            "A": "To create a list.",
+            "B": "To iterate over multiple iterables in parallel.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 146,
+        "question": "What is the purpose of the `enumerate()` function in Python?",
+        "options": {
+            "A": "To create a list.",
+            "B": "To iterate over an iterable and return both the index and the value of each item.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 147,
+        "question": "What is the purpose of the `isinstance()` function in Python?",
+        "options": {
+            "A": "To create an instance of a class.",
+            "B": "To check if an object is an instance of a specific class or type.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 148,
+        "question": "What is the purpose of the `issubclass()` function in Python?",
+        "options": {
+            "A": "To create a subclass.",
+            "B": "To check if a class is a subclass of another class.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 149,
+        "question": "What is the purpose of the `super()` function in Python?",
+        "options": {
+            "A": "To create a superclass.",
+            "B": "To call methods from the parent class.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 150,
+        "question": "What is the purpose of the `property()` function in Python?",
+        "options": {
+            "A": "To define a property of a class.",
+            "B": "To create a new class.",
+            "C": "To print output to the console.",
+            "D": "To import a module."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 151,
+        "question": "Which of the following is NOT a characteristic of Object-Oriented Programming?",
+        "options": {
+            "A": "Encapsulation",
+            "B": "Procedural Decomposition",
+            "C": "Inheritance",
+            "D": "Polymorphism"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 152,
+        "question": "What is the primary purpose of a Python IDE like PyCharm?",
+        "options": {
+            "A": "To run Python code directly from the command line.",
+            "B": "To provide a user-friendly interface for writing, debugging, and managing Python projects.",
+            "C": "To translate Python code into machine code.",
+            "D": "To create flowcharts for Python programs."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 153,
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": {
+            "A": "1st_variable",
+            "B": "myVariable",
+            "C": "my-variable",
+            "D": "var name"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 154,
+        "question": "What is the purpose of the `type()` function in Python?",
+        "options": {
+            "A": "To assign a data type to a variable.",
+            "B": "To convert a variable to a different data type.",
+            "C": "To determine the data type of a variable.",
+            "D": "To print the value of a variable."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 155,
+        "question": "What does PEP 8 refer to?",
+        "options": {
+            "A": "Python Enhancement Proposal 8, a guide for writing clean and readable Python code.",
+            "B": "A Python library for data analysis.",
+            "C": "A Python version number.",
+            "D": "A Python security protocol."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 156,
+        "question": "In a flowchart, what does a diamond shape typically represent?",
+        "options": {
+            "A": "A process or action.",
+            "B": "A decision point.",
+            "C": "The start or end of the flowchart.",
+            "D": "Input/Output operation."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 157,
+        "question": "Which operator is used for assignment in Python?",
+        "options": {
+            "A": "==",
+            "B": "=",
+            "C": "!=",
+            "D": "+="
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 158,
+        "question": "What is the difference between `==` and `is` in Python?",
+        "options": {
+            "A": "`==` checks for equality of value, while `is` checks for identity (same object in memory).",
+            "B": "`==` checks for identity, while `is` checks for equality of value.",
+            "C": "They both do the same thing.",
+            "D": "`==` is used for string comparison, while `is` is used for numerical comparison."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 159,
+        "question": "What is the purpose of ChatGPT in the context of Python development?",
+        "options": {
+            "A": "To automatically execute Python code.",
+            "B": "To generate, debug, and explain Python code.",
+            "C": "To create graphical user interfaces for Python applications.",
+            "D": "To optimize Python code for performance."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 160,
+        "question": "What is the difference between a paid and a free Copilot?",
+        "options": {
+            "A": "Free Copilot has limited features and access compared to the paid version.",
+            "B": "Paid Copilot is only available for specific IDEs.",
+            "C": "Free Copilot offers better code suggestions.",
+            "D": "There is no difference between the two."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 161,
+        "question": "Which of the following is a correct example of an `if-elif-else` statement?",
+        "options": {
+            "A": "if x > 5: print('A') else: print('B')",
+            "B": "if x > 5: print('A') elif x < 5: print('B') else: print('C')",
+            "C": "if x > 5 print('A') elif x < 5 print('B') else print('C')",
+            "D": "if x > 5 then print('A') else print('B')"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 162,
+        "question": "What is string slicing in Python?",
+        "options": {
+            "A": "Concatenating strings together.",
+            "B": "Extracting a portion of a string.",
+            "C": "Converting a string to uppercase.",
+            "D": "Finding the length of a string."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 163,
+        "question": "What is the purpose of escape characters in strings?",
+        "options": {
+            "A": "To create new lines in a string.",
+            "B": "To represent special characters that cannot be directly typed in a string.",
+            "C": "To encrypt strings for security purposes.",
+            "D": "To define string variables."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 164,
+        "question": "What is the difference between a global and a local variable?",
+        "options": {
+            "A": "Global variables are accessible from anywhere in the program, while local variables are only accessible within the function they are defined in.",
+            "B": "Local variables are accessible from anywhere in the program, while global variables are only accessible within the function they are defined in.",
+            "C": "Global variables are used for mathematical operations, while local variables are used for string manipulation.",
+            "D": "There is no difference between global and local variables."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 165,
+        "question": "Which of the following is a valid way to display output in Python?",
+        "options": {
+            "A": "print('Hello, world!')",
+            "B": "display('Hello, world!')",
+            "C": "echo('Hello, world!')",
+            "D": "output('Hello, world!')"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 166,
+        "question": "What is the purpose of pseudocode?",
+        "options": {
+            "A": "To write actual Python code.",
+            "B": "To create a visual representation of a program using flowcharts.",
+            "C": "To plan the logic of a program in a human-readable format before writing code.",
+            "D": "To debug Python code."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 167,
+        "question": "What does the ternary operator allow you to do?",
+        "options": {
+            "A": "Perform complex mathematical calculations.",
+            "B": "Write conditional expressions in a single line.",
+            "C": "Define functions.",
+            "D": "Create loops."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 168,
+        "question": "What is the purpose of regular expressions?",
+        "options": {
+            "A": "To perform mathematical operations on strings.",
+            "B": "To search, match, and manipulate text based on patterns.",
+            "C": "To encrypt and decrypt strings.",
+            "D": "To create graphical user interfaces."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 169,
+        "question": "What is the output of the following code: `print(5 + '5')`?",
+        "options": {
+            "A": "10",
+            "B": "55",
+            "C": "TypeError",
+            "D": "None"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 170,
+        "question": "What is the purpose of nested conditional statements?",
+        "options": {
+            "A": "To create loops.",
+            "B": "To define functions.",
+            "C": "To place one conditional statement inside another.",
+            "D": "To perform mathematical operations."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 171,
+        "question": "Which data type is used to store true or false values?",
+        "options": {
+            "A": "Integer",
+            "B": "Float",
+            "C": "Boolean",
+            "D": "String"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 172,
+        "question": "What is the result of `10 // 3`?",
+        "options": {
+            "A": "3.333...",
+            "B": "3",
+            "C": "1",
+            "D": "0"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 173,
+        "question": "What is the purpose of the `len()` function?",
+        "options": {
+            "A": "To convert a value to a different data type.",
+            "B": "To find the length of a string, list, or other sequence.",
+            "C": "To perform mathematical calculations.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 174,
+        "question": "What is the difference between a list and a tuple in Python?",
+        "options": {
+            "A": "Lists are mutable, while tuples are immutable.",
+            "B": "Tuples are mutable, while lists are immutable.",
+            "C": "Lists can only store integers, while tuples can store any data type.",
+            "D": "There is no difference between lists and tuples."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 175,
+        "question": "What is the purpose of the `input()` function?",
+        "options": {
+            "A": "To print output to the console.",
+            "B": "To read input from the user.",
+            "C": "To perform mathematical calculations.",
+            "D": "To define functions."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 176,
+        "question": "What is the output of `print('Python'[2:5])`?",
+        "options": {
+            "A": "Pyt",
+            "B": "tho",
+            "C": "Pyth",
+            "D": "thon"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 177,
+        "question": "Which of the following is a membership operator?",
+        "options": {
+            "A": "+",
+            "B": "==",
+            "C": "in",
+            "D": ">"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 178,
+        "question": "What is the purpose of the `range()` function?",
+        "options": {
+            "A": "To create a list of numbers.",
+            "B": "To perform mathematical calculations.",
+            "C": "To read input from the user.",
+            "D": "To print output to the console."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 179,
+        "question": "What is the purpose of the `def` keyword in Python?",
+        "options": {
+            "A": "To define a variable.",
+            "B": "To define a function.",
+            "C": "To define a class.",
+            "D": "To define a loop."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 180,
+        "question": "What is the output of the following code: `x = 5; y = 2; print(x % y)`?",
+        "options": {
+            "A": "2.5",
+            "B": "1",
+            "C": "7",
+            "D": "0"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 181,
+        "question": "What is the primary benefit of using Copilot for debugging?",
+        "options": {
+            "A": "It automatically fixes all errors in your code.",
+            "B": "It suggests potential fixes for syntax errors and logical issues.",
+            "C": "It runs your code for you.",
+            "D": "It translates your code into different languages."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 182,
+        "question": "What is the purpose of a flowchart's 'start/end' symbol (oval)?",
+        "options": {
+            "A": "To indicate a process.",
+            "B": "To indicate a decision.",
+            "C": "To mark the beginning and end of the algorithm.",
+            "D": "To represent input/output."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 183,
+        "question": "Which of the following is a logical operator?",
+        "options": {
+            "A": "=",
+            "B": "+",
+            "C": "and",
+            "D": "%"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 184,
+        "question": "What is the purpose of the `else` block in an `if` statement?",
+        "options": {
+            "A": "To execute code only if the `if` condition is true.",
+            "B": "To execute code only if the `if` condition is false.",
+            "C": "To execute code regardless of the `if` condition.",
+            "D": "To define a new variable."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 185,
+        "question": "What is the output of `print(type([1, 2, 3]))`?",
+        "options": {
+            "A": "<class 'tuple'>",
+            "B": "<class 'list'>",
+            "C": "<class 'set'>",
+            "D": "<class 'string'>"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 186,
+        "question": "What is the purpose of the `\n` escape character?",
+        "options": {
+            "A": "To create a new tab.",
+            "B": "To create a new line.",
+            "C": "To create a new paragraph.",
+            "D": "To create a new file."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 187,
+        "question": "What is the difference between `int()` and `float()`?",
+        "options": {
+            "A": "`int()` converts a value to an integer, while `float()` converts a value to a floating-point number.",
+            "B": "`float()` converts a value to an integer, while `int()` converts a value to a floating-point number.",
+            "C": "They both do the same thing.",
+            "D": "`int()` is used for strings, while `float()` is used for numbers."
+        },
+        "correct_answer": "A"
+    },
+    {
+        "id": 188,
+        "question": "What is the purpose of the `import` statement?",
+        "options": {
+            "A": "To define a new function.",
+            "B": "To include external modules or libraries in your code.",
+            "C": "To print output to the console.",
+            "D": "To create a new variable."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 189,
+        "question": "What is the output of `print(5 > 3 and 2 < 1)`?",
+        "options": {
+            "A": "True",
+            "B": "False",
+            "C": "1",
+            "D": "0"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 190,
+        "question": "What is the purpose of the `id()` function?",
+        "options": {
+            "A": "To determine the data type of a variable.",
+            "B": "To get the unique identifier of an object in memory.",
+            "C": "To print the value of a variable.",
+            "D": "To convert a variable to a different data type."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 191,
+        "question": "What is the role of a developer versus a programmer?",
+        "options": {
+            "A": "They are interchangeable terms.",
+            "B": "A programmer focuses on writing code, while a developer is involved in the entire software development lifecycle.",
+            "C": "A developer focuses on writing code, while a programmer is involved in the entire software development lifecycle.",
+            "D": "A programmer manages the project, while a developer writes the code."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 192,
+        "question": "What is the purpose of the `elif` keyword?",
+        "options": {
+            "A": "To define a new variable.",
+            "B": "To create a loop.",
+            "C": "To provide an additional condition to check if the previous `if` condition is false.",
+            "D": "To end the program."
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 193,
+        "question": "What is the output of `print(2**3)`?",
+        "options": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 194,
+        "question": "What is the purpose of comments in Python code?",
+        "options": {
+            "A": "To execute specific commands.",
+            "B": "To provide explanations and documentation for the code.",
+            "C": "To define variables.",
+            "D": "To create loops."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 195,
+        "question": "What is the purpose of the `not` operator?",
+        "options": {
+            "A": "To perform addition.",
+            "B": "To negate a boolean value.",
+            "C": "To perform multiplication.",
+            "D": "To compare two values."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 196,
+        "question": "What is the output of `print('hello'.upper())`?",
+        "options": {
+            "A": "hello",
+            "B": "Hello",
+            "C": "HELLO",
+            "D": "hELLo"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 197,
+        "question": "What is the purpose of memory management in Python?",
+        "options": {
+            "A": "To manually allocate and deallocate memory.",
+            "B": "To automatically allocate and deallocate memory.",
+            "C": "To store data in external files.",
+            "D": "To encrypt data for security purposes."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 198,
+        "question": "What is the purpose of the `isinstance()` function?",
+        "options": {
+            "A": "To check if a variable is assigned a value.",
+            "B": "To check if an object is an instance of a particular class or type.",
+            "C": "To convert a variable to a different data type.",
+            "D": "To print the value of a variable."
+        },
+        "correct_answer": "B"
+    },
+    {
+        "id": 199,
+        "question": "What is the output of `print(10 / 0)`?",
+        "options": {
+            "A": "0",
+            "B": "1",
+            "C": "ZeroDivisionError",
+            "D": "Infinity"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "id": 200,
+        "question": "What is the primary advantage of using an online Python practice tool?",
+        "options": {
+            "A": "It allows you to write and run Python code without installing anything on your computer.",
+            "B": "It provides access to advanced debugging tools.",
+            "C": "It automatically generates code for you.",
+            "D": "It translates your code into different languages."
+        },
+        "correct_answer": "A"
+    }
+]

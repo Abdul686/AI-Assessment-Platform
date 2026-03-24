@@ -1,0 +1,224 @@
+COURSE: LangChain Mastery: Build GenAI Apps with LangChain &Pinecone
+URL: https://azirotechnologies.udemy.com/course/master-langchain-pinecone-openai-build-llm-applications/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Python programmers who want to build LLM-Powered Applications using LangChain, Pinecone and OpenAI.
+Any technical person interested in the most disruptive technology of this decade.
+Any programmer interested in AI.
+
+--- DESCRIPTION ---
+Description
+
+Fully Updated for the latest versions of LangChain, OpenaAI, and Pinecone.
+
+Unlock the Power of LangChain and Pinecone to Build Advanced LLM Applications with Generative AI and Python!
+
+
+
+
+This LangChain course is the 2nd part of “OpenAI API with Python Bootcamp”. It is not recommended for complete beginners as it requires some essential Python programming experience.
+
+Are you ready to dive into the world of Large Language Models (LLMs) and Generative AI (GenAI)? This comprehensive course will guide you through building cutting-edge LLM applications using OpenAI or Gemini API, LangChain, and Pinecone.
+
+By the end of this course, you'll master LangChain and Pinecone to create powerful, production-ready LLM apps in Python. You'll also develop modern web front-ends with Streamlit, bringing your AI applications to life.
+
+
+
+
+In this course, you will:
+
+Understand the fundamentals of LangChain for simplified LLM app development.
+
+Dive into Generative AI with OpenAI and Google's Gemini.
+
+Build real-world LLM applications step-by-step with Python.
+
+Utilize LangChain Agents and Chains for advanced functionalities.
+
+Explore Pinecone for efficient vector embeddings and similarity search.
+
+Work with vector databases like Pinecone and Chroma.
+
+Implement embeddings and indexing for custom document QA systems.
+
+Create RAG (Retrieval-Augemented Generation) Apps with LangChain.
+
+Summarize large texts using LLMs.
+
+Learn Prompt Engineering best practices.
+
+Create engaging front-ends using Streamlit.
+
+Become proficient in using AI Coding Assistants (Jupyter AI)
+
+Create LLM-Based Hands-On Projects with LangChain for the Real-Word: RAG, ChatBot, Summarization
+
+
+
+
+Who should take this course?
+
+Python developers interested in AI, LLMs, LangChain and LangGraph.
+
+Data scientists and AI enthusiasts looking to expand their skill set.
+
+Professionals aiming to leverage Generative AI (GenAI) and LangChain in real-world applications.
+
+Don't miss out on the AI revolution! Equip yourself with the skills to build state-of-the-art LLM applications. Enroll now and stay ahead in the rapidly evolving field of AI.
+
+Join me on this exciting journey to master LangChain, Pinecone, and Generative AI. Let's build the future together!
+
+I look forward to seeing you in the course!
+
+Who this course is for:
+Python programmers who want to build LLM-Powered Applications using LangChain, Pinecone and OpenAI.
+Any technical person interested in the most disruptive technology of this decade.
+Any programmer interested in AI.
+Show more
+
+--- CURRICULUM ---
+Course content
+15 sections • 111 lectures • 10h 44m total length
+Collapse all sections
+Getting Started
+3 lectures • 3min
+How to Get the Most Out of This Course
+Join My Private Community!
+Course Resources
+Deep Dive into LangChain
+16 lectures • 1hr 42min
+LangChain Demo
+Introduction to LangChain
+Setting Up the Environment: LangChain, Python-dotenv
+ChatModels: GPT-3.5-Turbo and GPT-4
+Caching LLM Responses
+LLM Streaming
+Prompt Templates
+ChatPrompt Templates
+Important Update: Handling LLMChain Deprecation Errors
+Simple Chains
+Sequential Chains
+Introduction to LangChain Agents
+LangChain Agents in Action: Python REPL
+LangChain Tools: DuckDuckGo and Wikipedia
+Creating a ReAct Agent
+Testing the ReAct Agent
+LangChain and Vector Stores (Pinecone)
+9 lectures • 1hr 5min
+Short Recap of Embeddings
+Introduction to Vector Databases
+Authenticating to Pinecone
+Working with Pinecone Indexes
+Working with Vectors
+Namespaces
+Splitting and Embedding Text Using LangChain
+Inserting the Embeddings into a Pinecone Index
+Asking Questions (Similarity Search)
+LangChain and Google's Gemini
+7 lectures • 46min
+Getting a Gemini API Key
+Gemini Multimodal Models: Nano, Pro, and Ultra
+Installing the Python Libraries for Gemini and Authenticating to Gemini
+Integrating Gemini with LangChain
+Using a System Prompt and Enabling Streaming
+Multimodal AI With Gemini
+Gemini Safety Settings
+Jupyter AI
+9 lectures • 42min
+Jupyter AI
+Python Version
+Introduction to Jupyter AI and Other Coding Companions
+Installing Jupyter AI
+Using Jupyter AI in JupyterLab
+Setting Up Jupyter AI in Jupyter Notebook
+Using Jupyter AI in Jupyter Notebook
+Using Interpolation for More Advanced Use Cases
+Using Jupyter AI with Other Providers and Models
+Project #1: Building a Custom ChatGPT App with LangChain From Scratch
+4 lectures • 25min
+Project Introduction
+Implementing a ChatGPT App with ChatPromptTemplates and Chains
+Adding Chat Memory Using ConversationBufferMemory
+Saving Chat Sessions
+Project #2: RAG - Q&A App on Your Private Documents (Pinecone and Chroma)
+10 lectures • 1hr 23min
+Project Introduction
+Loading Your Custom (Private) PDF Documents
+Loading Different Document Formats
+Public and Private Service Loaders
+Chunking Strategies and Splitting the Documents
+Embedding and Uploading to a Vector Database (Pinecone)
+Asking and Getting Answers
+Using Chroma as a Vector DB
+Adding Memory to the RAG System (Chat History)
+Using a Custom Prompt
+Project #3: Building a Front-End for the Question-Answering App Using Streamlit
+8 lectures • 41min
+LangChain Version
+Project Introduction and Library Installation
+Defining Functions
+Creating the Sidebar
+Reading, Chunking, and Embedding Data
+Asking Questions and Getting Answers
+Saving the Chat History
+Clearing Session State History Using Callback Functions
+Project #4: Summarizing With LangChain and OpenAI
+10 lectures • 47min
+Project Introduction
+LangChain Version
+Summarizing Using a Basic Prompt
+Summarizing using Prompt Templates
+Summarizing Using StuffDocumentsChain
+Summarizing Large Documents Using map_reduce
+map_reduce With Custom Prompts
+Summarizing Using the refine CombineDocumentChain
+refine With Custom Prompts
+Summarizing Using LangChain Agents
+Project #5: Building a Custom ChatGTP App with LangChain and Streamlit
+4 lectures • 24min
+Project Introduction
+Building the App
+Displaying the Chat History
+Testing the App
+[Appendix]: Creating Web Interfaces for LLM Applications Using Streamlit
+13 lectures • 1hr 10min
+Section Resources
+Introduction to Streamlit
+Streamlit Main Concepts
+Displaying Data on the Screen: st.write() and Magic
+Widgets, Part 1: text_input, number_input, button
+Widgets, Part 2: checkbox, radio, select
+Widgets, Part 3: slider, file_uploader, camera_input, image
+Layout: Sidebar
+Layout: Columns
+Layout: Expander
+Displaying a Progress Bar
+Session State
+Callbacks
+[Appendix]: Python Programming
+11 lectures • 58min
+README
+While and continue Statements
+While and break Statements
+List Slicing and Iteration
+List Comprehension - Part 1
+List Comprehension - Part 2
+Working with Dictionaries
+JSON Data Serialization
+JSON Data Deserialization
+Assignment: JSON and Requests/REST API
+Assignment Answer: JSON and Requests/REST API
+[Appendinx]: Setting Up the Environment: Jupyter Notebook and Google Colab
+4 lectures • 36min
+Setting Up the Environment: Jupyter Notebook
+Setting Up the Environment: Google Colab
+Setting-Up Virtual Environments with venv
+Using Virtual Environments in PyCharm and VSCode
+Where to Go From Here?
+1 lecture • 1min
+What's Next?
+BONUS SECTION
+2 lectures • 2min
+Congratulations
+BONUS: THANK YOU GIFT!

@@ -1,0 +1,146 @@
+COURSE: Vector Databases Fundamentals [NEW]
+URL: https://azirotechnologies.udemy.com/course/vector-databases-ai/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Data Scientists and Analysts
+Developers and Engineers
+AI Enthusiasts and Researchers
+Beginners in Data Management
+
+--- DESCRIPTION ---
+Description
+
+In the era of big data and AI, managing and extracting meaningful insights from vast amounts of unstructured data is more crucial than ever. "Mastering Vector Databases: From Foundations to Advanced Applications" is your comprehensive guide to understanding, building, and leveraging vector databases to transform your data management capabilities.
+
+What You Will Learn:
+
+Foundations of Vector Databases: This course will help you gain a solid understanding of vector databases, why they are essential, and how they differ from traditional databases.
+
+Overview of Top Vector Database Solutions: Explore the top 5 vector database solutions, including Pinecone and Chroma, and understand their unique features and key differences.
+
+Building Vector Databases from Scratch: Learn how to construct your vector database from the ground up, focusing on metrics, data structures, and efficient data storage.
+
+Vectorization Techniques: Master converting unstructured data into meaningful vectors using abstraction frameworks and embedding techniques.
+
+Hands-On Projects: Apply your knowledge with practical projects that demonstrate real-world applications of vector databases, including AI-driven search, document clustering, and personalized content recommendations.
+
+Advanced Querying and Retrieval: Understand how to quickly perform efficient similarity searches and retrieve relevant data using advanced querying techniques.
+
+Why Enroll in This Course?
+
+Comprehensive Curriculum: This course covers both foundational knowledge and advanced applications, ensuring a complete understanding of vector databases.
+
+Expert Instruction: Learn from an experienced instructor who provides clear, step-by-step guidance throughout the course.
+
+Hands-On Learning: Use practical projects and real-world examples to solidify your understanding and apply what you've learned.
+
+Cutting-Edge Tools: Get hands-on experience with leading vector databases solutions like Pinecone and Chroma, and learn how to integrate them with OpenAI for powerful data management capabilities.
+
+Who Should Enroll?
+
+Data Scientists and Analysts looking to enhance their data management skills.
+
+Developers and Engineers interested in building robust, scalable data solutions.
+
+AI Enthusiasts and Researchers aiming to leverage vector databases for advanced applications.
+
+Anyone interested in mastering the latest tools and techniques for managing unstructured data.
+
+Transform your data into actionable insights with the power of vector databases. Enroll now and start your journey toward mastering vector databases today!
+
+
+
+
+Who this course is for:
+Data Scientists and Analysts
+Developers and Engineers
+AI Enthusiasts and Researchers
+Beginners in Data Management
+Show more
+
+--- CURRICULUM ---
+Course content
+12 sections • 57 lectures • 4h 26m total length
+Collapse all sections
+Introduction
+1 lecture • 3min
+Introduction - Course prerequisites and structure
+Source Code and Resources
+2 lectures • 2min
+PLEASE Watch this - How To Get the Source Code
+Source code and resources
+Vector Databases Deep Dive - Fundamentals
+3 lectures • 20min
+Introduction to Vector Databases - Full Overview
+Why Vector Databases
+Vector Databases - Benefits and Advantages
+Traditional vs Vector Databases - Differences
+6 lectures • 29min
+Traditional vs Vector Databases - Limitations and Challenges
+Vector Databases & Embeddings - Full Work Flow
+Embeddings vs Vectors - Differences
+Vector Databases - How They Work and Advantages
+Vector Databases Use Cases
+Vector and Traditional Databases - Summary
+Vector Databases Solutions - Top 5 Vector Databases
+3 lectures • 18min
+The Top 5 Vector Databases - Overview
+Understanding LLM (Large Language Models)
+Check in
+Building Vector Databases - Hands-on - Chroma Vector Database
+11 lectures • 1hr 6min
+Development Environment Setup
+Setup VS-Code, Python and OpenAI API Key
+Chroma Database workflow
+Creating a Chroma Vector Database & Adding Documents & Querying them
+Looping Through the Results & Showing Similarity Search Results
+Chroma Default Embedding Function
+Chroma Vector Database - Persisting Data and Saving
+Creating an OpenAI Embeddings - Raw without Chroma
+Using OpenAIs Embedding API to Create Embedding in Chroma
+Vector Databases Metrics and Data Structures
+Section Summary
+Common Measures of Vector Similarity
+4 lectures • 13min
+Vector Similarity Deep Dive - Cosine Similarity
+Euclidean Distance - L2 Norm
+Dot Product
+Section Summary
+Vector Databases and LLM - the Full Workflow
+6 lectures • 34min
+Vector Databases and LLM - Deep Dive
+Loading all Documents
+Generating Embeddings from Documents & Insert then into Chroma Database
+Getting the Relevant Chunks when Given a Query
+Using OpenAI LLM to Generate Response - Full Flow
+Section Summary
+Vector Databases & the Langchain Framework
+6 lectures • 29min
+The LangChain Framework - Quick Overview
+Getting started with LangChain and the OpenAIChat Wrapper
+Loading Documents with LangChain Document Loader
+Splitting the Documents with LangChain
+Creating a Chroma Vector Database with LangChain
+Getting the Response from the Model - the Complete WorkFlow
+Pinecone Vector Database
+10 lectures • 35min
+Pinecone - Deep Dive
+Create Pinecone Account & Dashboard Overview
+Creating our Pinecone Index in Code
+Upserting and Querying our Pinecone Index
+Querying Pinecone Manually in the Dashboard
+Using LangChain Pinecone Wrapper - Create Index and Upsert & Similarity Search
+Creating a Retriever and Chain Objects & a LLM to get a Response
+Clean up - Delete Pinecone Index
+Challenge - Explore other Vector Database
+Section Summary
+Choosing the Right Vector Database
+3 lectures • 12min
+Choosing the Right Vector Database - Comparison Tables
+Which Database Should I Choose?
+Choosing the Right Database - Criterias
+Wrap up & Next Steps
+2 lectures • 6min
+Congratulations and Next Steps
+Bonus Lecture

@@ -1,0 +1,256 @@
+COURSE: Deploy ML Model in Production with FastAPI and Docker
+URL: https://azirotechnologies.udemy.com/course/nlp-with-bert-in-python/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Machine learning engineers who want to gain hands-on experience in setting up and configuring an end-to-end machine learning production pipeline.
+Data Scientists and Machine Learning Engineers: Professionals looking to advance their skills in deploying machine learning models in production environments using FastAPI, AWS, and Docker.
+Cloud Engineers and DevOps Professionals: Individuals who want to master cloud-based deployments, automate ML pipelines, and manage scalable infrastructure on AWS.
+Software Developers and Engineers: Developers interested in integrating machine learning models into applications and services, with a focus on API development and containerization.
+AI Enthusiasts and Practitioners: Anyone passionate about AI and machine learning who wants to gain hands-on experience in taking models from development to deployment.
+Tech Professionals Transitioning into ML Ops: IT professionals or developers transitioning into machine learning operations (ML Ops) who need practical knowledge of production-grade deployment and automation tools.
+
+--- DESCRIPTION ---
+Description
+
+Welcome to Production-Grade ML Model Deployment with FastAPI, AWS, Docker, and NGINX!
+
+Unlock the power of seamless ML model deployment with our comprehensive course, Production-Grade ML Model Deployment with FastAPI, AWS, Docker, and NGINX. This course is designed for data scientists, machine learning engineers, and cloud practitioners who are ready to take their models from development to production. You'll gain the skills needed to deploy, scale, and manage your machine learning models in real-world environments, ensuring they are robust, scalable, and secure.
+
+What You Will Learn:
+
+Streamline ML Operations with FastAPI: Master the art of serving machine learning models using FastAPI, one of the fastest-growing web frameworks. Learn to build robust RESTful APIs that facilitate quick and efficient model inference, ensuring your ML solutions are both accessible and scalable.
+
+Harness the Power of AWS for Scalable Deployments: Leverage AWS services like EC2, S3, ECR, and Fargate to deploy and manage your ML models in the cloud. Gain hands-on experience automating deployments with Boto3, integrating models with AWS infrastructure, and ensuring they are secure, reliable, and cost-efficient.
+
+Containerize Your Applications with Docker: Discover the flexibility of Docker to containerize your ML applications. Learn how to build, deploy, and manage Docker containers, ensuring your models run consistently across different environments, from development to production.
+
+Build and Deploy End-to-End ML Pipelines: Understand the intricacies of ML Ops by constructing end-to-end machine learning pipelines. Explore data management, model monitoring, A/B testing, and more, ensuring your models perform optimally at every stage of the lifecycle.
+
+Automate Deployments with Boto3: Automate the deployment of your ML models using Python and Boto3. From launching EC2 instances to managing S3 buckets, streamline cloud operations, making your deployments faster and more efficient.
+
+Scale ML Models with NGINX: Learn to use NGINX with Docker-Compose to scale your ML applications across multiple instances, ensuring high availability and performance in production.
+
+Deploy Serverless ML Models with AWS Fargate: Dive into serverless deployment using AWS Fargate, and learn how to package, deploy, and manage ML models with AWS ECR and ECS for scalable, serverless applications.
+
+Real-World ML Use Cases: Apply your knowledge to real-world scenarios by deploying models for sentiment analysis, disaster tweet classification, and human pose estimation. Using cutting-edge transformers and computer vision techniques, you’ll gain practical experience in bringing AI to life.
+
+Deploy Interactive ML Applications with Streamlit: Create and deploy interactive web applications using Streamlit. Integrate your FastAPI-powered models into user-friendly interfaces, making your ML solutions accessible to non-technical users.
+
+Monitor and Optimize Production ML Models: Implement load testing, monitoring, and performance optimization techniques to ensure your models remain reliable and efficient in production environments.
+
+
+
+
+Why This Course?
+
+In today’s fast-paced tech landscape, the ability to deploy machine learning models into production is a highly sought-after skill. This course combines the latest technologies—FastAPI, AWS, Docker, NGINX, and Streamlit—into one powerful learning journey. Whether you're looking to advance your career or enhance your skill set, this course provides everything you need to deploy, scale, and manage production-grade ML models with confidence.
+
+By the end of this course, you’ll have the expertise to deploy machine learning models that are not only effective but also scalable, secure, and ready for production in real-world environments. Join us and take the next step in your machine-learning journey!
+
+Who this course is for:
+Machine learning engineers who want to gain hands-on experience in setting up and configuring an end-to-end machine learning production pipeline.
+Data Scientists and Machine Learning Engineers: Professionals looking to advance their skills in deploying machine learning models in production environments using FastAPI, AWS, and Docker.
+Cloud Engineers and DevOps Professionals: Individuals who want to master cloud-based deployments, automate ML pipelines, and manage scalable infrastructure on AWS.
+Software Developers and Engineers: Developers interested in integrating machine learning models into applications and services, with a focus on API development and containerization.
+AI Enthusiasts and Practitioners: Anyone passionate about AI and machine learning who wants to gain hands-on experience in taking models from development to deployment.
+Tech Professionals Transitioning into ML Ops: IT professionals or developers transitioning into machine learning operations (ML Ops) who need practical knowledge of production-grade deployment and automation tools.
+Show more
+
+--- CURRICULUM ---
+Course content
+16 sections • 161 lectures • 18h 13m total length
+Collapse all sections
+Introduction
+3 lectures • 10min
+Course Introduction
+Install Requirements.txt
+Resources [Code Files]
+Introduction to ML Ops and Pipeline
+8 lectures • 44min
+What is Machine Learning Pipeline
+Type of ML Model Deployment
+ML Infrastructure and Integration Tools
+Benefits of ML Pipeline
+Challenges in ML Model Deployment
+Data and Model Management
+A/B Testing for ML Model
+ML Model Bias and Security
+Introduction to AWS Services
+7 lectures • 55min
+Getting Started with AWS
+Exploring EC2 Dashboard
+AWS Cost Calculator
+Creating EC2 Windows Server Part 1
+Creating EC2 Windows Server Part 2
+Create EC2 Ubuntu Machine
+Create S3 Bucket
+Managing AWS EC2 Servers with Boto3
+11 lectures • 1hr 20min
+Introduction
+AWS Credentials Setup with AWS CLI for Boto3
+AWS Boto3 - SSH Key Pair Setup
+AWS Boto3 - Launch EC2 with Python Part 1
+AWS Boto3 - Launch EC2 with Python Part 2
+AWS Boto3 - Exploring Security Groups using AWS Console
+AWS Boto3 - Create Custom Security Group with Python
+AWS Boto3 - Configure Custom Security Group Using Python
+AWS Boto 3 - Attach and Detach Security Groups to EC2 with Python
+AWS Boto3 - Check EC2 Instance Status
+AWS Boto3 - Start, Stop and Terminate EC2 Instance with Python
+Managing AWS S3 with Boto3
+8 lectures • 47min
+Introduction
+AWS Boto3 - Create S3 Bucket with Python
+AWS Boto3 - Upload File to S3 with Python
+AWS Boto3 - List S3 Objects or Files in the Bucket
+AWS Boto3 - Download S3 File to Local System
+AWS Boto3 - Upload All Files in Dir to S3 using Python
+AWS Boto3 - Download Full S3 Dir to Local
+AWS Boto3 - Delete All Files in an S3 Bucket
+Sentiment Classification using TinyBERT Transformer
+9 lectures • 56min
+Introduction
+Getting Started with Sentiment Classification
+Load Data with Hugging Face Datasets Library
+Data Tokenization
+Build Model Evaluation Function
+Model Building and Training
+Model Save and Load for Inference
+Push Model to AWS S3 Part 1
+Push Model to AWS S3 Part 2
+Disaster Tweets Classification using TinyBERT Transformer
+8 lectures • 44min
+Introduction
+Getting Started with Disaster Tweets Classification
+Loading Disaster Tweets
+Load Data with Hugging Face Datasets Library
+Tweets Tokenization
+Model Building and Training
+Model Save and Load for Inference
+Push Model to AWS S3
+Human Pose Image Classification using Vision Transformers (ViT)
+11 lectures • 58min
+Introduction
+Getting Started with Image Classification
+Human Pose Dataset Preparation
+Image Preprocessing Part 1
+Image Preprocessing Part 2
+ViT Model Building
+Vision Transformer (ViT) Fine Tuning
+Model Prediction on Test Dataset
+Classification Report and Confusion Matrix
+Human Pose Prediction on Real Images
+Push Model to AWS S3
+Deploy ML Model at Streamlit Server
+12 lectures • 1hr 14min
+Introduction
+Streamlit Application Walkthrough
+Streamlit Basics Part 1
+Streamlit Basics Part 2
+Streamlit Basics Part 3
+Streamlit Basics Part 4
+Streamlit Basics Part 5
+Streamlit Basics Part 6
+Streamlit App with ML Model Part 1
+Streamlit App with ML Model Part 2
+Upload Streamlit App on GitHub for Pipeline
+Deploying ML App at Streamlit Server
+ML Model Deployment with Streamlit at AWS EC2 Server
+14 lectures • 1hr 25min
+Introduction
+Automating AWS EC2 Instance Creation with Boto3
+Automating Security Group Configuration
+Automating Server Start and Stop
+Create Instance with Automated Script
+Terminate Instance
+Fasted and Shortest Way to Create Server During POC
+Connect with SSH to Your Server
+Connect VS Code with the Server
+Connect GitHub with the Server
+Run Streamlit on AWS Server
+Create S3 Full Access and Attach to EC2 Server
+Run Streamlit Application Automatically and Server Start Up
+Attach Permanent Fixed IP with EC2 Server
+Building REST API with FastAPI
+15 lectures • 1hr 42min
+Introduction
+Introduction to ML Model Serving over REST API
+API Requests Type
+API Response Types
+How to Inspect Browser for API Requests and Response
+What is FastAPI?
+Build Your First FastAPI Application
+Working with GET Requests
+Working with POST Requests
+Exploring FastAPI Interactive API Docs
+Call GET API Through CURL and Python
+Call POST API Through CURL and Python
+Explore GET Requests with Postman
+Explore POST Requests with Postman
+Send POST Data as Data Payload
+ML Model Serving over REST API for Production Deployment
+18 lectures • 2hr 25min
+Introduction
+Pydantic Data Class Introduction
+Building Data Classes for ML Models
+Running and Testing Your Application with Data Validation
+Building Sentiment, Disaster and Human Pose Classifier APIs
+Integrating S3 with API for CI-CD
+Load All ML Models
+Serving All ML Models Over the API
+Doing Data Validation and Modelling for Output
+Doing Data Validation and Modelling for Image Classifier
+API Load Testing
+Get Presigned Image URL from S3
+Serving ML Models Through API in Streamlit Application Part 1
+Serving ML Models Through API in Streamlit Application Part 2
+Serving ML Models Through API in Streamlit Application Part 3
+Deploying ML Model in Production with FastAPI Part 1
+Deploying ML Model in Production with FastAPI Part 2
+Deploying ML Model in Production with FastAPI Part 3
+Introduction to Docker for ML Model Deployment
+11 lectures • 1hr 20min
+Introduction
+Docker Introduction Part 1
+Docker Introduction Part 2
+Docker Introduction Part 3
+Basic Docker Command
+Your First Dockerfile
+Inspect Docker Image
+Write Dockerfile for FastAPI
+Run FastAPI inside Docker
+Pushing Docker Image to Docker Hub
+Pulling Docker Image from Docker Hub
+Scale ML Model with NGINX Server
+8 lectures • 1hr 4min
+Introduction
+Why to Use NGINX in Production
+Use Docker-Compose to Run Docker
+Scaling Your Application to N-Instances
+Scaling with NGINX Part 1
+Scaling with NGINX Part 2
+Design ML REST API Services with NGINX Server
+Run ML REST API with NGINX Server
+Deploy ML Model in Production with Docker, FastAPI and NGINX on AWS EC2
+7 lectures • 58min
+Introduction
+Package ML App as an Docker Image Part 1
+Package ML App as an Docker Image Part 2
+Package ML App as an Docker Image Part 3
+Run API Services Inside Docker at EC2 Part 1
+Run API Services Inside Docker at EC2 Part 2
+Load Testing of Model Deployed in the Production with Docker
+Deploy Serverless ML Model in Production at AWS Fargate with AWS ECR and AWS ECS
+11 lectures • 1hr 31min
+Introduction
+Introduction to Deploy ML Model with AWS ECR ECS and Serverless Fargate
+[MUST WATCH] Minor Code Modification for AWS Serverless Deployment
+Building and Pushing Docker Image on AWS ECR
+How ECR, Task Definition, Service and Cluster Works Together
+How to Create Task Definition for ECS Service
+Launch ECS Service on Fargate for Serverless ML Model API
+ML Service is Launched at AWS Fargate
+Exploring AWS ECS Services
+Simulating Real-time Users to Do Load Testing on ML API
+Resource Cleanup. Thank You

@@ -1,0 +1,154 @@
+COURSE: Advanced Retrieval Augmented Generation
+URL: https://azirotechnologies.udemy.com/course/advanced-retrieval-augmented-generation/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Engineer with at least 2 years of Experience
+Beginners can follow the video but won't be able to replicate the practical part (They can still learn a lot)
+Data Scientists / Analysts with at least 2 years of Experience
+
+--- DESCRIPTION ---
+Description
+
+Master Advanced Retrieval Augmented Generation (RAG) with Generative AI & LLM
+
+Unlock the Power of Advanced RAG Techniques for Robust, Efficient, and Scalable AI Systems
+
+Course Overview:
+
+Dive deep into the cutting-edge world of Retrieval Augmented Generation (RAG) with this comprehensive course, meticulously designed to equip you with the skills to enhance your Large Language Model (LLM) implementations. Whether you're looking to optimize your LLM calls, generate synthetic datasets, or overcome common challenges like rate limits and redundant data, this course has you covered.
+
+What You'll Learn:
+
+Implement structured outputs to enhance the robustness of your LLM calls.
+
+Master asynchronous Python to make your LLM calls faster and more cost-effective.
+
+Generate synthetic data to establish a strong baseline for your RAG system, even without active users.
+
+Filter out redundant generated data to improve system efficiency.
+
+Overcome OpenAI rate limits by leveraging caching, tracing, and retry mechanisms.
+
+Combine caching, tracing, and retrying techniques for optimal performance.
+
+Secure your API keys and streamline your development process using best practices.
+
+Apply advanced agentic patterns to build resilient and adaptive AI systems.
+
+Course Content:
+
+Introduction to RAG and Structured Outputs: Gain a solid foundation in RAG concepts and learn the importance of structured outputs for agentic patterns.
+
+Setup and Configuration: Step-by-step guidance on setting up your development environment with Docker, Python, and essential tools.
+
+Asynchronous Execution & Caching: Learn to execute multiple LLM calls concurrently and implement caching strategies to save time and resources.
+
+Synthetic Data Generation: Create high-quality synthetic datasets to simulate real-world scenarios and refine your RAG system.
+
+Advanced Troubleshooting: Master debugging techniques for async code and handle complex challenges like OpenAI rate limits.
+
+Requirements:
+
+A modern laptop with Python installed or access to Google Drive.
+
+Experience as a software engineer (2+ years preferred).
+
+Intermediate Python programming skills or ability to learn quickly.
+
+Basic understanding of data science (precision, recall, pandas).
+
+Access to a pro version of ChatGPT or equivalent LLM tools.
+
+Who Should Enroll:
+
+Software engineers with experience in basic RAG implementations who want to advance their skills.
+
+Data scientists and AI professionals looking to optimize their LLM-based systems.
+
+Developers interested in mastering the latest RAG techniques for robust, scalable AI solutions.
+
+Join this course today and transform your AI systems with the latest Advanced RAG techniques!
+
+Who this course is for:
+Software Engineer with at least 2 years of Experience
+Beginners can follow the video but won't be able to replicate the practical part (They can still learn a lot)
+Data Scientists / Analysts with at least 2 years of Experience
+Show more
+
+--- CURRICULUM ---
+Course content
+6 sections • 60 lectures • 10h 32m total length
+Collapse all sections
+Introduction & Setup
+8 lectures • 40min
+Introduction
+BEFORE YOU BUY: The course is not finished and new videos are added every weeks
+How To Follow This Course
+Create an OpenAI API Key
+Setup Vitual Env and Jupyter
+Setup local Langfuse with Docker
+How to get the Python `.gitignore` for the next video
+Initialize a git repo for our code
+Section 1 - Making our LLM powered systems more Robust
+20 lectures • 4hr 7min
+Securing our API Keys with python-dotenv
+Calling OPENAI
+[OPTIONAL] Theory : What are Tokens
+[OPTIONAL] Theory: What are LLM, Instructed Models and Chat Templates
+Use asynchronous code to execute several OpenAI LLM calls concurrently
+Introducing the five problems we need to solve to make our LLM apps more robust
+Caching (part 1): How to cache variables on disk
+Caching (part 2): Caching LLM Calls
+[CODE] Source Code for Caching LLM Call
+[Optional] Ignore cache directory in git
+[Optional] Make our cached function work with autocompletion
+How to use Tracing to inspect your systems more easily and build gold datatasets
+Tracing + Caching
+Why Retrying matters and how to implement it with the Backoff Python Decorator
+How to combine Caching, Tracing and Retrying, and a demo of RateLimiteErrors
+[OPTIONAL THEORY] Why are Structured Outputs so important for Agentic Patterns
+Structured Outputs Demo
+Robust "Structured Outputs" Calls with Tracing, Retrying and Caching
+Source Code for Robust "Structured Outputs"
+[OPTIONAL] Section Conclusion
+Section 2 - Measure and Improve Performance of the Retrieval System
+1 lecture • 20min
+Section Introduction - What is RAG, Retrieval and what's the plan here
+Section 2 - Part 1 - [STEP BY STEP] Generating a Synthetic Evaluation Dataset
+21 lectures • 4hr 46min
+Dataset Introduction & How to Download It (it's in the lecture's resources)
+Loading the Dataset & Downloading the Starter Notebook In the Resources
+How are we going to generate a synthetic dataset
+How to write and then iterate on the first draft of a prompt
+Use Jinja and dedent to create robust and simple Prompt Templating
+[Optional Exercise] Improve the First Prompt Draft
+Improve the prompt to improve the quality of our generated questions
+Create a batch workflow to iterate faster
+Finish improving the prompt for our evaluation question generation step
+Run the prompt against the full dataset and display a progress bar to monitor
+Introduction : Deduplicating synthetic data with embeddings
+Introduction to Embeddings (Semantic Vectors) and how to use for deduplication
+Making Robust Embedding Calls to OpenAI
+Computing Cosine Similarity between Two Embeddings
+Download The Starter Notebook
+Compute Embeddings for Each Questions
+Analyze Likely Duplicates using Embedding
+Prepare "bad questions" list and Compute Cosine Similarity for Each Question
+Write the prompt to classify duplicated questions from likely duplicates
+Run the "duplicate identification" prompt and eliminate duplicates
+Improve the generated questions using LLM and structured outputs
+Section 2 - Part 2 - Measuring Improvements in Retrieval Performance
+9 lectures • 39min
+Download the Resources for This Section
+Setup
+Install Lancedb
+Creating a LanceDB table with a Full-Text-Search (FTS)
+Intro to Full Text Search and How to Sanitize Term Queries for Full Text Search
+Establish FTS BASELINE
+Install the Reranker Library to run models like Cross Encoder and ColBERT
+Measure Retrieval Performance with FTS with a Reranking Step
+Starter notebook for Vector Search
+Conclusion
+1 lecture • 1min
+BEFORE YOU BUY: The course is not finished and new videos are added every weeks

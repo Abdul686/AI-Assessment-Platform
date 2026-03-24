@@ -1,0 +1,437 @@
+- id: 1
+  question: You are building a RAG application using LCEL. You need to chain a 'PromptTemplate'
+    with a 'ChatModel' and then a 'OutputParser'. Which LCEL Runnable component best
+    represents this entire sequence?
+  options:
+    A: Chain
+    B: Pipeline
+    C: Transform
+    D: Stream
+  correct_answer: B
+- id: 2
+  question: When implementing custom chunking using an LLM-based splitter, what is
+    the primary trade-off you need to consider compared to a character-based splitter?
+  options:
+    A: Speed vs. Semantic Accuracy
+    B: Cost vs. Memory Usage
+    C: Complexity vs. Scalability
+    D: Maintainability vs. Performance
+  correct_answer: A
+- id: 3
+  question: You've implemented a Parent Document Retriever with an InMemoryDocStore.
+    What is the main benefit of this approach?
+  options:
+    A: Improved query latency
+    B: Reduced storage costs
+    C: Enhanced context relevance
+    D: Simplified data synchronization
+  correct_answer: C
+- id: 4
+  question: You are using RAGAS to evaluate your RAG pipeline. You observe a low context
+    precision score. What does this likely indicate?
+  options:
+    A: The retrieved documents are irrelevant to the query.
+    B: The LLM is failing to generate coherent responses.
+    C: The embedding model is not capturing semantic similarity.
+    D: The chunk size is too large.
+  correct_answer: A
+- id: 5
+  question: You're using MultiQuery Retrieval. What is the primary goal of generating
+    multiple queries from a single user input?
+  options:
+    A: To reduce the load on the LLM.
+    B: To improve recall by covering different aspects of the query.
+    C: To simplify the query formulation process.
+    D: To increase the speed of retrieval.
+  correct_answer: B
+- id: 6
+  question: When using a Cross-Encoder for reranking, what is the key difference compared
+    to using the embedding model's similarity score?
+  options:
+    A: Cross-Encoders consider the query and document jointly.
+    B: Cross-Encoders are faster to compute.
+    C: Cross-Encoders require less memory.
+    D: Cross-Encoders are more scalable.
+  correct_answer: A
+- id: 7
+  question: You've implemented routing between a table and a vectorstore. What is
+    a critical security consideration when allowing an LLM to generate SQL queries?
+  options:
+    A: Data encryption at rest.
+    B: SQL injection vulnerabilities.
+    C: Network access control.
+    D: Authentication and authorization.
+  correct_answer: B
+- id: 8
+  question: You are integrating NeMo Guardrails with LangChain using RunnableRails.
+    What is the primary purpose of this integration?
+  options:
+    A: To improve the performance of the LLM.
+    B: To enforce safety and alignment constraints on the LLM's output.
+    C: To simplify the development process.
+    D: To reduce the cost of LLM usage.
+  correct_answer: B
+- id: 9
+  question: You are using LangFuse to trace chains. What type of information can LangFuse
+    provide that is valuable for debugging RAG applications?
+  options:
+    A: LLM token usage statistics.
+    B: Detailed execution logs and intermediate results.
+    C: Vectorstore indexing times.
+    D: Database query performance metrics.
+  correct_answer: B
+- id: 10
+  question: You are building a tool calling application. What is the role of the 'agent'
+    in this context?
+  options:
+    A: To generate the initial user query.
+    B: To decide which tool to use based on the user input.
+    C: To execute the tool and retrieve the results.
+    D: To format the final response to the user.
+  correct_answer: B
+- id: 11
+  question: You're using the Indexing API. What problem does it primarily solve?
+  options:
+    A: Optimizing LLM inference speed.
+    B: Keeping vectorstores synchronized with raw data changes.
+    C: Improving the accuracy of embedding models.
+    D: Reducing the cost of data storage.
+  correct_answer: B
+- id: 12
+  question: When migrating from RAGAS v0.1 to v0.2, what is the most important change
+    to be aware of?
+  options:
+    A: The API for creating testsets has been completely rewritten.
+    B: The evaluation metrics have been updated.
+    C: The dependency on LangChain has been removed.
+    D: The installation process has been simplified.
+  correct_answer: B
+- id: 13
+  question: You've noticed that your RAG application is consistently retrieving irrelevant
+    documents. Which of the following is the LEAST likely cause?
+  options:
+    A: Poorly defined embedding model.
+    B: Inadequate chunking strategy.
+    C: Insufficient training data for the LLM.
+    D: Ineffective query formulation.
+  correct_answer: C
+- id: 14
+  question: You are using HyDE (Hypothetical Document Embeddings). How does this technique
+    aim to improve retrieval?
+  options:
+    A: By generating embeddings for hypothetical documents based on the query.
+    B: By compressing the retrieved documents before embedding.
+    C: By reranking the retrieved documents using a cross-encoder.
+    D: By using a different embedding model for the query and documents.
+  correct_answer: A
+- id: 15
+  question: You are building a RAG application that needs to handle complex SQL queries.
+    What is the benefit of LLM-based routing to a SQL chain?
+  options:
+    A: It guarantees the correctness of the generated SQL.
+    B: It allows the LLM to determine if a SQL query is necessary.
+    C: It automatically optimizes the SQL query for performance.
+    D: It eliminates the need for a database administrator.
+  correct_answer: B
+- id: 16
+  question: What is the primary advantage of using Colang within NeMo Guardrails?
+  options:
+    A: It simplifies the integration with LangChain.
+    B: It provides a declarative way to define guardrails.
+    C: It improves the performance of the LLM.
+    D: It reduces the cost of LLM usage.
+  correct_answer: B
+- id: 17
+  question: You are using a custom Postgres DocStore built with the BaseStore Interface.
+    What is a key consideration when designing the schema?
+  options:
+    A: The maximum length of the text field.
+    B: The indexing strategy for efficient similarity search.
+    C: The data type of the embedding vector.
+    D: All of the above.
+  correct_answer: D
+- id: 18
+  question: In the context of RAG, what is the purpose of 'document compression/filtering'
+    using an LLM?
+  options:
+    A: To reduce the size of the vectorstore.
+    B: To extract the most relevant information from a document before embedding.
+    C: To improve the speed of retrieval.
+    D: To remove irrelevant information from the document.
+  correct_answer: B
+- id: 19
+  question: You are comparing embedding models. What is a key difference between open-source
+    and proprietary models (like OpenAI's Gen-3 models)?
+  options:
+    A: Open-source models are generally more accurate.
+    B: Proprietary models often offer better performance but come with licensing costs.
+    C: Open-source models are easier to customize.
+    D: Proprietary models are always more scalable.
+  correct_answer: B
+- id: 20
+  question: You've implemented a RAG application with chat history. What is a potential
+    issue with maintaining long chat histories?
+  options:
+    A: Increased computational cost.
+    B: Context window limitations of the LLM.
+    C: Difficulty in managing state.
+    D: All of the above.
+  correct_answer: D
+- id: 21
+  question: When using LLM-based routing, what is a potential drawback compared to
+    embedding-based routing?
+  options:
+    A: Lower accuracy.
+    B: Higher latency.
+    C: Increased cost.
+    D: Reduced scalability.
+  correct_answer: B
+- id: 22
+  question: You are debugging a RAG application where the LLM is generating responses
+    that are not grounded in the retrieved documents. What is a likely cause?
+  options:
+    A: The embedding model is not capturing semantic similarity.
+    B: The LLM is hallucinating.
+    C: The chunk size is too small.
+    D: The retrieval process is too slow.
+  correct_answer: B
+- id: 23
+  question: What is the primary benefit of using a Runnable in LCEL?
+  options:
+    A: It simplifies the process of creating chains.
+    B: It allows for modular and reusable components.
+    C: It improves the performance of the LLM.
+    D: It reduces the cost of LLM usage.
+  correct_answer: B
+- id: 24
+  question: You are using a CharacterTextSplitter. What is a limitation of this approach?
+  options:
+    A: It does not consider semantic meaning.
+    B: It is too slow.
+    C: It requires a lot of memory.
+    D: It is difficult to implement.
+  correct_answer: A
+- id: 25
+  question: You are evaluating your RAG pipeline and notice a high answer relevancy
+    score but a low context precision score. What does this suggest?
+  options:
+    A: The LLM is generating relevant answers, but the retrieved documents are not
+      focused.
+    B: The LLM is hallucinating.
+    C: The embedding model is not capturing semantic similarity.
+    D: The chunk size is too large.
+  correct_answer: A
+- id: 26
+  question: What is the purpose of the 'Parent Document Retriever' in a two-stage
+    retrieval process?
+  options:
+    A: To retrieve the most relevant documents quickly.
+    B: To retrieve a broader set of documents for more comprehensive context.
+    C: To rerank the retrieved documents.
+    D: To compress the retrieved documents.
+  correct_answer: B
+- id: 27
+  question: You are using tool calling to get data from an API. What is a crucial
+    aspect of designing the tool's schema?
+  options:
+    A: The API's rate limits.
+    B: The data types of the API's parameters and return values.
+    C: The security credentials required to access the API.
+    D: All of the above.
+  correct_answer: D
+- id: 28
+  question: You've implemented routing between a table and a vectorstore. What type
+    of query would be best suited for the SQL chain?
+  options:
+    A: A broad, open-ended question.
+    B: A specific question requiring structured data.
+    C: A question about the overall topic of the documents.
+    D: A question that can be answered with a simple keyword search.
+  correct_answer: B
+- id: 29
+  question: What is the role of 'Actions' in NeMo Guardrails?
+  options:
+    A: To define the LLM's behavior.
+    B: To specify the allowed interactions with external tools.
+    C: To enforce safety and alignment constraints.
+    D: All of the above.
+  correct_answer: D
+- id: 30
+  question: You are using LangFuse to trace chains. What is the benefit of visualizing
+    the execution flow?
+  options:
+    A: It helps identify bottlenecks in the pipeline.
+    B: It allows you to understand how the LLM is processing the input.
+    C: It makes it easier to debug errors.
+    D: All of the above.
+  correct_answer: D
+- id: 31
+  question: What is the primary purpose of the 'Indexing API' in the context of RAG?
+  options:
+    A: To improve the speed of retrieval.
+    B: To keep the vectorstore synchronized with changes in the source data.
+    C: To optimize the embedding model.
+    D: To reduce the cost of data storage.
+  correct_answer: B
+- id: 32
+  question: You are using RAGAS to evaluate your RAG pipeline. What does a low faithfulness
+    score indicate?
+  options:
+    A: The retrieved documents are irrelevant to the query.
+    B: The LLM is generating responses that are not supported by the retrieved documents.
+    C: The embedding model is not capturing semantic similarity.
+    D: The chunk size is too large.
+  correct_answer: B
+- id: 33
+  question: What is the main advantage of using MultiQuery Retrieval over a single
+    query?
+  options:
+    A: Reduced computational cost.
+    B: Improved recall by exploring different query formulations.
+    C: Simplified query formulation.
+    D: Faster retrieval speed.
+  correct_answer: B
+- id: 34
+  question: When using a Cross-Encoder for reranking, what is a potential drawback?
+  options:
+    A: Lower accuracy compared to embedding similarity.
+    B: Higher computational cost compared to embedding similarity.
+    C: Difficulty in scaling to large datasets.
+    D: Limited support for different languages.
+  correct_answer: B
+- id: 35
+  question: You are implementing routing between a table and a vectorstore. What is
+    a best practice for preventing SQL injection vulnerabilities?
+  options:
+    A: Using parameterized queries.
+    B: Validating user input.
+    C: Limiting the privileges of the database user.
+    D: All of the above.
+  correct_answer: D
+- id: 36
+  question: What is the primary benefit of integrating NeMo Guardrails with LangChain?
+  options:
+    A: Improved LLM performance.
+    B: Enhanced safety and alignment of LLM outputs.
+    C: Simplified development process.
+    D: Reduced LLM usage costs.
+  correct_answer: B
+- id: 37
+  question: You are using LangFuse to trace chains. What is the purpose of 'spans'?
+  options:
+    A: To measure the latency of each component in the pipeline.
+    B: To store the intermediate results of each component.
+    C: To provide detailed information about the execution of each component.
+    D: All of the above.
+  correct_answer: D
+- id: 38
+  question: You are building a tool calling application. What is the role of the 'tool_schema'?
+  options:
+    A: To define the LLM's behavior.
+    B: To describe the available tools and their parameters.
+    C: To enforce safety and alignment constraints.
+    D: To manage the tool's API keys.
+  correct_answer: B
+- id: 39
+  question: What is the key difference between LCEL's 'Chain' and 'Pipeline' runnables?
+  options:
+    A: Chains are sequential, while Pipelines can be parallel.
+    B: Pipelines are sequential, while Chains can be parallel.
+    C: Chains are for simple tasks, while Pipelines are for complex tasks.
+    D: Pipelines are for data transformation, while Chains are for LLM interaction.
+  correct_answer: A
+- id: 40
+  question: You are using an LLM-based splitter. What is a potential issue with relying
+    solely on the LLM's judgment for chunk boundaries?
+  options:
+    A: The LLM might introduce bias.
+    B: The LLM might be inconsistent in its chunking decisions.
+    C: The LLM might be too slow.
+    D: All of the above.
+  correct_answer: D
+- id: 41
+  question: You observe that your RAG application performs well on general queries
+    but struggles with highly specific questions. What could be a contributing factor?
+  options:
+    A: Insufficient context in the retrieved documents.
+    B: The embedding model is not capturing fine-grained semantic differences.
+    C: The LLM is not able to handle complex reasoning.
+    D: All of the above.
+  correct_answer: D
+- id: 42
+  question: What is the primary benefit of using a Parent Document Retriever with
+    a custom DocStore?
+  options:
+    A: Improved retrieval speed.
+    B: Greater control over data storage and indexing.
+    C: Reduced storage costs.
+    D: Simplified data synchronization.
+  correct_answer: B
+- id: 43
+  question: You are using LangFuse to trace chains. What is the purpose of 'metadata'?
+  options:
+    A: To store the LLM's parameters.
+    B: To provide additional information about the execution of each component.
+    C: To measure the latency of each component.
+    D: To store the intermediate results of each component.
+  correct_answer: B
+- id: 44
+  question: You are building a tool calling application. What is the role of the 'agent_executor'?
+  options:
+    A: To define the available tools.
+    B: To execute the tool and retrieve the results.
+    C: To orchestrate the interaction between the LLM and the tools.
+    D: To format the final response to the user.
+  correct_answer: C
+- id: 45
+  question: What is the main advantage of using the Indexing API over manually updating
+    the vectorstore?
+  options:
+    A: Improved performance.
+    B: Reduced complexity and increased reliability.
+    C: Lower storage costs.
+    D: Simplified data synchronization.
+  correct_answer: B
+- id: 46
+  question: You are using RAGAS to evaluate your RAG pipeline. What does a high answer
+    groundedness score indicate?
+  options:
+    A: The retrieved documents are irrelevant to the query.
+    B: The LLM is generating responses that are well-supported by the retrieved documents.
+    C: The embedding model is not capturing semantic similarity.
+    D: The chunk size is too large.
+  correct_answer: B
+- id: 47
+  question: What is the primary goal of HyDE (Hypothetical Document Embeddings)?
+  options:
+    A: To reduce the size of the vectorstore.
+    B: To improve recall by generating embeddings for potential relevant documents.
+    C: To rerank the retrieved documents.
+    D: To compress the retrieved documents.
+  correct_answer: B
+- id: 48
+  question: You are using LLM-based routing. What is a potential challenge with this
+    approach?
+  options:
+    A: Lower accuracy compared to embedding-based routing.
+    B: Higher latency due to the LLM's processing time.
+    C: Increased cost due to LLM usage.
+    D: All of the above.
+  correct_answer: D
+- id: 49
+  question: What is the purpose of 'RunnableRails' in NeMo Guardrails integration
+    with LangChain?
+  options:
+    A: To simplify the integration process.
+    B: To wrap LangChain runnables with guardrails.
+    C: To improve the performance of the LLM.
+    D: To reduce the cost of LLM usage.
+  correct_answer: B
+- id: 50
+  question: You are using LangFuse to trace chains. What is the benefit of using 'tags'?
+  options:
+    A: To measure the latency of each component.
+    B: To categorize and filter the traces for easier analysis.
+    C: To store the intermediate results of each component.
+    D: To provide detailed information about the LLM's parameters.
+  correct_answer: B

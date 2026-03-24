@@ -1,0 +1,446 @@
+- id: 1
+  question: You are building a RAG system for a large document corpus. Initial tests
+    show the LLM frequently hallucinates information not present in the retrieved
+    context. Which strategy would be MOST effective as a first step to mitigate this?
+  options:
+    A: Increase the temperature parameter of the LLM.
+    B: Implement result re-ranking based on relevance scores.
+    C: Reduce the chunk size of the documents during indexing.
+    D: Switch to a more powerful, larger LLM.
+  correct_answer: B
+- id: 2
+  question: When choosing between FAISS, ANNOY, and HNSW for a vector database, which
+    is generally the best choice when prioritizing recall over speed for a dataset
+    of 10 million vectors?
+  options:
+    A: FAISS with IVF quantization.
+    B: ANNOY with a large number of trees.
+    C: HNSW with appropriate parameters (M, efConstruction).
+    D: All three perform equally well in this scenario.
+  correct_answer: C
+- id: 3
+  question: You've implemented prompt caching in your RAG pipeline. Users are reporting
+    inconsistent responses for identical queries. What is the most likely cause?
+  options:
+    A: The cache TTL (Time-To-Live) is set too high.
+    B: The cache key doesn't uniquely identify the query and context.
+    C: The LLM is inherently non-deterministic.
+    D: The vector database is returning different results for the same query.
+  correct_answer: B
+- id: 4
+  question: In a SQL chatbot built with LangChain, what is the primary purpose of
+    implementing query optimization techniques *before* executing the generated SQL?
+  options:
+    A: To improve the readability of the generated SQL code.
+    B: To prevent SQL injection vulnerabilities.
+    C: To reduce the execution time and resource consumption of the database query.
+    D: To ensure the SQL query adheres to a specific database schema.
+  correct_answer: C
+- id: 5
+  question: You are indexing a collection of PDF documents with varying layouts. Which
+    text chunking strategy would likely yield the best results for RAG, considering
+    semantic coherence?
+  options:
+    A: Fixed-size chunks with no overlap.
+    B: Recursive character text splitter with a large chunk size.
+    C: Recursive character text splitter with moderate overlap.
+    D: Sentence splitter with a small chunk size.
+  correct_answer: C
+- id: 6
+  question: What is the main benefit of using query expansion in a RAG system?
+  options:
+    A: Reducing the size of the vector database.
+    B: Improving the LLM's reasoning capabilities.
+    C: Increasing the likelihood of retrieving relevant documents by considering synonyms
+      and related terms.
+    D: Decreasing the latency of the retrieval process.
+  correct_answer: C
+- id: 7
+  question: You're using Ollama to run an open-source LLM locally. The LLM consistently
+    runs out of memory during inference. What is the most effective way to address
+    this?
+  options:
+    A: Increase the batch size for processing.
+    B: Reduce the number of layers in the LLM.
+    C: Use a smaller model or quantize the existing model.
+    D: Increase the system's RAM.
+  correct_answer: C
+- id: 8
+  question: When integrating a vector database like Pinecone with LangChain, what
+    is the purpose of specifying a similarity metric (e.g., cosine similarity)?
+  options:
+    A: To control the size of the vectors stored in the database.
+    B: To define how the similarity between the query vector and the indexed vectors
+      is calculated.
+    C: To encrypt the data stored in the vector database.
+    D: To optimize the indexing speed of the database.
+  correct_answer: B
+- id: 9
+  question: You've noticed that your website chatbot struggles with questions about
+    recently updated content. What is the most efficient way to address this?
+  options:
+    A: Re-index the entire website content.
+    B: Increase the chunk size of the website content.
+    C: Implement incremental indexing to only update the changed content.
+    D: Reduce the temperature parameter of the LLM.
+  correct_answer: C
+- id: 10
+  question: In a multi-modal chatbot processing PDF documents, what is a key challenge
+    when extracting text from images within the PDF?
+  options:
+    A: Ensuring the text is always perfectly accurate.
+    B: Handling different image formats and resolutions.
+    C: Maintaining the original formatting of the text.
+    D: Integrating the extracted text with the LLM.
+  correct_answer: B
+- id: 11
+  question: What is the primary advantage of using LangChain's 'Memory' component
+    in a chatbot?
+  options:
+    A: To store the entire document corpus.
+    B: To enable the chatbot to maintain context across multiple turns of conversation.
+    C: To cache the LLM's responses.
+    D: To optimize the vector database queries.
+  correct_answer: B
+- id: 12
+  question: You are evaluating different embedding models. Model A has higher accuracy
+    but is significantly slower than Model B. How would you approach this trade-off
+    in a production RAG system?
+  options:
+    A: Always choose the faster model (Model B).
+    B: Use Model A for all queries.
+    C: Use Model A for complex queries and Model B for simpler ones.
+    D: Quantize Model A to improve its speed.
+  correct_answer: C
+- id: 13
+  question: What is the purpose of 're-ranking' retrieved documents in a RAG pipeline?
+  options:
+    A: To reduce the number of documents retrieved.
+    B: To improve the order of retrieved documents based on relevance to the query.
+    C: To compress the documents before sending them to the LLM.
+    D: To cache the retrieved documents.
+  correct_answer: B
+- id: 14
+  question: You've implemented a RAG system for a technical documentation website.
+    Users are complaining that the chatbot often provides overly verbose responses.
+    What can you do to improve this?
+  options:
+    A: Increase the temperature parameter of the LLM.
+    B: Add constraints to the prompt instructing the LLM to be concise.
+    C: Reduce the chunk size of the documents.
+    D: Increase the number of retrieved documents.
+  correct_answer: B
+- id: 15
+  question: What is the role of a 'loader' in LangChain?
+  options:
+    A: To generate embeddings for the documents.
+    B: To load documents from various sources (e.g., websites, PDFs, databases).
+    C: To interact with the LLM.
+    D: To store the retrieved documents.
+  correct_answer: B
+- id: 16
+  question: You are building a RAG system for a dataset with highly specialized terminology.
+    What technique could improve retrieval accuracy?
+  options:
+    A: Using a generic embedding model.
+    B: Fine-tuning an embedding model on your specific dataset.
+    C: Increasing the chunk size.
+    D: Reducing the number of retrieved documents.
+  correct_answer: B
+- id: 17
+  question: What is the potential drawback of using a very small chunk size in a RAG
+    system?
+  options:
+    A: Increased computational cost.
+    B: Loss of semantic context.
+    C: Reduced retrieval speed.
+    D: Increased memory usage.
+  correct_answer: B
+- id: 18
+  question: In the context of RAG, what does 'grounding' refer to?
+  options:
+    A: The process of connecting the LLM to a database.
+    B: Ensuring the LLM's responses are based on the retrieved context.
+    C: The process of creating embeddings.
+    D: The process of fine-tuning the LLM.
+  correct_answer: B
+- id: 19
+  question: You've implemented a SQL chatbot, but it's generating SQL queries that
+    are vulnerable to SQL injection attacks. What is the most important step to address
+    this?
+  options:
+    A: Increase the complexity of the LLM prompt.
+    B: Implement input sanitization and parameterized queries.
+    C: Reduce the number of tables the chatbot has access to.
+    D: Use a different LLM.
+  correct_answer: B
+- id: 20
+  question: What is the purpose of using a 'chain' in LangChain?
+  options:
+    A: To store the document corpus.
+    B: To define a sequence of operations to be performed on the input data.
+    C: To manage the LLM's parameters.
+    D: To visualize the vector embeddings.
+  correct_answer: B
+- id: 21
+  question: You are observing that your RAG system performs well on simple queries
+    but struggles with complex, multi-faceted questions. What advanced RAG technique
+    could help?
+  options:
+    A: Reducing the chunk size.
+    B: Implementing query decomposition.
+    C: Increasing the temperature of the LLM.
+    D: Using a smaller embedding model.
+  correct_answer: B
+- id: 22
+  question: What is the primary benefit of using a managed vector database service
+    like Pinecone over self-hosting a vector database?
+  options:
+    A: Lower cost.
+    B: Greater control over the infrastructure.
+    C: Simplified scalability and maintenance.
+    D: Increased data privacy.
+  correct_answer: C
+- id: 23
+  question: You've noticed that the LLM in your RAG system is consistently ignoring
+    the retrieved context. What could be the cause?
+  options:
+    A: The embedding model is not capturing the semantic meaning of the documents.
+    B: The LLM's prompt is not effectively instructing it to use the context.
+    C: The vector database is returning irrelevant results.
+    D: The chunk size is too large.
+  correct_answer: B
+- id: 24
+  question: What is the purpose of using a 'retriever' in LangChain?
+  options:
+    A: To generate embeddings for the documents.
+    B: To retrieve relevant documents from the vector database.
+    C: To interact with the LLM.
+    D: To store the retrieved documents.
+  correct_answer: B
+- id: 25
+  question: You are building a RAG system for a large codebase. What is a suitable
+    text splitting strategy?
+  options:
+    A: Fixed-size chunks with no overlap.
+    B: Recursive character text splitter, respecting code structure (e.g., functions,
+      classes).
+    C: Sentence splitter.
+    D: Character text splitter.
+  correct_answer: B
+- id: 26
+  question: What is the role of the 'k' parameter in k-NN search within a vector database?
+  options:
+    A: It determines the dimensionality of the vectors.
+    B: It specifies the number of nearest neighbors to retrieve.
+    C: It controls the quantization level.
+    D: It defines the similarity metric.
+  correct_answer: B
+- id: 27
+  question: You've implemented prompt caching, but the cache hit rate is very low.
+    What could be the reason?
+  options:
+    A: The cache size is too small.
+    B: The cache key is too specific.
+    C: The queries are highly diverse.
+    D: The LLM is changing its responses frequently.
+  correct_answer: A
+- id: 28
+  question: In a multi-modal RAG system, how would you handle tables within a PDF
+    document?
+  options:
+    A: Ignore the tables and only process the surrounding text.
+    B: Convert the tables to text and include them in the context.
+    C: Use OCR to extract the table data and store it in a structured format.
+    D: Use a specialized table understanding model.
+  correct_answer: C
+- id: 29
+  question: What is the purpose of LangChain's 'Document' object?
+  options:
+    A: To store the LLM's responses.
+    B: To represent a single piece of text to be processed.
+    C: To manage the vector database connection.
+    D: To define the LLM's parameters.
+  correct_answer: B
+- id: 30
+  question: You are using a closed-source LLM API. What is a potential limitation
+    compared to using an open-source LLM?
+  options:
+    A: Lower accuracy.
+    B: Limited customization options.
+    C: Higher computational cost.
+    D: Slower inference speed.
+  correct_answer: B
+- id: 31
+  question: What is the benefit of using a hybrid search approach (e.g., combining
+    keyword search with vector search)?
+  options:
+    A: Reduced computational cost.
+    B: Improved recall and precision.
+    C: Simplified indexing process.
+    D: Increased data privacy.
+  correct_answer: B
+- id: 32
+  question: You've implemented a RAG system, and the LLM is generating responses that
+    are factually incorrect, even when the relevant context is retrieved. What could
+    be the issue?
+  options:
+    A: The embedding model is not accurate enough.
+    B: The LLM has inherent biases or limitations.
+    C: The chunk size is too small.
+    D: The vector database is corrupted.
+  correct_answer: B
+- id: 33
+  question: What is the purpose of LangChain's 'OutputParser'?
+  options:
+    A: To generate embeddings for the documents.
+    B: To extract structured information from the LLM's output.
+    C: To interact with the LLM.
+    D: To store the retrieved documents.
+  correct_answer: B
+- id: 34
+  question: You are building a RAG system for a dynamic dataset that is frequently
+    updated. What indexing strategy would be most efficient?
+  options:
+    A: Full re-indexing of the entire dataset with each update.
+    B: Incremental indexing, only updating the changed documents.
+    C: Using a static index.
+    D: Reducing the chunk size.
+  correct_answer: B
+- id: 35
+  question: What is the role of the 'efConstruction' parameter in HNSW indexing?
+  options:
+    A: It determines the dimensionality of the vectors.
+    B: It controls the construction speed and index quality.
+    C: It specifies the number of nearest neighbors to retrieve.
+    D: It defines the similarity metric.
+  correct_answer: B
+- id: 36
+  question: You've implemented a RAG system, and the response time is too slow. What
+    are some potential optimization strategies?
+  options:
+    A: Increase the chunk size.
+    B: Reduce the number of retrieved documents.
+    C: Use a more powerful LLM.
+    D: Increase the temperature of the LLM.
+  correct_answer: B
+- id: 37
+  question: What is the purpose of LangChain's 'Agent'?
+  options:
+    A: To store the document corpus.
+    B: To allow the LLM to use tools and make decisions based on the input.
+    C: To manage the vector database connection.
+    D: To define the LLM's parameters.
+  correct_answer: B
+- id: 38
+  question: You are using a RAG system for a dataset with a lot of noise and irrelevant
+    information. What technique could improve retrieval accuracy?
+  options:
+    A: Using a smaller embedding model.
+    B: Implementing a filtering step to remove irrelevant documents.
+    C: Increasing the chunk size.
+    D: Reducing the number of retrieved documents.
+  correct_answer: B
+- id: 39
+  question: What is the potential drawback of using a very large chunk size in a RAG
+    system?
+  options:
+    A: Increased computational cost.
+    B: Difficulty in identifying the relevant information within the chunk.
+    C: Reduced retrieval speed.
+    D: Increased memory usage.
+  correct_answer: B
+- id: 40
+  question: In the context of RAG, what is 'semantic search'?
+  options:
+    A: Searching for documents based on keywords.
+    B: Searching for documents based on their meaning and context.
+    C: Searching for documents based on their file type.
+    D: Searching for documents based on their creation date.
+  correct_answer: B
+- id: 41
+  question: You've implemented a RAG system for a customer support knowledge base.
+    What metric would be most important to monitor?
+  options:
+    A: Indexing speed.
+    B: Embedding model accuracy.
+    C: Answer relevance and customer satisfaction.
+    D: Vector database storage cost.
+  correct_answer: C
+- id: 42
+  question: What is the purpose of LangChain's 'Transformations' module?
+  options:
+    A: To generate embeddings for the documents.
+    B: To manipulate and process documents before they are indexed.
+    C: To interact with the LLM.
+    D: To store the retrieved documents.
+  correct_answer: B
+- id: 43
+  question: You are building a RAG system for a dataset with a hierarchical structure.
+    What indexing strategy would be most effective?
+  options:
+    A: Flat indexing.
+    B: Hierarchical indexing, reflecting the dataset's structure.
+    C: Using a static index.
+    D: Reducing the chunk size.
+  correct_answer: B
+- id: 44
+  question: What is the role of the 'M' parameter in HNSW indexing?
+  options:
+    A: It determines the dimensionality of the vectors.
+    B: It controls the maximum degree of each node in the graph.
+    C: It specifies the number of nearest neighbors to retrieve.
+    D: It defines the similarity metric.
+  correct_answer: B
+- id: 45
+  question: You've implemented a RAG system, and the LLM is generating responses that
+    are too similar to the retrieved context. What could be the issue?
+  options:
+    A: The embedding model is not accurate enough.
+    B: The LLM is not paraphrasing the context effectively.
+    C: The chunk size is too small.
+    D: The vector database is corrupted.
+  correct_answer: B
+- id: 46
+  question: What is the purpose of LangChain's 'Callbacks'?
+  options:
+    A: To store the document corpus.
+    B: To monitor and log the execution of LangChain components.
+    C: To manage the vector database connection.
+    D: To define the LLM's parameters.
+  correct_answer: B
+- id: 47
+  question: You are using a RAG system for a dataset with a lot of acronyms and abbreviations.
+    What technique could improve retrieval accuracy?
+  options:
+    A: Using a smaller embedding model.
+    B: Expanding acronyms and abbreviations before indexing.
+    C: Increasing the chunk size.
+    D: Reducing the number of retrieved documents.
+  correct_answer: B
+- id: 48
+  question: What is the potential benefit of using a quantization technique for embedding
+    vectors?
+  options:
+    A: Increased accuracy.
+    B: Reduced memory usage and faster search speed.
+    C: Simplified indexing process.
+    D: Increased data privacy.
+  correct_answer: B
+- id: 49
+  question: In the context of RAG, what is 'context compression'?
+  options:
+    A: Reducing the size of the vector database.
+    B: Summarizing or filtering the retrieved context before sending it to the LLM.
+    C: Compressing the documents before indexing.
+    D: Reducing the dimensionality of the embedding vectors.
+  correct_answer: B
+- id: 50
+  question: You've implemented a RAG system, and the LLM is consistently generating
+    responses that are off-topic. What could be the issue?
+  options:
+    A: The embedding model is not accurate enough.
+    B: The LLM's prompt is not well-defined.
+    C: The chunk size is too small.
+    D: The vector database is corrupted.
+  correct_answer: B

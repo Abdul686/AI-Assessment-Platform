@@ -1,0 +1,193 @@
+COURSE: LangGraph Mastery: Develop LLM Agents with LangGraph
+URL: https://azirotechnologies.udemy.com/course/langgraph-mastery-develop-llm-agents-with-langgraph/
+
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Developers aiming to build Generative AI applications using LangChain and LangGraph.
+Enthusiasts who want to explore the new frontier of LLM agents.
+
+--- DESCRIPTION ---
+Description
+
+Welcome to this brand new course on LangGraph, which allows us to build agentic LLM applications. Unleash the Full Potential of AI with LangGraph & LangChain!
+
+
+
+
+By the end of this course, you will be equipped with the skills to seamlessly integrate LLM agents into your applications, opening up new possibilities and horizons.
+
+
+
+
+We are witnessing a rapid ascent in AI capabilities, with groundbreaking advancements occurring annually. This swift progress has the potential to significantly reshape our world in the coming years.
+
+
+
+
+Three pivotal advancements are poised to make a profound impact: Infinite Context Windows, Text to Action, and Agents.
+
+
+
+
+Agents: The New Frontier in AI
+
+Agents are autonomous intelligent entities designed to perform tasks, process information, and interact within a language-based framework. These agents are significantly expanding the potential of AI across various domains.
+
+
+
+
+Agentic AI is revolutionizing industries, offering enhanced applications in fields such as legal document analysis, medical diagnostics, and software development. Imagine an army of skilled programmers working around the clock to develop software solutions for you.
+
+
+
+
+In this course, we will delve into LangGraph, an extension of LangChain specifically designed for agent and multi-agent workflows. LangGraph enables highly customizable and controllable agent flows, ideal for complex scenarios.
+
+We will also explore LangSmith, a platform for tracing and debugging your production-grade LLM applications.
+
+
+
+
+What You'll Learn:
+
+Master LangGraph: Explore nodes, edges, and state management for advanced agent workflows.
+
+LangChain Integration: Connect LLMs to real-world tools for powerful multi-agent applications.
+
+Develop Autonomous Agents: Build agents that can observe, reflect, and improve with memory and tool observation.
+
+RAG & Embeddings: Implement Retrieval-Augmented Generation (RAG) with Pinecone for enhanced search capabilities.
+
+Debug & Scale: Use LangSmith to debug and trace production-grade AI applications.
+
+
+
+
+Why Enroll in This Course?
+
+Cutting-Edge Skills: You'll master LangGraph and LangChain, tools at the forefront of AI development.
+
+Practical Applications: Build real-world AI solutions that can be integrated into businesses, research, and more.
+
+Step-by-Step Guidance: Whether you're experienced in AI or just getting started, our comprehensive tutorials will guide you through each project.
+
+Join the AI Revolution: The demand for AI professionals is skyrocketing—position yourself at the forefront by mastering these critical technologies.
+
+
+
+
+Hands-On Projects:
+
+ReAct Agent from Scratch: Build a fully functional agent with LangGraph.
+
+Custom Chatbot: Develop an intelligent chatbot powered by LangChain.
+
+Content Generation Tools: Create AI tools that generate essays, tweets, and more using LangGraph’s reflection pattern.
+
+Master Project: Build a robust research agent integrating GPT-4, Pinecone, ArXiv, and Google SerpAPI.
+
+Ready to build AI agents that can transform industries? Enroll now and take your AI development skills to the next level with LangGraph!
+
+Looking forward to seeing you in the course!
+
+Who this course is for:
+Software Developers aiming to build Generative AI applications using LangChain and LangGraph.
+Enthusiasts who want to explore the new frontier of LLM agents.
+Show more
+
+--- CURRICULUM ---
+Course content
+9 sections • 74 lectures • 5h 25m total length
+Collapse all sections
+Getting Started
+3 lectures • 3min
+Course Prerequisites
+Join Our Online Community!
+Course Resources
+Building a Simple ReAct Agent from Scratch
+7 lectures • 25min
+Introduction to Agents and ReAct
+Creating the Agent Class
+Creating the ReAct Prompt
+Creating the Tools
+Testing the Agent
+Automating the Agent
+Project Source Code
+Building with LangGraph
+8 lectures • 39min
+LangGraph Concepts and Core Components
+Building a ChatBot
+Visualizing the Graph
+Running the ChatBot
+Tavily AI
+Enhancing the ChatBot with Tools
+Adding Memory to the ChatBot
+Project Source Code
+Reflection - Tweet Generator
+7 lectures • 20min
+Intro to Reflection
+Generate
+Reflect and Repeat
+Define the Graph - Part 1
+Define the Graph - Part 2
+Running the App
+Project Source Code
+LangSmith: Platform for Building Production-grade LLM Apps
+5 lectures • 16min
+LangSmith
+Setting up LangSmith
+Tracing with LangSmith
+Tracing the Reflection Agentic App with LangSmith
+Project Source Code
+Reflexion - Essay Writer
+8 lectures • 32min
+Project Overview
+Defining the AgentState and the Prompts
+Implementing the Agents and the Nodes
+Defining the Conditional Edge
+Defining the Graph
+Running the Agentic App
+Tracing the App with LangSmith
+Project Source Code
+Master Project: Build a Research Agent with LangGraph, GPT-4o, RAG,ArXiv,SerpAPI
+23 lectures • 2hr 10min
+Quick Note
+Providing an Overview of the Application
+Extracting Data from ArXiv into a Pandas DataFrame and Saving it as JSON
+Downloading the Research Papers (PDFs)
+Loading and Splitting PDF Files into Chunks, Expanding the DataFrame
+Building a Knowledge Base for the RAG System Using Embeddings
+Creating a Pinecone Index
+Populating the Knowledge Base and Uploading it to Pinecone
+Developing Custom Tools
+Implementing the ArXiv Fetch Tool
+Integrating Google SerpAPI for Web Search
+Implementing Web Search Tools with Google SerpAPI
+Creating RAG Tools for Retrieval-Augmented Generation
+Implementing the Final Answer Generation Tool
+Initializing the "Oracle" LLM
+Testing the Oracle and the Tools
+Building a Decision-Making Pipeline
+Defining the Agent State
+Defining the Graph for Decision-Making
+Generating Reports
+Building a Final Research Report
+Concluding the Project
+Project Source Code
+[Appendix]: Object Oriented Programming in Python
+11 lectures • 59min
+README
+Intro to Object Oriented Programming (OOP)
+OOP Demonstration: The Turtle
+Defining Classes and Objects
+The __init__ Method
+The __del__ Method
+Instance Attributes and Class Attributes
+Magic Methods
+TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys - Part 1
+TypedDict: Type Hints for Dictionaries with a Fixed Set of Keys - Part 2
+Python OOP Cheat Sheet
+BONUS SECTION
+2 lectures • 2min
+Congratulations
+BONUS: THANK YOU GIFT!

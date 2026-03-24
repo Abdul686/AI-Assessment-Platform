@@ -1,0 +1,432 @@
+- id: q1_nlp_evolution
+  question: A company is building a sentiment analysis tool. Initially, they used
+    a rule-based system with manually defined keywords. Performance is poor due to
+    nuanced language. Which NLP era would represent the next logical improvement?
+  options:
+    A: Rule-Based Systems
+    B: Statistical Era
+    C: Embeddings Era
+    D: Machine Learning Era
+  correct_answer: B
+- id: q2_transformer_attention
+  question: In a Transformer model, what is the primary function of the attention
+    mechanism?
+  options:
+    A: To reduce the dimensionality of the input sequence.
+    B: To allow the model to focus on different parts of the input sequence when processing
+      each element.
+    C: To perform non-linear transformations on the input data.
+    D: To accelerate the training process by parallelizing computations.
+  correct_answer: B
+- id: q3_pretraining_finetuning
+  question: 'You have a pre-trained BERT model. You want to adapt it for a specific
+    task: classifying customer support tickets. What is the process called?'
+  options:
+    A: Pre-training
+    B: Fine-tuning
+    C: Tokenization
+    D: Embedding
+  correct_answer: B
+- id: q4_bert_gpt_t5
+  question: A task requires generating coherent and creative text, such as writing
+    product descriptions. Which Transformer model is most suitable?
+  options:
+    A: BERT
+    B: GPT
+    C: T5
+    D: All are equally suitable
+  correct_answer: B
+- id: q5_tokenization
+  question: What is the primary purpose of tokenization in NLP?
+  options:
+    A: To convert text into numerical representations.
+    B: To split text into smaller units, such as words or subwords.
+    C: To remove stop words and punctuation.
+    D: To perform stemming or lemmatization.
+  correct_answer: B
+- id: q6_mlm
+  question: Masked Language Modeling (MLM) is a key technique used in training which
+    Transformer model?
+  options:
+    A: GPT
+    B: T5
+    C: BERT
+    D: All of the above
+  correct_answer: C
+- id: q7_semantic_search
+  question: You've built a semantic search index using Transformers. A user searches
+    for 'comfortable running shoes'. What does semantic search aim to return?
+  options:
+    A: Documents containing the exact phrase 'comfortable running shoes'.
+    B: Documents related to running shoes, even if they don't use those exact words.
+    C: Documents containing either 'comfortable' or 'running shoes'.
+    D: Documents ranked by the frequency of the words 'comfortable' and 'running shoes'.
+  correct_answer: B
+- id: q8_llm_decoding
+  question: What is 'decoding' in the context of Large Language Models?
+  options:
+    A: The process of converting text into numerical embeddings.
+    B: The process of generating text from the model's internal representation.
+    C: The process of training the model on a large dataset.
+    D: The process of evaluating the model's performance.
+  correct_answer: B
+- id: q9_rlhf
+  question: What is the primary goal of Reinforcement Learning from Human Feedback
+    (RLHF) in LLM training?
+  options:
+    A: To increase the model's training speed.
+    B: To align the model's outputs with human preferences and instructions.
+    C: To reduce the model's computational cost.
+    D: To improve the model's ability to perform mathematical calculations.
+  correct_answer: B
+- id: q10_chat_templates
+  question: Why are chat templates important when interacting with LLMs?
+  options:
+    A: They reduce the model's memory requirements.
+    B: They provide a structured format for input and output, improving consistency
+      and control.
+    C: They automatically correct grammatical errors in the input.
+    D: They allow the model to access external databases.
+  correct_answer: B
+- id: q11_sequence_length
+  question: 'Increasing the sequence length during LLM training generally leads to:'
+  options:
+    A: Reduced computational cost.
+    B: Improved ability to capture long-range dependencies, but increased memory requirements.
+    C: Faster training times.
+    D: Decreased model accuracy.
+  correct_answer: B
+- id: q12_token_counts
+  question: A model has a vocabulary size of 30,000 tokens. What impact does a larger
+    vocabulary generally have?
+  options:
+    A: Reduced model size.
+    B: Increased model size and computational cost.
+    C: Faster training times.
+    D: Improved generalization ability.
+  correct_answer: B
+- id: q13_numerical_precision
+  question: What is the trade-off when reducing numerical precision (e.g., from FP32
+    to FP16) during LLM training?
+  options:
+    A: Increased accuracy, but higher memory usage.
+    B: Reduced memory usage and faster training, but potential loss of precision.
+    C: No trade-off; lower precision always improves performance.
+    D: Increased model complexity.
+  correct_answer: B
+- id: q14_peft_lora
+  question: What is the primary benefit of using Parameter-Efficient Fine-Tuning (PEFT)
+    techniques like LoRA?
+  options:
+    A: They require significantly more computational resources.
+    B: They reduce the number of trainable parameters, making fine-tuning more efficient.
+    C: They always result in higher accuracy than full fine-tuning.
+    D: They eliminate the need for a pre-trained model.
+  correct_answer: B
+- id: q15_gradient_accumulation
+  question: Why is gradient accumulation used during LLM training?
+  options:
+    A: To reduce the learning rate.
+    B: To simulate a larger batch size when memory is limited.
+    C: To improve the model's generalization ability.
+    D: To accelerate the training process.
+  correct_answer: B
+- id: q16_adapter_merging
+  question: What is the purpose of merging adapters in LoRA?
+  options:
+    A: To reduce the size of the LoRA adapters.
+    B: To combine the knowledge learned from multiple adapters into a single model.
+    C: To improve the training speed of LoRA.
+    D: To prevent overfitting.
+  correct_answer: B
+- id: q17_8bit_training
+  question: What is the main advantage of 8-bit training compared to traditional 16-bit
+    or 32-bit training?
+  options:
+    A: Higher accuracy.
+    B: Reduced memory footprint, allowing for larger models or batch sizes.
+    C: Faster training speed.
+    D: Simplified model architecture.
+  correct_answer: B
+- id: q18_flash_attention
+  question: What problem does FlashAttention aim to solve?
+  options:
+    A: The vanishing gradient problem.
+    B: The computational bottleneck of the attention mechanism, especially with long
+      sequences.
+    C: The overfitting problem.
+    D: The difficulty of parallelizing Transformer training.
+  correct_answer: B
+- id: q19_qlora
+  question: QLoRA builds upon LoRA by adding what key feature?
+  options:
+    A: Increased adapter size.
+    B: Quantization to 4-bit precision.
+    C: Removal of the pre-trained model.
+    D: Automatic hyperparameter tuning.
+  correct_answer: B
+- id: q20_deepspeed
+  question: What is a key capability of DeepSpeed for LLM training?
+  options:
+    A: Automatic model architecture search.
+    B: Efficiently scaling training across multiple GPUs and nodes.
+    C: Simplifying the data preprocessing pipeline.
+    D: Automatically generating training data.
+  correct_answer: B
+- id: q21_fsdp
+  question: How does Fully Sharded Data Parallelism (FSDP) differ from traditional
+    data parallelism?
+  options:
+    A: FSDP only works with smaller models.
+    B: FSDP shards the model parameters across multiple GPUs, reducing memory usage
+      per GPU.
+    C: FSDP eliminates the need for gradient synchronization.
+    D: FSDP is only compatible with specific hardware.
+  correct_answer: B
+- id: q22_encoder_decoder
+  question: What is the primary difference between an encoder-only model (like BERT)
+    and a decoder-only model (like GPT)?
+  options:
+    A: Encoder models are better at generating text, while decoder models are better
+      at understanding text.
+    B: Encoder models process the entire input sequence at once, while decoder models
+      generate output sequentially.
+    C: Decoder models require more computational resources.
+    D: Encoder models are only used for classification tasks.
+  correct_answer: B
+- id: q23_t5_text_to_text
+  question: What makes T5 unique among the Transformer models discussed?
+  options:
+    A: It is the smallest Transformer model.
+    B: It frames all NLP tasks as a text-to-text problem.
+    C: It is only suitable for question answering.
+    D: It does not require pre-training.
+  correct_answer: B
+- id: q24_embeddings_purpose
+  question: What is the purpose of word embeddings in NLP?
+  options:
+    A: To convert text into a format that can be processed by a computer.
+    B: To represent words as dense vectors in a high-dimensional space, capturing
+      semantic relationships.
+    C: To remove stop words from the text.
+    D: To perform stemming and lemmatization.
+  correct_answer: B
+- id: q25_instruction_following
+  question: When using GPT for instruction following, what is crucial for achieving
+    desired results?
+  options:
+    A: Using a very large batch size.
+    B: Crafting clear and specific prompts.
+    C: Reducing the model's temperature to zero.
+    D: Using a small vocabulary size.
+  correct_answer: B
+- id: q26_llm_selection
+  question: A project requires a model that can handle both understanding and generating
+    text. Which LLM selection criteria is most important?
+  options:
+    A: Model size (number of parameters).
+    B: The model's architecture (encoder-only, decoder-only, or encoder-decoder).
+    C: The model's training data.
+    D: The model's licensing terms.
+  correct_answer: B
+- id: q27_generation_techniques
+  question: What does 'temperature' control during text generation with an LLM?
+  options:
+    A: The length of the generated text.
+    B: The randomness and creativity of the generated text.
+    C: The grammatical correctness of the generated text.
+    D: The speed of text generation.
+  correct_answer: B
+- id: q28_batch_size_impact
+  question: 'Increasing the batch size during LLM training can lead to:'
+  options:
+    A: Slower training speed.
+    B: More stable gradient updates, but increased memory requirements.
+    C: Reduced model accuracy.
+    D: Simplified model architecture.
+  correct_answer: B
+- id: q29_checkpointing
+  question: What is the purpose of gradient checkpointing during LLM training?
+  options:
+    A: To save the model's weights at regular intervals.
+    B: To reduce memory usage by recomputing activations during the backward pass.
+    C: To accelerate the training process.
+    D: To improve the model's generalization ability.
+  correct_answer: B
+- id: q30_lora_evaluation
+  question: When evaluating LoRA adapters, what metric is crucial to consider alongside
+    accuracy?
+  options:
+    A: Training time.
+    B: Adapter size (number of parameters).
+    C: Inference speed.
+    D: Memory usage.
+  correct_answer: B
+- id: q31_4bit_training_tradeoff
+  question: What is the primary risk associated with 4-bit training?
+  options:
+    A: Increased training time.
+    B: Potential loss of model accuracy due to reduced precision.
+    C: Higher memory requirements.
+    D: Difficulty in implementing the technique.
+  correct_answer: B
+- id: q32_deepspeed_optimizations
+  question: DeepSpeed utilizes ZeRO (Zero Redundancy Optimizer). What is the core
+    principle of ZeRO?
+  options:
+    A: Reducing the learning rate.
+    B: Eliminating redundant copies of model parameters across GPUs.
+    C: Increasing the batch size.
+    D: Simplifying the model architecture.
+  correct_answer: B
+- id: q33_fsdp_communication
+  question: In FSDP, how is communication between GPUs handled?
+  options:
+    A: All GPUs broadcast their entire model parameters to each other.
+    B: Only the necessary parameters are communicated between GPUs during forward
+      and backward passes.
+    C: Communication is disabled to reduce overhead.
+    D: Communication is handled by a central server.
+  correct_answer: B
+- id: q34_transformer_encoder
+  question: What is the primary function of the encoder in a Transformer model?
+  options:
+    A: To generate text.
+    B: To process the input sequence and create a contextualized representation.
+    C: To decode the output sequence.
+    D: To perform tokenization.
+  correct_answer: B
+- id: q35_transformer_decoder
+  question: What is the primary function of the decoder in a Transformer model?
+  options:
+    A: To process the input sequence.
+    B: To generate the output sequence based on the encoder's output.
+    C: To perform tokenization.
+    D: To calculate attention weights.
+  correct_answer: B
+- id: q36_attention_mechanism
+  question: 'The attention mechanism in Transformers allows the model to:'
+  options:
+    A: Ignore irrelevant parts of the input sequence.
+    B: Focus on different parts of the input sequence when processing each element.
+    C: Reduce the dimensionality of the input sequence.
+    D: Parallelize computations.
+  correct_answer: B
+- id: q37_pretraining_benefits
+  question: What is the main benefit of pre-training a Transformer model?
+  options:
+    A: It reduces the need for labeled data.
+    B: It allows the model to learn general language representations.
+    C: It speeds up the training process.
+    D: It simplifies the model architecture.
+  correct_answer: B
+- id: q38_finetuning_data
+  question: When fine-tuning a pre-trained model, what type of data is typically used?
+  options:
+    A: Unlabeled data.
+    B: A small, task-specific labeled dataset.
+    C: A large, general-purpose dataset.
+    D: Synthetic data.
+  correct_answer: B
+- id: q39_tokenization_impact
+  question: How does the choice of tokenizer affect the performance of a Transformer
+    model?
+  options:
+    A: It has no impact on performance.
+    B: It can affect the model's vocabulary size and ability to handle rare words.
+    C: It only affects the training speed.
+    D: It only affects the model's memory usage.
+  correct_answer: B
+- id: q40_mlm_objective
+  question: What is the objective of Masked Language Modeling (MLM)?
+  options:
+    A: To generate text from scratch.
+    B: To predict masked words in a sentence.
+    C: To translate text from one language to another.
+    D: To classify text into different categories.
+  correct_answer: B
+- id: q41_semantic_search_vector
+  question: In semantic search, how are documents and queries represented?
+  options:
+    A: As keywords.
+    B: As dense vectors capturing their semantic meaning.
+    C: As bag-of-words representations.
+    D: As TF-IDF scores.
+  correct_answer: B
+- id: q42_llm_rlhf_reward
+  question: In RLHF, what provides the reward signal to the reinforcement learning
+    algorithm?
+  options:
+    A: The model's loss function.
+    B: Human feedback on the quality of the model's outputs.
+    C: The model's training data.
+    D: A pre-defined set of rules.
+  correct_answer: B
+- id: q43_llm_input_output
+  question: What is the role of the input context window in an LLM?
+  options:
+    A: It determines the model's learning rate.
+    B: It limits the amount of text the model can process at once.
+    C: It controls the model's temperature.
+    D: It defines the model's vocabulary size.
+  correct_answer: B
+- id: q44_sequence_length_memory
+  question: Why does increasing sequence length significantly impact memory usage
+    during LLM training?
+  options:
+    A: The model's parameters increase linearly with sequence length.
+    B: Attention mechanisms require storing attention weights for all pairs of tokens.
+    C: The batch size must be reduced to compensate for the increased sequence length.
+    D: The model's learning rate must be decreased.
+  correct_answer: B
+- id: q45_lora_adapter_size
+  question: How does the size of the LoRA adapters affect the trade-off between performance
+    and efficiency?
+  options:
+    A: Larger adapters always lead to better performance.
+    B: Smaller adapters are more efficient but may have lower performance.
+    C: Adapter size has no impact on performance or efficiency.
+    D: Larger adapters are more efficient.
+  correct_answer: B
+- id: q46_flash_attention_complexity
+  question: What is the computational complexity of standard attention, and how does
+    FlashAttention attempt to improve it?
+  options:
+    A: O(n), FlashAttention reduces it to O(log n).
+    B: O(n^2), FlashAttention reduces it to O(n log n).
+    C: O(n^3), FlashAttention reduces it to O(n^2).
+    D: O(1), FlashAttention maintains the same complexity.
+  correct_answer: B
+- id: q47_deepspeed_zero_stage
+  question: What does ZeRO Stage 3 in DeepSpeed achieve?
+  options:
+    A: It only optimizes the optimizer states.
+    B: It shards the model parameters, gradients, and optimizer states across GPUs.
+    C: It only reduces communication overhead.
+    D: It only increases the batch size.
+  correct_answer: B
+- id: q48_fsdp_sharding
+  question: What is the primary benefit of sharding model parameters in FSDP?
+  options:
+    A: Increased training speed.
+    B: Reduced memory footprint per GPU.
+    C: Simplified model architecture.
+    D: Improved model accuracy.
+  correct_answer: B
+- id: q49_4bit_quantization
+  question: How does 4-bit quantization reduce memory usage?
+  options:
+    A: By reducing the number of layers in the model.
+    B: By representing model weights with only 4 bits per parameter.
+    C: By removing unused parameters.
+    D: By compressing the training data.
+  correct_answer: B
+- id: q50_peft_lora_benefits
+  question: What is a key advantage of using LoRA over full fine-tuning for large
+    language models?
+  options:
+    A: LoRA always achieves higher accuracy.
+    B: LoRA requires significantly less computational resources and storage.
+    C: LoRA eliminates the need for a pre-trained model.
+    D: LoRA simplifies the model architecture.
+  correct_answer: B

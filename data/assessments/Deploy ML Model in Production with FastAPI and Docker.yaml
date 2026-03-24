@@ -1,0 +1,460 @@
+- id: 1
+  question: You've deployed a FastAPI application serving a sentiment analysis model.  Clients
+    report intermittent 502 Bad Gateway errors.  You suspect the model loading time
+    exceeds the default FastAPI startup timeout. How do you address this?
+  options:
+    A: Increase the `uvicorn.workers` count to handle more concurrent requests.
+    B: Configure a longer startup timeout in your Uvicorn configuration (e.g., `--startup-timeout`).
+    C: Implement a health check endpoint that only returns success after the model
+      is loaded.
+    D: Reduce the model's size by using a smaller architecture.
+  correct_answer: B
+- id: 2
+  question: When using Boto3 to launch an EC2 instance, which parameter is crucial
+    for ensuring your instance has access to S3 for model storage?
+  options:
+    A: The `instance_type` parameter.
+    B: Attaching an IAM role with appropriate S3 permissions to the instance.
+    C: Specifying the AWS region in the Boto3 configuration.
+    D: Using a public IP address for the instance.
+  correct_answer: B
+- id: 3
+  question: You're containerizing your FastAPI application with Docker.  Your Dockerfile
+    includes `COPY requirements.txt .` and `RUN pip install -r requirements.txt`.
+    What is the primary benefit of using a `requirements.txt` file?
+  options:
+    A: It automatically updates dependencies to the latest versions.
+    B: It ensures a consistent and reproducible environment across different deployments.
+    C: It reduces the size of the Docker image.
+    D: It allows you to install dependencies directly from GitHub.
+  correct_answer: B
+- id: 4
+  question: You've deployed your model using AWS Fargate.  You notice high latency.  Which
+    of the following is the *least* likely cause?
+  options:
+    A: Insufficient memory allocated to the Fargate task.
+    B: Network latency between the client and the Fargate service.
+    C: The model itself is computationally expensive.
+    D: The EC2 instance type used for the Fargate service is too small.
+  correct_answer: D
+- id: 5
+  question: You're using NGINX as a reverse proxy in front of multiple FastAPI instances.  How
+    do you configure NGINX to distribute traffic evenly across these instances?
+  options:
+    A: Using the `proxy_pass` directive with the IP addresses of each instance.
+    B: Using the `upstream` block to define a pool of servers and the `proxy_pass`
+      directive to point to the upstream block.
+    C: Using the `server` block with the `listen` directive.
+    D: Using the `location` block to define specific routes for each instance.
+  correct_answer: B
+- id: 6
+  question: In a FastAPI application, you're receiving a large JSON payload for inference.
+    What is the best practice to handle potential `RequestEntityTooLarge` errors?
+  options:
+    A: Increase the server's memory allocation.
+    B: Implement streaming to process the data in chunks.
+    C: Ignore the error and let the server crash.
+    D: Reduce the size of the input data by downsampling.
+  correct_answer: B
+- id: 7
+  question: You've implemented A/B testing for two versions of your model.  What metric
+    is *most* important to monitor to determine the winning version?
+  options:
+    A: CPU utilization of the servers.
+    B: The business metric the model is intended to improve (e.g., conversion rate,
+      click-through rate).
+    C: The number of requests served per second.
+    D: The model's prediction confidence score.
+  correct_answer: B
+- id: 8
+  question: When pushing a Docker image to Docker Hub, what security best practice
+    should you follow?
+  options:
+    A: Use a public Docker Hub repository.
+    B: Use a private Docker Hub repository and secure access with strong credentials.
+    C: Store your Docker Hub credentials in your Dockerfile.
+    D: Push the image without tagging it.
+  correct_answer: B
+- id: 9
+  question: You're using Streamlit to create an interactive web application for your
+    model.  How can you efficiently cache the model loading process to improve application
+    startup time?
+  options:
+    A: Use Streamlit's `@st.cache_data` decorator.
+    B: Load the model in a separate thread.
+    C: Use a global variable to store the model.
+    D: Load the model only when the user interacts with the application.
+  correct_answer: A
+- id: 10
+  question: You're using AWS S3 to store your model files. What is the benefit of
+    enabling S3 versioning?
+  options:
+    A: It automatically compresses the model files.
+    B: It allows you to revert to previous versions of the model in case of errors.
+    C: It reduces the cost of S3 storage.
+    D: It automatically replicates the model files to multiple regions.
+  correct_answer: B
+- id: 11
+  question: You've deployed your FastAPI application with Docker and NGINX. You want
+    to monitor the application's health. What is a good approach?
+  options:
+    A: Rely solely on NGINX's access logs.
+    B: Implement a health check endpoint in your FastAPI application and configure
+      NGINX to probe it.
+    C: Periodically check the CPU and memory usage of the server.
+    D: Manually inspect the application logs.
+  correct_answer: B
+- id: 12
+  question: You are using Boto3 to upload a large model file to S3. What is the best
+    practice to ensure reliable uploads?
+  options:
+    A: Upload the entire file in a single operation.
+    B: Use the `upload_fileobj` method with a large buffer size.
+    C: Use the `upload_file` method with the `Callback` parameter for progress tracking
+      and retries.
+    D: Compress the file before uploading.
+  correct_answer: C
+- id: 13
+  question: In your FastAPI application, you're using Pydantic models for data validation.
+    What happens if the incoming data does not conform to the Pydantic model's schema?
+  options:
+    A: The application crashes.
+    B: A `ValidationError` exception is raised, providing details about the validation
+      errors.
+    C: The application ignores the invalid data.
+    D: The application automatically corrects the invalid data.
+  correct_answer: B
+- id: 14
+  question: You're experiencing slow response times with your FastAPI application.
+    You suspect the database queries are the bottleneck. What is a potential optimization
+    strategy?
+  options:
+    A: Increase the number of FastAPI workers.
+    B: Implement caching for frequently accessed data.
+    C: Reduce the size of the model.
+    D: Use a different web framework.
+  correct_answer: B
+- id: 15
+  question: When deploying to AWS Fargate, what is the primary difference between
+    using a managed IAM role versus embedding credentials directly in your Docker
+    image?
+  options:
+    A: IAM roles are more expensive.
+    B: IAM roles provide better security and avoid hardcoding sensitive information.
+    C: Docker images with embedded credentials are easier to manage.
+    D: There is no difference in security.
+  correct_answer: B
+- id: 16
+  question: You've deployed a model that predicts image classifications. You notice
+    the model performs well on training data but poorly on real-world images. What
+    is a likely cause?
+  options:
+    A: The model is overfitting to the training data.
+    B: The model is underfitting the training data.
+    C: The training data is perfectly representative of real-world images.
+    D: The model is too simple.
+  correct_answer: A
+- id: 17
+  question: You are using Docker Compose to orchestrate your FastAPI application and
+    NGINX. What is the purpose of the `depends_on` directive in the `docker-compose.yml`
+    file?
+  options:
+    A: It specifies the order in which containers are built.
+    B: It defines the network configuration for the containers.
+    C: It ensures that one container starts only after another container has started.
+    D: It sets environment variables for the containers.
+  correct_answer: C
+- id: 18
+  question: You're using FastAPI to serve a model that requires a GPU. How do you
+    ensure your Docker container has access to a GPU?
+  options:
+    A: Install the NVIDIA drivers inside the Docker container.
+    B: Use the `nvidia-docker` runtime or the NVIDIA Container Toolkit.
+    C: Use a CPU-based model.
+    D: Enable GPU passthrough in the Docker configuration.
+  correct_answer: B
+- id: 19
+  question: You've implemented load testing on your deployed FastAPI application.
+    You observe that the response time increases significantly as the number of concurrent
+    users increases. What is a potential solution?
+  options:
+    A: Reduce the model's complexity.
+    B: Increase the number of FastAPI workers and/or scale horizontally with NGINX.
+    C: Use a different load testing tool.
+    D: Reduce the size of the input data.
+  correct_answer: B
+- id: 20
+  question: You're using AWS CloudWatch to monitor your Fargate service. What metric
+    is most useful for identifying potential scaling issues?
+  options:
+    A: CPU utilization.
+    B: Memory utilization.
+    C: Network I/O.
+    D: All of the above.
+  correct_answer: D
+- id: 21
+  question: What is the primary purpose of using a Dockerfile?
+  options:
+    A: To manage the dependencies of your Python project.
+    B: To define the steps to build a Docker image.
+    C: To run your FastAPI application.
+    D: To configure your AWS infrastructure.
+  correct_answer: B
+- id: 22
+  question: You're using Streamlit to display images predicted by your model.  The
+    images are stored in an S3 bucket. How can you efficiently serve these images
+    without downloading them to the Streamlit server?
+  options:
+    A: Download the images to a local cache on the Streamlit server.
+    B: Use the S3 presigned URL to directly access the images from the browser.
+    C: Convert the images to base64 strings and embed them in the Streamlit application.
+    D: Use a CDN to cache the images.
+  correct_answer: B
+- id: 23
+  question: You've deployed your FastAPI application with Docker and NGINX. You want
+    to implement SSL/TLS encryption. What is the recommended approach?
+  options:
+    A: Configure SSL/TLS directly in your FastAPI application.
+    B: Configure SSL/TLS in NGINX and let it handle the encryption.
+    C: Use a load balancer with SSL/TLS enabled.
+    D: Disable SSL/TLS for testing purposes.
+  correct_answer: B
+- id: 24
+  question: When using Boto3, what is the purpose of a 'profile'?
+  options:
+    A: To specify the AWS region.
+    B: To store multiple sets of AWS credentials.
+    C: To define the EC2 instance type.
+    D: To configure the S3 bucket name.
+  correct_answer: B
+- id: 25
+  question: You're using FastAPI and Pydantic. You want to define a field in your
+    Pydantic model that is required and must be a positive integer. How would you
+    define this field?
+  options:
+    A: '`field_name: int`'
+    B: '`field_name: Optional[int]`'
+    C: '`field_name: int = Field(gt=0)`'
+    D: '`field_name: int = Field(required=True, gt=0)`'
+  correct_answer: D
+- id: 26
+  question: You've noticed that your model's performance degrades over time in production.
+    What is a likely cause and a potential solution?
+  options:
+    A: Data drift; retrain the model with new data.
+    B: Increased network latency; optimize the network configuration.
+    C: Hardware failure; replace the server.
+    D: Software bugs; fix the bugs in the code.
+  correct_answer: A
+- id: 27
+  question: What is the purpose of the `CMD` instruction in a Dockerfile?
+  options:
+    A: To set environment variables.
+    B: To define the working directory.
+    C: To specify the command to run when the container starts.
+    D: To copy files into the container.
+  correct_answer: C
+- id: 28
+  question: You're using AWS Fargate. You want to automatically scale your service
+    based on CPU utilization. What AWS service should you configure?
+  options:
+    A: AWS CloudWatch.
+    B: AWS Auto Scaling.
+    C: AWS Lambda.
+    D: AWS SQS.
+  correct_answer: B
+- id: 29
+  question: You're using NGINX as a reverse proxy. You want to configure caching to
+    reduce the load on your FastAPI application. What NGINX directive would you use?
+  options:
+    A: '`proxy_pass`'
+    B: '`proxy_cache`'
+    C: '`server`'
+    D: '`location`'
+  correct_answer: B
+- id: 30
+  question: You're deploying a model that requires a large amount of memory. Which
+    AWS EC2 instance type would be most suitable?
+  options:
+    A: t2.micro
+    B: t2.medium
+    C: r5.large
+    D: t2.small
+  correct_answer: C
+- id: 31
+  question: What is the benefit of using a CI/CD pipeline for deploying your ML model?
+  options:
+    A: It automates the deployment process, reducing manual errors.
+    B: It allows for faster iteration and deployment of new model versions.
+    C: It improves the reliability and consistency of deployments.
+    D: All of the above.
+  correct_answer: D
+- id: 32
+  question: You're using Streamlit. How can you prevent sensitive information (like
+    API keys) from being exposed in your application?
+  options:
+    A: Store the API keys directly in the Streamlit code.
+    B: Use Streamlit's secrets management feature or environment variables.
+    C: Encrypt the API keys in the code.
+    D: Disable the Streamlit application.
+  correct_answer: B
+- id: 33
+  question: You've deployed your FastAPI application with Docker. You want to limit
+    the amount of memory the container can use. How do you achieve this?
+  options:
+    A: Using the `--memory` flag when running the container.
+    B: Setting the `memory` limit in the `docker-compose.yml` file.
+    C: Modifying the Dockerfile.
+    D: Using the `ulimit` command.
+  correct_answer: B
+- id: 34
+  question: What is the purpose of the `ENTRYPOINT` instruction in a Dockerfile?
+  options:
+    A: To set environment variables.
+    B: To define the working directory.
+    C: To specify the executable that will be run when the container starts.
+    D: To copy files into the container.
+  correct_answer: C
+- id: 35
+  question: You're using AWS S3 to store your model files. What is the benefit of
+    enabling S3 encryption?
+  options:
+    A: It reduces the cost of S3 storage.
+    B: It protects your data from unauthorized access.
+    C: It automatically replicates the model files to multiple regions.
+    D: It improves the performance of S3.
+  correct_answer: B
+- id: 36
+  question: You're using FastAPI to serve a model that processes images. You want
+    to optimize the image processing pipeline for performance. What is a potential
+    optimization strategy?
+  options:
+    A: Use a more efficient image processing library.
+    B: Parallelize the image processing tasks.
+    C: Cache the processed images.
+    D: All of the above.
+  correct_answer: D
+- id: 37
+  question: You've deployed your model using AWS Fargate. You want to monitor the
+    application's logs. What AWS service should you use?
+  options:
+    A: AWS CloudWatch.
+    B: AWS Auto Scaling.
+    C: AWS Lambda.
+    D: AWS SQS.
+  correct_answer: A
+- id: 38
+  question: You're using NGINX as a reverse proxy. You want to configure health checks
+    to ensure that only healthy instances are receiving traffic. What NGINX directive
+    would you use?
+  options:
+    A: '`proxy_pass`'
+    B: '`upstream` with `health_check`'
+    C: '`server`'
+    D: '`location`'
+  correct_answer: B
+- id: 39
+  question: You're deploying a model that requires a GPU. Which AWS EC2 instance type
+    would be most suitable?
+  options:
+    A: t2.micro
+    B: t2.medium
+    C: g4dn.xlarge
+    D: t2.small
+  correct_answer: C
+- id: 40
+  question: What is the purpose of using a `.dockerignore` file?
+  options:
+    A: To specify the dependencies of your Docker image.
+    B: To exclude files and directories from being copied into the Docker image.
+    C: To define the command to run when the container starts.
+    D: To configure the network settings for the container.
+  correct_answer: B
+- id: 41
+  question: You're using Streamlit. How can you handle user authentication?
+  options:
+    A: Streamlit has built-in authentication features.
+    B: Use a third-party authentication library or service.
+    C: Implement authentication directly in the Streamlit code.
+    D: Disable user authentication.
+  correct_answer: B
+- id: 42
+  question: You've deployed your FastAPI application with Docker. You want to expose
+    a specific port to the host machine. How do you achieve this?
+  options:
+    A: Using the `-p` flag when running the container.
+    B: Setting the `ports` in the `docker-compose.yml` file.
+    C: Modifying the Dockerfile.
+    D: Using the `expose` instruction in the Dockerfile.
+  correct_answer: A
+- id: 43
+  question: What is the purpose of the `VOLUME` instruction in a Dockerfile?
+  options:
+    A: To set environment variables.
+    B: To define the working directory.
+    C: To create a mount point for persistent data.
+    D: To copy files into the container.
+  correct_answer: C
+- id: 44
+  question: You're using AWS S3 to store your model files. What is the benefit of
+    using S3 lifecycle policies?
+  options:
+    A: It reduces the cost of S3 storage by automatically transitioning data to cheaper
+      storage classes.
+    B: It protects your data from unauthorized access.
+    C: It automatically replicates the model files to multiple regions.
+    D: It improves the performance of S3.
+  correct_answer: A
+- id: 45
+  question: You're using FastAPI to serve a model that requires a large amount of
+    CPU. What is a potential optimization strategy?
+  options:
+    A: Use a more efficient model architecture.
+    B: Parallelize the inference tasks.
+    C: Cache the model predictions.
+    D: All of the above.
+  correct_answer: D
+- id: 46
+  question: You've deployed your model using AWS Fargate. You want to configure logging
+    to send logs to CloudWatch. How do you achieve this?
+  options:
+    A: Configure the logging driver in the Dockerfile.
+    B: Configure the logging options in the ECS task definition.
+    C: Use the AWS CLI to configure logging.
+    D: Manually configure logging in the container.
+  correct_answer: B
+- id: 47
+  question: You're using NGINX as a reverse proxy. You want to configure rate limiting
+    to prevent abuse of your API. What NGINX directive would you use?
+  options:
+    A: '`proxy_pass`'
+    B: '`limit_req`'
+    C: '`server`'
+    D: '`location`'
+  correct_answer: B
+- id: 48
+  question: You're deploying a model that requires a large amount of storage. Which
+    AWS EC2 instance type would be most suitable?
+  options:
+    A: t2.micro
+    B: t2.medium
+    C: i3.xlarge
+    D: t2.small
+  correct_answer: C
+- id: 49
+  question: What is the purpose of using a virtual environment in your Python project?
+  options:
+    A: To isolate the project's dependencies from other projects.
+    B: To improve the performance of your code.
+    C: To automatically update dependencies to the latest versions.
+    D: To simplify the deployment process.
+  correct_answer: A
+- id: 50
+  question: You're using Streamlit. How can you deploy your application to a public
+    URL?
+  options:
+    A: Use Streamlit Sharing.
+    B: Deploy the application to a cloud provider like AWS or Azure.
+    C: Use a reverse proxy like NGINX.
+    D: All of the above.
+  correct_answer: D

@@ -1,0 +1,455 @@
+- id: 1
+  question: You are designing a system to store embeddings for 10 million documents.
+    Considering Pinecone's pricing model, which index type would likely be most cost-effective
+    if query latency requirements are moderate (around 200ms)?
+  options:
+    A: p1.xlarge
+    B: p2.small
+    C: p3.medium
+    D: p4.large
+  correct_answer: B
+- id: 2
+  question: When using ChromaDB locally, you encounter performance issues with similarity
+    searches on a large dataset. What is the most effective initial step to improve
+    query speed?
+  options:
+    A: Increase the batch size for vector insertion.
+    B: Implement a more sophisticated embedding model.
+    C: Explore different indexing algorithms within ChromaDB.
+    D: Reduce the dimensionality of the vectors.
+  correct_answer: C
+- id: 3
+  question: You've implemented a semantic search application using Pinecone and LangChain.
+    Users report that results are sometimes irrelevant. What is a likely cause and
+    how would you address it?
+  options:
+    A: The embedding model is not capturing semantic meaning; retrain with a different
+      model.
+    B: Pinecone's index is fragmented; rebuild the index.
+    C: LangChain's prompt template is poorly designed; refine the prompt.
+    D: The distance metric used in Pinecone is inappropriate; switch to a different
+      metric.
+  correct_answer: A
+- id: 4
+  question: In Pinecone v5.0.0, you need to organize vectors representing different
+    product categories. What is the recommended approach for logically grouping these
+    vectors?
+  options:
+    A: Use metadata filtering during queries.
+    B: Create separate indexes for each category.
+    C: Utilize namespaces.
+    D: Partition vectors based on category ID.
+  correct_answer: C
+- id: 5
+  question: You are using OpenAI's embedding API and encounter rate limiting errors.
+    What is a practical strategy to mitigate this issue when indexing a large dataset?
+  options:
+    A: Increase the OpenAI API key's rate limit.
+    B: Implement exponential backoff with retries.
+    C: Reduce the batch size for embedding requests.
+    D: Switch to a different embedding provider.
+  correct_answer: B
+- id: 6
+  question: When performing vector partitioning in Pinecone, what is the primary trade-off
+    you need to consider?
+  options:
+    A: Storage cost vs. query latency.
+    B: Index build time vs. data consistency.
+    C: Query latency vs. index size.
+    D: Data accuracy vs. embedding dimensionality.
+  correct_answer: C
+- id: 7
+  question: You've implemented a RAG (Retrieval Augmented Generation) system with
+    LangChain and Pinecone. The generated responses are often repetitive. What could
+    be a contributing factor?
+  options:
+    A: Insufficient context retrieved from Pinecone.
+    B: The OpenAI model's temperature is set too low.
+    C: The embedding model is producing overly similar vectors.
+    D: LangChain's memory component is not configured correctly.
+  correct_answer: A
+- id: 8
+  question: You are building an audio similarity search application. After embedding
+    audio segments, you notice that similar sounds are not clustered closely in the
+    vector space. What should you investigate first?
+  options:
+    A: The choice of audio features used for embedding.
+    B: The Pinecone index configuration.
+    C: The vector dimensionality.
+    D: The query parameters.
+  correct_answer: A
+- id: 9
+  question: Which distance metric is generally most suitable for high-dimensional
+    vector spaces, minimizing the 'curse of dimensionality'?
+  options:
+    A: Euclidean distance
+    B: Manhattan distance
+    C: Cosine similarity
+    D: Dot product
+  correct_answer: C
+- id: 10
+  question: You are using ChromaDB and need to update a specific vector. What is the
+    most efficient way to achieve this?
+  options:
+    A: Delete the existing vector and insert a new one.
+    B: Use ChromaDB's update functionality (if available).
+    C: Query for the vector, modify it in memory, and then re-insert.
+    D: Rebuild the entire index.
+  correct_answer: A
+- id: 11
+  question: In the context of NER-based semantic search, what is the primary benefit
+    of incorporating named entities as metadata?
+  options:
+    A: Improved embedding quality.
+    B: More precise filtering and retrieval.
+    C: Reduced index size.
+    D: Faster query performance.
+  correct_answer: B
+- id: 12
+  question: You're experiencing slow query times in Pinecone despite using an appropriate
+    index type. What diagnostic tool within Pinecone would be most helpful?
+  options:
+    A: The API usage dashboard.
+    B: The index statistics page.
+    C: The vector upload logs.
+    D: The account billing information.
+  correct_answer: B
+- id: 13
+  question: When choosing an embedding model for semantic search, what factor is most
+    crucial for ensuring good performance?
+  options:
+    A: The model's size (number of parameters).
+    B: The model's training data and relevance to your domain.
+    C: The model's inference speed.
+    D: The model's license.
+  correct_answer: B
+- id: 14
+  question: You need to store vectors representing images. What preprocessing step
+    is essential before generating embeddings?
+  options:
+    A: Converting images to grayscale.
+    B: Resizing images to a consistent size.
+    C: Applying edge detection filters.
+    D: Converting images to a vector format.
+  correct_answer: B
+- id: 15
+  question: What is the purpose of a 'namespace' in Pinecone?
+  options:
+    A: To define the distance metric used for similarity search.
+    B: To logically separate vectors within an index.
+    C: To control access permissions to the index.
+    D: To specify the vector dimensionality.
+  correct_answer: B
+- id: 16
+  question: You are building a chat agent with LangChain and OpenAI. The agent frequently
+    hallucinates (provides incorrect information). How can you improve its accuracy
+    using RAG?
+  options:
+    A: Increase the OpenAI model's temperature.
+    B: Reduce the number of retrieved documents from Pinecone.
+    C: Increase the number of retrieved documents from Pinecone.
+    D: Use a different embedding model.
+  correct_answer: C
+- id: 17
+  question: What is the primary benefit of using vector databases over traditional
+    relational databases for similarity search?
+  options:
+    A: Better support for structured data.
+    B: More efficient storage of large text documents.
+    C: Faster similarity search for high-dimensional data.
+    D: Improved data consistency.
+  correct_answer: C
+- id: 18
+  question: You've noticed that Pinecone's query latency increases significantly as
+    the number of vectors in your index grows. What optimization technique should
+    you consider?
+  options:
+    A: Reducing the vector dimensionality.
+    B: Increasing the replication factor.
+    C: Implementing vector partitioning.
+    D: Switching to a different index type.
+  correct_answer: C
+- id: 19
+  question: When using ChromaDB, what is the significance of the `collection` parameter?
+  options:
+    A: It specifies the embedding model to use.
+    B: It defines a logical grouping of vectors.
+    C: It controls the indexing algorithm.
+    D: It sets the maximum vector dimensionality.
+  correct_answer: B
+- id: 20
+  question: You are designing a system to recommend similar videos based on their
+    audio content. What is a crucial consideration when choosing an embedding model?
+  options:
+    A: The model's ability to handle long sequences.
+    B: The model's performance on image recognition tasks.
+    C: The model's ability to capture temporal dependencies in audio.
+    D: The model's support for multiple languages.
+  correct_answer: C
+- id: 21
+  question: What is the purpose of metadata in a vector database?
+  options:
+    A: To store the embedding model used.
+    B: To provide additional information about the vectors for filtering and retrieval.
+    C: To encrypt the vector data.
+    D: To track the creation timestamp of the vectors.
+  correct_answer: B
+- id: 22
+  question: You are using Pinecone and want to ensure high availability. What should
+    you configure?
+  options:
+    A: Increase the pod count.
+    B: Enable replication.
+    C: Reduce the index size.
+    D: Use a different distance metric.
+  correct_answer: B
+- id: 23
+  question: What is the 'curse of dimensionality' and how does it impact vector similarity
+    search?
+  options:
+    A: It refers to the increasing computational cost of indexing high-dimensional
+      data.
+    B: It describes the phenomenon where distance metrics become less meaningful in
+      high-dimensional spaces.
+    C: It relates to the difficulty of visualizing high-dimensional data.
+    D: It's a problem with embedding models producing low-quality vectors.
+  correct_answer: B
+- id: 24
+  question: You are using LangChain to build a question-answering system. How does
+    the `RetrievalQA` chain utilize the vector database?
+  options:
+    A: It directly stores the question-answering pairs in the vector database.
+    B: It retrieves relevant documents from the vector database based on the user's
+      question.
+    C: It uses the vector database to generate the answer directly.
+    D: It uses the vector database to evaluate the quality of the answer.
+  correct_answer: B
+- id: 25
+  question: When upserting vectors to Pinecone, what happens if you exceed the maximum
+    vector size for your index?
+  options:
+    A: The upsert operation will fail.
+    B: The vectors will be truncated.
+    C: Pinecone will automatically resize the index.
+    D: The vectors will be stored in a separate index.
+  correct_answer: A
+- id: 26
+  question: You're using ChromaDB and need to perform a complex query involving multiple
+    filters on metadata. What is the most efficient way to achieve this?
+  options:
+    A: Iterate through all vectors and apply the filters in Python.
+    B: Use ChromaDB's query filters.
+    C: Rebuild the index with the filters applied.
+    D: Export the data to a relational database and perform the query there.
+  correct_answer: B
+- id: 27
+  question: What is the role of the OpenAI API key in a RAG application?
+  options:
+    A: To authenticate requests to the Pinecone vector database.
+    B: To generate embeddings for the text data.
+    C: To generate the final answer to the user's question.
+    D: To manage the LangChain agent's memory.
+  correct_answer: B
+- id: 28
+  question: You are building a video search engine based on audio content. What type
+    of embedding model would be most appropriate?
+  options:
+    A: A text embedding model.
+    B: An image embedding model.
+    C: An audio embedding model.
+    D: A video embedding model.
+  correct_answer: C
+- id: 29
+  question: What is the purpose of the `k` parameter in a vector similarity search?
+  options:
+    A: It specifies the dimensionality of the vectors.
+    B: It determines the number of nearest neighbors to retrieve.
+    C: It sets the distance threshold for similarity.
+    D: It controls the batch size for the query.
+  correct_answer: B
+- id: 30
+  question: You've implemented a semantic search application and notice that queries
+    with different phrasing but similar meaning return significantly different results.
+    What could be the issue?
+  options:
+    A: The embedding model is not robust to paraphrasing.
+    B: The Pinecone index is not properly configured.
+    C: The query parameters are incorrect.
+    D: The data preprocessing steps are flawed.
+  correct_answer: A
+- id: 31
+  question: In Pinecone, what does the 'replication factor' control?
+  options:
+    A: The number of shards used for the index.
+    B: The number of copies of each vector stored.
+    C: The size of the vectors.
+    D: The frequency of index updates.
+  correct_answer: B
+- id: 32
+  question: You are using ChromaDB and want to ensure that your data is persisted
+    even after the application restarts. What should you do?
+  options:
+    A: Use an in-memory ChromaDB instance.
+    B: Configure ChromaDB to use a persistent storage backend.
+    C: Manually save the vectors to a file.
+    D: Re-index the data every time the application starts.
+  correct_answer: B
+- id: 33
+  question: What is the primary advantage of using namespaces in Pinecone for multi-tenant
+    applications?
+  options:
+    A: Improved query performance.
+    B: Data isolation and access control.
+    C: Reduced storage costs.
+    D: Simplified index management.
+  correct_answer: B
+- id: 34
+  question: You are building a RAG system and need to handle long documents that exceed
+    the OpenAI model's context window. What is a common strategy?
+  options:
+    A: Truncate the documents.
+    B: Split the documents into smaller chunks.
+    C: Use a different embedding model.
+    D: Increase the OpenAI model's context window.
+  correct_answer: B
+- id: 35
+  question: What is the purpose of vector partitioning in Pinecone?
+  options:
+    A: To distribute the index across multiple servers.
+    B: To reduce the dimensionality of the vectors.
+    C: To improve query performance by limiting the search space.
+    D: To encrypt the vector data.
+  correct_answer: C
+- id: 36
+  question: You are using ChromaDB and want to delete a specific vector by its ID.
+    How would you achieve this?
+  options:
+    A: Use the `delete` method on the collection.
+    B: Rebuild the index without the vector.
+    C: Iterate through the collection and remove the vector manually.
+    D: ChromaDB does not support deleting vectors by ID.
+  correct_answer: A
+- id: 37
+  question: What is the role of LangChain in a RAG application?
+  options:
+    A: To generate embeddings for the text data.
+    B: To manage the vector database.
+    C: To orchestrate the retrieval and generation process.
+    D: To provide the user interface.
+  correct_answer: C
+- id: 38
+  question: You are building an audio similarity search application and notice that
+    the embeddings are not capturing the nuances of different musical genres. What
+    could be the issue?
+  options:
+    A: The audio features used for embedding are not genre-specific.
+    B: The Pinecone index is not properly configured.
+    C: The query parameters are incorrect.
+    D: The data preprocessing steps are flawed.
+  correct_answer: A
+- id: 39
+  question: What is the difference between cosine similarity and Euclidean distance?
+  options:
+    A: Cosine similarity measures the angle between vectors, while Euclidean distance
+      measures the magnitude.
+    B: Euclidean distance is more sensitive to vector magnitude than cosine similarity.
+    C: Cosine similarity is only applicable to binary vectors.
+    D: Euclidean distance is computationally more efficient than cosine similarity.
+  correct_answer: A
+- id: 40
+  question: You are using Pinecone and want to monitor the health of your index. What
+    metrics should you pay attention to?
+  options:
+    A: CPU usage and memory consumption.
+    B: Query latency and throughput.
+    C: Disk space and network bandwidth.
+    D: Number of active users and API requests.
+  correct_answer: B
+- id: 41
+  question: When using ChromaDB, what is the benefit of using a persistent storage
+    backend like DuckDB?
+  options:
+    A: Faster query performance.
+    B: Automatic index rebuilding.
+    C: Data persistence across sessions.
+    D: Reduced memory usage.
+  correct_answer: C
+- id: 42
+  question: You are building a RAG system and want to improve the relevance of the
+    retrieved documents. What technique could you use?
+  options:
+    A: Increase the OpenAI model's temperature.
+    B: Use a more sophisticated embedding model.
+    C: Reduce the number of retrieved documents.
+    D: Disable LangChain's memory component.
+  correct_answer: B
+- id: 43
+  question: What is the purpose of metadata filtering in a vector database?
+  options:
+    A: To improve the accuracy of the embeddings.
+    B: To reduce the size of the index.
+    C: To narrow down the search results based on specific criteria.
+    D: To encrypt the vector data.
+  correct_answer: C
+- id: 44
+  question: You are using Pinecone and want to update the metadata associated with
+    a vector. How would you achieve this?
+  options:
+    A: Use the `update` method on the vector.
+    B: Delete the vector and re-insert it with the updated metadata.
+    C: Modify the metadata directly in the Pinecone console.
+    D: Pinecone does not support updating metadata.
+  correct_answer: B
+- id: 45
+  question: What is the role of the OpenAI API in a RAG application?
+  options:
+    A: To store the vector embeddings.
+    B: To retrieve the relevant documents.
+    C: To generate the final answer based on the retrieved documents.
+    D: To manage the LangChain agent.
+  correct_answer: C
+- id: 46
+  question: You are building a video search engine and want to search for videos based
+    on spoken words. What is the first step in this process?
+  options:
+    A: Generate embeddings for the video frames.
+    B: Transcribe the audio into text and generate embeddings for the text.
+    C: Use a video embedding model.
+    D: Extract keyframes from the video.
+  correct_answer: B
+- id: 47
+  question: What is the primary benefit of using vector databases for recommendation
+    systems?
+  options:
+    A: Improved data consistency.
+    B: Faster similarity search for user preferences.
+    C: Reduced storage costs.
+    D: Simplified data modeling.
+  correct_answer: B
+- id: 48
+  question: You are using ChromaDB and want to perform a hybrid search combining keyword
+    search with vector similarity search. How can you achieve this?
+  options:
+    A: ChromaDB does not support hybrid search.
+    B: Use ChromaDB's filtering capabilities to combine keyword and vector search.
+    C: Implement a custom search algorithm that combines both methods.
+    D: Export the data to a relational database and perform the hybrid search there.
+  correct_answer: B
+- id: 49
+  question: What is the purpose of the `temperature` parameter in the OpenAI API?
+  options:
+    A: To control the length of the generated text.
+    B: To control the randomness of the generated text.
+    C: To control the quality of the generated text.
+    D: To control the cost of the API request.
+  correct_answer: B
+- id: 50
+  question: You are experiencing high latency in your Pinecone queries. You've already
+    optimized your index configuration and partitioning. What is the next step you
+    should consider?
+  options:
+    A: Increase the replication factor.
+    B: Upgrade to a larger Pinecone pod type.
+    C: Reduce the dimensionality of your vectors.
+    D: Switch to a different embedding model.
+  correct_answer: B

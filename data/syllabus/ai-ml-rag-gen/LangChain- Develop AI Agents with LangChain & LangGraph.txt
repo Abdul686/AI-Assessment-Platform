@@ -1,0 +1,344 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+Software Engineers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+Developers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+Engineers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+
+--- DESCRIPTION ---
+Description
+
+This course contains the use of artificial intelligence :)
+
+COURSE WAS RE-RECORDED and supports- LangChain Version 1.0+
+
+**Ideal students are software developers / data scientists / AI/ML Engineers**
+
+
+Welcome to the AI Agents with LangChain and LangGraph Udemy course - Unleashing the Power of Agentic AI!
+This  course is designed to teach you how to QUICKLY harness AI Engineering, Agent Engineering with the power the LangChain & LangGraph libraries for LLM applications and Agentic AI.
+This course will equip you with the skills and knowledge necessary to develop cutting-edge LLM solutions for a diverse range of topics.
+
+Please note that this is not a course for beginners. This course assumes that you have a background in software engineering and are proficient in Python. I will be using Pycharm IDE but you can use any editor you'd like since we only use basic feature of the IDE like debugging and running scripts .
+
+What You’ll Build:  No fluff. No toy examples. You’ll build:
+
+Search Agent
+
+Documentation Helper – A chatbot over Python package docs (and any data you choose), using advanced retrieval and RAG.
+
+Slim ChatGPT Code Interpreter – A lightweight code execution assistant.
+
+Prompt Engineering Theory
+
+Context Engineering Theory
+
+Introduction to LangGraph
+
+Model Context Protocol (MCP)
+
+
+The topics covered in this course include:
+
+AI Agents
+
+Agentic AI
+
+AI Engineering
+
+LangChain, LangGraph
+
+LLM + GenAI History
+
+Prompt Engineering: Few shots prompting, Chain of Thought, ReAct prompting
+
+Context Engineering
+
+Chat Models
+
+Open Source Models
+
+Prompts, PromptTemplates, langchainub
+
+Output Parsers, Pydantic Output Parsers
+
+Chains: create_retrieval_chain, create_stuff_documents_chain
+
+Agents, Custom Agents, Python Agents, CSV Agents, Agent Routers
+
+OpenAI Functions, Tool Calling
+
+Tools, Toolkits
+
+Memory
+
+Vectorstores (Pinecone, FAISS, Chroma)
+
+RAG (Retrieval Augmentation Generation)
+
+DocumentLoaders, TextSplitters
+
+Streamlit (for UI), Copilotkit
+
+LCEL
+
+Agent tracing with LangSmith
+
+Cursor IDE 
+
+MCP - Model Context Protocol & LangChain Ecosystem
+
+Introduction To LangGraph
+
+
+
+
+Throughout the course, you will work on hands-on exercises and real-world projects to reinforce your understanding of the concepts and techniques covered. By the end of the course, you will be proficient in using LangChain to create powerful, efficient, and versatile LLM applications for a wide array of usages.
+
+Why This Course?
+
+Up-to-date: Covers LangChain V.1+ and the latest LangGraph ecosystem.
+
+Practical: Real projects, real APIs, real-world skills.
+
+Career-boosting: Stay ahead in the LLM and GenAI job market.
+
+Step-by-step guidance: Clear, concise, no wasted time.
+
+Flexible: Use any Python IDE (Pycharm shown, but not required).
+
+
+
+
+DISCLAIMERS
+
+Please note that this is not a course for beginners. This course assumes that you have a background in software engineering and are proficient in Python.
+I will be using Pycharm IDE but you can use any editor you'd like since we only use basic feature of the IDE like debugging and running scripts.
+
+Who this course is for:
+Software Engineers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+Developers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+Engineers that want to learn how to build Generative AI based applications with LangChain and LangGraph
+Show more
+
+--- CURRICULUM ---
+Course content
+21 sections • 163 lectures • 18h 5m total length
+Collapse all sections
+Introduction
+5 lectures • 13min
+Course Introduction
+Course Objectives
+Course Structure + How to get the best of Udemy [PLEASE DO NOT SKIP]
+Course's Community
+Course Resources
+The GIST of LangChain- Get started by with your "Hello World" chain
+10 lectures • 57min
+What is LangChain? LangChain Under 6 Minutes
+What are we building? LangChain Hello World Chain
+Project Setup
+LangChain Fundamentals: Prompt Templates, ChatModels, and Chains
+Building a LangChain Chain to Summarize Text
+Debugging and Tracing Our LangChain Chain
+Using Local Open-Weights Models with LangChain and Ollama
+Integrating LangSmith for LangChain Application Tracing
+LangChain LCEL Fundamentals
+5 questions
+LangChain Model Switching: Groq API Integration
+1 question
+LangChain Version In Course V.1
+Which LLM to Use? (OpenAI, Gemini, Anthropic, Mistral, Llama)
+THE GIST Of AI Agents
+9 lectures • 57min
+What are AI Agents? A High-Level Overview
+Creating an AI Job Search Agent: A Practical Demo
+The Evolution of LangChain ReAct Agents
+Setting Up the Environment for a LangChain Search Agent
+Creating Your First LangChain Agent: Tools and LLMs
+From Query to Answer: How a LangChain Agent Thinks
+Integrating Real-World Search with Tavily and LangChain Tools
+Structured Output with LangChain Agents Using Pydantic
+[THEORY] Predictable Agent Responses with LangChain Structured Output
+Agents Under The Hood
+17 lectures • 1hr 50min
+DISCLAIMER
+Introduction to The Core Architecture of AI Agents: A Deep Dive
+Project Theme Overview: The E-Commerce Agent
+[Theory] The Gist of ReACT
+Setup
+-------- [Layer 1] The ReAct Loop --------
+Tool Binding and Defensive Prompting
+Understanding the ReAct Agent Loop in Langchain
+Model Switch
+: AI Agent Loop with LangChain Tool Calling
+7 questions
+-------- [Layer 2] Manual JSON Schemas vs. LangChain Tool Abstraction --------
+Building a ReAct Agent Loop with the Raw Ollama SDK
+Recap
+: Raw Function Calling — AI Agent Without LangChain
+7 questions
+-------- [Layer 3] The ReAct Prompt: The Foundation of AI Agents --------
+Generating Dynamic Tool Descriptions in Python
+Understanding the ReAct Prompt: Building AI Agents Without Function Calling
+Implementing Manual Tool Calling for LLMs
+Agent Loop With ReAct Prompt
+Agents Interview
+Function Calling
+2 lectures • 9min
+Intro
+[Theory] Understanding Function Calling for LLMs
+The GIST of RAG- Embeddings, Vector Databases and, & Retrieval
+9 lectures • 1hr 45min
+Introduction to Retrieval Augmentation Generation (RAG)
+Introduction to RAG Implementation
+Medium Analyzer- Boilerplate Project Setup
+Medium Analyzer- Class Review: TextLoader,TextSplitter,OpenAIEmbeddings,Pinecone
+Medium Analyzer- Ingestion Implementation
+RECAP
+Medium Analyzer- Naive Retrieval Implementation Implementation
+Medium Analyzer- 2 Step RAG
+LangChain RAG Documentation
+RAG Implementation with Vector Stores
+7 questions
+Building a documentation assistant (Embeddings, VectorDBs, Retrieval, Memory)
+16 lectures • 2hr 13min
+What are we building? (RAG)
+Quick Note: Pipenv vs uv
+Environment Setup
+Ingestion Pipeline Intro
+Imports
+Tavily Crawling
+[Optional] TavilyMap, TavilyExtract for High customizability
+[Optional] Crawling Deep Dive
+Recap
+Chunking (Text Splitting)
+Batch Indexing
+Retrieval Agent Implementation
+Run, Debug, Trace RAG Agent
+"Frontend" with Streamlit (UI)
+Documentation Helper In Production
+RAG Architecture
+Prompt Engineering Theory
+9 lectures • 58min
+The GIST of LLMs
+What is a Prompt? Composition of a formal prompt
+Zero Shot Prompting
+Few Shot Prompting
+Chain of Thought Prompting
+ReAct Prompting
+Prompt Engineering Quick Tips
+Context Engineering
+Context Engineering a System Prompt
+Let's Talk About LLM Applications In Production
+9 lectures • 1hr
+LLM Applications in Production
+LLM Application Development landscape
+LLMs in Production: Privacy & Data Retention
+Generative UI/UX featuring CopilotKit
+Official LangChain Academy Courses
+Open Source LLMs VS Managed LLM Providers (Deepseek)
+Confidence in AI Results By Assaf Elovic & Harrison Chase
+[NEW] AI FOMO is the New Normal
+Finished course? Whats next!
+-------------------Introduction To LangGraph -------------------
+13 lectures • 1hr 23min
+What is LangGraph?
+Why LangGraph? LangGraph VS LangChain
+What are Graphs?
+LangGraph & Flow Engineering
+LangGraph Core Components
+--------- [Hands On] Implementing ReAct AgentExecutor with LangGraph ---------
+Quick Note: poetry vs uv
+[Hands On] Get Started: Setting Up Your ReAct Agent Project Environment
+[Hands On] Coding the Agent's Brain: Implementing the ReAct Runnable
+[Hands On] 43. Building Blocks: Defining Your Agent's Nodes in LangGraph
+[Hands On] Bringing Your ReAct Agent to Life: Connecting Nodes into a Graph
+[Hands On] Running Our LangGraph React Agent with Function Calling
+[IMPORTANT] Building Modern LLM Agents: From History to LangGraph v1.0
+Reflection Agent
+5 lectures • 33min
+What are we building?
+Project Setup
+Creating the Reflector Chain and the Tweet Reviosr Chain
+Defining our LangGraph Graph
+LangSmith Tracing
+Reflexion Agent
+8 lectures • 58min
+What are we building
+Project Setup
+Section Resources
+Actor Agent V2
+Revisor Agent
+ToolNode - Executing Tools
+Building Our LangGraph Graph
+Tracing Our Graph
+Agentic RAG
+14 lectures • 1hr 26min
+What are Building In this Section- Agentic RAG Architecture
+Improving RAG Quality with the Corrective RAG Flow
+Boilerplate Setup for an Agentic RAG Agent with LangGraph
+Code Structure
+LangChain Vector Store Ingestion Pipeline (WebLoader, ChromaDB)
+Managing Information Flow in LangGraph: The GraphState
+Fetching Context for LLMs: The LangGraph Retrieve Node
+Building a Relevance Filter for RAG using LangChain's Structured Output
+Implementing a Web Search Node in LangGraph using Tavily API
+Creating the LLM Generation Chain and Node for LangGraph
+Building and Running the Complete LangGraph Agent
+Self RAG- Intro
+Self RAG- Implementation
+Adaptive RAG
+-----------------Introduction to Model Context Protocol (MCP)-------------------
+6 lectures • 39min
+[Theory] Why MCP (Model Context Protocol)
+[Theory] How LLMs REALLY Use Tools: Understanding Tool Calling
+[Theory] The GIST of the Protocol with Tool Calling
+[Theory] MCP Architecture
+[Theory] MCP Servers
+Bridging the Gap: The LangChain MCP Adapter Explained
+MCP
+9 questions
+Using a Pre-built Server (mcpdoc) with AI Clients (Cursor & Claude)
+4 lectures • 22min
+What are we building?
+MCP Inspector
+LLM.txt
+mcpdoc
+Building MCP Servers and Clients with LangChain
+7 lectures • 37min
+Intro
+Boilerplate
+Servers
+What are we MCBuilding?
+Simple MCP Server
+LangChain's MultiServerMCPClient from the LangChain MCP Adapter
+Tracing
+Useful tools when developing LLM Applications
+4 lectures • 19min
+[New, Important] Stop Writing Deprecated Code: LangChain's Official MCP Server
+LangChain Hub - Downloads prompt from the community
+TextSplitting Playground
+LangChain VS LlamaIndex
+Deep Agents
+6 lectures • 34min
+Introduction to Deep Agents Section
+Deep Agents: Taxonomy of Agents: Shallow Agents, Deep Agents, Coding Agents
+Deep Agents: How Deep Agents Use Dynamic To-Do Lists to Solve Complex Tasks
+Deep Agents: Sub Agents and Hierarchical Delegation
+Deep Agents: Subagents context flow
+Deep Agents File Systems
+LangChain Glossary
+7 lectures • 39min
+ChatModels
+Messages
+RecursiveCharacterTextSplitter
+Document
+LangChain Token Limitation Handeling Strategies
+LangChain Memory Intro- Co Reference Resolution
+LangChain Memory Theory Deepdive (LangGraph)
+Agent Security
+2 lectures • 31min
+What is LLM App Sec?
+The Bad of Agentic Coding
+Bonus
+1 lecture • 1min
+Bonus

@@ -1,0 +1,473 @@
+- id: 1
+  question: You are building a RAG pipeline with Langchain and Ollama. After chunking
+    a document, you observe that the retrieved context often lacks crucial information
+    needed to answer the user's query. What is the MOST effective initial adjustment
+    to improve retrieval relevance?
+  options:
+    A: Increase the `k` value in the `FAISS` retriever to retrieve more chunks.
+    B: Decrease the chunk size to capture more granular information.
+    C: Switch to a different embedding model provided by Ollama.
+    D: Implement a re-ranking strategy using a cross-encoder model.
+  correct_answer: B
+- id: 2
+  question: When using `ChatPromptTemplate` in Langchain, what is the primary benefit
+    of utilizing `MessagesPlaceholder`?
+  options:
+    A: It automatically translates prompts into different languages.
+    B: It allows for dynamic insertion of chat history into the prompt.
+    C: It optimizes prompt length for faster LLM processing.
+    D: It enforces a strict format for system messages.
+  correct_answer: B
+- id: 3
+  question: You've created a sequential LCEL chain with two RunnableLambda functions.
+    The first function processes user input, and the second function formats the output.
+    How would you add error handling to gracefully manage exceptions within the first
+    function?
+  options:
+    A: Wrap the first RunnableLambda in a `try...except` block within its `invoke`
+      method.
+    B: Use the `.catch()` method on the first RunnableLambda in the chain.
+    C: Implement a global exception handler within the Langchain application.
+    D: Rely on Langchain's default exception handling mechanism.
+  correct_answer: B
+- id: 4
+  question: You are parsing LLM output using a Pydantic model. The LLM occasionally
+    returns values that do not conform to the defined data types. What is the best
+    approach to handle these parsing errors?
+  options:
+    A: Ignore the errors and proceed with the default values in the Pydantic model.
+    B: Use the `with_structured_output` method with a `strict=True` argument.
+    C: Implement a custom parsing function to handle the invalid values.
+    D: Adjust the data types in the Pydantic model to accommodate the LLM's output.
+  correct_answer: B
+- id: 5
+  question: You are building a chatbot with chat history. You've implemented `InMemoryChatMessageHistory`,
+    but the chat history is lost every time the application restarts. What is the
+    most straightforward solution to persist the chat history?
+  options:
+    A: Switch to `FileChatMessageHistory` to store the history in a file.
+    B: Implement a custom database integration to store the history.
+    C: Use `LangSmith` to automatically persist the chat history.
+    D: Periodically save the `InMemoryChatMessageHistory` to a file.
+  correct_answer: A
+- id: 6
+  question: When deploying a Streamlit chatbot application on AWS EC2, what is a crucial
+    security consideration regarding the Ollama API?
+  options:
+    A: Exposing the Ollama API directly to the internet without authentication.
+    B: Using a reverse proxy like Nginx to secure the Ollama API endpoint.
+    C: Disabling the Ollama API entirely and relying solely on Langchain.
+    D: Using a public Ollama instance instead of a local one.
+  correct_answer: B
+- id: 7
+  question: You are processing a large number of PDF documents with varying structures.
+    Which document loader is generally MOST robust for handling complex PDF layouts
+    and extracting text accurately?
+  options:
+    A: TextLoader
+    B: PyMuPDFLoader
+    C: UnstructuredPDFLoader
+    D: DirectoryLoader
+  correct_answer: B
+- id: 8
+  question: You've implemented a RAG system using FAISS. You notice that similar queries
+    consistently retrieve the same documents, even if they are not entirely relevant.
+    What technique can you employ to improve the diversity of retrieved results?
+  options:
+    A: Increase the dimensionality of the embeddings.
+    B: Implement Maximal Marginal Relevance (MMR) re-ranking.
+    C: Decrease the chunk size.
+    D: Use a different distance metric in FAISS.
+  correct_answer: B
+- id: 9
+  question: You are building an agentic RAG system. You've defined a custom tool that
+    requires a specific API key. How do you securely pass this API key to the tool
+    without hardcoding it in the code?
+  options:
+    A: Store the API key in an environment variable and access it within the tool's
+      function.
+    B: Encrypt the API key and store it in a configuration file.
+    C: Pass the API key as a parameter to the agent's `create_agent` function.
+    D: Use Langchain's built-in secret management system.
+  correct_answer: A
+- id: 10
+  question: You've created a tool that uses the Tavily search API. The LLM is consistently
+    failing to correctly interpret the search results. What is a potential reason
+    for this issue?
+  options:
+    A: The LLM's context window is too small to accommodate the search results.
+    B: The Tavily search API is returning results in an unexpected format.
+    C: The prompt does not explicitly instruct the LLM on how to use the search results.
+    D: The Tavily API key is invalid.
+  correct_answer: C
+- id: 11
+  question: When building an agent with `create_agent`, what is the purpose of the
+    `agent_executor`?
+  options:
+    A: It defines the tools available to the agent.
+    B: It manages the agent's memory and chat history.
+    C: It executes the agent's reasoning loop and tool calls.
+    D: It configures the LLM used by the agent.
+  correct_answer: C
+- id: 12
+  question: You are building a Text-to-SQL agent. The LLM is generating SQL queries
+    that are syntactically correct but semantically incorrect (e.g., using the wrong
+    table names). What is the most effective way to address this issue?
+  options:
+    A: Increase the temperature of the LLM to encourage more diverse query generation.
+    B: Provide the LLM with a more detailed schema description and examples of correct
+      queries.
+    C: Implement a post-processing step to validate the SQL query against the database
+      schema.
+    D: Use a different LLM with better SQL generation capabilities.
+  correct_answer: B
+- id: 13
+  question: In the LinkedIn Profile Scraper project, what is the primary purpose of
+    using both Selenium and BeautifulSoup?
+  options:
+    A: Selenium handles dynamic content loading, while BeautifulSoup parses the static
+      HTML.
+    B: BeautifulSoup handles dynamic content loading, while Selenium parses the static
+      HTML.
+    C: Both libraries are used for dynamic content loading.
+    D: Both libraries are used for parsing static HTML.
+  correct_answer: A
+- id: 14
+  question: You are using Ollama to run a large language model locally. You are experiencing
+    performance issues, specifically slow response times. What is a potential optimization
+    strategy?
+  options:
+    A: Increase the number of CPU cores allocated to Ollama.
+    B: Reduce the model's quantization level (e.g., from Q8 to Q4).
+    C: Increase the context window size.
+    D: Use a smaller model.
+  correct_answer: B
+- id: 15
+  question: What is the main advantage of using Langchain Expression Language (LCEL)
+    over traditional Langchain chains?
+  options:
+    A: LCEL chains are easier to debug.
+    B: LCEL chains offer more flexibility and composability.
+    C: LCEL chains are faster to execute.
+    D: LCEL chains require less code.
+  correct_answer: B
+- id: 16
+  question: You are building a chatbot and want to ensure that the LLM doesn't generate
+    harmful or inappropriate responses. What is a best practice to mitigate this risk?
+  options:
+    A: Rely solely on the LLM's built-in safety mechanisms.
+    B: Implement a content filtering system to block harmful outputs.
+    C: Use a highly restrictive prompt template.
+    D: Disable the LLM's ability to generate creative text.
+  correct_answer: B
+- id: 17
+  question: When choosing a chunk size for RAG, what is the trade-off between smaller
+    and larger chunks?
+  options:
+    A: Smaller chunks are more computationally expensive, while larger chunks are
+      more precise.
+    B: Smaller chunks capture more context, while larger chunks are faster to process.
+    C: Smaller chunks are more precise, while larger chunks capture more context.
+    D: Smaller chunks are faster to process, while larger chunks are more computationally
+      expensive.
+  correct_answer: C
+- id: 18
+  question: You've noticed that your Langchain application is logging a large amount
+    of data to LangSmith. How can you reduce the logging volume without losing critical
+    information?
+  options:
+    A: Disable logging entirely.
+    B: Adjust the logging level to only log errors and warnings.
+    C: Increase the sampling rate for logging.
+    D: Use a different logging framework.
+  correct_answer: B
+- id: 19
+  question: You are using the `with_structured_output` method with a Pydantic model.
+    The LLM consistently returns a field with a value of `null`. What could be the
+    cause?
+  options:
+    A: The field is not required in the Pydantic model.
+    B: The LLM is unable to determine a value for the field.
+    C: The field's data type is incorrect in the Pydantic model.
+    D: The prompt does not explicitly ask for a value for the field.
+  correct_answer: D
+- id: 20
+  question: What is the primary benefit of using a vector database like FAISS or Chroma
+    in a RAG system?
+  options:
+    A: It stores the original documents in a structured format.
+    B: It enables efficient similarity search for relevant documents.
+    C: It automatically generates embeddings for the documents.
+    D: It provides a user interface for managing the documents.
+  correct_answer: B
+- id: 21
+  question: You are building a chatbot that needs to remember information across multiple
+    turns of conversation. Which type of chat memory is MOST suitable for storing
+    a limited amount of recent conversation history?
+  options:
+    A: FileChatMessageHistory
+    B: SQLChatMessageHistory
+    C: InMemoryChatMessageHistory
+    D: VectorStoreChatMessageHistory
+  correct_answer: C
+- id: 22
+  question: You are using the `RecursiveTextSplitter` to chunk a document. You notice
+    that important sentences are being split across multiple chunks. How can you adjust
+    the splitter to prevent this?
+  options:
+    A: Increase the `chunk_size`.
+    B: Decrease the `chunk_overlap`.
+    C: Increase the `chunk_overlap`.
+    D: Use a different text splitter.
+  correct_answer: C
+- id: 23
+  question: When deploying a Langchain application on AWS EC2, what is the purpose
+    of using a process manager like `systemd`?
+  options:
+    A: To monitor the application's performance.
+    B: To automatically restart the application if it crashes.
+    C: To manage the application's dependencies.
+    D: To scale the application horizontally.
+  correct_answer: B
+- id: 24
+  question: You are using the `DuckDuckGoSearchRun` tool in an agent. The agent is
+    consistently returning irrelevant search results. What could be the issue?
+  options:
+    A: The LLM is not formulating effective search queries.
+    B: The DuckDuckGo API is down.
+    C: The agent's memory is corrupted.
+    D: The LLM's temperature is too high.
+  correct_answer: A
+- id: 25
+  question: What is the role of the `RunnablePassthrough` in LCEL chains?
+  options:
+    A: It transforms the input data before passing it to the next Runnable.
+    B: It passes the input data through unchanged to the next Runnable.
+    C: It terminates the chain execution.
+    D: It logs the input data.
+  correct_answer: B
+- id: 26
+  question: You are building a RAG system for a highly specialized domain (e.g., medical
+    research). What is a key consideration when choosing an embedding model?
+  options:
+    A: The model's size and computational cost.
+    B: The model's ability to capture domain-specific semantics.
+    C: The model's training data and general knowledge.
+    D: The model's ease of use and integration with Langchain.
+  correct_answer: B
+- id: 27
+  question: You've implemented a tool calling loop in an agent. The agent is getting
+    stuck in an infinite loop, repeatedly calling the same tool. What is a potential
+    cause?
+  options:
+    A: The LLM is not able to determine when to stop calling the tool.
+    B: The tool is returning an error message.
+    C: The agent's memory is full.
+    D: The LLM's temperature is too low.
+  correct_answer: A
+- id: 28
+  question: What is the purpose of the `agent_session` object in Langchain agents?
+  options:
+    A: It stores the agent's configuration settings.
+    B: It manages the agent's memory and chat history.
+    C: It provides access to the agent's tools.
+    D: It handles the agent's communication with the LLM.
+  correct_answer: B
+- id: 29
+  question: You are using IBM Docling to process a scanned document. The OCR accuracy
+    is poor, resulting in incorrect text extraction. What can you do to improve the
+    OCR quality?
+  options:
+    A: Reduce the image resolution.
+    B: Increase the image resolution.
+    C: Use a different OCR engine.
+    D: Disable OCR entirely.
+  correct_answer: B
+- id: 30
+  question: You are building a chatbot that needs to handle multiple concurrent users.
+    What is a key consideration for scaling the application?
+  options:
+    A: Using a single EC2 instance with a large amount of memory.
+    B: Using a load balancer to distribute traffic across multiple EC2 instances.
+    C: Using a smaller LLM to reduce computational cost.
+    D: Disabling chat history to reduce memory usage.
+  correct_answer: B
+- id: 31
+  question: When using Ollama, what does the `modelfile` allow you to do?
+  options:
+    A: Define custom prompts for the LLM.
+    B: Create and configure custom models based on existing ones.
+    C: Manage the Ollama API keys.
+    D: Monitor the LLM's performance.
+  correct_answer: B
+- id: 32
+  question: You are using Langchain's `SQLDatabaseChain`. The LLM is generating SQL
+    queries that are vulnerable to SQL injection attacks. How can you mitigate this
+    risk?
+  options:
+    A: Disable SQL query generation entirely.
+    B: Use parameterized queries to prevent malicious code execution.
+    C: Increase the LLM's temperature.
+    D: Use a different database system.
+  correct_answer: B
+- id: 33
+  question: What is the purpose of the `LangSmith` integration in Langchain?
+  options:
+    A: To deploy Langchain applications to production.
+    B: To monitor, debug, and evaluate Langchain applications.
+    C: To manage the Ollama API keys.
+    D: To create custom LLM models.
+  correct_answer: B
+- id: 34
+  question: You are building a RAG system and want to use a hybrid retrieval approach,
+    combining vector search with keyword search. How can you achieve this in Langchain?
+  options:
+    A: Use multiple retrievers and combine their results using a re-ranking strategy.
+    B: Use a single retriever that supports both vector and keyword search.
+    C: Use a different vector database.
+    D: Use a different embedding model.
+  correct_answer: A
+- id: 35
+  question: You are using a custom tool in an agent. The tool requires a complex input
+    format. How can you ensure that the LLM provides the correct input to the tool?
+  options:
+    A: Provide a detailed description of the input format in the tool's documentation.
+    B: Use a Pydantic model to define the input format and validate the LLM's output.
+    C: Manually correct the LLM's output before passing it to the tool.
+    D: Use a simpler input format.
+  correct_answer: B
+- id: 36
+  question: What is the benefit of using Langchain's `RouterChain`?
+  options:
+    A: It allows you to chain multiple LLM calls together.
+    B: It allows you to dynamically route the input to different chains based on certain
+      criteria.
+    C: It allows you to parse LLM output into structured data.
+    D: It allows you to manage chat history.
+  correct_answer: B
+- id: 37
+  question: You are using the `MarkItDown` library to convert a document to Markdown.
+    The conversion is resulting in loss of formatting. What could be the cause?
+  options:
+    A: The document is in an unsupported format.
+    B: The `MarkItDown` library is not configured correctly.
+    C: The document is too large.
+    D: The document contains complex formatting elements that are not supported by
+      Markdown.
+  correct_answer: D
+- id: 38
+  question: You are deploying a Langchain application on AWS EC2 and want to ensure
+    that the application is automatically restarted if it crashes. What AWS service
+    can you use?
+  options:
+    A: AWS S3
+    B: AWS Lambda
+    C: AWS CloudWatch
+    D: AWS Auto Scaling
+  correct_answer: C
+- id: 39
+  question: What is the purpose of the `temperature` parameter in an LLM?
+  options:
+    A: It controls the length of the generated text.
+    B: It controls the randomness of the generated text.
+    C: It controls the speed of the LLM.
+    D: It controls the accuracy of the LLM.
+  correct_answer: B
+- id: 40
+  question: You are building a chatbot and want to implement a fallback mechanism
+    to handle cases where the LLM is unable to answer the user's query. What is a
+    common approach?
+  options:
+    A: Return a generic error message.
+    B: Use a knowledge base to search for relevant information.
+    C: Ask the user to rephrase their query.
+    D: All of the above.
+  correct_answer: D
+- id: 41
+  question: When using Ollama, what is the purpose of the `ollama serve` command?
+  options:
+    A: To pull a model from the Ollama registry.
+    B: To run a model locally.
+    C: To start an Ollama API server.
+    D: To list the available models.
+  correct_answer: C
+- id: 42
+  question: You are using Langchain to build a document processing pipeline. You need
+    to extract tables from a PDF document. Which loader is best suited for this task?
+  options:
+    A: PyMuPDFLoader
+    B: UnstructuredPDFLoader
+    C: DirectoryLoader
+    D: TextLoader
+  correct_answer: B
+- id: 43
+  question: What is the primary benefit of using Langchain's `Runnable` interface?
+  options:
+    A: It simplifies the creation of complex chains.
+    B: It provides a standardized way to interact with LLMs and other components.
+    C: It improves the performance of Langchain applications.
+    D: It reduces the amount of code required to build Langchain applications.
+  correct_answer: B
+- id: 44
+  question: You are building an agent that needs to access a private API. How can
+    you securely store and access the API key?
+  options:
+    A: Hardcode the API key in the agent's code.
+    B: Store the API key in a configuration file.
+    C: Use environment variables.
+    D: Encrypt the API key and store it in a database.
+  correct_answer: C
+- id: 45
+  question: What is the purpose of the `k` parameter in a FAISS retriever?
+  options:
+    A: It controls the dimensionality of the embeddings.
+    B: It specifies the number of documents to retrieve.
+    C: It controls the chunk size.
+    D: It controls the temperature of the LLM.
+  correct_answer: B
+- id: 46
+  question: You are using Langchain to build a chatbot that needs to remember the
+    user's preferences. What is the best way to store this information?
+  options:
+    A: Store the preferences in the chat history.
+    B: Use a dedicated database to store the preferences.
+    C: Store the preferences in the LLM's context window.
+    D: Store the preferences in a configuration file.
+  correct_answer: B
+- id: 47
+  question: What is the role of the `prompt` parameter in a Langchain chain?
+  options:
+    A: It specifies the LLM to use.
+    B: It defines the input to the chain.
+    C: It defines the instructions for the LLM.
+    D: It specifies the output format.
+  correct_answer: C
+- id: 48
+  question: You are using Langchain to build a RAG system. You notice that the LLM
+    is generating responses that are not relevant to the retrieved context. What could
+    be the cause?
+  options:
+    A: The embedding model is not capturing the semantic meaning of the documents.
+    B: The chunk size is too large.
+    C: The prompt is not instructing the LLM to use the retrieved context.
+    D: All of the above.
+  correct_answer: D
+- id: 49
+  question: When deploying a Langchain application on AWS EC2, what is the purpose
+    of using a security group?
+  options:
+    A: To manage the application's dependencies.
+    B: To control the network traffic to the EC2 instance.
+    C: To monitor the application's performance.
+    D: To scale the application horizontally.
+  correct_answer: B
+- id: 50
+  question: You are building an agent that needs to perform web searches. You are
+    using the `DuckDuckGoSearchRun` tool. The agent is consistently returning empty
+    search results. What could be the issue?
+  options:
+    A: The LLM is not formulating effective search queries.
+    B: The DuckDuckGo API is down.
+    C: The agent's memory is full.
+    D: The LLM's temperature is too high.
+  correct_answer: A

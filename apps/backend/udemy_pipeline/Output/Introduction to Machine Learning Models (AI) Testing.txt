@@ -1,0 +1,132 @@
+--- TARGET AUDIENCE ---
+Who this course is for:
+QA Testers
+Software Engineers
+Software Testers
+Data Engineers
+Developers
+Test Managers
+
+--- DESCRIPTION ---
+Description
+
+This course will introduce you to the World of Machine Learning Models Testing.
+
+As AI continues to revolutionize industries, many companies are developing their own ML models to enhance their business operations. However, testing these models presents unique challenges that differ from traditional software testing. Machine Learning Model testing requires a deeper understanding of both data quality and model behavior, as well as the algorithms that power them.
+
+This Course starts with explaining the fundamentals of the Artificial Intelligence & Machine Learning concepts and gets deep dive into testing concepts & Strategies for Machine Learning models with real time examples.
+
+Below is high level of Agenda of the tutorial:
+
+
+
+
+Introduction to Artificial Intelligence
+
+Overview of Machine Learning Models and their Lifecycle
+
+Shift-Left Testing in the ML Engineering Phase
+
+QA Functional Testing in the ML Validation Phase
+
+API Testing Scope for Machine Learning Models
+
+Responsible AI Testing for ML Models
+
+Post-Deployment Testing Strategies for ML Models
+
+Continuous Tracking and Monitoring Activities for QA in Production
+
+By the end of this course,
+you will gain expertise in testing Machine Learning Models at every stage of their lifecycle.
+
+Please Note:
+This course highlights specialized testing types and methodologies unique to Machine Learning Testing, with real-world examples.
+
+No specific programming language or code is involved in this tutorial.
+
+
+
+
+Who this course is for:
+QA Testers
+Software Engineers
+Software Testers
+Data Engineers
+Developers
+Test Managers
+Show more
+
+--- CURRICULUM ---
+Course content
+9 sections • 39 lectures • 4h 54m total length
+Collapse all sections
+Getting Started with Machine Learning Testing basics
+5 lectures • 27min
+Introduction and Agenda of the tutorial
+Introduction to Artificial Intelligence Systems with examples
+What is Machine Learning and how it is related to Artificial Intelligence family
+Examples of commonly used Machine Learning Models and their usage
+Material download
+Early Testing Strategies in ML Model Engineering phase (Supervised Learning)
+6 lectures • 51min
+Understand Machine Learning Model Life cycle stages with online/offline modes
+How Machine Learning models works in nutshell -Learn terminologies used
+Understand how OverFitting Testng & UnderFitting works with Trained data sets
+Predicting House Prices (ML Model) Demo to show how internally Algorithms works
+Revision on Supervised Learning Model Testing with Overfitting/UnderFitting ex
+Material download
+Knowledge Check - Section-2
+11 questions
+Unsupervised Learning Models Testing in Engineering Phase
+4 lectures • 28min
+Introduction to Unsupervised Learning in the ML models with example
+Testing scope on Unsupervised Learning with Data point patterns&Cluster scores
+Revision on Unsupervised Learning with cluster score analysis
+Material download
+Knowledge Check - Section-3
+5 questions
+Reinforcement Learning & Commonly used Frameworks and Algos in ML Models
+3 lectures • 22min
+Introduction to Reinforcement Learning in ML Model with examples
+Algorithms and Frameworks commonly used in developing ML Models
+Material download
+Knowledge Check - Section-4
+2 questions
+Functional Testing for Machine Learning Models in Evaluation Phase
+8 lectures • 1hr 13min
+What are Validation Unseen Data sets and why it is required
+Temperature Testing to fine tune the response predictions from ML Models
+Prompts Testing with Zero Shot & Chain of thought Prompts test
+Relevance stary Testing & Fantasy claims testing on ML Models
+Repeatability Testing & Asking question in different phases to test
+Style Transfer testing & Intent recognition testing on ML Models
+What is Invariance Testing & BiDirectional testing for AI Models
+Material download
+Knowledge Check - Section-5
+11 questions
+Introduction to API Testing on Machine Learning Models
+3 lectures • 33min
+Create OpenAI Account to test ChatGPT API's of generating response
+Download Postman tool to setup ChatGPT APIs environment for testing
+PostBot plugin to generate automation scripts for API responses in Postman
+Responsible AI Testing with examples on Machine Learning (AI) Models
+4 lectures • 25min
+Importance of Fairness testing on ML responses to check bias
+Transparency testing and why it is necessary to stay ahead in AI competition
+Data Privacy and Security testing on Machine Learning models
+Material download
+Knowledge Check: Section-7
+5 questions
+Post Deployment Testing Types with examples on Machine Learning Models
+4 lectures • 30min
+Importance of Integration & Latency testing on Production ML models
+Importance of Data drift Testing & Concept Drift Testing in ML Models
+Shadow Testing & A/B Testing to certify the latest version of ML into prod
+Material download
+Knowledge Check: Section-8
+5 questions
+Final words - Impact of Machine Learning Models in QA Space
+2 lectures • 6min
+How QA's can be critical resources for Machine Learning Model Life cycle
+Bonus Lecture
