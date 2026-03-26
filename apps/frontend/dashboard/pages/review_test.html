@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Test — Aziro L&D Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .page-wrap { max-width: 860px; }
+    .review-section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .review-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .review-item {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      margin-top: 8px;
+    }
+    .btn-back {
+      padding: 11px 22px;
+      background: transparent;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: 'DM Sans', sans-serif;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-back:hover { background: var(--surface2); color: var(--text); }
+    .btn-generate {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: var(--accent4);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-generate:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(164,53,240,0.35); }
+  </style>
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="breadcrumb">Home › Create Test › Review</div>
+        <div class="page-title">Review Test Details</div>
+      </div>
+    </div>
+
+    <div class="content page-wrap">
+
+      <div class="review-section">
+        <div class="review-title">Selected Course</div>
+        <div id="reviewCourse" class="review-item"></div>
+      </div>
+
+      <div class="review-section">
+        <div class="review-title">Candidates</div>
+        <div id="reviewCandidates"></div>
+      </div>
+
+      <div class="action-bar">
+        <a href="create_test.html" class="btn-back" onclick="event.preventDefault(); goBack();">Back</a>
+        <button class="btn-generate" onclick="generateTest()">Generate Test Link & Send</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="../js/sidebar.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  function loadReviewData() {
+    const course = localStorage.getItem('testCourse');
+    const candidates = JSON.parse(localStorage.getItem('testCandidates') || '[]');
+
+    if (!course) {
+      showToast('No course selected. Redirecting...', 'error');
+      setTimeout(() => window.location.href = 'create_test.html', 2000);
+      return;
+    }
+
+    document.getElementById('reviewCourse').textContent = course;
+
+    const candDiv = document.getElementById('reviewCandidates');
+    candDiv.innerHTML = '';
+    candidates.forEach((cand, idx) => {
+      const item = document.createElement('div');
+      item.className = 'review-item';
+      item.textContent = `${idx + 1}. ${cand.name} (${cand.email}) - ${cand.empId || 'N/A'} - ${cand.location || 'N/A'}`;
+      candDiv.appendChild(item);
+    });
+  }
+
+  function goBack() {
+    window.location.href = '/create_test.html';
+  }
+
+  function generateTest() {
+    const candidates = JSON.parse(localStorage.getItem('testCandidates') || '[]');
+    const n = candidates.length;
+    showToast(`${n} test link${n > 1 ? 's' : ''} generated & sent!`);
+    setTimeout(() => { window.location.href = '/generated_tests.html'; }, 2000);
+  }
+
+  document.addEventListener('DOMContentLoaded', loadReviewData);
+</script>
+</body>
+</html>
