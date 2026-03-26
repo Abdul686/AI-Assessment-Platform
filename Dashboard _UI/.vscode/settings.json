@@ -1,7 +1,0 @@
-{
-    "claudeCode.preferredLocation": "panel",
-    "chat.viewSessions.orientation": "stacked",
-    "workbench.editor.enablePreview": false,
-    "git.autofetch": true,
-    "files.autoSave": "afterDelay"
-}
