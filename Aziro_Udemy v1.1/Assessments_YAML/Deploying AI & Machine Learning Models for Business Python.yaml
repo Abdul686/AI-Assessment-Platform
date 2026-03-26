@@ -1,0 +1,430 @@
+- id: q1_docker_basics
+  question: You need to share a machine learning model and its dependencies with a
+    colleague who has a different operating system. Which benefit of Docker best addresses
+    this challenge?
+  options:
+    A: Docker's network isolation features.
+    B: Docker's image portability and consistency.
+    C: Docker's resource limiting capabilities.
+    D: Docker's integration with Kubernetes.
+  correct_answer: B
+- id: q2_flask_api
+  question: In a Flask API designed to serve predictions from a machine learning model,
+    what is the primary purpose of the `request` object?
+  options:
+    A: To manage the server's internal state.
+    B: To access incoming data from the client.
+    C: To handle database connections.
+    D: To define the API's documentation.
+  correct_answer: B
+- id: q3_random_forest_deployment
+  question: You've trained a Random Forest model and pickled it. When deploying it
+    as an API, what is the most crucial reason to load the pickled model *within*
+    the API endpoint function rather than globally?
+  options:
+    A: To reduce memory consumption during API startup.
+    B: To ensure thread safety in a multi-threaded environment.
+    C: To simplify the API code.
+    D: To improve model training speed.
+  correct_answer: B
+- id: q4_dockerfile_commands
+  question: In a Dockerfile, what is the purpose of the `EXPOSE` command?
+  options:
+    A: To publish a port from the container to the host machine.
+    B: To specify the base image for the container.
+    C: To define the working directory inside the container.
+    D: To install dependencies within the container.
+  correct_answer: A
+- id: q5_flask_get_post
+  question: You need to accept a large JSON payload from a client. Which HTTP method
+    is most appropriate for this scenario in your Flask API?
+  options:
+    A: GET
+    B: POST
+    C: PUT
+    D: DELETE
+  correct_answer: B
+- id: q6_docker_image_layers
+  question: Understanding Docker image layers is crucial for efficient builds. What
+    is the primary benefit of caching Docker image layers?
+  options:
+    A: Reduced image size.
+    B: Faster build times for subsequent builds with unchanged layers.
+    C: Improved container security.
+    D: Automatic image updates.
+  correct_answer: B
+- id: q7_flasgger_api_docs
+  question: You've integrated Flasgger into your Flask API. What is the primary advantage
+    of using Flasgger?
+  options:
+    A: Automated performance testing.
+    B: Automatically generated, interactive API documentation.
+    C: Enhanced API security features.
+    D: Simplified database integration.
+  correct_answer: B
+- id: q8_random_forest_input
+  question: Your Random Forest API accepts file input. What is a potential security
+    concern when handling user-uploaded files, and how can you mitigate it?
+  options:
+    A: Denial of Service (DoS) attacks; limit file size.
+    B: SQL injection; sanitize file names.
+    C: Cross-Site Scripting (XSS); encode file content.
+    D: Man-in-the-Middle (MITM) attacks; use HTTPS.
+  correct_answer: A
+- id: q9_docker_wsgi
+  question: What is the role of a WSGI server (e.g., Gunicorn) in a production Dockerized
+    Flask application?
+  options:
+    A: To manage Docker image builds.
+    B: To serve the Flask application and handle incoming requests.
+    C: To monitor container resource usage.
+    D: To define the API's data schema.
+  correct_answer: B
+- id: q10_nlp_clustering
+  question: In the NLP text clustering application, why are stemming and lemmatization
+    techniques applied to the text data?
+  options:
+    A: To increase the computational complexity of the clustering algorithm.
+    B: To reduce the dimensionality of the data and improve clustering accuracy.
+    C: To encrypt the text data for security purposes.
+    D: To translate the text data into different languages.
+  correct_answer: B
+- id: q11_docker_networking
+  question: When running multiple Docker containers, how can they communicate with
+    each other?
+  options:
+    A: Through the host machine's network interface.
+    B: Using Docker's built-in networking features (e.g., Docker networks).
+    C: Directly via IP addresses, regardless of Docker.
+    D: Only through port forwarding on the host machine.
+  correct_answer: B
+- id: q12_flask_error_handling
+  question: What is the best practice for handling errors in a Flask API?
+  options:
+    A: Print error messages to the console.
+    B: Return generic error messages to the client.
+    C: Use `try-except` blocks and return informative error responses with appropriate
+      HTTP status codes.
+    D: Ignore errors and continue processing.
+  correct_answer: C
+- id: q13_deep_learning_model_saving
+  question: After training a deep learning model, what is the purpose of saving the
+    model's weights?
+  options:
+    A: To reduce the model's training time.
+    B: To avoid retraining the model every time it's used for prediction.
+    C: To improve the model's accuracy.
+    D: To compress the model's size.
+  correct_answer: B
+- id: q14_docker_volume_mounts
+  question: What is the primary benefit of using Docker volume mounts?
+  options:
+    A: To share data between the host machine and the container.
+    B: To increase the container's memory allocation.
+    C: To improve the container's network performance.
+    D: To automatically restart the container on failure.
+  correct_answer: A
+- id: q15_flask_api_security
+  question: What is a common security vulnerability in Flask APIs, and how can you
+    prevent it?
+  options:
+    A: SQL injection; use parameterized queries.
+    B: Cross-Site Request Forgery (CSRF); use CSRF protection tokens.
+    C: Denial of Service (DoS); limit request rates.
+    D: All of the above.
+  correct_answer: D
+- id: q16_docker_compose
+  question: What is the main advantage of using Docker Compose?
+  options:
+    A: It simplifies the process of building Docker images.
+    B: It allows you to define and manage multi-container applications.
+    C: It automatically scales your Docker containers.
+    D: It provides a graphical user interface for Docker.
+  correct_answer: B
+- id: q17_flask_api_testing
+  question: What is the best way to test a Flask API?
+  options:
+    A: Manually using a web browser.
+    B: Using a dedicated testing framework like `pytest` or `unittest`.
+    C: By checking the API's logs.
+    D: By monitoring the server's CPU usage.
+  correct_answer: B
+- id: q18_deep_learning_image_preprocessing
+  question: Why is image preprocessing (e.g., resizing, normalization) important when
+    deploying a deep learning model for image recognition?
+  options:
+    A: To reduce the image file size.
+    B: To ensure the input images are in the format expected by the model.
+    C: To improve the image quality.
+    D: To encrypt the image data.
+  correct_answer: B
+- id: q19_docker_resource_limits
+  question: How can you limit the amount of CPU and memory a Docker container can
+    use?
+  options:
+    A: Using the `docker run` command with the `--cpus` and `--memory` flags.
+    B: Modifying the Dockerfile.
+    C: Using the `docker stats` command.
+    D: Configuring the host machine's operating system.
+  correct_answer: A
+- id: q20_flask_api_versioning
+  question: Why is API versioning important when deploying a Flask API?
+  options:
+    A: To improve the API's performance.
+    B: To allow for backward compatibility and avoid breaking existing clients.
+    C: To simplify the API's documentation.
+    D: To reduce the API's code complexity.
+  correct_answer: B
+- id: q21_docker_build_context
+  question: What is the Docker build context and why is it important?
+  options:
+    A: The base image used for the container; it defines the operating system.
+    B: The set of files and directories available to the Docker daemon during the
+      build process; it affects build speed and access to resources.
+    C: The network configuration of the container; it controls communication.
+    D: The metadata associated with the Docker image; it provides information about
+      the image.
+  correct_answer: B
+- id: q22_flask_blueprints
+  question: What is the purpose of Flask Blueprints?
+  options:
+    A: To manage database connections.
+    B: To organize a large Flask application into reusable components.
+    C: To handle API authentication.
+    D: To generate API documentation.
+  correct_answer: B
+- id: q23_deep_learning_model_optimization
+  question: What techniques can be used to optimize a deep learning model for deployment
+    to reduce its size and improve inference speed?
+  options:
+    A: Model pruning and quantization.
+    B: Increasing the model's complexity.
+    C: Using a larger batch size during training.
+    D: Training the model for a longer duration.
+  correct_answer: A
+- id: q24_docker_logging
+  question: How can you access the logs generated by a Docker container?
+  options:
+    A: Using the `docker logs` command.
+    B: Checking the host machine's system logs.
+    C: Using a dedicated logging driver.
+    D: All of the above.
+  correct_answer: D
+- id: q25_flask_api_authentication
+  question: What is a common method for authenticating users in a Flask API?
+  options:
+    A: Using basic authentication with username and password.
+    B: Using API keys.
+    C: Using JSON Web Tokens (JWT).
+    D: All of the above.
+  correct_answer: D
+- id: q26_docker_image_tags
+  question: What is the purpose of tagging Docker images?
+  options:
+    A: To assign a unique identifier to the image.
+    B: To version control the image and easily identify different builds.
+    C: To compress the image size.
+    D: To encrypt the image content.
+  correct_answer: B
+- id: q27_flask_request_context
+  question: What is the Flask request context and why is it important?
+  options:
+    A: It provides access to the server's configuration settings.
+    B: It provides access to the current request's data and context, such as the URL,
+      headers, and form data.
+    C: It manages the database connections.
+    D: It handles API authentication.
+  correct_answer: B
+- id: q28_deep_learning_model_serving
+  question: What are some considerations when serving a deep learning model in a production
+    environment?
+  options:
+    A: Scalability, latency, and monitoring.
+    B: Model accuracy and training data.
+    C: Code readability and documentation.
+    D: Developer productivity and code maintainability.
+  correct_answer: A
+- id: q29_docker_networks
+  question: What is the purpose of Docker networks?
+  options:
+    A: To isolate containers from the host machine's network.
+    B: To allow containers to communicate with each other and the outside world.
+    C: To manage container resource allocation.
+    D: To monitor container performance.
+  correct_answer: B
+- id: q30_flask_api_documentation
+  question: Why is good API documentation important?
+  options:
+    A: To help developers understand how to use the API.
+    B: To facilitate collaboration between developers.
+    C: To reduce the number of support requests.
+    D: All of the above.
+  correct_answer: D
+- id: q31_docker_image_size
+  question: What strategies can you use to minimize the size of a Docker image?
+  options:
+    A: Use a smaller base image, multi-stage builds, and remove unnecessary files.
+    B: Include all dependencies in a single layer.
+    C: Use a larger base image for better compatibility.
+    D: Avoid using caching during the build process.
+  correct_answer: A
+- id: q32_flask_session_management
+  question: How can you manage user sessions in a Flask API?
+  options:
+    A: Using cookies.
+    B: Using server-side sessions.
+    C: Using JWTs.
+    D: All of the above.
+  correct_answer: D
+- id: q33_deep_learning_data_augmentation
+  question: What is data augmentation and why is it useful in deep learning?
+  options:
+    A: A technique to reduce the size of the training dataset.
+    B: A technique to artificially increase the size of the training dataset by creating
+      modified versions of existing data.
+    C: A technique to improve the model's inference speed.
+    D: A technique to encrypt the training data.
+  correct_answer: B
+- id: q34_docker_security
+  question: What are some security best practices for Docker containers?
+  options:
+    A: Use minimal base images, run containers as non-root users, and regularly scan
+      for vulnerabilities.
+    B: Run containers as root users for maximum privileges.
+    C: Expose all ports to the host machine.
+    D: Disable security features to improve performance.
+  correct_answer: A
+- id: q35_flask_api_rate_limiting
+  question: Why is rate limiting important for a Flask API?
+  options:
+    A: To improve the API's performance.
+    B: To prevent abuse and protect against denial-of-service attacks.
+    C: To simplify the API's documentation.
+    D: To reduce the API's code complexity.
+  correct_answer: B
+- id: q36_docker_restart_policies
+  question: What is the purpose of Docker restart policies?
+  options:
+    A: To automatically rebuild Docker images.
+    B: To automatically restart containers if they exit unexpectedly.
+    C: To manage container resource allocation.
+    D: To monitor container performance.
+  correct_answer: B
+- id: q37_flask_api_caching
+  question: How can you improve the performance of a Flask API by using caching?
+  options:
+    A: Store frequently accessed data in memory to reduce database queries.
+    B: Disable caching to ensure data is always up-to-date.
+    C: Increase the API's request timeout.
+    D: Reduce the API's code complexity.
+  correct_answer: A
+- id: q38_deep_learning_transfer_learning
+  question: What is transfer learning and why is it useful in deep learning?
+  options:
+    A: A technique to train a model from scratch.
+    B: A technique to reuse a pre-trained model on a new task.
+    C: A technique to reduce the model's complexity.
+    D: A technique to encrypt the model's weights.
+  correct_answer: B
+- id: q39_docker_healthchecks
+  question: What is the purpose of Docker healthchecks?
+  options:
+    A: To monitor the container's resource usage.
+    B: To periodically check the container's health and restart it if it fails.
+    C: To manage container networking.
+    D: To automatically scale the container.
+  correct_answer: B
+- id: q40_flask_api_error_codes
+  question: What is the importance of returning appropriate HTTP status codes in a
+    Flask API?
+  options:
+    A: To provide information about the API's performance.
+    B: To indicate the success or failure of a request to the client.
+    C: To simplify the API's documentation.
+    D: To reduce the API's code complexity.
+  correct_answer: B
+- id: q41_docker_volume_types
+  question: What is the difference between a named volume and a bind mount in Docker?
+  options:
+    A: Named volumes are managed by Docker, while bind mounts are managed by the host
+      machine.
+    B: Bind mounts are managed by Docker, while named volumes are managed by the host
+      machine.
+    C: Named volumes are only for temporary data, while bind mounts are for persistent
+      data.
+    D: Bind mounts are only for temporary data, while named volumes are for persistent
+      data.
+  correct_answer: A
+- id: q42_flask_api_input_validation
+  question: Why is input validation important in a Flask API?
+  options:
+    A: To improve the API's performance.
+    B: To prevent security vulnerabilities and ensure data integrity.
+    C: To simplify the API's documentation.
+    D: To reduce the API's code complexity.
+  correct_answer: B
+- id: q43_deep_learning_model_quantization
+  question: What is model quantization and how does it help with deployment?
+  options:
+    A: Reducing the number of layers in the model.
+    B: Converting the model's weights to lower precision (e.g., from float32 to int8).
+    C: Increasing the model's training data.
+    D: Encrypting the model's weights.
+  correct_answer: B
+- id: q44_docker_swarm
+  question: What is Docker Swarm?
+  options:
+    A: A tool for building Docker images.
+    B: Docker's native container orchestration solution.
+    C: A command-line interface for managing Docker containers.
+    D: A logging driver for Docker containers.
+  correct_answer: B
+- id: q45_flask_api_testing_pytest
+  question: What are the benefits of using pytest for testing a Flask API?
+  options:
+    A: Simplified test discovery and execution.
+    B: Rich set of features for writing and running tests.
+    C: Integration with other testing tools.
+    D: All of the above.
+  correct_answer: D
+- id: q46_deep_learning_model_pruning
+  question: What is model pruning and how does it help with deployment?
+  options:
+    A: Removing unnecessary connections or weights from the model.
+    B: Increasing the model's complexity.
+    C: Using a larger batch size during training.
+    D: Training the model for a longer duration.
+  correct_answer: A
+- id: q47_docker_image_registry
+  question: What is a Docker image registry?
+  options:
+    A: A database for storing Docker containers.
+    B: A service for storing and distributing Docker images.
+    C: A tool for building Docker images.
+    D: A command-line interface for managing Docker containers.
+  correct_answer: B
+- id: q48_flask_api_cors
+  question: What is CORS and why is it important for a Flask API?
+  options:
+    A: Cross-Origin Resource Sharing; it allows or restricts web pages from making
+      requests to a different domain.
+    B: Cross-Origin Request Security; it encrypts API requests.
+    C: Cross-Origin Response System; it manages API responses.
+    D: Cross-Origin Routing System; it handles API routing.
+  correct_answer: A
+- id: q49_deep_learning_model_versioning
+  question: Why is versioning deep learning models important?
+  options:
+    A: To track changes and ensure reproducibility.
+    B: To improve the model's accuracy.
+    C: To reduce the model's size.
+    D: To simplify the model's code.
+  correct_answer: A
+- id: q50_docker_monitoring
+  question: What tools can be used to monitor the performance of Docker containers?
+  options:
+    A: Docker stats, Prometheus, and Grafana.
+    B: Only Docker stats.
+    C: Only Prometheus.
+    D: Only Grafana.
+  correct_answer: A

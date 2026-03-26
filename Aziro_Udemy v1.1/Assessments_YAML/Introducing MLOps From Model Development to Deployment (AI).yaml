@@ -1,0 +1,381 @@
+- id: q1_mlops_importance
+  question: A team is struggling with inconsistent model performance in production
+    due to changes in input data. Which MLOps practice would be MOST effective in
+    addressing this issue?
+  options:
+    A: Implementing more frequent model retraining schedules.
+    B: Establishing robust data validation and monitoring pipelines.
+    C: Increasing the complexity of the model architecture.
+    D: Reducing the frequency of model deployments.
+  correct_answer: B
+- id: q2_devops_mlops_diff
+  question: Compared to traditional DevOps, MLOps places a significantly greater emphasis
+    on which aspect?
+  options:
+    A: Automated infrastructure provisioning.
+    B: Model versioning and data lineage.
+    C: Continuous integration and continuous delivery.
+    D: Code quality and unit testing.
+  correct_answer: B
+- id: q3_git_mlops
+  question: You've trained multiple model versions with varying hyperparameters. What
+    is the BEST practice for managing these in a Git repository?
+  options:
+    A: Store the model weights directly in the Git repository.
+    B: Store model metadata (parameters, metrics) and instructions to recreate the
+      model, not the weights themselves.
+    C: Create separate branches for each model version.
+    D: Use Git LFS to store large model files.
+  correct_answer: B
+- id: q4_docker_benefits
+  question: What is the primary benefit of using Docker in an MLOps pipeline?
+  options:
+    A: Improved code readability and maintainability.
+    B: Ensuring consistent execution environments across different stages.
+    C: Faster model training times.
+    D: Simplified data preprocessing.
+  correct_answer: B
+- id: q5_kubernetes_orchestration
+  question: You need to scale your model serving infrastructure to handle increased
+    traffic. How does Kubernetes facilitate this?
+  options:
+    A: Automatically optimizes model code for performance.
+    B: Provides mechanisms for auto-scaling based on resource utilization.
+    C: Manages data storage and retrieval.
+    D: Handles model versioning and rollback.
+  correct_answer: B
+- id: q6_experimentation_production
+  question: What is a key difference between the experimentation and production phases
+    in an ML workflow?
+  options:
+    A: Experimentation focuses on model accuracy, while production focuses on model
+      latency.
+    B: Experimentation prioritizes flexibility and rapid iteration, while production
+      prioritizes stability and reliability.
+    C: Experimentation requires more computational resources than production.
+    D: Experimentation uses different programming languages than production.
+  correct_answer: B
+- id: q7_cloud_platform_choice
+  question: A company wants to leverage a cloud platform for MLOps. They prioritize
+    cost-effectiveness and have limited existing cloud infrastructure. Which platform
+    might be a good starting point?
+  options:
+    A: AWS SageMaker
+    B: Google Cloud AI Platform
+    C: Azure Machine Learning
+    D: All platforms are equally cost-effective.
+  correct_answer: A
+- id: q8_model_drift
+  question: Your model's performance degrades over time in production. What is the
+    MOST likely cause?
+  options:
+    A: A bug in the model's code.
+    B: Model drift due to changes in the input data distribution.
+    C: Insufficient training data.
+    D: Hardware failures.
+  correct_answer: B
+- id: q9_monitoring_metrics
+  question: Besides accuracy, what other metrics are crucial to monitor in a production
+    ML model?
+  options:
+    A: CPU usage and memory consumption.
+    B: Latency, throughput, and data drift.
+    C: Number of lines of code and code complexity.
+    D: Developer productivity and code review time.
+  correct_answer: B
+- id: q10_pipeline_structure
+  question: What is the benefit of structuring your MLOps project with a clear separation
+    of data ingestion, preprocessing, training, and deployment stages?
+  options:
+    A: It simplifies the model training process.
+    B: It improves code readability and facilitates easier debugging and maintenance.
+    C: It reduces the need for version control.
+    D: It eliminates the need for monitoring.
+  correct_answer: B
+- id: q11_containerization_challenges
+  question: When containerizing an ML model, what is a common challenge related to
+    dependencies?
+  options:
+    A: Containers automatically resolve all dependencies.
+    B: Ensuring the container includes all necessary libraries and packages.
+    C: Containers reduce the size of the model.
+    D: Dependencies are not relevant in containerized environments.
+  correct_answer: B
+- id: q12_k8s_pod_scaling
+  question: In Kubernetes, how are multiple instances of your model serving application
+    managed?
+  options:
+    A: Through the use of Services.
+    B: Through the use of Deployments and ReplicaSets.
+    C: Through direct manipulation of the underlying nodes.
+    D: Kubernetes automatically handles scaling without configuration.
+  correct_answer: B
+- id: q13_data_validation
+  question: What is the purpose of data validation in an MLOps pipeline?
+  options:
+    A: To improve model accuracy.
+    B: To ensure data quality and prevent unexpected errors during training and inference.
+    C: To reduce data storage costs.
+    D: To speed up data preprocessing.
+  correct_answer: B
+- id: q14_model_versioning
+  question: Why is model versioning crucial in MLOps?
+  options:
+    A: To track changes in model code.
+    B: To enable rollback to previous model versions in case of issues.
+    C: To simplify model deployment.
+    D: To reduce model training time.
+  correct_answer: B
+- id: q15_ci_cd_ml
+  question: How can CI/CD pipelines be adapted for ML models?
+  options:
+    A: By automating model training, evaluation, and deployment.
+    B: By focusing solely on code changes.
+    C: By eliminating the need for testing.
+    D: By manually deploying models to production.
+  correct_answer: A
+- id: q16_feature_store
+  question: What problem does a feature store aim to solve in an MLOps context?
+  options:
+    A: Storing model weights efficiently.
+    B: Ensuring consistency and reusability of features across different models and
+      pipelines.
+    C: Automating model training.
+    D: Managing Kubernetes deployments.
+  correct_answer: B
+- id: q17_monitoring_alerts
+  question: What is the purpose of setting up alerts in a monitoring system for your
+    ML model?
+  options:
+    A: To automatically retrain the model.
+    B: To notify the team when performance metrics fall below predefined thresholds.
+    C: To improve model accuracy.
+    D: To reduce data storage costs.
+  correct_answer: B
+- id: q18_model_retraining
+  question: When should you consider retraining your ML model?
+  options:
+    A: Only when the model's accuracy drops below a certain threshold.
+    B: Regularly, and when significant data drift is detected.
+    C: Only when new data becomes available.
+    D: Never, once the model is deployed.
+  correct_answer: B
+- id: q19_dockerfile_best_practices
+  question: What is a best practice when writing a Dockerfile for an ML model?
+  options:
+    A: Include all possible dependencies to avoid errors.
+    B: Use a minimal base image and layer instructions to reduce image size.
+    C: Ignore caching to ensure reproducibility.
+    D: Store sensitive information directly in the Dockerfile.
+  correct_answer: B
+- id: q20_k8s_namespace
+  question: What is the purpose of Kubernetes namespaces?
+  options:
+    A: To manage network traffic.
+    B: To isolate resources and provide a scope for names.
+    C: To store model weights.
+    D: To automate model training.
+  correct_answer: B
+- id: q21_data_preprocessing_pipeline
+  question: Why is it important to version control your data preprocessing pipeline?
+  options:
+    A: To track changes in the raw data.
+    B: To ensure reproducibility of the data transformation steps.
+    C: To reduce data storage costs.
+    D: To improve model accuracy.
+  correct_answer: B
+- id: q22_model_serving
+  question: What are some common methods for serving ML models in production?
+  options:
+    A: Flask, FastAPI, TensorFlow Serving.
+    B: Jupyter Notebooks, Python scripts.
+    C: Excel spreadsheets, PowerPoint presentations.
+    D: Text editors, command-line interfaces.
+  correct_answer: A
+- id: q23_cloud_cost_optimization
+  question: What strategies can be used to optimize cloud costs for MLOps?
+  options:
+    A: Using spot instances, autoscaling, and right-sizing resources.
+    B: Ignoring resource utilization.
+    C: Using the most expensive cloud services.
+    D: Storing all data in the cloud.
+  correct_answer: A
+- id: q24_model_explainability
+  question: Why is model explainability important in regulated industries?
+  options:
+    A: To improve model accuracy.
+    B: To understand the reasons behind model predictions and ensure fairness and
+      transparency.
+    C: To reduce model training time.
+    D: To simplify model deployment.
+  correct_answer: B
+- id: q25_k8s_ingress
+  question: What is the purpose of a Kubernetes Ingress?
+  options:
+    A: To manage internal communication between pods.
+    B: To expose services to external traffic.
+    C: To store model weights.
+    D: To automate model training.
+  correct_answer: B
+- id: q26_data_lineage
+  question: What does data lineage track?
+  options:
+    A: The accuracy of the model.
+    B: The origin and transformations of data throughout the pipeline.
+    C: The cost of data storage.
+    D: The number of users accessing the data.
+  correct_answer: B
+- id: q27_model_performance_degradation
+  question: You observe a sudden drop in model performance. What is the FIRST step
+    you should take?
+  options:
+    A: Retrain the model immediately.
+    B: Investigate the input data and monitoring metrics for anomalies.
+    C: Increase the model's complexity.
+    D: Deploy a new model version.
+  correct_answer: B
+- id: q28_docker_image_layers
+  question: How do Docker image layers contribute to build speed?
+  options:
+    A: They slow down the build process.
+    B: They allow Docker to cache unchanged layers, speeding up subsequent builds.
+    C: They increase the size of the image.
+    D: They eliminate the need for a Dockerfile.
+  correct_answer: B
+- id: q29_k8s_secrets
+  question: How should sensitive information like API keys be managed in Kubernetes?
+  options:
+    A: Hardcode them directly into the deployment configuration.
+    B: Store them as environment variables in the deployment configuration.
+    C: Use Kubernetes Secrets to securely store and manage them.
+    D: Store them in a public Git repository.
+  correct_answer: C
+- id: q30_feature_engineering
+  question: What is the role of feature engineering in the MLOps pipeline?
+  options:
+    A: To select the best model architecture.
+    B: To transform raw data into features suitable for model training.
+    C: To deploy the model to production.
+    D: To monitor model performance.
+  correct_answer: B
+- id: q31_mlops_tooling
+  question: Which of the following is NOT typically considered a core component of
+    an MLOps toolchain?
+  options:
+    A: Version control (e.g., Git)
+    B: CI/CD pipelines (e.g., Jenkins, GitLab CI)
+    C: Project management software (e.g., Jira)
+    D: Model registry (e.g., MLflow)
+  correct_answer: C
+- id: q32_model_bias
+  question: How can MLOps practices help mitigate model bias?
+  options:
+    A: By ignoring the issue and focusing on accuracy.
+    B: By implementing data validation and monitoring to detect biased data.
+    C: By using more complex model architectures.
+    D: By reducing the amount of training data.
+  correct_answer: B
+- id: q33_k8s_services
+  question: What is the primary function of a Kubernetes Service?
+  options:
+    A: To manage storage volumes.
+    B: To provide a stable network endpoint for accessing pods.
+    C: To schedule pods on nodes.
+    D: To monitor pod health.
+  correct_answer: B
+- id: q34_data_versioning
+  question: What is the benefit of versioning your datasets?
+  options:
+    A: It reduces data storage costs.
+    B: It allows you to reproduce experiments and track data changes.
+    C: It improves model accuracy.
+    D: It simplifies data preprocessing.
+  correct_answer: B
+- id: q35_model_monitoring_techniques
+  question: What are some techniques for detecting model drift?
+  options:
+    A: Monitoring input data distributions and model prediction distributions.
+    B: Ignoring the issue and hoping it resolves itself.
+    C: Increasing the model's complexity.
+    D: Reducing the amount of training data.
+  correct_answer: A
+- id: q36_docker_compose
+  question: What is the purpose of Docker Compose?
+  options:
+    A: To build Docker images.
+    B: To define and run multi-container Docker applications.
+    C: To manage Kubernetes deployments.
+    D: To monitor model performance.
+  correct_answer: B
+- id: q37_k8s_deployments
+  question: What is the role of a Kubernetes Deployment?
+  options:
+    A: To manage network traffic.
+    B: To declare the desired state of your application and manage updates.
+    C: To store model weights.
+    D: To automate model training.
+  correct_answer: B
+- id: q38_feature_store_benefits
+  question: What is a key benefit of using a feature store for online inference?
+  options:
+    A: Reduced model training time.
+    B: Low-latency access to consistent features.
+    C: Simplified data preprocessing.
+    D: Improved model accuracy.
+  correct_answer: B
+- id: q39_alerting_thresholds
+  question: How should alerting thresholds for model performance metrics be determined?
+  options:
+    A: Based on arbitrary values.
+    B: Based on historical performance and business requirements.
+    C: Based on the complexity of the model.
+    D: Based on the size of the training dataset.
+  correct_answer: B
+- id: q40_model_packaging
+  question: What is the best practice for packaging a model for deployment?
+  options:
+    A: Include all source code and data in a single archive.
+    B: Package the model with its dependencies and a serving script.
+    C: Store the model weights in a public repository.
+    D: Deploy the model directly from a Jupyter Notebook.
+  correct_answer: B
+- id: q41_mlflow_tracking
+  question: What is the primary purpose of MLflow Tracking?
+  options:
+    A: To deploy models to production.
+    B: To track experiments and log parameters, metrics, and artifacts.
+    C: To manage Kubernetes deployments.
+    D: To monitor model performance.
+  correct_answer: B
+- id: q42_shadow_deployment
+  question: What is the purpose of a shadow deployment?
+  options:
+    A: To reduce model training time.
+    B: To test a new model version in production without impacting live traffic.
+    C: To simplify model deployment.
+    D: To monitor model performance.
+  correct_answer: B
+- id: q43_k8s_horizontal_pod_autoscaler
+  question: What does a Kubernetes Horizontal Pod Autoscaler (HPA) do?
+  options:
+    A: Automatically scales the number of pods based on CPU utilization or other metrics.
+    B: Manages storage volumes.
+    C: Schedules pods on nodes.
+    D: Monitors pod health.
+  correct_answer: A
+- id: q44_data_quality_checks
+  question: What types of data quality checks should be included in an MLOps pipeline?
+  options:
+    A: Checking for missing values, outliers, and data type consistency.
+    B: Ignoring data quality issues.
+    C: Increasing the amount of training data.
+    D: Simplifying the model architecture.
+  correct_answer: A
+- id: q45_canary_deployment
+  question: What is the main benefit of a canary deployment strategy?
+  options:
+    A: Faster model deployment.
+    B: Reduced risk of introducing bugs or performance issues to all users.
+    C: Simplified model monitoring.
+    D: Lower cloud costs.
+  correct_answer: B
