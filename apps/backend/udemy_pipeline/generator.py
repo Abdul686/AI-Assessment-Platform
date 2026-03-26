@@ -6,9 +6,17 @@ import google.generativeai as genai
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = os.path.join(SCRIPT_DIR, "Output")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "Assessments_YAML")
+DEFAULT_INPUT_FILE = os.path.join(
+    INPUT_DIR, "LLMs Mastery_Complete Guide to Transformers and Gen AI.txt"
+)
+DEFAULT_OUTPUT_FILE = os.path.join(
+    SCRIPT_DIR, "Assessments_LLMs Mastery_Complete Guide to Transformers and Gen AI.yaml"
+)
 
 
-def generate_assessments(content_file_path, output_yaml_path):
+def generate_assessments(
+    content_file_path=DEFAULT_INPUT_FILE, output_yaml_path=DEFAULT_OUTPUT_FILE
+):
     # Read the extracted Udemy data
     with open(content_file_path, "r", encoding="utf-8") as f:
         course_context = f.read()
