@@ -36,6 +36,7 @@ def main() -> None:
         "/dashboard.html": "/pages/dashboard.html",
         "/dahsboard.html": "/pages/dahsboard.html",
         "/create_test.html": "/pages/create_test.html",
+        "/review_test.html": "/pages/review_test.html",
         "/generated_tests.html": "/pages/generated_tests.html",
         "/evaluation.html": "/pages/evaluation.html",
         "/reports.html": "/pages/reports.html",
