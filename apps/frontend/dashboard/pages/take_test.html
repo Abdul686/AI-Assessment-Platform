@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Test - Aziro L&amp;D</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root {
+      --candidate-bg: linear-gradient(180deg, #f4f0ff 0%, #fbf9ff 100%);
+      --candidate-panel: #ffffff;
+      --candidate-border: #e8e1f5;
+      --candidate-ink: #24183d;
+      --candidate-soft: #6d647f;
+      --candidate-accent: #5b5ce2;
+      --candidate-accent-dark: #494ac1;
+      --candidate-highlight: #fff0de;
+    }
+    body {
+      margin: 0;
+      background: var(--candidate-bg);
+      color: var(--candidate-ink);
+      min-height: 100vh;
+      font-family: "DM Sans", sans-serif;
+    }
+    .take-shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+    .brand-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--candidate-ink);
+    }
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ff9b52, #ff6f3c);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(255, 111, 60, 0.24);
+    }
+    .test-layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--candidate-panel);
+      border: 1px solid var(--candidate-border);
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(55, 38, 94, 0.08);
+    }
+    .side-panel {
+      padding: 22px 18px;
+      position: sticky;
+      top: 18px;
+    }
+    .main-panel {
+      padding: 24px;
+    }
+    .side-section + .side-section {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--candidate-border);
+    }
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--candidate-soft);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .candidate-name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .candidate-meta {
+      color: var(--candidate-soft);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .detail-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .detail-card {
+      border: 1px solid var(--candidate-border);
+      background: #faf8ff;
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    .detail-card strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .question-dots {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .question-dot {
+      border: 1px solid var(--candidate-border);
+      background: white;
+      border-radius: 12px;
+      height: 40px;
+      font-weight: 700;
+      color: var(--candidate-soft);
+      cursor: pointer;
+    }
+    .question-dot.current {
+      background: var(--candidate-accent);
+      color: white;
+      border-color: var(--candidate-accent);
+    }
+    .question-dot.answered {
+      background: #eef8f0;
+      color: #16803c;
+      border-color: #bfe0c7;
+    }
+    .question-dot.current.answered {
+      background: var(--candidate-accent);
+      color: white;
+      border-color: var(--candidate-accent);
+    }
+    .screen {
+      display: none;
+    }
+    .screen.active {
+      display: block;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #2a124e 0%, #5b5ce2 100%);
+      color: white;
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .hero-banner h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+    .hero-banner p {
+      margin: 0;
+      max-width: 640px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+    .instruction-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .instruction-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--candidate-border);
+      border-radius: 16px;
+      background: #fcfbff;
+    }
+    .instruction-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--candidate-highlight);
+      color: #b96310;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .start-actions,
+    .nav-actions,
+    .review-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .question-label {
+      color: var(--candidate-soft);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+    .question-card {
+      border: 1px solid var(--candidate-border);
+      border-radius: 20px;
+      padding: 20px;
+      background: #fff;
+    }
+    .question-text {
+      font-size: 20px;
+      line-height: 1.45;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .option-list {
+      display: grid;
+      gap: 12px;
+    }
+    .option-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border: 1px solid var(--candidate-border);
+      border-radius: 16px;
+      background: #fbfaff;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.15s, background 0.15s;
+    }
+    .option-item:hover {
+      border-color: var(--candidate-accent);
+      transform: translateY(-1px);
+      background: #f6f4ff;
+    }
+    .option-item input {
+      margin-top: 3px;
+      accent-color: var(--candidate-accent);
+    }
+    .option-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid var(--candidate-border);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--candidate-soft);
+      flex-shrink: 0;
+    }
+    .question-progress {
+      margin-bottom: 18px;
+    }
+    .progress-bar {
+      height: 8px;
+      background: #ece6f8;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff9b52, #5b5ce2);
+      width: 0;
+      transition: width 0.2s ease;
+    }
+    .review-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .review-card {
+      border: 1px solid var(--candidate-border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: #fcfbff;
+    }
+    .review-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .review-answer {
+      color: var(--candidate-soft);
+      font-size: 13px;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 64px 22px;
+      color: var(--candidate-soft);
+    }
+    @media (max-width: 900px) {
+      .test-layout {
+        grid-template-columns: 1fr;
+      }
+      .side-panel {
+        position: static;
+      }
+    }
+    @media (max-width: 640px) {
+      .main-panel,
+      .side-panel {
+        padding: 18px;
+      }
+      .hero-banner h1 {
+        font-size: 23px;
+      }
+      .question-text {
+        font-size: 18px;
+      }
+      .question-dots {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .start-actions,
+      .nav-actions,
+      .review-actions {
+        flex-direction: column;
+      }
+      .start-actions .btn,
+      .nav-actions .btn,
+      .review-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="take-shell">
+    <div class="brand-strip">
+      <div class="brand-mark">
+        <div class="brand-badge">A</div>
+        <div>
+          <div>Aziro L&amp;D Assessment</div>
+          <div style="font-size:12px;color:var(--candidate-soft);font-weight:500">Candidate test portal</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="appRoot" class="panel main-panel">
+      <div style="font-size:18px;font-weight:700;margin-bottom:8px">Loading assessment...</div>
+      <div class="text-faint">Please wait while your secure test link is verified.</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="../js/api-config.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    let API_BASE_URL = "";
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    let assignmentData = null;
+    let currentQuestionIndex = 0;
+    let answersByQuestionId = {};
+    let assessmentStarted = false;
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function renderError(message) {
+      document.getElementById("appRoot").innerHTML = `
+        <div class="empty-state">
+          <div style="font-size:22px;font-weight:700;margin-bottom:10px;color:var(--candidate-ink)">Assessment unavailable</div>
+          <div>${escapeHtml(message)}</div>
+        </div>
+      `;
+    }
+
+    function renderResult(result) {
+      document.getElementById("appRoot").innerHTML = `
+        <div class="panel main-panel">
+          <div class="hero-banner">
+            <h1>Assessment submitted</h1>
+            <p>Your test has been reviewed and submitted successfully.</p>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-card">
+              <strong>Candidate</strong>
+              ${escapeHtml(assignmentData.assignment.candidateName)}
+            </div>
+            <div class="detail-card">
+              <strong>Course</strong>
+              ${escapeHtml(assignmentData.test.courseName)}
+            </div>
+            <div class="detail-card">
+              <strong>Score</strong>
+              ${escapeHtml(String(result.score))} / ${escapeHtml(String(result.totalQuestions))} (${escapeHtml(String(result.percentage))}%)
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderShell(contentHtml) {
+      document.getElementById("appRoot").outerHTML = `
+        <div id="appRoot" class="test-layout">
+          <aside class="panel side-panel">
+            <div class="side-section">
+              <div class="eyebrow">Candidate</div>
+              <div class="candidate-name">${escapeHtml(assignmentData.assignment.candidateName)}</div>
+              <div class="candidate-meta">
+                ${escapeHtml(assignmentData.assignment.candidateEmail)}<br>
+                Employee ID: ${escapeHtml(assignmentData.assignment.employeeId || "Not provided")}<br>
+                Branch: ${escapeHtml(assignmentData.assignment.branch || "Not provided")}
+              </div>
+            </div>
+            <div class="side-section">
+              <div class="eyebrow">Assessment</div>
+              <div class="detail-grid">
+                <div class="detail-card">
+                  <strong>Course</strong>
+                  ${escapeHtml(assignmentData.test.courseName)}
+                </div>
+                <div class="detail-card">
+                  <strong>Questions</strong>
+                  15 MCQs
+                </div>
+                <div class="detail-card">
+                  <strong>Time Limit</strong>
+                  ${escapeHtml(String(assignmentData.test.timeLimit || "Not set"))} minutes
+                </div>
+              </div>
+            </div>
+            <div class="side-section">
+              <div class="eyebrow">Progress</div>
+              <div class="candidate-meta" id="answeredCountLabel">0 of 15 answered</div>
+              <div class="question-dots" id="questionDots"></div>
+            </div>
+          </aside>
+          <main class="panel main-panel">${contentHtml}</main>
+        </div>
+      `;
+      renderQuestionDots();
+      updateAnsweredCount();
+    }
+
+    function renderQuestionDots() {
+      const dotsContainer = document.getElementById("questionDots");
+      if (!dotsContainer || !assignmentData) {
+        return;
+      }
+
+      dotsContainer.innerHTML = assignmentData.questions.map((question, index) => {
+        const classes = ["question-dot"];
+        if (index === currentQuestionIndex && assessmentStarted) {
+          classes.push("current");
+        }
+        if (answersByQuestionId[question.id]) {
+          classes.push("answered");
+        }
+        return `<button type="button" class="${classes.join(" ")}" data-question-index="${index}">${index + 1}</button>`;
+      }).join("");
+
+      dotsContainer.querySelectorAll("[data-question-index]").forEach((button) => {
+        button.addEventListener("click", () => {
+          if (!assessmentStarted) {
+            return;
+          }
+          currentQuestionIndex = Number(button.dataset.questionIndex);
+          renderQuestionScreen();
+        });
+      });
+    }
+
+    function updateAnsweredCount() {
+      const label = document.getElementById("answeredCountLabel");
+      if (!label || !assignmentData) {
+        return;
+      }
+      const answered = assignmentData.questions.filter((question) => answersByQuestionId[question.id]).length;
+      label.textContent = `${answered} of ${assignmentData.questions.length} answered`;
+    }
+
+    function renderStartScreen() {
+      assessmentStarted = false;
+      renderShell(`
+        <section class="screen active">
+          <div class="hero-banner">
+            <h1>${escapeHtml(assignmentData.test.courseName)}</h1>
+            <p>This assessment contains 15 multiple-choice questions based on the selected Udemy course. Please read the instructions carefully before you begin.</p>
+          </div>
+          <div class="instruction-list">
+            <div class="instruction-item">
+              <div class="instruction-num">1</div>
+              <div>
+                <strong>Read each question carefully</strong>
+                <div class="candidate-meta">Choose one option for every question. You can move forward and backward before final submission.</div>
+              </div>
+            </div>
+            <div class="instruction-item">
+              <div class="instruction-num">2</div>
+              <div>
+                <strong>Use navigation controls</strong>
+                <div class="candidate-meta">Use Previous and Next to move between questions, or jump directly using the numbered question map.</div>
+              </div>
+            </div>
+            <div class="instruction-item">
+              <div class="instruction-num">3</div>
+              <div>
+                <strong>Review before submit</strong>
+                <div class="candidate-meta">At the end, you will see a review page showing all answers before your final submission.</div>
+              </div>
+            </div>
+          </div>
+          <div class="start-actions">
+            <div class="candidate-meta">Candidate: ${escapeHtml(assignmentData.assignment.candidateName)} | Course: ${escapeHtml(assignmentData.test.courseName)}</div>
+            <button class="btn btn-primary" type="button" id="beginAssessmentBtn">Start Test</button>
+          </div>
+        </section>
+      `);
+
+      document.getElementById("beginAssessmentBtn").addEventListener("click", startAssessment);
+    }
+
+    function renderQuestionScreen() {
+      assessmentStarted = true;
+      const question = assignmentData.questions[currentQuestionIndex];
+      const progressPercent = ((currentQuestionIndex + 1) / assignmentData.questions.length) * 100;
+      const selectedAnswer = answersByQuestionId[question.id] || "";
+
+      const optionsHtml = Object.entries(question.options || {}).map(([key, value]) => `
+        <label class="option-item">
+          <input type="radio" name="question-${question.id}" value="${escapeHtml(key)}" ${selectedAnswer === key ? "checked" : ""}>
+          <span class="option-key">${escapeHtml(key)}</span>
+          <span>${escapeHtml(value)}</span>
+        </label>
+      `).join("");
+
+      renderShell(`
+        <section class="screen active">
+          <div class="question-progress">
+            <div class="question-label">Question ${currentQuestionIndex + 1} of ${assignmentData.questions.length}</div>
+            <div class="progress-bar"><div class="progress-fill" style="width:${progressPercent}%"></div></div>
+          </div>
+          <div class="question-card">
+            <div class="question-text">${escapeHtml(question.question)}</div>
+            <div class="option-list">${optionsHtml}</div>
+          </div>
+          <div class="nav-actions">
+            <button class="btn btn-secondary" type="button" id="prevQuestionBtn" ${currentQuestionIndex === 0 ? "disabled" : ""}>Previous Question</button>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-secondary" type="button" id="reviewAssessmentBtn">Review Answers</button>
+              <button class="btn btn-primary" type="button" id="nextQuestionBtn">${currentQuestionIndex === assignmentData.questions.length - 1 ? "Finish Questions" : "Next Question"}</button>
+            </div>
+          </div>
+        </section>
+      `);
+
+      document.querySelectorAll(`input[name="question-${question.id}"]`).forEach((input) => {
+        input.addEventListener("change", () => {
+          answersByQuestionId[question.id] = input.value;
+          renderQuestionDots();
+          updateAnsweredCount();
+        });
+      });
+
+      document.getElementById("prevQuestionBtn").addEventListener("click", () => {
+        if (currentQuestionIndex > 0) {
+          currentQuestionIndex -= 1;
+          renderQuestionScreen();
+        }
+      });
+
+      document.getElementById("nextQuestionBtn").addEventListener("click", () => {
+        const selected = document.querySelector(`input[name="question-${question.id}"]:checked`);
+        if (selected) {
+          answersByQuestionId[question.id] = selected.value;
+        }
+
+        if (currentQuestionIndex === assignmentData.questions.length - 1) {
+          renderReviewScreen();
+          return;
+        }
+
+        currentQuestionIndex += 1;
+        renderQuestionScreen();
+      });
+
+      document.getElementById("reviewAssessmentBtn").addEventListener("click", () => {
+        const selected = document.querySelector(`input[name="question-${question.id}"]:checked`);
+        if (selected) {
+          answersByQuestionId[question.id] = selected.value;
+        }
+        renderReviewScreen();
+      });
+    }
+
+    function renderReviewScreen() {
+      assessmentStarted = true;
+      const reviewCards = assignmentData.questions.map((question, index) => {
+        const selected = answersByQuestionId[question.id];
+        const selectedText = selected ? `${selected}: ${question.options[selected] || ""}` : "Not answered";
+        return `
+          <div class="review-card">
+            <strong>Q${index + 1}. ${escapeHtml(question.question)}</strong>
+            <div class="review-answer">${escapeHtml(selectedText)}</div>
+          </div>
+        `;
+      }).join("");
+
+      renderShell(`
+        <section class="screen active">
+          <div class="hero-banner">
+            <h1>Review your answers</h1>
+            <p>Please check all 15 responses before you submit the assessment. You can still go back and change any answer.</p>
+          </div>
+          <div class="review-grid">${reviewCards}</div>
+          <div class="review-actions">
+            <button class="btn btn-secondary" type="button" id="backToQuestionsBtn">Back to Questions</button>
+            <button class="btn btn-primary" type="button" id="finalSubmitBtn">Submit Test</button>
+          </div>
+        </section>
+      `);
+
+      document.getElementById("backToQuestionsBtn").addEventListener("click", () => {
+        renderQuestionScreen();
+      });
+      document.getElementById("finalSubmitBtn").addEventListener("click", submitAssessment);
+    }
+
+    async function startAssessment() {
+      try {
+        if (!API_BASE_URL) {
+          API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+        }
+        const startResponse = await fetch(`${API_BASE_URL}/api/assignments/by-token/${token}/start`, {
+          method: "POST",
+        });
+        const startPayload = await startResponse.json();
+        if (!startResponse.ok) {
+          throw new Error(startPayload.detail || "Could not start the assessment.");
+        }
+        currentQuestionIndex = 0;
+        renderQuestionScreen();
+      } catch (error) {
+        showToast(error.message || "Could not start the assessment.", "error");
+      }
+    }
+
+    async function submitAssessment() {
+      const answers = assignmentData.questions.map((question) => ({
+        questionId: question.id,
+        selectedAnswer: answersByQuestionId[question.id] || null,
+      }));
+
+      try {
+        if (!API_BASE_URL) {
+          API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+        }
+        const response = await fetch(`${API_BASE_URL}/api/assignments/by-token/${token}/submit`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ answers }),
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.detail || "Failed to submit the assessment.");
+        }
+        renderResult(payload.result);
+      } catch (error) {
+        showToast(error.message || "Failed to submit assessment.", "error");
+      }
+    }
+
+    async function loadAssessment() {
+      if (!token) {
+        renderError("This test link is missing its token.");
+        return;
+      }
+
+      try {
+        API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+        const response = await fetch(`${API_BASE_URL}/api/assignments/by-token/${token}`);
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.detail || "Could not load the assessment.");
+        }
+        assignmentData = payload;
+        answersByQuestionId = {};
+        renderStartScreen();
+      } catch (error) {
+        renderError(error.message || "The assessment could not be loaded.");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadAssessment);
+  </script>
+</body>
+</html>

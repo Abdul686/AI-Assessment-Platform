@@ -354,14 +354,12 @@
           <div class="form-group">
             <label class="form-label" for="questionType">Question Type</label>
             <select class="form-control" id="questionType">
-              <option>MCQ Only</option>
-              <option>Coding Only</option>
-              <option>Mixed (MCQ + Coding)</option>
+              <option selected>MCQ Only</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label" for="questionCount">No. of Questions</label>
-            <input type="number" class="form-control" id="questionCount" value="20" min="5" max="100">
+            <input type="number" class="form-control" id="questionCount" value="15" min="15" max="15" readonly>
           </div>
           <div class="form-group">
             <label class="form-label" for="timeLimit">Time Limit (Minutes)</label>
@@ -497,9 +495,10 @@
 
 <div class="toast" id="toast"></div>
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
-  const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:8001`;
+  let API_BASE_URL = "";
   const courseSearch = document.getElementById("courseSearch");
   const courseDropdownList = document.getElementById("courseDropdownList");
   const courseStatus = document.getElementById("courseStatus");
@@ -611,6 +610,7 @@
 
   async function loadCourseList() {
     try {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
       const response = await fetch(`${API_BASE_URL}/api/courses`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
@@ -628,6 +628,9 @@
   }
 
   async function loadCourseQuestions(courseName) {
+    if (!API_BASE_URL) {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+    }
     courseQuestions.style.display = "block";
     courseQuestionsList.textContent = "Fetching questions...";
     courseStatus.textContent = `Loading questions for ${courseName}...`;
@@ -689,8 +692,8 @@
 
   function buildConfig() {
     return {
-      questionType: document.getElementById("questionType").value,
-      questionCount: document.getElementById("questionCount").value,
+      questionType: "MCQ Only",
+      questionCount: 15,
       timeLimit: document.getElementById("timeLimit").value,
       aptitudeEnabled: document.getElementById("aptitudeEnabled").value,
       difficultyLevel: document.getElementById("difficultyLevel").value,
@@ -716,7 +719,7 @@
     localStorage.setItem("testCourse", selectedCourse);
     localStorage.setItem("testConfig", JSON.stringify(buildConfig()));
     localStorage.setItem("testCandidates", JSON.stringify(candidates));
-    window.location.href = "/review_test.html";
+    window.location.href = "review_test.html";
   }
 
   courseSearch.addEventListener("focus", () => {
