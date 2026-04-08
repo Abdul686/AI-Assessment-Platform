@@ -15,10 +15,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field
 
 try:
-    from .db import get_connection, init_db
+    from .db import get_connection, get_database_path, init_db
     from .email_service import send_assignment_email
 except ImportError:
-    from db import get_connection, init_db
+    from db import get_connection, get_database_path, init_db
     from email_service import send_assignment_email
 
 
@@ -39,7 +39,7 @@ DATA_DIRS = [
 ]
 DEFAULT_PUBLIC_TEST_BASE_URL = os.getenv(
     "PUBLIC_TEST_BASE_URL",
-    "http://127.0.0.1:5500/apps/frontend/dashboard/pages/take_test.html",
+    "http://127.0.0.1:8000/take_test.html",
 )
 DEFAULT_API_PORT = int(os.getenv("API_PORT", "8011"))
 
@@ -223,7 +223,7 @@ def health() -> dict[str, str]:
     return {
         "status": "ok",
         "service": "Aziro L&D Assessment API",
-        "database": str((BASE_DIR / "data" / "aziro_assessments.db").resolve()),
+        "database": str(get_database_path().resolve()),
         "api_port": str(DEFAULT_API_PORT),
     }
 

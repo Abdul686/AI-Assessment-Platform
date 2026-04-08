@@ -168,8 +168,9 @@ window.addCandidateRow = function(containerId) {
 // If not on login page and no session token, redirect.
 (function authGuard() {
   const loginPage  = window.location.pathname.includes('login.html');
+  const publicTestPage = window.location.pathname.includes('take_test.html');
   const hasSession = localStorage.getItem('trainiq_user');
-  if (!loginPage && !hasSession) {
+  if (!loginPage && !publicTestPage && !hasSession) {
     window.location.replace('login.html');
   }
 })();
