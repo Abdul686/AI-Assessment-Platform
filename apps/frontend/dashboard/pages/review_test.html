@@ -140,8 +140,12 @@
 
 <div class="toast" id="toast"></div>
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
+  let API_BASE_URL = "";
+  let hasReviewData = false;
+
   function addReviewItem(container, label, value) {
     const item = document.createElement("div");
     item.className = "review-item";
@@ -158,13 +162,18 @@
     const candidates = JSON.parse(localStorage.getItem("testCandidates") || "[]");
 
     if (!course) {
-      showToast("No course selected. Redirecting...", "error");
-      setTimeout(() => {
-        window.location.href = "/create_test.html";
-      }, 1200);
+      hasReviewData = false;
+      document.getElementById("reviewCourse").textContent =
+        "No test details found. Create a test first to review it here.";
+      document.getElementById("reviewConfig").innerHTML = "";
+      document.getElementById("reviewDelivery").innerHTML = "";
+      document.getElementById("reviewCandidates").innerHTML =
+        '<div class="review-item">No candidates loaded.</div>';
+      showToast("No saved test details found.", "error");
       return;
     }
 
+    hasReviewData = true;
     document.getElementById("reviewCourse").textContent = course;
 
     const configContainer = document.getElementById("reviewConfig");
@@ -199,16 +208,73 @@
   }
 
   function goBack() {
-    window.location.href = "/create_test.html";
+    window.location.href = "create_test.html";
   }
 
-  function generateTest() {
-    const candidates = JSON.parse(localStorage.getItem("testCandidates") || "[]");
-    const count = candidates.length;
-    showToast(`${count} test link${count > 1 ? "s" : ""} generated and sent.`);
-    setTimeout(() => {
-      window.location.href = "/generated_tests.html";
-    }, 1200);
+  function getFrontendBaseUrl() {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.pathname = currentUrl.pathname.replace(/\/review_test\.html$/, "/take_test.html");
+    currentUrl.search = "";
+    currentUrl.hash = "";
+    return currentUrl.toString();
+  }
+
+  async function generateTest() {
+    if (!hasReviewData) {
+      showToast("Please create a test before generating links.", "error");
+      setTimeout(() => {
+        window.location.href = "create_test.html";
+      }, 1000);
+      return;
+    }
+
+    const button = document.querySelector(".btn-generate");
+    const originalLabel = button.textContent;
+    button.disabled = true;
+    button.textContent = "Generating...";
+
+    try {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+      const course = localStorage.getItem("testCourse");
+      const config = JSON.parse(localStorage.getItem("testConfig") || "{}");
+      const candidates = JSON.parse(localStorage.getItem("testCandidates") || "[]");
+
+      const response = await fetch(`${API_BASE_URL}/api/tests`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          course,
+          config: {
+            ...config,
+            questionCount: Number(config.questionCount || 0),
+            timeLimit: config.timeLimit ? Number(config.timeLimit) : null,
+          },
+          candidates,
+          frontendBaseUrl: getFrontendBaseUrl(),
+        }),
+      });
+
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.detail || "Failed to create test.");
+      }
+
+      localStorage.setItem("latestGeneratedTest", JSON.stringify(payload));
+      showToast(
+        `${payload.assignments.length} test link${payload.assignments.length > 1 ? "s" : ""} generated successfully.`,
+        "success"
+      );
+      setTimeout(() => {
+        window.location.href = "generated_tests.html";
+      }, 900);
+    } catch (error) {
+      showToast(error.message || "Failed to generate test.", "error");
+    } finally {
+      button.disabled = false;
+      button.textContent = originalLabel;
+    }
   }
 
   document.addEventListener("DOMContentLoaded", loadReviewData);

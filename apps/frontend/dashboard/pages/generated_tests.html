@@ -130,10 +130,138 @@
 </div>
 <div class="toast" id="toast"></div>
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
+<script>
+  let API_BASE_URL = "";
+
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function statusBadge(status) {
+    const normalized = (status || "pending").toLowerCase();
+    if (normalized === "completed") return "badge-completed";
+    if (normalized === "expired") return "badge-expired";
+    if (normalized === "started") return "badge-active";
+    return "badge-pending";
+  }
+
+  window.copyLink = function(link) {
+    if (!link) {
+      showToast("No link available to copy.", "error");
+      return;
+    }
+    navigator.clipboard.writeText(link).then(() => {
+      showToast("Test link copied to clipboard!", "success");
+    }).catch(() => {
+      showToast("Could not copy the test link.", "error");
+    });
+  };
+
+  function renderTests(tests) {
+    const testList = document.getElementById("testList");
+    if (!tests.length) {
+      testList.innerHTML = `
+        <div class="card" style="padding:24px">
+          <div style="font-size:15px;font-weight:700;margin-bottom:6px">No generated tests yet</div>
+          <div class="text-faint">Create a new test to see generated candidate links here.</div>
+        </div>
+      `;
+      return;
+    }
+
+    const cards = [];
+    tests.forEach((test, index) => {
+      (test.assignments || []).forEach((assignment) => {
+        cards.push(`
+          <div class="test-card anim-${(index % 6) + 1}" data-status="${escapeHtml(assignment.status || "pending")}">
+            <div class="card-top">
+              <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
+              <div style="flex:1">
+                <div class="emp-name">
+                  ${escapeHtml(assignment.candidateName)}
+                  <span class="badge ${statusBadge(assignment.status)}">${escapeHtml(assignment.status || "pending")}</span>
+                </div>
+                <div class="emp-meta">${escapeHtml(assignment.candidateEmail)} · ${escapeHtml(test.courseName)} · ${escapeHtml(assignment.branch || "No branch")}</div>
+              </div>
+              <div class="card-actions">
+                <a href="${escapeHtml(assignment.testLink)}" target="_blank" rel="noopener" class="action-btn">Open Test</a>
+                <a href="#" class="action-btn" data-copy-link="${escapeHtml(assignment.testLink)}">Copy Link</a>
+              </div>
+            </div>
+            <div class="module-list">
+              <div class="module-row">
+                <div class="mod-badge" style="background:#5b5ce2">${escapeHtml(String(test.questionCount || 0))}</div>
+                <span class="mod-name">${escapeHtml(test.courseName)}</span>
+                <span style="font-size:12px;color:var(--text3)">
+                  ${assignment.status === "completed"
+                    ? `Score: ${escapeHtml(String(assignment.score ?? 0))}/${escapeHtml(String(assignment.totalQuestions ?? 15))} (${escapeHtml(String(assignment.percentage ?? 0))}%)`
+                    : `Email: ${escapeHtml(assignment.emailStatus || "not_requested")}`}
+                </span>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+    });
+
+    testList.innerHTML = cards.join("");
+    document.querySelectorAll("[data-copy-link]").forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.copyLink(item.dataset.copyLink);
+      });
+    });
+    if (typeof setupSelectAll === "function") {
+      setupSelectAll("selectAll", "cb-item", "selCount");
+    }
+  }
+
+  async function loadTests() {
+    try {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+      const response = await fetch(`${API_BASE_URL}/api/tests`);
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.detail || "Failed to load tests.");
+      }
+      renderTests(payload.tests || []);
+    } catch (error) {
+      const latest = localStorage.getItem("latestGeneratedTest");
+      if (latest) {
+        const parsed = JSON.parse(latest);
+        renderTests([
+          {
+            ...parsed.test,
+            assignments: parsed.assignments || [],
+          },
+        ]);
+        return;
+      }
+
+      document.getElementById("testList").innerHTML = `
+        <div class="card" style="padding:24px">
+          <div style="font-size:15px;font-weight:700;margin-bottom:6px">Could not load generated tests</div>
+          <div class="text-faint">${escapeHtml(error.message || "Unexpected error.")}</div>
+        </div>
+      `;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadTests);
+</script>
 <script>
   setupSelectAll('selectAll','cb-item','selCount');
   function copyLink(){showToast('🔗 Test link copied to clipboard!');}
+</script>
+<script>
+  copyLink = window.copyLink;
 </script>
 </body>
 </html>
