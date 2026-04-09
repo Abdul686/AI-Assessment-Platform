@@ -6,75 +6,7 @@
   <title>Create Test - Aziro L&amp;D Platform</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .page-wrap { max-width: 860px; }
-
-    .searchable-dropdown {
-      position: relative;
-    }
-    .dropdown-list {
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 0;
-      right: 0;
-      max-height: 220px;
-      overflow-y: auto;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-md);
-      z-index: 20;
-      display: none;
-    }
-    .dropdown-item {
-      padding: 10px 12px;
-      cursor: pointer;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--text2);
-    }
-    .dropdown-item:last-child {
-      border-bottom: none;
-    }
-    .dropdown-item:hover,
-    .dropdown-item.active {
-      background: var(--surface2);
-      color: var(--text);
-    }
-    .dropdown-empty {
-      padding: 10px 12px;
-      font-size: 13px;
-      color: var(--text3);
-    }
-    .course-preview {
-      display: none;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 12px 14px;
-      margin-bottom: 14px;
-    }
-    .course-preview-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-    .course-preview-list {
-      font-size: 13px;
-      line-height: 1.45;
-      color: var(--text2);
-    }
-    .course-preview-item {
-      margin-bottom: 10px;
-    }
-    .course-preview-item:last-child {
-      margin-bottom: 0;
-    }
-    .course-preview-options {
-      margin-left: 12px;
-      color: var(--text3);
-      font-size: 12px;
-    }
+    .page-wrap { max-width: 980px; }
 
     .cand-section-header {
       display: flex;
@@ -125,7 +57,7 @@
     }
     .cand-thead {
       display: grid;
-      grid-template-columns: 1.4fr 1.8fr 1.2fr 1.2fr 42px;
+      grid-template-columns: 1.4fr 1.8fr 1.2fr 1.6fr 42px;
       background: var(--surface2);
       border-bottom: 1px solid var(--border);
       padding: 10px 14px;
@@ -141,7 +73,7 @@
 
     .cand-row {
       display: grid;
-      grid-template-columns: 1.4fr 1.8fr 1.2fr 1.2fr 42px;
+      grid-template-columns: 1.4fr 1.8fr 1.2fr 1.6fr 42px;
       align-items: center;
       padding: 9px 14px;
       gap: 8px;
@@ -177,6 +109,10 @@
     }
     .cand-row select option {
       background: var(--surface2);
+    }
+    .course-search-input::-webkit-calendar-picker-indicator {
+      opacity: 0.6;
+      cursor: pointer;
     }
 
     .del-btn {
@@ -232,11 +168,21 @@
       margin-bottom: 16px;
     }
 
-    .delivery-grid {
+    .entry-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 18px;
+    }
+    .entry-section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+    .entry-section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
     }
 
     .action-bar {
@@ -305,6 +251,22 @@
       transform: translateY(-1px);
       box-shadow: 0 4px 16px rgba(164, 53, 240, 0.35);
     }
+    @media (max-width: 860px) {
+      .cand-thead,
+      .cand-row {
+        grid-template-columns: 1fr;
+      }
+      .cand-thead {
+        display: none;
+      }
+      .cand-row {
+        padding: 14px;
+        gap: 10px;
+      }
+      .cand-row > div:last-child {
+        justify-content: flex-start !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -325,162 +287,57 @@
         <div class="step-header">
           <div class="step-num">1</div>
           <div>
-            <div class="step-title">Select Course &amp; Configuration</div>
-            <div class="step-sub">Choose the course, preview randomized questions, and configure the test.</div>
+            <div class="step-title">Employee Test Details</div>
+            <div class="step-sub">Enter the required employee details and select the Udemy course in one place.</div>
           </div>
         </div>
 
-        <div class="form-group mb-md">
-          <label class="form-label" for="courseSearch">Udemy Course</label>
-          <div class="searchable-dropdown">
-            <input
-              type="text"
-              class="form-control"
-              id="courseSearch"
-              placeholder="Search and select a course..."
-              autocomplete="off"
-            >
-            <div class="dropdown-list" id="courseDropdownList"></div>
-          </div>
-          <small id="courseStatus" class="text-faint">Select a course to load a randomized set of 15 MCQ questions from YAML.</small>
-        </div>
+        <div class="entry-layout">
+          <div class="entry-section">
+            <div class="entry-section-title">Employee Details</div>
+            <div class="info-tip">
+              <span>Enter employee name, work email, location, and choose the Udemy course for each employee. A unique test link will be created automatically for every selected course assignment.</span>
+            </div>
 
-        <div class="course-preview" id="courseQuestions">
-          <div class="course-preview-title">Sample Questions (15 randomized)</div>
-          <div class="course-preview-list" id="courseQuestionsList"></div>
-        </div>
-
-        <div class="form-grid-3 mb-md">
-          <div class="form-group">
-            <label class="form-label" for="questionType">Question Type</label>
-            <select class="form-control" id="questionType">
-              <option selected>MCQ Only</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="questionCount">No. of Questions</label>
-            <input type="number" class="form-control" id="questionCount" value="15" min="15" max="15" readonly>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="timeLimit">Time Limit (Minutes)</label>
-            <input type="number" class="form-control" id="timeLimit" value="30" min="10" max="180">
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label class="form-label" for="aptitudeEnabled">Aptitude Test</label>
-            <select class="form-control" id="aptitudeEnabled">
-              <option>Yes - Include Aptitude Section</option>
-              <option>No - Skip Aptitude</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="difficultyLevel">Difficulty Level</label>
-            <select class="form-control" id="difficultyLevel">
-              <option>Beginner (0-1 yrs)</option>
-              <option selected>Intermediate (1-3 yrs)</option>
-              <option>Advanced (3+ yrs)</option>
-              <option>Mixed - Auto Detect</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="step-card anim-2">
-        <div class="step-header">
-          <div class="step-num">2</div>
-          <div>
-            <div class="step-title">Employee Details</div>
-            <div class="step-sub">Enter candidate details. No pre-registration is required.</div>
-          </div>
-        </div>
-
-        <div class="info-tip">
-          <span>Enter employee name, work email, employee ID, and branch. The system creates a unique test link per candidate automatically.</span>
-        </div>
-
-        <div class="cand-section-header">
-          <div class="cand-section-title">
-            Candidate List
-            <span class="cand-count-badge" id="candCount">1</span>
-          </div>
-          <button class="add-cand-top" type="button" onclick="addCandidate()">Add Candidate</button>
-        </div>
-
-        <div class="cand-table-wrap">
-          <div class="cand-thead">
-            <div class="cth">Full Name</div>
-            <div class="cth">Email</div>
-            <div class="cth">Employee ID</div>
-            <div class="cth">Branch</div>
-            <div></div>
-          </div>
-          <div id="candBody">
-            <div class="cand-row" id="cr-1">
-              <div><input type="text" placeholder="e.g. Ananya Sharma"></div>
-              <div><input type="email" placeholder="ananya@company.com"></div>
-              <div><input type="text" placeholder="e.g. EMP12345"></div>
-              <div>
-                <select>
-                  <option value="">Branch</option>
-                  <option>Delhi HQ</option>
-                  <option>Mumbai</option>
-                  <option>Bangalore</option>
-                  <option>Pune</option>
-                  <option>Hyderabad</option>
-                  <option>Chennai</option>
-                  <option>Kolkata</option>
-                  <option>Other</option>
-                </select>
+            <div class="cand-section-header">
+              <div class="cand-section-title">
+                Candidate List
+                <span class="cand-count-badge" id="candCount">1</span>
               </div>
-              <div style="display:flex;justify-content:center">
-                <button class="del-btn" type="button" onclick="delRow(this)">X</button>
+              <button class="add-cand-top" type="button" onclick="addCandidate()">Add Candidate</button>
+            </div>
+
+            <div class="cand-table-wrap">
+              <div class="cand-thead">
+                <div class="cth">Employee Name</div>
+                <div class="cth">Employee Email</div>
+                <div class="cth">Location</div>
+                <div class="cth">Udemy Course</div>
+                <div></div>
+              </div>
+              <div id="candBody">
+                <div class="cand-row" id="cr-1">
+                  <div><input type="text" placeholder="e.g. Ananya Sharma"></div>
+                  <div><input type="email" placeholder="ananya@company.com"></div>
+                  <div>
+                    <select>
+                      <option value="">Select location</option>
+                      <option>Chennai</option>
+                      <option>Pune</option>
+                      <option>Bangalore</option>
+                      <option>Noida</option>
+                    </select>
+                  </div>
+                  <div><input type="text" class="course-search-input" data-course-input="true" list="courseOptionsList" placeholder="Search Udemy course" autocomplete="off"></div>
+                  <div style="display:flex;justify-content:center">
+                    <button class="del-btn" type="button" onclick="delRow(this)">X</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <button class="add-another-row" type="button" onclick="addCandidate()">Add Another Candidate</button>
-      </div>
-
-      <div class="step-card anim-3">
-        <div class="step-header">
-          <div class="step-num">3</div>
-          <div>
-            <div class="step-title">Test Delivery Method</div>
-            <div class="step-sub">Choose how the unique test link is delivered to the employee.</div>
+            <button class="add-another-row" type="button" onclick="addCandidate()">Add Another Candidate</button>
           </div>
-        </div>
-
-        <div class="delivery-grid">
-          <div class="form-group">
-            <label class="form-label" for="sendMethod">Send Method</label>
-            <select class="form-control" id="sendMethod">
-              <option>Send via Outlook (Microsoft Graph API)</option>
-              <option>Generate Link Only - Copy Manually</option>
-              <option>Generate Link + Show QR Code</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="linkExpiry">Link Expiry</label>
-            <select class="form-control" id="linkExpiry">
-              <option>7 Days</option>
-              <option>3 Days</option>
-              <option>1 Day</option>
-              <option>No Expiry</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="customMessage">Custom Email Message (Optional)</label>
-          <textarea
-            class="form-control"
-            id="customMessage"
-            rows="3"
-            placeholder="Dear {name}, please complete your training assessment for {course} using the link below. Link expires in {expiry}. - L&amp;D Team"
-          ></textarea>
         </div>
       </div>
 
@@ -494,31 +351,43 @@
 </div>
 
 <div class="toast" id="toast"></div>
+<datalist id="courseOptionsList"></datalist>
 <script src="../js/sidebar.js"></script>
 <script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
   let API_BASE_URL = "";
-  const courseSearch = document.getElementById("courseSearch");
-  const courseDropdownList = document.getElementById("courseDropdownList");
-  const courseStatus = document.getElementById("courseStatus");
-  const courseQuestions = document.getElementById("courseQuestions");
-  const courseQuestionsList = document.getElementById("courseQuestionsList");
   let rowId = 1;
   let availableCourses = [];
 
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
   function branchOptionsMarkup() {
     return `
-      <option value="">Branch</option>
-      <option>Delhi HQ</option>
-      <option>Mumbai</option>
-      <option>Bangalore</option>
-      <option>Pune</option>
-      <option>Hyderabad</option>
+      <option value="">Select location</option>
       <option>Chennai</option>
-      <option>Kolkata</option>
-      <option>Other</option>
+      <option>Pune</option>
+      <option>Bangalore</option>
+      <option>Noida</option>
     `;
+  }
+
+  function courseInputMarkup(selectedCourse = "") {
+    return `<input type="text" class="course-search-input" data-course-input="true" list="courseOptionsList" placeholder="Search Udemy course" autocomplete="off" value="${escapeHtml(selectedCourse)}">`;
+  }
+
+  function refreshCourseInputs() {
+    const datalist = document.getElementById("courseOptionsList");
+    datalist.innerHTML = availableCourses
+      .map((course) => `<option value="${escapeHtml(course.name)}"></option>`)
+      .join("");
   }
 
   function addCandidate() {
@@ -531,8 +400,8 @@
     row.innerHTML = `
       <div><input type="text" placeholder="Employee name"></div>
       <div><input type="email" placeholder="email@company.com"></div>
-      <div><input type="text" placeholder="Employee ID"></div>
       <div><select>${branchOptionsMarkup()}</select></div>
+      <div>${courseInputMarkup()}</div>
       <div style="display:flex;justify-content:center">
         <button class="del-btn" type="button" onclick="delRow(this)">X</button>
       </div>
@@ -557,57 +426,6 @@
       document.querySelectorAll("#candBody .cand-row").length;
   }
 
-  function renderCourseDropdown(courses) {
-    courseDropdownList.innerHTML = "";
-
-    if (!courses.length) {
-      const empty = document.createElement("div");
-      empty.className = "dropdown-empty";
-      empty.textContent = "No matching courses found.";
-      courseDropdownList.appendChild(empty);
-      return;
-    }
-
-    courses.forEach((course) => {
-      const item = document.createElement("div");
-      item.className = "dropdown-item";
-      item.dataset.value = course.name;
-      item.textContent = course.name;
-      item.addEventListener("mousedown", (event) => {
-        event.preventDefault();
-        selectCourse(course.name);
-      });
-      courseDropdownList.appendChild(item);
-    });
-  }
-
-  function filterCourses(query) {
-    const normalized = query.trim().toLowerCase();
-    const filtered = !normalized
-      ? availableCourses
-      : availableCourses.filter((course) =>
-          course.name.toLowerCase().includes(normalized)
-        );
-    renderCourseDropdown(filtered);
-    courseDropdownList.style.display = "block";
-  }
-
-  function getSelectedCourse() {
-    const exactMatch = availableCourses.find(
-      (course) => course.name.toLowerCase() === courseSearch.value.trim().toLowerCase()
-    );
-    return courseSearch.dataset.selectedCourse || (exactMatch ? exactMatch.name : "");
-  }
-
-  function selectCourse(courseName) {
-    courseSearch.value = courseName;
-    courseSearch.dataset.selectedCourse = courseName;
-    courseDropdownList.style.display = "none";
-    if (courseName) {
-      loadCourseQuestions(courseName);
-    }
-  }
-
   async function loadCourseList() {
     try {
       API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
@@ -617,60 +435,11 @@
       }
       const payload = await response.json();
       availableCourses = payload.courses || [];
-      renderCourseDropdown(availableCourses);
-      courseStatus.textContent = `Loaded ${availableCourses.length} courses from backend.`;
+      refreshCourseInputs();
     } catch (error) {
       availableCourses = [];
-      renderCourseDropdown([]);
-      courseStatus.textContent = "Failed to load courses from the API.";
       console.error(error);
-    }
-  }
-
-  async function loadCourseQuestions(courseName) {
-    if (!API_BASE_URL) {
-      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
-    }
-    courseQuestions.style.display = "block";
-    courseQuestionsList.textContent = "Fetching questions...";
-    courseStatus.textContent = `Loading questions for ${courseName}...`;
-
-    try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/questions?course=${encodeURIComponent(courseName)}&count=15`
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
-      const payload = await response.json();
-      courseQuestionsList.innerHTML = "";
-
-      payload.questions.forEach((question, index) => {
-        const item = document.createElement("div");
-        item.className = "course-preview-item";
-
-        const title = document.createElement("div");
-        title.style.fontWeight = "700";
-        title.textContent = `${index + 1}. ${question.question}`;
-
-        const options = document.createElement("div");
-        options.className = "course-preview-options";
-        options.textContent = Object.entries(question.options || {})
-          .map(([key, value]) => `${key}: ${value}`)
-          .join(" | ");
-
-        item.appendChild(title);
-        item.appendChild(options);
-        courseQuestionsList.appendChild(item);
-      });
-
-      courseStatus.textContent =
-        `Loaded ${payload.questions.length} questions (from ${payload.available} available).`;
-    } catch (error) {
-      courseQuestionsList.textContent = "Failed to load questions.";
-      courseStatus.textContent = "Failed to load questions from the API.";
-      console.error(error);
+      showToast("Failed to load courses from the API.", "error");
     }
   }
 
@@ -680,11 +449,12 @@
       const inputs = row.querySelectorAll("input, select");
       const name = inputs[0].value.trim();
       const email = inputs[1].value.trim();
-      const employeeId = inputs[2].value.trim();
-      const branch = inputs[3].value;
+      const branch = inputs[2].value;
+      const course = inputs[3].value;
+      const isValidCourse = availableCourses.some((item) => item.name === course);
 
-      if (name && email) {
-        candidates.push({ name, email, employeeId, branch });
+      if (name && email && isValidCourse) {
+        candidates.push({ name, email, employeeId: "", branch, course });
       }
     });
     return candidates;
@@ -694,48 +464,40 @@
     return {
       questionType: "MCQ Only",
       questionCount: 15,
-      timeLimit: document.getElementById("timeLimit").value,
-      aptitudeEnabled: document.getElementById("aptitudeEnabled").value,
-      difficultyLevel: document.getElementById("difficultyLevel").value,
-      sendMethod: document.getElementById("sendMethod").value,
-      linkExpiry: document.getElementById("linkExpiry").value,
-      customMessage: document.getElementById("customMessage").value.trim(),
+      timeLimit: 30,
+      aptitudeEnabled: "No",
+      difficultyLevel: "Intermediate",
+      sendMethod: "Send via Outlook (Microsoft Graph API)",
+      linkExpiry: "7 Days",
+      customMessage: "",
     };
   }
 
   function goToReview() {
-    const selectedCourse = getSelectedCourse();
-    if (!selectedCourse) {
-      showToast("Please select a course.", "error");
-      return;
-    }
-
     const candidates = buildCandidates();
     if (!candidates.length) {
-      showToast("Add at least one candidate with name and email.", "error");
+      showToast("Add at least one candidate with name, email, and course.", "error");
       return;
     }
 
-    localStorage.setItem("testCourse", selectedCourse);
+    const incompleteRow = [...document.querySelectorAll("#candBody .cand-row")].some((row) => {
+      const inputs = row.querySelectorAll("input, select");
+      const hasCourse = availableCourses.some((item) => item.name === inputs[3].value);
+      return inputs[0].value.trim() || inputs[1].value.trim() || inputs[2].value || inputs[3].value
+        ? !(inputs[0].value.trim() && inputs[1].value.trim() && hasCourse)
+        : false;
+    });
+
+    if (incompleteRow) {
+      showToast("Complete name, email, and select a valid course for each entered candidate.", "error");
+      return;
+    }
+
+    localStorage.removeItem("testCourse");
     localStorage.setItem("testConfig", JSON.stringify(buildConfig()));
     localStorage.setItem("testCandidates", JSON.stringify(candidates));
     window.location.href = "review_test.html";
   }
-
-  courseSearch.addEventListener("focus", () => {
-    filterCourses(courseSearch.value);
-  });
-
-  courseSearch.addEventListener("input", () => {
-    courseSearch.dataset.selectedCourse = "";
-    filterCourses(courseSearch.value);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".searchable-dropdown")) {
-      courseDropdownList.style.display = "none";
-    }
-  });
 
   document.addEventListener("DOMContentLoaded", () => {
     updateCount();

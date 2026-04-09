@@ -309,6 +309,82 @@
       padding: 64px 22px;
       color: var(--candidate-soft);
     }
+    .success-shell {
+      max-width: 760px;
+      margin: 40px auto 0;
+    }
+    .success-card {
+      padding: 30px;
+    }
+    .success-title {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0 0 10px;
+      color: var(--candidate-ink);
+    }
+    .success-copy {
+      margin: 0 0 22px;
+      color: var(--candidate-soft);
+      line-height: 1.7;
+    }
+    .proctor-alert {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #ffd7d7;
+      background: #fff5f5;
+      color: #a12a2a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .proctor-note {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--candidate-border);
+      background: #fcfbff;
+      color: var(--candidate-soft);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(16, 10, 31, 0.52);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+    .modal-card {
+      width: min(100%, 460px);
+      background: #fff;
+      border: 1px solid var(--candidate-border);
+      border-radius: 24px;
+      box-shadow: 0 28px 60px rgba(37, 24, 61, 0.2);
+      padding: 24px;
+    }
+    .modal-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--candidate-ink);
+    }
+    .modal-copy {
+      color: var(--candidate-soft);
+      font-size: 14px;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
     @media (max-width: 900px) {
       .test-layout {
         grid-template-columns: 1fr;
@@ -346,6 +422,12 @@
   </style>
 </head>
 <body>
+  <noscript>
+    <div style="max-width:720px;margin:48px auto;padding:24px;border-radius:20px;background:#fff;border:1px solid #e8e1f5;color:#24183d;font-family:DM Sans,sans-serif">
+      <h1 style="margin:0 0 12px;font-size:24px">JavaScript Required</h1>
+      <p style="margin:0;line-height:1.6">JavaScript must be enabled to start and complete this assessment. If JavaScript is disabled, the test cannot be accessed.</p>
+    </div>
+  </noscript>
   <div class="take-shell">
     <div class="brand-strip">
       <div class="brand-mark">
@@ -364,6 +446,15 @@
   </div>
 
   <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="proctorModal">
+    <div class="modal-card">
+      <div class="modal-title" id="proctorModalTitle">Assessment warning</div>
+      <div class="modal-copy" id="proctorModalMessage"></div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" type="button" id="proctorModalButton">Return to Test</button>
+      </div>
+    </div>
+  </div>
   <script src="../js/api-config.js"></script>
   <script src="../js/main.js"></script>
   <script>
@@ -374,6 +465,15 @@
     let currentQuestionIndex = 0;
     let answersByQuestionId = {};
     let assessmentStarted = false;
+    let proctoringEnabled = false;
+    let monitoringInitialized = false;
+    let strikeCount = 0;
+    const MAX_STRIKES = 3;
+    let isStartingAssessment = false;
+    let isSubmittingAssessment = false;
+    let lastViolationAt = 0;
+    let violationModalOpen = false;
+    let currentModalAction = null;
 
     function escapeHtml(text) {
       return String(text || "")
@@ -394,8 +494,13 @@
     }
 
     function renderResult(result) {
-      document.getElementById("appRoot").innerHTML = `
-        <div class="panel main-panel">
+      deactivateProctoring();
+      closeProctorModal();
+      document.getElementById("appRoot").outerHTML = `
+        <div id="appRoot" class="success-shell">
+          <div class="panel success-card">
+            <div class="success-title">You have successfully submitted the test</div>
+            <p class="success-copy">Your assessment has been submitted successfully. You may now close this window.</p>
           <div class="hero-banner">
             <h1>Assessment submitted</h1>
             <p>Your test has been reviewed and submitted successfully.</p>
@@ -413,6 +518,7 @@
               <strong>Score</strong>
               ${escapeHtml(String(result.score))} / ${escapeHtml(String(result.totalQuestions))} (${escapeHtml(String(result.percentage))}%)
             </div>
+          </div>
           </div>
         </div>
       `;
@@ -461,6 +567,168 @@
       updateAnsweredCount();
     }
 
+    function canHandleViolation() {
+      if (!proctoringEnabled || !assessmentStarted || isSubmittingAssessment || violationModalOpen) {
+        return false;
+      }
+      const now = Date.now();
+      if (now - lastViolationAt < 1200) {
+        return false;
+      }
+      lastViolationAt = now;
+      return true;
+    }
+
+    function deactivateProctoring() {
+      proctoringEnabled = false;
+      assessmentStarted = false;
+      if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    function openProctorModal(title, message, buttonLabel, action) {
+      const modal = document.getElementById("proctorModal");
+      document.getElementById("proctorModalTitle").textContent = title;
+      document.getElementById("proctorModalMessage").textContent = message;
+      const button = document.getElementById("proctorModalButton");
+      button.textContent = buttonLabel;
+      currentModalAction = action;
+      violationModalOpen = true;
+      modal.classList.add("active");
+    }
+
+    function closeProctorModal() {
+      const modal = document.getElementById("proctorModal");
+      modal.classList.remove("active");
+      currentModalAction = null;
+      violationModalOpen = false;
+      lastViolationAt = Date.now();
+    }
+
+    async function restoreAssessmentFocus() {
+      try {
+        if (!document.fullscreenElement) {
+          await document.documentElement.requestFullscreen();
+        }
+      } catch (error) {
+        showToast("Full screen permission is required to continue the assessment.", "error");
+      } finally {
+        closeProctorModal();
+      }
+    }
+
+    async function forceSubmitTest(reason) {
+      if (isSubmittingAssessment) {
+        return;
+      }
+      isSubmittingAssessment = true;
+      const answers = assignmentData.questions.map((question) => ({
+        questionId: question.id,
+        selectedAnswer: answersByQuestionId[question.id] || null,
+      }));
+
+      try {
+        if (!API_BASE_URL) {
+          API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+        }
+        const response = await fetch(`${API_BASE_URL}/api/assignments/by-token/${token}/submit`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ answers }),
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.detail || "Failed to submit the assessment.");
+        }
+        renderResult(payload.result);
+        showToast(reason || "Test submitted.", "success");
+      } catch (error) {
+        deactivateProctoring();
+        renderError(reason || error.message || "The test was terminated and could not be submitted.");
+      } finally {
+        isSubmittingAssessment = false;
+      }
+    }
+
+    function handleStrike(reason) {
+      if (!canHandleViolation()) {
+        return;
+      }
+
+      strikeCount += 1;
+      if (strikeCount >= MAX_STRIKES) {
+        const message = `Strike ${strikeCount}: ${reason} Maximum violations reached. Your test is being submitted automatically.`;
+        deactivateProctoring();
+        openProctorModal("Assessment terminated", message, "Submit Test", async () => {
+          closeProctorModal();
+          await forceSubmitTest("Test terminated due to proctoring violations.");
+        });
+        showToast(message, "error");
+        return;
+      }
+
+      const warningMessage = `Strike ${strikeCount}: ${reason} ${MAX_STRIKES - strikeCount} warning(s) remaining before the test is terminated. Click below to return to full screen and continue.`;
+      openProctorModal("Assessment warning", warningMessage, "Return to Test", restoreAssessmentFocus);
+      showToast(warningMessage, "error");
+    }
+
+    function initializeProctoring() {
+      if (monitoringInitialized) {
+        return;
+      }
+      monitoringInitialized = true;
+
+      document.addEventListener("fullscreenchange", () => {
+        if (!document.fullscreenElement) {
+          handleStrike("You exited full screen mode.");
+        }
+      });
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          handleStrike("You switched tabs or minimized the browser.");
+        }
+      });
+
+      window.addEventListener("blur", () => {
+        handleStrike("You moved away from the assessment window.");
+      });
+
+      document.addEventListener("contextmenu", (event) => {
+        if (proctoringEnabled) {
+          event.preventDefault();
+        }
+      });
+
+      ["copy", "cut", "paste"].forEach((eventName) => {
+        document.addEventListener(eventName, (event) => {
+          if (proctoringEnabled) {
+            event.preventDefault();
+            showToast("Clipboard actions are disabled during the assessment.", "error");
+          }
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!proctoringEnabled) {
+          return;
+        }
+
+        const key = event.key.toLowerCase();
+        const blockedCombo = (event.ctrlKey || event.metaKey) && ["a", "c", "i", "j", "p", "r", "s", "u", "v", "x"].includes(key);
+        const blockedShiftCombo = event.ctrlKey && event.shiftKey && ["c", "i", "j"].includes(key);
+        const blockedFunctionKey = ["F5", "F11", "F12"].includes(event.key);
+
+        if (blockedCombo || blockedShiftCombo || blockedFunctionKey) {
+          event.preventDefault();
+          showToast("Keyboard shortcuts are disabled during the assessment.", "error");
+        }
+      });
+    }
+
     function renderQuestionDots() {
       const dotsContainer = document.getElementById("questionDots");
       if (!dotsContainer || !assignmentData) {
@@ -500,6 +768,10 @@
 
     function renderStartScreen() {
       assessmentStarted = false;
+      proctoringEnabled = false;
+      strikeCount = 0;
+      isStartingAssessment = false;
+      isSubmittingAssessment = false;
       renderShell(`
         <section class="screen active">
           <div class="hero-banner">
@@ -529,14 +801,20 @@
               </div>
             </div>
           </div>
+          <div class="proctor-note">
+            Proctoring is enabled for this assessment. You must keep the test in full screen, avoid switching tabs or windows, and keyboard shortcuts, copy, paste, and right-click are blocked while the test is active.
+          </div>
+          <div class="proctor-alert">
+            Three proctoring violations will automatically terminate and submit the test. If JavaScript is disabled, the assessment cannot start.
+          </div>
           <div class="start-actions">
             <div class="candidate-meta">Candidate: ${escapeHtml(assignmentData.assignment.candidateName)} | Course: ${escapeHtml(assignmentData.test.courseName)}</div>
-            <button class="btn btn-primary" type="button" id="beginAssessmentBtn">Start Test</button>
+            <button class="btn btn-primary" type="button" id="beginAssessmentBtn">Enter Full Screen and Start Test</button>
           </div>
         </section>
       `);
 
-      document.getElementById("beginAssessmentBtn").addEventListener("click", startAssessment);
+      document.getElementById("beginAssessmentBtn").addEventListener("click", (event) => startAssessment(event.currentTarget));
     }
 
     function renderQuestionScreen() {
@@ -645,8 +923,21 @@
       document.getElementById("finalSubmitBtn").addEventListener("click", submitAssessment);
     }
 
-    async function startAssessment() {
+    async function startAssessment(button) {
+      if (isStartingAssessment) {
+        return;
+      }
+
+      isStartingAssessment = true;
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Starting...";
+      }
+
       try {
+        if (!document.fullscreenElement) {
+          await document.documentElement.requestFullscreen();
+        }
         if (!API_BASE_URL) {
           API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
         }
@@ -657,38 +948,27 @@
         if (!startResponse.ok) {
           throw new Error(startPayload.detail || "Could not start the assessment.");
         }
+        initializeProctoring();
+        proctoringEnabled = true;
+        strikeCount = 0;
         currentQuestionIndex = 0;
         renderQuestionScreen();
       } catch (error) {
+        if (document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
         showToast(error.message || "Could not start the assessment.", "error");
+        if (button) {
+          button.disabled = false;
+          button.textContent = "Enter Full Screen and Start Test";
+        }
+      } finally {
+        isStartingAssessment = false;
       }
     }
 
     async function submitAssessment() {
-      const answers = assignmentData.questions.map((question) => ({
-        questionId: question.id,
-        selectedAnswer: answersByQuestionId[question.id] || null,
-      }));
-
-      try {
-        if (!API_BASE_URL) {
-          API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
-        }
-        const response = await fetch(`${API_BASE_URL}/api/assignments/by-token/${token}/submit`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ answers }),
-        });
-        const payload = await response.json();
-        if (!response.ok) {
-          throw new Error(payload.detail || "Failed to submit the assessment.");
-        }
-        renderResult(payload.result);
-      } catch (error) {
-        showToast(error.message || "Failed to submit assessment.", "error");
-      }
+      await forceSubmitTest("Assessment submitted successfully.");
     }
 
     async function loadAssessment() {
@@ -711,6 +991,14 @@
         renderError(error.message || "The assessment could not be loaded.");
       }
     }
+
+    document.getElementById("proctorModalButton").addEventListener("click", async () => {
+      if (typeof currentModalAction === "function") {
+        await currentModalAction();
+      } else {
+        closeProctorModal();
+      }
+    });
 
     document.addEventListener("DOMContentLoaded", loadAssessment);
   </script>

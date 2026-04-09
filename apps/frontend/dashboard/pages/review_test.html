@@ -111,7 +111,7 @@
 
     <div class="content page-wrap">
       <div class="review-section">
-        <div class="review-title">Selected Course</div>
+        <div class="review-title">Selected Course(s)</div>
         <div id="reviewCourse" class="review-item"></div>
       </div>
 
@@ -157,11 +157,11 @@
   }
 
   function loadReviewData() {
-    const course = localStorage.getItem("testCourse");
     const config = JSON.parse(localStorage.getItem("testConfig") || "{}");
     const candidates = JSON.parse(localStorage.getItem("testCandidates") || "[]");
+    const courses = [...new Set(candidates.map((candidate) => candidate.course).filter(Boolean))];
 
-    if (!course) {
+    if (!candidates.length || !courses.length) {
       hasReviewData = false;
       document.getElementById("reviewCourse").textContent =
         "No test details found. Create a test first to review it here.";
@@ -174,7 +174,7 @@
     }
 
     hasReviewData = true;
-    document.getElementById("reviewCourse").textContent = course;
+    document.getElementById("reviewCourse").textContent = courses.join(", ");
 
     const configContainer = document.getElementById("reviewConfig");
     configContainer.innerHTML = "";
@@ -200,7 +200,7 @@
       item.appendChild(strong);
       item.appendChild(
         document.createTextNode(
-          ` (${candidate.email}) - ID: ${candidate.employeeId || "N/A"} - Branch: ${candidate.branch || "N/A"}`
+          ` (${candidate.email}) - Course: ${candidate.course || "N/A"} - Branch: ${candidate.branch || "N/A"}`
         )
       );
       candidatesContainer.appendChild(item);
@@ -235,35 +235,62 @@
 
     try {
       API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
-      const course = localStorage.getItem("testCourse");
       const config = JSON.parse(localStorage.getItem("testConfig") || "{}");
       const candidates = JSON.parse(localStorage.getItem("testCandidates") || "[]");
+      const groupedByCourse = candidates.reduce((groups, candidate) => {
+        if (!candidate.course) {
+          return groups;
+        }
+        groups[candidate.course] = groups[candidate.course] || [];
+        groups[candidate.course].push(candidate);
+        return groups;
+      }, {});
 
-      const response = await fetch(`${API_BASE_URL}/api/tests`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          course,
-          config: {
-            ...config,
-            questionCount: Number(config.questionCount || 0),
-            timeLimit: config.timeLimit ? Number(config.timeLimit) : null,
-          },
-          candidates,
-          frontendBaseUrl: getFrontendBaseUrl(),
-        }),
-      });
-
-      const payload = await response.json();
-      if (!response.ok) {
-        throw new Error(payload.detail || "Failed to create test.");
+      const groupedEntries = Object.entries(groupedByCourse);
+      if (!groupedEntries.length) {
+        throw new Error("No candidate courses were selected.");
       }
 
-      localStorage.setItem("latestGeneratedTest", JSON.stringify(payload));
+      const payloads = [];
+      for (const [course, groupedCandidates] of groupedEntries) {
+        const response = await fetch(`${API_BASE_URL}/api/tests`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            course,
+            config: {
+              ...config,
+              questionCount: Number(config.questionCount || 0),
+              timeLimit: config.timeLimit ? Number(config.timeLimit) : null,
+            },
+            candidates: groupedCandidates.map((candidate) => ({
+              name: candidate.name,
+              email: candidate.email,
+              employeeId: candidate.employeeId || "",
+              branch: candidate.branch || "",
+            })),
+            frontendBaseUrl: getFrontendBaseUrl(),
+          }),
+        });
+
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.detail || `Failed to create test for ${course}.`);
+        }
+        payloads.push(payload);
+      }
+
+      const mergedPayload = {
+        message: "Tests created successfully.",
+        tests: payloads.map((payload) => payload.test),
+        assignments: payloads.flatMap((payload) => payload.assignments || []),
+      };
+
+      localStorage.setItem("latestGeneratedTest", JSON.stringify(mergedPayload));
       showToast(
-        `${payload.assignments.length} test link${payload.assignments.length > 1 ? "s" : ""} generated successfully.`,
+        `${mergedPayload.assignments.length} test link${mergedPayload.assignments.length > 1 ? "s" : ""} generated successfully.`,
         "success"
       );
       setTimeout(() => {

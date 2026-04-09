@@ -236,12 +236,18 @@
       const latest = localStorage.getItem("latestGeneratedTest");
       if (latest) {
         const parsed = JSON.parse(latest);
-        renderTests([
-          {
-            ...parsed.test,
-            assignments: parsed.assignments || [],
-          },
-        ]);
+        const fallbackTests = Array.isArray(parsed.tests) && parsed.tests.length
+          ? parsed.tests.map((test) => ({
+              ...test,
+              assignments: (parsed.assignments || []).filter((assignment) => assignment.testId === test.id),
+            }))
+          : [
+              {
+                ...parsed.test,
+                assignments: parsed.assignments || [],
+              },
+            ];
+        renderTests(fallbackTests);
         return;
       }
 

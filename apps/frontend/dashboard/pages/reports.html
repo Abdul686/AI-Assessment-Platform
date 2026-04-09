@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reports - Aziro L&amp;D</title>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
     .kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:24px}
     .kpi-block{background:var(--surface);border-radius:var(--radius-sm);padding:16px 18px;border:1px solid var(--border);border-left:4px solid;box-shadow:var(--shadow-xs)}
@@ -15,7 +14,6 @@
     .kpi-block.red{border-left-color:var(--danger)}
     .kpi-val{font-size:28px;font-weight:800;color:var(--text);line-height:1}
     .kpi-label{font-size:12px;color:var(--text3);margin-top:4px}
-    .chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:24px}
     .report-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:18px}
     .filters-row{display:flex;gap:10px;flex-wrap:wrap}
     .mobile-results{display:none;gap:12px;flex-direction:column}
@@ -27,7 +25,7 @@
     .mini-stat{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:10px 12px}
     .empty-state{padding:30px 20px;text-align:center;color:var(--text3)}
     @media (max-width: 1100px){.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width: 820px){.chart-grid{grid-template-columns:1fr}.data-table{display:none}.mobile-results{display:flex}}
+    @media (max-width: 820px){.data-table{display:none}.mobile-results{display:flex}}
     @media (max-width: 640px){.kpi-grid{grid-template-columns:1fr}.report-toolbar{align-items:stretch}.filters-row{flex-direction:column}}
   </style>
 </head>
@@ -52,12 +50,7 @@
         <div class="kpi-block red"><div class="kpi-val" id="failedCount">0</div><div class="kpi-label">Failed - Need Re-Training</div></div>
       </div>
 
-      <div class="chart-grid anim-2">
-        <div class="card"><div class="card-header"><div><div class="card-title">Results by Course</div><div class="card-subtitle">Average percentage across completed tests</div></div></div><canvas id="courseChart" height="100"></canvas></div>
-        <div class="card"><div class="card-header"><div><div class="card-title">Branch-wise Pass Rate</div><div class="card-subtitle">Pass percentage by branch</div></div></div><canvas id="branchChart" height="100"></canvas></div>
-      </div>
-
-      <div class="card anim-3">
+      <div class="card anim-2">
         <div class="card-header">
           <div>
             <div class="card-title">Candidate Results</div>
@@ -76,7 +69,7 @@
               <option value="all">All Courses</option>
             </select>
           </div>
-          <button class="export-btn" type="button" onclick="showToast('Use browser print or export once backend file export is added.')">Export</button>
+          <button class="export-btn" type="button" onclick="exportResultsCsv()">Export CSV</button>
         </div>
 
         <table class="data-table" id="resultsTable">
@@ -96,8 +89,7 @@
 <script>
   let API_BASE_URL = "";
   let allResults = [];
-  let courseChart = null;
-  let branchChart = null;
+  let visibleResults = [];
 
   function escapeHtml(text) {
     return String(text || "")
@@ -131,75 +123,6 @@
     document.getElementById("failedCount").textContent = failed;
   }
 
-  function buildCourseChart(results) {
-    const grouped = {};
-    results.forEach((item) => {
-      const key = item.courseName || "Unknown";
-      grouped[key] = grouped[key] || [];
-      grouped[key].push(Number(item.percentage || 0));
-    });
-
-    const labels = Object.keys(grouped);
-    const values = labels.map((label) => {
-      const scores = grouped[label];
-      return Number((scores.reduce((sum, item) => sum + item, 0) / scores.length).toFixed(1));
-    });
-
-    if (courseChart) courseChart.destroy();
-    courseChart = new Chart(document.getElementById("courseChart"), {
-      type: "bar",
-      data: {
-        labels,
-        datasets: [{
-          data: values,
-          backgroundColor: ["#5b5ce2","#2ec5d3","#16a34a","#a435f0","#7c3aed","#ec4899","#f59e0b","#94a3b8"],
-          borderRadius: 8,
-          borderSkipped: false,
-        }],
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: { y: { min: 0, max: 100, ticks: { callback: (v) => `${v}%` } } },
-      },
-    });
-  }
-
-  function buildBranchChart(results) {
-    const grouped = {};
-    results.forEach((item) => {
-      const key = item.branch || "Unknown";
-      grouped[key] = grouped[key] || [];
-      grouped[key].push(resultStatus(item) === "pass" ? 1 : 0);
-    });
-
-    const labels = Object.keys(grouped);
-    const values = labels.map((label) => {
-      const items = grouped[label];
-      const passed = items.reduce((sum, item) => sum + item, 0);
-      return Number(((passed / items.length) * 100).toFixed(1));
-    });
-
-    if (branchChart) branchChart.destroy();
-    branchChart = new Chart(document.getElementById("branchChart"), {
-      type: "bar",
-      data: {
-        labels,
-        datasets: [{
-          data: values,
-          backgroundColor: labels.map((_, index) => ["#16a34a","#5b5ce2","#d97706","#a435f0","#ec4899","#2ec5d3"][index % 6]),
-          borderRadius: 8,
-          borderSkipped: false,
-        }],
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: { y: { min: 0, max: 100, ticks: { callback: (v) => `${v}%` } } },
-      },
-    });
-  }
-
   function populateCourseFilter(results) {
     const select = document.getElementById("courseFilter");
     const current = select.value;
@@ -211,6 +134,7 @@
   }
 
   function renderResults(results) {
+    visibleResults = [...results];
     const tbody = document.getElementById("resultsTableBody");
     const mobile = document.getElementById("mobileResults");
     const empty = document.getElementById("reportsEmpty");
@@ -255,6 +179,58 @@
     `).join("");
   }
 
+  function csvValue(value) {
+    const normalized = String(value ?? "").replace(/\r?\n|\r/g, " ").trim();
+    return `"${normalized.replace(/"/g, '""')}"`;
+  }
+
+  function exportResultsCsv() {
+    if (!visibleResults.length) {
+      showToast("No results available to export.", "error");
+      return;
+    }
+
+    const headers = [
+      "Employee",
+      "Email",
+      "Course",
+      "Branch",
+      "Score",
+      "Total Questions",
+      "Percentage",
+      "Status",
+      "Submitted At",
+    ];
+
+    const rows = visibleResults.map((item) => ([
+      item.candidateName || "",
+      item.candidateEmail || "",
+      item.courseName || "",
+      item.branch || "No branch",
+      item.score ?? 0,
+      item.totalQuestions ?? 15,
+      `${item.percentage ?? 0}%`,
+      resultStatus(item) === "pass" ? "Pass" : "Fail",
+      formatDate(item.submittedAt),
+    ]));
+
+    const csv = [headers, ...rows]
+      .map((row) => row.map(csvValue).join(","))
+      .join("\r\n");
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const stamp = new Date().toISOString().slice(0, 10);
+    link.href = url;
+    link.download = `candidate-results-${stamp}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    showToast(`Exported ${visibleResults.length} result${visibleResults.length === 1 ? "" : "s"} to CSV.`, "success");
+  }
+
   function applyFilters() {
     const query = document.getElementById("searchInput").value.trim().toLowerCase();
     const status = document.getElementById("statusFilter").value;
@@ -281,8 +257,6 @@
 
       allResults = payload.results || [];
       updateKpis(allResults);
-      buildCourseChart(allResults);
-      buildBranchChart(allResults);
       populateCourseFilter(allResults);
       applyFilters();
     } catch (error) {
