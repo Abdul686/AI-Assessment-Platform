@@ -202,7 +202,7 @@ if (typeof Chart !== 'undefined') {
   Chart.defaults.font.family    = "'DM Sans', sans-serif";
   Chart.defaults.font.size      = 12;
   Chart.defaults.plugins.legend.display = false;
-  Chart.defaults.plugins.tooltip.backgroundColor = '#2a124e';
+  Chart.defaults.plugins.tooltip.backgroundColor = '#2d4f95';
   Chart.defaults.plugins.tooltip.borderColor      = 'rgba(255,255,255,0.12)';
   Chart.defaults.plugins.tooltip.borderWidth      = 1;
   Chart.defaults.plugins.tooltip.padding          = 10;
@@ -215,4 +215,4 @@ if (typeof Chart !== 'undefined') {
 /* ── SIDEBAR NAV ICON SVGs (injected via JS to keep HTML DRY) ── */
 // Not used here — icons are inline in each HTML file for clarity.
 
-console.log('%cTrainIQ L&D Platform loaded ✓', 'color:#a435f0;font-weight:bold;font-size:13px');
+console.log('%cTrainIQ L&D Platform loaded ✓', 'color:#355ca8;font-weight:bold;font-size:13px');

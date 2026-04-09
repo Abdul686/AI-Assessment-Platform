@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="../css/style.css">
   <style>
     :root {
-      --candidate-bg: linear-gradient(180deg, #f4f0ff 0%, #fbf9ff 100%);
+      --candidate-bg: linear-gradient(180deg, #eef3fa 0%, #f8fbff 100%);
       --candidate-panel: #ffffff;
-      --candidate-border: #e8e1f5;
-      --candidate-ink: #24183d;
-      --candidate-soft: #6d647f;
-      --candidate-accent: #5b5ce2;
-      --candidate-accent-dark: #494ac1;
-      --candidate-highlight: #fff0de;
+      --candidate-border: #d2ddec;
+      --candidate-ink: #1f2f4d;
+      --candidate-soft: #607692;
+      --candidate-accent: #355ca8;
+      --candidate-accent-dark: #2d4f95;
+      --candidate-highlight: #e5edf9;
     }
     body {
       margin: 0;
@@ -46,12 +46,12 @@
       width: 38px;
       height: 38px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #ff9b52, #ff6f3c);
+      background: linear-gradient(135deg, #5a80c9, #355ca8);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 24px rgba(255, 111, 60, 0.24);
+      box-shadow: 0 10px 24px rgba(53, 92, 168, 0.26);
     }
     .test-layout {
       display: grid;
@@ -63,7 +63,7 @@
       background: var(--candidate-panel);
       border: 1px solid var(--candidate-border);
       border-radius: 22px;
-      box-shadow: 0 18px 40px rgba(55, 38, 94, 0.08);
+      box-shadow: 0 14px 30px rgba(33, 58, 102, 0.12);
     }
     .side-panel {
       padding: 22px 18px;
@@ -103,7 +103,7 @@
     }
     .detail-card {
       border: 1px solid var(--candidate-border);
-      background: #faf8ff;
+      background: #f5f8fc;
       border-radius: 16px;
       padding: 12px 14px;
     }
@@ -148,7 +148,7 @@
       display: block;
     }
     .hero-banner {
-      background: linear-gradient(135deg, #2a124e 0%, #5b5ce2 100%);
+      background: linear-gradient(135deg, #355ca8 0%, #2d4f95 100%);
       color: white;
       border-radius: 22px;
       padding: 24px;
@@ -187,14 +187,14 @@
       padding: 14px 16px;
       border: 1px solid var(--candidate-border);
       border-radius: 16px;
-      background: #fcfbff;
+      background: #f8fbff;
     }
     .instruction-num {
       width: 30px;
       height: 30px;
       border-radius: 50%;
       background: var(--candidate-highlight);
-      color: #b96310;
+      color: #355ca8;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -241,14 +241,14 @@
       padding: 14px 16px;
       border: 1px solid var(--candidate-border);
       border-radius: 16px;
-      background: #fbfaff;
+      background: #f8fbff;
       cursor: pointer;
       transition: border-color 0.15s, transform 0.15s, background 0.15s;
     }
     .option-item:hover {
       border-color: var(--candidate-accent);
       transform: translateY(-1px);
-      background: #f6f4ff;
+      background: #eff4fb;
     }
     .option-item input {
       margin-top: 3px;
@@ -273,14 +273,14 @@
     }
     .progress-bar {
       height: 8px;
-      background: #ece6f8;
+      background: #dbe5f4;
       border-radius: 999px;
       overflow: hidden;
       margin-top: 8px;
     }
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, #ff9b52, #5b5ce2);
+      background: linear-gradient(90deg, #6c8fcb, #355ca8);
       width: 0;
       transition: width 0.2s ease;
     }
@@ -293,7 +293,7 @@
       border: 1px solid var(--candidate-border);
       border-radius: 16px;
       padding: 14px 16px;
-      background: #fcfbff;
+      background: #f8fbff;
     }
     .review-card strong {
       display: block;
