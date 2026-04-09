@@ -112,6 +112,13 @@ def main() -> None:
     api_thread = None
 
     class RootRedirectHandler(SimpleHTTPRequestHandler):
+        def end_headers(self):  # noqa: N802 - match base class signature
+            # Disable browser caching in local dev to prevent stale UI assets.
+            self.send_header("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+            self.send_header("Pragma", "no-cache")
+            self.send_header("Expires", "0")
+            super().end_headers()
+
         def do_GET(self):  # noqa: N802 - match base class signature
             parts = urlsplit(self.path)
             new_path = route_map.get(parts.path)
