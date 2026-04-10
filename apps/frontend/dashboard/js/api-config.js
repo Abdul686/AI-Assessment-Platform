@@ -1,53 +1,34 @@
 window.AziroConfig = window.AziroConfig || {};
 
 window.AziroConfig.getApiBaseUrl = function() {
-  const override = window.localStorage.getItem("aziroApiBaseUrl");
-  if (override) {
-    return override.replace(/\/$/, "");
-  }
-  return `${window.location.protocol}//${window.location.hostname}:8011`;
+  return window.location.origin.replace(/\/$/, "");
 };
 
 window.AziroConfig.getApiBaseUrlCandidates = function() {
-  const override = window.localStorage.getItem("aziroApiBaseUrl");
-  const host = window.location.hostname;
-  const protocol = window.location.protocol;
-  const candidates = [];
-
-  if (override) {
-    candidates.push(override.replace(/\/$/, ""));
-  }
-
-  candidates.push(`${protocol}//${host}:8011`);
-  candidates.push(`${protocol}//${host}:8001`);
-  candidates.push(window.location.origin.replace(/\/$/, ""));
-
-  return [...new Set(candidates)];
+  return [window.AziroConfig.getApiBaseUrl()];
 };
 
 window.AziroConfig.resolveApiBaseUrl = async function() {
-  if (window.AziroConfig._resolvedApiBaseUrl) {
-    return window.AziroConfig._resolvedApiBaseUrl;
+  const baseUrl = window.AziroConfig.getApiBaseUrl();
+
+  if (window.AziroConfig._resolvedApiBaseUrl === baseUrl) {
+    return baseUrl;
   }
 
-  const candidates = window.AziroConfig.getApiBaseUrlCandidates();
-  for (const candidate of candidates) {
-    try {
-      const response = await fetch(`${candidate}/api/health`, { method: "GET" });
-      if (!response.ok) {
-        continue;
-      }
+  try {
+    const response = await fetch(`${baseUrl}/api/health`, { method: "GET" });
+    if (response.ok) {
       const payload = await response.json();
       if (payload && payload.service === "Aziro L&D Assessment API") {
-        window.AziroConfig._resolvedApiBaseUrl = candidate;
-        window.localStorage.setItem("aziroApiBaseUrl", candidate);
-        return candidate;
+        window.AziroConfig._resolvedApiBaseUrl = baseUrl;
+        window.localStorage.setItem("aziroApiBaseUrl", baseUrl);
+        return baseUrl;
       }
-    } catch (error) {
     }
+  } catch (error) {
   }
 
-  const fallback = window.AziroConfig.getApiBaseUrl();
-  window.AziroConfig._resolvedApiBaseUrl = fallback;
-  return fallback;
+  window.AziroConfig._resolvedApiBaseUrl = baseUrl;
+  window.localStorage.setItem("aziroApiBaseUrl", baseUrl);
+  return baseUrl;
 };

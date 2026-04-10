@@ -37,11 +37,12 @@ DATA_DIRS = [
     BASE_DIR.parent.parent / "data" / "assessments",
     BASE_DIR / "udemy_pipeline" / "Assessments_YAML",
 ]
+DEFAULT_SERVER_PORT = os.getenv("PORT", os.getenv("API_PORT", "8000"))
 DEFAULT_PUBLIC_TEST_BASE_URL = os.getenv(
     "PUBLIC_TEST_BASE_URL",
-    "http://127.0.0.1:8000/take_test.html",
+    f"http://127.0.0.1:{DEFAULT_SERVER_PORT}/take_test.html",
 )
-DEFAULT_API_PORT = int(os.getenv("API_PORT", "8011"))
+DEFAULT_API_PORT = int(DEFAULT_SERVER_PORT)
 
 
 class CandidateIn(BaseModel):
