@@ -1,105 +1,124 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard — Aziro L&D</title>
+  <title>Dashboard - Aziro L&amp;D</title>
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
-    /* Help icon tooltip */
     .help-wrap { position: relative; display: inline-flex; }
     .help-btn {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--surface2); border: 1px solid var(--border);
-      color: var(--text2); font-size: 15px; font-weight: 700;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: all var(--t); font-family: 'Syne', sans-serif;
+      min-width: 70px;
+      height: 36px;
+      border-radius: 999px;
+      padding: 0 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--t);
+      font-family: "DM Sans", sans-serif;
     }
     .help-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
     .help-tooltip {
-      position: absolute; top: calc(100% + 12px); right: 0;
-      width: 290px; background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 16px 18px;
-      box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none;
-      transform: translateY(-6px); transition: all 0.2s ease; z-index: 999;
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      width: 300px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-6px);
+      transition: all 0.2s ease;
+      z-index: 999;
     }
     .help-wrap:hover .help-tooltip { opacity: 1; pointer-events: all; transform: translateY(0); }
     .help-tooltip::before {
-      content: ''; position: absolute; top: -6px; right: 14px;
-      width: 10px; height: 10px; background: var(--surface);
-      border-left: 1px solid var(--border); border-top: 1px solid var(--border);
+      content: "";
+      position: absolute;
+      top: -6px;
+      right: 18px;
+      width: 10px;
+      height: 10px;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      border-top: 1px solid var(--border);
       transform: rotate(45deg);
     }
-    .help-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .help-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
     .help-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
     .help-step:last-child { margin-bottom: 0; }
     .help-step-num {
-      width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
-      color: white; font-size: 11px; font-weight: 700;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--accent); color: white; font-size: 11px; font-weight: 700;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
     .help-step-text { font-size: 12px; color: var(--text2); line-height: 1.5; }
-    .help-step-text strong { color: var(--text); font-weight: 600; }
     .help-arrow { text-align: center; color: var(--text3); font-size: 12px; margin: 3px 0 3px 32px; }
-
-    /* Topbar user avatar */
     .topbar-user { display: flex; align-items: center; gap: 8px; cursor: pointer; }
     .topbar-user-avatar {
       width: 34px; height: 34px; border-radius: 50%;
-      background: var(--accent4); color: white;
-      font-size: 13px; font-weight: 700;
+      background: var(--accent4); color: white; font-size: 13px; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
     }
     .topbar-user-name { font-size: 13px; font-weight: 600; color: var(--text); }
     .topbar-search {
       display: flex; align-items: center; gap: 8px;
       background: var(--surface2); border: 1px solid var(--border);
-      border-radius: var(--radius-sm); padding: 8px 14px; min-width: 200px;
+      border-radius: var(--radius-sm); padding: 8px 14px; min-width: 220px;
     }
     .topbar-search input {
       background: transparent; border: none; outline: none;
-      font-size: 13px; color: var(--text); font-family: 'DM Sans', sans-serif; width: 100%;
+      font-size: 13px; color: var(--text); font-family: "DM Sans", sans-serif; width: 100%;
     }
-    .topbar-search input::placeholder { color: var(--text3); }
+    .dashboard-head { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:24px; }
+    .overview-card-blue .oc-big,
+    .overview-card-orange .oc-big { min-height: 42px; }
+    .recent-empty { padding: 20px; text-align: center; color: var(--text3); }
+    @media (max-width: 900px) {
+      .dashboard-head { flex-direction: column; align-items: stretch; }
+      .topbar-search { min-width: 0; width: 100%; }
+    }
   </style>
 </head>
 <body>
-
 <div class="app-shell">
   <div id="sidebar-mount"></div>
 
   <main class="main">
-
-    <!-- TOPBAR -->
     <div class="topbar">
       <div class="topbar-left">
-        <div class="breadcrumb">🏠 Home › Dashboard</div>
+        <div class="breadcrumb">Home &gt; Dashboard</div>
         <div class="page-title">Dashboard</div>
       </div>
       <div class="topbar-right">
         <div class="topbar-search">
-          <span style="color:var(--text3)">🔍</span>
-          <input type="text" placeholder="Search...">
+          <span style="color:var(--text3)">Search</span>
+          <input type="text" id="dashboardSearch" placeholder="Search employee, course, branch">
         </div>
-
-        <!-- ? Help icon -->
         <div class="help-wrap">
-          <button class="help-btn" aria-label="Help">?</button>
+          <button class="help-btn" aria-label="Help">Help</button>
           <div class="help-tooltip">
-            <div class="help-title">📋 How to use this platform</div>
-            <div class="help-step"><div class="help-step-num">1</div><div class="help-step-text"><strong>Create Test</strong> — Select course, set questions & time limit, enter employee name + email</div></div>
+            <div class="help-title">How to use this platform</div>
+            <div class="help-step"><div class="help-step-num">1</div><div class="help-step-text"><strong>Create Test</strong> - Select a course, configure the assessment, and add employee details.</div></div>
             <div class="help-arrow">↓</div>
-            <div class="help-step"><div class="help-step-num">2</div><div class="help-step-text"><strong>Generate Link</strong> — System creates a unique test link and sends via Outlook email</div></div>
+            <div class="help-step"><div class="help-step-num">2</div><div class="help-step-text"><strong>Generate Link</strong> - The system creates one secure test link per candidate.</div></div>
             <div class="help-arrow">↓</div>
-            <div class="help-step"><div class="help-step-num">3</div><div class="help-step-text"><strong>Employee Takes Test</strong> — Employee opens link and completes the assessment</div></div>
+            <div class="help-step"><div class="help-step-num">3</div><div class="help-step-text"><strong>Candidate Takes Test</strong> - Employees complete the 15-question MCQ test from the candidate-only page.</div></div>
             <div class="help-arrow">↓</div>
-            <div class="help-step"><div class="help-step-num">4</div><div class="help-step-text"><strong>Evaluate Results</strong> — View scores & pass/fail in Evaluation page</div></div>
-            <div class="help-arrow">↓</div>
-            <div class="help-step"><div class="help-step-num">5</div><div class="help-step-text"><strong>Download Reports</strong> — Export branch-wise analytics from Reports page</div></div>
+            <div class="help-step"><div class="help-step-num">4</div><div class="help-step-text"><strong>Review Results</strong> - Use Reports and Evaluation to inspect score, pass/fail, and question review.</div></div>
           </div>
         </div>
-
         <div class="topbar-user">
           <div class="topbar-user-avatar" id="tbAvatar">A</div>
           <span class="topbar-user-name" id="tbName">HR Admin</span>
@@ -107,107 +126,100 @@
       </div>
     </div>
 
-    <!-- PAGE CONTENT — only one instance -->
     <div class="content">
-
-      <!-- Welcome + time filters row -->
-      <div class="flex justify-between items-center mb-lg anim-1">
+      <div class="dashboard-head anim-1">
         <div>
           <div class="text-faint text-sm" id="welcomeMsg">Welcome back, HR Admin</div>
-          <div style="display:flex;align-items:center;gap:10px;margin-top:4px">
-            <span style="font-size:22px">📊</span>
-            <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800">Dashboard</span>
-            <span style="font-size:12px;color:var(--text3);background:var(--surface2);padding:3px 10px;border-radius:20px">2 minutes ago</span>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:4px;flex-wrap:wrap">
+            <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800">Training Dashboard</span>
+            <span id="dataScopeLabel" style="font-size:12px;color:var(--text3);background:var(--surface2);padding:3px 10px;border-radius:20px">Today</span>
           </div>
         </div>
-        <div class="flex items-center gap-md">
-          <div class="time-filters">
-            <button class="tf-btn active">Today</button>
-            <button class="tf-btn">Last 24h</button>
-            <button class="tf-btn">Last 7 Days</button>
-            <button class="tf-btn">Last 28 Days</button>
+        <div class="flex items-center gap-md" style="flex-wrap:wrap">
+          <div class="time-filters" id="timeFilters">
+            <button class="tf-btn active" data-range="today">Today</button>
+            <button class="tf-btn" data-range="24h">Last 24h</button>
+            <button class="tf-btn" data-range="7d">Last 7 Days</button>
+            <button class="tf-btn" data-range="28d">Last 28 Days</button>
           </div>
-          <a href="create_test.html" class="btn btn-primary" style="background:var(--accent4);border:none">+ Create Test</a>
+          <a href="create_test.html" class="btn btn-primary">+ Create Test</a>
         </div>
       </div>
 
-      <!-- OVERVIEW BANNER CARDS -->
       <div class="grid-2 mb-lg anim-2">
         <div class="overview-card-blue">
           <div class="oc-head">
-            <div class="oc-title">🌐 Today's Overview — All Branches</div>
-            <div class="oc-tag">● Live</div>
+            <div class="oc-title">Overview</div>
+            <div class="oc-tag">Live</div>
           </div>
-          <div class="oc-big">47</div>
-          <div class="oc-sub">Total Employees Tested Today</div>
+          <div class="oc-big" id="overviewTotalAssignments">0</div>
+          <div class="oc-sub">Candidate assignments in the selected period</div>
           <div class="oc-metrics">
-            <div><div class="oc-metric-val">32</div><div class="oc-metric-label">Total Tests</div></div>
-            <div><div class="oc-metric-val">28</div><div class="oc-metric-label">Completed</div></div>
-            <div><div class="oc-metric-val">4</div><div class="oc-metric-label">Pending</div></div>
+            <div><div class="oc-metric-val" id="overviewTestsCreated">0</div><div class="oc-metric-label">Tests Created</div></div>
+            <div><div class="oc-metric-val" id="overviewCompleted">0</div><div class="oc-metric-label">Completed</div></div>
+            <div><div class="oc-metric-val" id="overviewPending">0</div><div class="oc-metric-label">Pending</div></div>
           </div>
         </div>
         <div class="overview-card-orange">
           <div class="oc-head">
-            <div class="oc-title">👤 My Activity Today</div>
-            <div class="oc-tag">Personal</div>
+            <div class="oc-title">Workflow Health</div>
+            <div class="oc-tag">Current</div>
           </div>
-          <div class="oc-big">12</div>
-          <div class="oc-sub">My Candidates Assigned</div>
+          <div class="oc-big" id="overviewAvgScore">0%</div>
+          <div class="oc-sub">Average score from submitted tests in the selected period</div>
           <div class="oc-metrics">
-            <div><div class="oc-metric-val">8</div><div class="oc-metric-label">Tests Created</div></div>
-            <div><div class="oc-metric-val">6</div><div class="oc-metric-label">Completed</div></div>
-            <div><div class="oc-metric-val">2</div><div class="oc-metric-label">Pending</div></div>
+            <div><div class="oc-metric-val" id="overviewPass">0</div><div class="oc-metric-label">Pass</div></div>
+            <div><div class="oc-metric-val" id="overviewFail">0</div><div class="oc-metric-label">Fail</div></div>
+            <div><div class="oc-metric-val" id="overviewCourses">0</div><div class="oc-metric-label">Active Courses</div></div>
           </div>
         </div>
       </div>
 
-      <!-- STAT CARDS -->
       <div class="grid-4 mb-lg anim-3">
         <div class="stat-card">
           <div class="stat-icon icon-blue">📚</div>
           <div>
-            <div class="stat-val">24</div>
+            <div class="stat-val" id="statCourses">0</div>
             <div class="stat-label">Active Courses</div>
-            <div class="stat-change change-up">↑ 3 this week</div>
+            <div class="stat-change change-up">Loaded from YAML question bank</div>
           </div>
         </div>
         <div class="stat-card">
           <div class="stat-icon icon-green">✅</div>
           <div>
-            <div class="stat-val">186</div>
+            <div class="stat-val" id="statCompleted">0</div>
             <div class="stat-label">Tests Completed</div>
-            <div class="stat-change change-up">↑ 12 today</div>
+            <div class="stat-change change-up" id="statCompletedNote">Submitted assignments</div>
           </div>
         </div>
         <div class="stat-card">
           <div class="stat-icon icon-amber">⏳</div>
           <div>
-            <div class="stat-val">31</div>
+            <div class="stat-val" id="statPending">0</div>
             <div class="stat-label">Pending Tests</div>
-            <div class="stat-change change-down">↓ 5 cleared</div>
+            <div class="stat-change change-neutral">Sent or started but not submitted</div>
           </div>
         </div>
         <div class="stat-card">
           <div class="stat-icon icon-purple">📈</div>
           <div>
-            <div class="stat-val">78%</div>
-            <div class="stat-label">Avg. Score</div>
-            <div class="stat-change change-up">↑ 4% vs last week</div>
+            <div class="stat-val" id="statAverage">0%</div>
+            <div class="stat-label">Average Score</div>
+            <div class="stat-change change-up">Across completed tests</div>
           </div>
         </div>
       </div>
 
-      <!-- CHARTS ROW -->
       <div class="grid-col-2-1 mb-lg anim-4">
         <div class="card">
           <div class="card-header">
             <div>
-              <div class="card-title">Test Performance — Weekly</div>
-              <div class="card-subtitle">Score distribution across all courses</div>
+              <div class="card-title">Assignment Status</div>
+              <div class="card-subtitle">Created vs completed vs pending in the selected period</div>
             </div>
             <div class="legend">
-              <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>Completed</div>
-              <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Passed</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>Created</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Completed</div>
               <div class="legend-item"><div class="legend-dot" style="background:var(--warning)"></div>Pending</div>
             </div>
           </div>
@@ -217,27 +229,20 @@
           <div class="card-header">
             <div>
               <div class="card-title">Pass / Fail</div>
-              <div class="card-subtitle">All tests this month</div>
+              <div class="card-subtitle">Submitted tests in the selected period</div>
             </div>
           </div>
           <canvas id="donutChart" height="160"></canvas>
-          <div class="legend" style="justify-content:center;margin-top:14px">
-            <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Pass 68%</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--danger)"></div>Fail 18%</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--warning)"></div>Pending 14%</div>
-          </div>
+          <div class="legend" style="justify-content:center;margin-top:14px" id="donutLegend"></div>
         </div>
       </div>
 
-      <!-- BOTTOM ROW -->
       <div class="grid-col-3-2 anim-5">
-
-        <!-- Recent Activity Table -->
         <div class="card">
           <div class="card-header">
             <div>
               <div class="card-title">Recent Test Activity</div>
-              <div class="card-subtitle">Latest assignments &amp; completions across all branches</div>
+              <div class="card-subtitle">Latest assignments and submissions from the current workflow</div>
             </div>
             <a href="generated_tests.html" style="font-size:12px;color:var(--accent4);font-weight:600;text-decoration:none">View all →</a>
           </div>
@@ -251,125 +256,319 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody>
-              <tr><td class="td-primary">Ananya Sharma</td><td>Python Fundamentals</td><td>Mumbai</td><td class="text-success fw-600">88%</td><td><span class="badge badge-completed">Completed</span></td></tr>
-              <tr><td class="td-primary">Rajesh Kumar</td><td>Docker Basics</td><td>Delhi HQ</td><td class="text-faint">—</td><td><span class="badge badge-pending">Pending</span></td></tr>
-              <tr><td class="td-primary">Priya Mehta</td><td>Linux Administration</td><td>Pune</td><td class="text-success fw-600">92%</td><td><span class="badge badge-completed">Completed</span></td></tr>
-              <tr><td class="td-primary">Vikram Nair</td><td>AWS Cloud Basics</td><td>Bangalore</td><td class="text-faint">—</td><td><span class="badge badge-sent">Sent</span></td></tr>
-              <tr><td class="td-primary">Kavitha Reddy</td><td>DevOps CI/CD</td><td>Hyderabad</td><td class="text-faint">—</td><td><span class="badge badge-sent">Sent</span></td></tr>
-              <tr><td class="td-primary">Sneha Patel</td><td>Python Advanced</td><td>Chennai</td><td class="text-faint">—</td><td><span class="badge badge-draft">Draft</span></td></tr>
-            </tbody>
+            <tbody id="recentActivityBody"></tbody>
           </table>
+          <div id="recentActivityEmpty" class="recent-empty" style="display:none">No activity yet. Create a test to start the workflow.</div>
         </div>
 
-        <!-- Right column: Quick Actions + Session -->
         <div style="display:flex;flex-direction:column;gap:14px">
-
           <div class="card">
             <div class="card-header">
               <div>
-                <div class="card-title">⚡ Quick Actions</div>
-                <div class="card-subtitle">Jump to common tasks</div>
+                <div class="card-title">Quick Actions</div>
+                <div class="card-subtitle">Use the live workflow pages</div>
               </div>
             </div>
             <div class="qa-list">
               <a href="create_test.html" class="qa-item">
-                <div class="qa-icon-wrap icon-orange">➕</div>
-                <div><div class="qa-label">Create Test</div><div class="qa-desc">Assign test via email link</div></div>
+                <div class="qa-icon-wrap icon-orange">＋</div>
+                <div><div class="qa-label">Create Test</div><div class="qa-desc">Build and assign a new 15-question MCQ test</div></div>
                 <div class="qa-arrow">›</div>
               </a>
               <a href="generated_tests.html" class="qa-item">
                 <div class="qa-icon-wrap icon-blue">📋</div>
-                <div><div class="qa-label">View Generated Tests</div><div class="qa-desc">See all test links sent</div></div>
-                <div class="qa-arrow">›</div>
-              </a>
-              <a href="evaluation.html" class="qa-item">
-                <div class="qa-icon-wrap icon-green">📊</div>
-                <div><div class="qa-label">Evaluate Results</div><div class="qa-desc">Review scores &amp; performance</div></div>
+                <div><div class="qa-label">Generated Tests</div><div class="qa-desc">Open candidate links and track assignment status</div></div>
                 <div class="qa-arrow">›</div>
               </a>
               <a href="reports.html" class="qa-item">
-                <div class="qa-icon-wrap icon-amber">📁</div>
-                <div><div class="qa-label">View Reports</div><div class="qa-desc">Export &amp; share analytics</div></div>
+                <div class="qa-icon-wrap icon-green">📊</div>
+                <div><div class="qa-label">Reports</div><div class="qa-desc">View responsive results, KPIs, and filters</div></div>
+                <div class="qa-arrow">›</div>
+              </a>
+              <a href="evaluation.html" class="qa-item" id="evaluationQuickLink">
+                <div class="qa-icon-wrap icon-amber">🧾</div>
+                <div><div class="qa-label">Latest Evaluation</div><div class="qa-desc" id="evaluationQuickDesc">Opens the most recent completed test review</div></div>
                 <div class="qa-arrow">›</div>
               </a>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-title mb-sm" style="font-size:14px">🖥️ Session Info</div>
+            <div class="card-title mb-sm" style="font-size:14px">Session Info</div>
             <div class="session-box" style="margin-top:0">
               <div class="session-row">👤 <span id="sess-email">hr.admin@company.com</span></div>
-              <div class="session-row">🏢 <span>Branch: Delhi HQ</span></div>
-              <div class="session-row" style="font-size:11px;color:var(--text3)">🕐 Session scoped to today. See Reports for full history.</div>
+              <div class="session-row">🏢 <span id="sess-branch">Branch: Delhi HQ</span></div>
+              <div class="session-row" style="font-size:11px;color:var(--text3)">🕐 This dashboard is connected to the live test creation, generated links, results, and reports flow.</div>
             </div>
           </div>
-
         </div>
       </div>
-
-    </div><!-- /content — ONE closing tag only -->
+    </div>
   </main>
 </div>
 
 <div class="toast" id="toast"></div>
-
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
-  // Load user info from localStorage
-  (function() {
-    try {
-      const u = JSON.parse(localStorage.getItem('trainiq_user'));
-      if (!u) return;
-      const name = u.name || 'HR Admin';
-      if (document.getElementById('tbName'))    document.getElementById('tbName').textContent    = name;
-      if (document.getElementById('tbAvatar'))  document.getElementById('tbAvatar').textContent  = name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
-      if (document.getElementById('welcomeMsg')) document.getElementById('welcomeMsg').textContent = 'Welcome back, ' + name;
-      if (document.getElementById('sess-email')) document.getElementById('sess-email').textContent = u.email || 'hr.admin@company.com';
-    } catch(_) {}
-  })();
+  let API_BASE_URL = "";
+  let allTests = [];
+  let allResults = [];
+  let allCourses = [];
+  let filteredAssignments = [];
+  let selectedRange = "today";
+  let searchQuery = "";
+  let barChart = null;
+  let donutChart = null;
 
-  // Bar chart
-  new Chart(document.getElementById('barChart'), {
-    type: 'bar',
-    data: {
-      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
-      datasets: [
-        { label:'Completed', data:[12,19,8,15,22,10,18], backgroundColor:'rgba(91,92,226,0.75)',  borderRadius:6 },
-        { label:'Passed',    data:[9,15,6,12,18,8,14],   backgroundColor:'rgba(22,163,74,0.75)',  borderRadius:6 },
-        { label:'Pending',   data:[3,4,2,3,4,2,4],       backgroundColor:'rgba(217,119,6,0.65)', borderRadius:6 }
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false } },
-        y: { beginAtZero: true }
-      }
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function safeDate(value) {
+    if (!value) return null;
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function formatDate(value) {
+    const date = safeDate(value);
+    return date ? date.toLocaleString() : "-";
+  }
+
+  function getRangeStart(range) {
+    const now = new Date();
+    if (range === "today") return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if (range === "24h") return new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    if (range === "7d") return new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    return new Date(now.getTime() - 28 * 24 * 60 * 60 * 1000);
+  }
+
+  function assignmentSearchBlob(item) {
+    return [item.candidateName, item.candidateEmail, item.courseName, item.branch, item.status].join(" ").toLowerCase();
+  }
+
+  function flattenAssignments(tests) {
+    return tests.flatMap((test) => (test.assignments || []).map((assignment) => ({
+      ...assignment,
+      courseName: test.courseName,
+      testCreatedAt: test.createdAt,
+      testId: test.id,
+    })));
+  }
+
+  function applyDashboardFilters() {
+    const rangeStart = getRangeStart(selectedRange);
+    const assignments = flattenAssignments(allTests);
+    filteredAssignments = assignments.filter((item) => {
+      const referenceDate = safeDate(item.submittedAt || item.createdAt || item.testCreatedAt);
+      const matchesRange = !referenceDate || referenceDate >= rangeStart;
+      const matchesSearch = !searchQuery || assignmentSearchBlob(item).includes(searchQuery);
+      return matchesRange && matchesSearch;
+    });
+    updateDashboard();
+  }
+
+  function updateDashboard() {
+    const completed = filteredAssignments.filter((item) => item.submittedAt);
+    const pending = filteredAssignments.filter((item) => !item.submittedAt && (["pending", "started", "sent", "not_requested"].includes((item.status || "").toLowerCase()) || !item.status));
+    const pass = completed.filter((item) => Number(item.percentage || 0) >= 60);
+    const fail = completed.filter((item) => Number(item.percentage || 0) < 60);
+    const avgScore = completed.length ? (completed.reduce((sum, item) => sum + Number(item.percentage || 0), 0) / completed.length) : 0;
+    const uniqueTestIds = new Set(filteredAssignments.map((item) => item.testId));
+
+    document.getElementById("overviewTotalAssignments").textContent = filteredAssignments.length;
+    document.getElementById("overviewTestsCreated").textContent = uniqueTestIds.size;
+    document.getElementById("overviewCompleted").textContent = completed.length;
+    document.getElementById("overviewPending").textContent = pending.length;
+    document.getElementById("overviewAvgScore").textContent = `${avgScore.toFixed(1)}%`;
+    document.getElementById("overviewPass").textContent = pass.length;
+    document.getElementById("overviewFail").textContent = fail.length;
+    document.getElementById("overviewCourses").textContent = allCourses.length;
+
+    document.getElementById("statCourses").textContent = allCourses.length;
+    document.getElementById("statCompleted").textContent = completed.length;
+    document.getElementById("statCompletedNote").textContent = completed.length ? `${completed.length} submitted assignments` : "No completed tests yet";
+    document.getElementById("statPending").textContent = pending.length;
+    document.getElementById("statAverage").textContent = `${avgScore.toFixed(1)}%`;
+
+    renderRecentActivity(filteredAssignments);
+    renderCharts(uniqueTestIds.size, completed.length, pending.length, pass.length, fail.length);
+    wireLatestEvaluation(completed);
+  }
+
+  function renderRecentActivity(assignments) {
+    const body = document.getElementById("recentActivityBody");
+    const empty = document.getElementById("recentActivityEmpty");
+    const recent = [...assignments].sort((a, b) => {
+      const aTime = safeDate(a.submittedAt || a.createdAt || a.testCreatedAt)?.getTime() || 0;
+      const bTime = safeDate(b.submittedAt || b.createdAt || b.testCreatedAt)?.getTime() || 0;
+      return bTime - aTime;
+    }).slice(0, 6);
+
+    if (!recent.length) {
+      body.innerHTML = "";
+      empty.style.display = "block";
+      return;
     }
-  });
 
-  // Donut chart
-  new Chart(document.getElementById('donutChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Pass','Fail','Pending'],
-      datasets: [{
-        data: [68,18,14],
-        backgroundColor: ['#16a34a','#dc2626','#d97706'],
-        borderWidth: 0,
-        hoverOffset: 6
-      }]
-    },
-    options: {
-      responsive: true,
-      cutout: '72%',
-      plugins: { legend: { display: false } }
+    empty.style.display = "none";
+    body.innerHTML = recent.map((item) => {
+      const status = (item.status || "pending").toLowerCase();
+      const badgeClass =
+        status === "completed" ? "badge-completed" :
+        status === "expired" ? "badge-expired" :
+        status === "started" ? "badge-active" :
+        status === "sent" ? "badge-sent" :
+        "badge-pending";
+      const scoreCell = item.submittedAt
+        ? `<span class="text-success fw-600">${escapeHtml(String(item.percentage || 0))}%</span>`
+        : `<span class="text-faint">-</span>`;
+
+      return `
+        <tr>
+          <td class="td-primary">${escapeHtml(item.candidateName)}</td>
+          <td>${escapeHtml(item.courseName)}</td>
+          <td>${escapeHtml(item.branch || "No branch")}</td>
+          <td>${scoreCell}</td>
+          <td><span class="badge ${badgeClass}">${escapeHtml(item.status || "pending")}</span></td>
+        </tr>
+      `;
+    }).join("");
+  }
+
+  function renderCharts(createdCount, completedCount, pendingCount, passCount, failCount) {
+    if (barChart) barChart.destroy();
+    barChart = new Chart(document.getElementById("barChart"), {
+      type: "bar",
+      data: {
+        labels: ["Workflow"],
+        datasets: [
+          { label: "Created", data: [createdCount], backgroundColor: "rgba(91,92,226,0.78)", borderRadius: 8 },
+          { label: "Completed", data: [completedCount], backgroundColor: "rgba(22,163,74,0.78)", borderRadius: 8 },
+          { label: "Pending", data: [pendingCount], backgroundColor: "rgba(217,119,6,0.72)", borderRadius: 8 }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true } }
+      }
+    });
+
+    const donutPending = Math.max(completedCount - passCount - failCount, 0);
+    if (donutChart) donutChart.destroy();
+    donutChart = new Chart(document.getElementById("donutChart"), {
+      type: "doughnut",
+      data: {
+        labels: ["Pass", "Fail", "Pending"],
+        datasets: [{
+          data: [passCount, failCount, donutPending],
+          backgroundColor: ["#16a34a", "#dc2626", "#d97706"],
+          borderWidth: 0,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        cutout: "72%",
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    const total = passCount + failCount + donutPending || 1;
+    document.getElementById("donutLegend").innerHTML = `
+      <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div>Pass ${Math.round((passCount / total) * 100)}%</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--danger)"></div>Fail ${Math.round((failCount / total) * 100)}%</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--warning)"></div>Pending ${Math.round((donutPending / total) * 100)}%</div>
+    `;
+  }
+
+  function wireLatestEvaluation(completedAssignments) {
+    const link = document.getElementById("evaluationQuickLink");
+    const desc = document.getElementById("evaluationQuickDesc");
+    const latest = [...completedAssignments].sort((a, b) => {
+      const aTime = safeDate(a.submittedAt)?.getTime() || 0;
+      const bTime = safeDate(b.submittedAt)?.getTime() || 0;
+      return bTime - aTime;
+    })[0];
+
+    if (latest) {
+      link.href = `evaluation.html?assignmentId=${encodeURIComponent(latest.id)}`;
+      desc.textContent = `${latest.candidateName} • ${latest.courseName}`;
+    } else {
+      link.href = "reports.html";
+      desc.textContent = "No completed test yet. Open Reports once submissions arrive.";
+    }
+  }
+
+  function loadUser() {
+    try {
+      const user = JSON.parse(localStorage.getItem("trainiq_user"));
+      if (!user) return;
+      const name = user.name || "HR Admin";
+      document.getElementById("tbName").textContent = name;
+      document.getElementById("tbAvatar").textContent = name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+      document.getElementById("welcomeMsg").textContent = `Welcome back, ${name}`;
+      document.getElementById("sess-email").textContent = user.email || "hr.admin@company.com";
+      document.getElementById("sess-branch").textContent = `Branch: ${user.branch || "Delhi HQ"}`;
+    } catch (_) {}
+  }
+
+  function setupInteractions() {
+    document.getElementById("dashboardSearch").addEventListener("input", (event) => {
+      searchQuery = event.target.value.trim().toLowerCase();
+      applyDashboardFilters();
+    });
+
+    document.querySelectorAll("#timeFilters .tf-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("#timeFilters .tf-btn").forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        selectedRange = button.dataset.range;
+        document.getElementById("dataScopeLabel").textContent = button.textContent;
+        applyDashboardFilters();
+      });
+    });
+  }
+
+  async function loadDashboardData() {
+    API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+    const [coursesResponse, testsResponse, resultsResponse] = await Promise.all([
+      fetch(`${API_BASE_URL}/api/courses`),
+      fetch(`${API_BASE_URL}/api/tests`),
+      fetch(`${API_BASE_URL}/api/results`)
+    ]);
+
+    const coursesPayload = await coursesResponse.json();
+    const testsPayload = await testsResponse.json();
+    const resultsPayload = await resultsResponse.json();
+
+    if (!coursesResponse.ok) throw new Error(coursesPayload.detail || "Failed to load courses.");
+    if (!testsResponse.ok) throw new Error(testsPayload.detail || "Failed to load tests.");
+    if (!resultsResponse.ok) throw new Error(resultsPayload.detail || "Failed to load results.");
+
+    allCourses = coursesPayload.courses || [];
+    allTests = testsPayload.tests || [];
+    allResults = resultsPayload.results || [];
+    applyDashboardFilters();
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    loadUser();
+    setupInteractions();
+    try {
+      await loadDashboardData();
+    } catch (error) {
+      showToast(error.message || "Failed to load dashboard.", "error");
     }
   });
 </script>
-
 </body>
 </html>

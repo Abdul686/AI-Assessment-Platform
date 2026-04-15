@@ -1,17 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evaluation — TrainIQ L&D</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluation - Aziro L&amp;D</title>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
-    .score-high{color:var(--success);font-weight:700;font-size:15px}
-    .score-mid{color:var(--warning);font-weight:700;font-size:15px}
-    .score-low{color:var(--danger);font-weight:700;font-size:15px}
-    .detail-stat{background:var(--surface2);border-radius:var(--radius-sm);padding:12px 16px;text-align:center;border:1px solid var(--border)}
-    .detail-stat-val{font-size:22px;font-weight:800;color:var(--text)}
-    .detail-stat-label{font-size:11px;color:var(--text3);margin-top:2px}
+    .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:22px}
+    .summary-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow-xs)}
+    .summary-value{font-size:24px;font-weight:800;color:var(--text);line-height:1}
+    .summary-label{font-size:12px;color:var(--text3);margin-top:6px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:22px}
+    .detail-list{display:grid;gap:10px}
+    .detail-item{padding:12px 14px;border-radius:14px;background:var(--surface2);border:1px solid var(--border);font-size:13px;color:var(--text2)}
+    .detail-item strong{display:block;color:var(--text);margin-bottom:4px}
+    .answers-wrap{display:grid;gap:14px}
+    .answer-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-xs)}
+    .answer-card.correct{border-left:4px solid var(--success)}
+    .answer-card.incorrect{border-left:4px solid var(--danger)}
+    .answer-title{font-size:15px;font-weight:700;margin-bottom:12px;color:var(--text)}
+    .answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .answer-chip{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);font-size:13px;color:var(--text2)}
+    .empty-state{padding:34px 20px;text-align:center;color:var(--text3)}
+    @media (max-width: 980px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr}.answer-grid{grid-template-columns:1fr}}
+    @media (max-width: 640px){.summary-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -20,100 +32,121 @@
   <main class="main">
     <div class="topbar">
       <div class="topbar-left">
-        <div class="breadcrumb">🏠 Home › Evaluation</div>
+        <div class="breadcrumb">Home &gt; Reports &gt; Evaluation</div>
         <div class="page-title">Evaluation &amp; Results</div>
       </div>
       <div class="topbar-right">
-        <div class="time-filters">
-          <button class="tf-btn active">Today</button>
-          <button class="tf-btn">This Week</button>
-          <button class="tf-btn">This Month</button>
-        </div>
-        <button class="export-btn" onclick="showToast('📥 Exporting results…')">📥 Export Results</button>
+        <a href="reports.html" class="export-btn">Back To Reports</a>
       </div>
     </div>
-    <div class="content">
-      <div class="grid-4 mb-lg anim-1">
-        <div class="stat-card"><div class="stat-icon icon-blue">🧑‍💼</div><div><div class="stat-val">47</div><div class="stat-label">Employees Tested</div><div class="stat-change change-up">↑ 8 this week</div></div></div>
-        <div class="stat-card"><div class="stat-icon icon-green">✅</div><div><div class="stat-val">32</div><div class="stat-label">Passed</div><div class="stat-change change-up">68% pass rate</div></div></div>
-        <div class="stat-card"><div class="stat-icon icon-red">❌</div><div><div class="stat-val">9</div><div class="stat-label">Failed</div><div class="stat-change change-neutral">Need re-training</div></div></div>
-        <div class="stat-card"><div class="stat-icon icon-orange">⭐</div><div><div class="stat-val">78%</div><div class="stat-label">Avg. Score</div><div class="stat-change change-up">↑ 4% vs last batch</div></div></div>
-      </div>
-
-      <div class="grid-col-2-1 mb-lg anim-2">
-        <div class="card">
-          <div class="card-header"><div><div class="card-title">Score Distribution by Course</div><div class="card-subtitle">Average score per course — current batch</div></div></div>
-          <canvas id="courseChart" height="90"></canvas>
-        </div>
-        <div class="card">
-          <div class="card-header"><div><div class="card-title">Pass Rate by Branch</div><div class="card-subtitle">% passing this month</div></div></div>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Delhi HQ</span><span class="text-success fw-600">82%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:82%;background:var(--success)"></div></div></div>
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Mumbai</span><span class="text-success fw-600">75%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:75%;background:var(--blue)"></div></div></div>
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Bangalore</span><span class="text-warning fw-600">61%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:61%;background:var(--warning)"></div></div></div>
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Pune</span><span class="text-success fw-600">88%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:88%;background:var(--success)"></div></div></div>
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Hyderabad</span><span class="text-warning fw-600">67%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:67%;background:var(--warning)"></div></div></div>
-            <div><div class="flex justify-between text-sm text-muted mb-sm"><span>Chennai</span><span class="text-danger fw-600">54%</span></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:54%;background:var(--danger)"></div></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card anim-3">
-        <div class="card-header">
-          <div><div class="card-title">Individual Results</div><div class="card-subtitle">Click "View" on any row to see detailed breakdown</div></div>
-          <div style="display:flex;gap:8px">
-            <div class="search-wrap" style="max-width:220px"><span>🔍</span><input type="text" placeholder="Search employee…" oninput="filterTableRows(this.value)"></div>
-            <select class="filter-select" onchange="filterTableByStatus(this.value)"><option value="all">All</option><option value="pass">Pass</option><option value="fail">Fail</option><option value="pending">Pending</option></select>
-          </div>
-        </div>
-        <table class="data-table" id="resultsTable">
-          <thead><tr><th>#</th><th>Employee</th><th>Course</th><th>Branch</th><th>Score</th><th>Status</th><th>Date</th><th>Action</th></tr></thead>
-          <tbody>
-            <tr data-result="pass"><td class="text-faint">01</td><td class="td-primary">Ananya Sharma</td><td>Python Fundamentals</td><td>Mumbai</td><td><span class="score-high">88%</span></td><td><span class="badge badge-pass">Pass</span></td><td class="text-faint">12 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Ananya Sharma','88%','Pass','Python Fundamentals')">View</button></td></tr>
-            <tr data-result="pass"><td class="text-faint">02</td><td class="td-primary">Priya Mehta</td><td>Linux Administration</td><td>Pune</td><td><span class="score-high">92%</span></td><td><span class="badge badge-pass">Pass</span></td><td class="text-faint">11 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Priya Mehta','92%','Pass','Linux Administration')">View</button></td></tr>
-            <tr data-result="fail"><td class="text-faint">03</td><td class="td-primary">Karan Mishra</td><td>Docker Basics</td><td>Delhi HQ</td><td><span class="score-low">42%</span></td><td><span class="badge badge-fail">Fail</span></td><td class="text-faint">10 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Karan Mishra','42%','Fail','Docker Basics')">View</button></td></tr>
-            <tr data-result="pass"><td class="text-faint">04</td><td class="td-primary">Sneha Iyer</td><td>AWS Cloud Basics</td><td>Bangalore</td><td><span class="score-mid">68%</span></td><td><span class="badge badge-pass">Pass</span></td><td class="text-faint">10 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Sneha Iyer','68%','Pass','AWS Cloud Basics')">View</button></td></tr>
-            <tr data-result="pass"><td class="text-faint">05</td><td class="td-primary">Rohan Das</td><td>DevOps CI/CD</td><td>Hyderabad</td><td><span class="score-high">84%</span></td><td><span class="badge badge-pass">Pass</span></td><td class="text-faint">09 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Rohan Das','84%','Pass','DevOps CI/CD')">View</button></td></tr>
-            <tr data-result="fail"><td class="text-faint">06</td><td class="td-primary">Anjali Verma</td><td>Python Advanced</td><td>Chennai</td><td><span class="score-low">38%</span></td><td><span class="badge badge-fail">Fail</span></td><td class="text-faint">08 Mar 2025</td><td><button class="btn btn-secondary btn-sm" onclick="viewDetail('Anjali Verma','38%','Fail','Python Advanced')">View</button></td></tr>
-            <tr data-result="pending"><td class="text-faint">07</td><td class="td-primary">Vikram Nair</td><td>AWS Cloud Basics</td><td>Bangalore</td><td class="text-faint">—</td><td><span class="badge badge-pending">Pending</span></td><td class="text-faint">—</td><td><button class="btn btn-secondary btn-sm" disabled style="opacity:0.4">View</button></td></tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="content" id="evaluationContent">
+      <div class="card"><div class="empty-state">Loading evaluation details...</div></div>
     </div>
   </main>
 </div>
-
-<div class="modal-overlay" id="detailModal">
-  <div class="modal">
-    <div class="modal-header"><div class="modal-title" id="modalTitle">Result Detail</div><button class="modal-close" onclick="closeModal('detailModal')">✕</button></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-bottom:18px">
-      <div class="detail-stat"><div class="detail-stat-val" id="d-score">—</div><div class="detail-stat-label">Overall Score</div></div>
-      <div class="detail-stat"><div class="detail-stat-val text-success">18</div><div class="detail-stat-label">Correct</div></div>
-      <div class="detail-stat"><div class="detail-stat-val text-danger">4</div><div class="detail-stat-label">Incorrect</div></div>
-      <div class="detail-stat"><div class="detail-stat-val text-muted">28m</div><div class="detail-stat-label">Time Taken</div></div>
-    </div>
-    <canvas id="radarChart" height="200"></canvas>
-    <div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('detailModal')">Close</button><button class="btn btn-primary" onclick="showToast('📥 Report downloaded!')">Download PDF</button></div>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
-  new Chart(document.getElementById('courseChart'),{type:'bar',data:{labels:['Python Fund.','Docker','Linux Admin','AWS Cloud','DevOps','ML Basics'],datasets:[{data:[78,65,88,72,81,69],backgroundColor:['#5b5ce2','#2ec5d3','#16a34a','#a435f0','#7c3aed','#ec4899'],borderRadius:8,borderSkipped:false}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{min:0,max:100,ticks:{callback:v=>v+'%'}}}}});
-  let radarInst=null;
-  function viewDetail(name,score,status,course){
-    document.getElementById('modalTitle').textContent=name+' — '+course;
-    const el=document.getElementById('d-score');
-    el.textContent=score;
-    el.className='detail-stat-val '+(status==='Pass'?'text-success':'text-danger');
-    openModal('detailModal');
-    if(radarInst)radarInst.destroy();
-    radarInst=new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:['Theory','Coding','Aptitude','Soft Skills','Scenario'],datasets:[{data:[Math.floor(50+Math.random()*45),Math.floor(50+Math.random()*45),Math.floor(50+Math.random()*45),Math.floor(50+Math.random()*45),Math.floor(50+Math.random()*45)],backgroundColor:'rgba(164,53,240,0.12)',borderColor:'#a435f0',borderWidth:2,pointBackgroundColor:'#a435f0'}]},options:{scales:{r:{min:0,max:100,grid:{color:'rgba(0,0,0,0.06)'},ticks:{backdropColor:'transparent',stepSize:25},pointLabels:{color:'#4b4861',font:{size:12}}}},plugins:{legend:{display:false}}}});
+  let API_BASE_URL = "";
+
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
   }
-  function filterTableRows(q){document.querySelectorAll('#resultsTable tbody tr').forEach(r=>r.style.display=r.textContent.toLowerCase().includes(q.toLowerCase())?'':' none');}
-  function filterTableByStatus(v){document.querySelectorAll('#resultsTable tbody tr').forEach(r=>r.style.display=(v==='all'||r.dataset.result===v)?'':'none');}
+
+  function formatDate(value) {
+    if (!value) return "-";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleString();
+  }
+
+  function getStatusBadge(status) {
+    return status === "Pass" ? "badge-pass" : "badge-fail";
+  }
+
+  function renderEvaluation(payload) {
+    const summary = payload.summary;
+    const assignment = payload.assignment;
+    const test = payload.test;
+    const answers = payload.answers || [];
+
+    document.getElementById("evaluationContent").innerHTML = `
+      <div class="hero-grid anim-1">
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Candidate Summary</div><div class="card-subtitle">Overall result for the submitted assessment</div></div></div>
+          <div class="detail-list">
+            <div class="detail-item"><strong>Candidate</strong>${escapeHtml(assignment.candidateName)} (${escapeHtml(assignment.candidateEmail)})</div>
+            <div class="detail-item"><strong>Course</strong>${escapeHtml(test.courseName)}</div>
+            <div class="detail-item"><strong>Branch</strong>${escapeHtml(assignment.branch || "No branch")}</div>
+            <div class="detail-item"><strong>Submitted</strong>${escapeHtml(formatDate(assignment.submittedAt))}</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Assessment Settings</div><div class="card-subtitle">Configuration snapshot used for this test</div></div></div>
+          <div class="detail-list">
+            <div class="detail-item"><strong>Question Type</strong>${escapeHtml(test.questionType || "MCQ Only")}</div>
+            <div class="detail-item"><strong>Difficulty</strong>${escapeHtml(test.difficultyLevel || "Not set")}</div>
+            <div class="detail-item"><strong>Time Limit</strong>${escapeHtml(String(test.timeLimit || "Not set"))} minutes</div>
+            <div class="detail-item"><strong>Status</strong><span class="badge ${getStatusBadge(summary.status)}">${escapeHtml(summary.status)}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-grid anim-2">
+        <div class="summary-card"><div class="summary-value">${escapeHtml(String(summary.score || 0))}/${escapeHtml(String(summary.totalQuestions || 0))}</div><div class="summary-label">Overall Score</div></div>
+        <div class="summary-card"><div class="summary-value">${escapeHtml(String(summary.percentage || 0))}%</div><div class="summary-label">Percentage</div></div>
+        <div class="summary-card"><div class="summary-value">${escapeHtml(String(summary.correctCount || 0))}</div><div class="summary-label">Correct Answers</div></div>
+        <div class="summary-card"><div class="summary-value">${escapeHtml(String(summary.incorrectCount || 0))}</div><div class="summary-label">Incorrect Answers</div></div>
+      </div>
+
+      <div class="card anim-3">
+        <div class="card-header"><div><div class="card-title">Question-by-Question Review</div><div class="card-subtitle">Selected answer versus the correct answer for each MCQ</div></div></div>
+        <div class="answers-wrap">
+          ${answers.map((answer) => `
+            <div class="answer-card ${answer.isCorrect ? "correct" : "incorrect"}">
+              <div class="answer-title">Q${escapeHtml(String(answer.order))}. ${escapeHtml(answer.question)}</div>
+              <div class="answer-grid">
+                <div class="answer-chip"><strong>Selected Answer</strong><div>${escapeHtml(answer.selectedAnswer ? `${answer.selectedAnswer}: ${answer.selectedAnswerText}` : "Not answered")}</div></div>
+                <div class="answer-chip"><strong>Correct Answer</strong><div>${escapeHtml(answer.correctAnswer ? `${answer.correctAnswer}: ${answer.correctAnswerText}` : "-")}</div></div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  async function loadEvaluation() {
+    const params = new URLSearchParams(window.location.search);
+    const assignmentId = params.get("assignmentId");
+
+    if (!assignmentId) {
+      document.getElementById("evaluationContent").innerHTML = '<div class="card"><div class="empty-state">No assignment selected. Open this page from Reports or Generated Tests.</div></div>';
+      return;
+    }
+
+    try {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+      const response = await fetch(`${API_BASE_URL}/api/results/${encodeURIComponent(assignmentId)}`);
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.detail || "Failed to load evaluation details.");
+      }
+      renderEvaluation(payload);
+    } catch (error) {
+      document.getElementById("evaluationContent").innerHTML = `<div class="card"><div class="empty-state">${escapeHtml(error.message || "Failed to load evaluation details.")}</div></div>`;
+      showToast(error.message || "Failed to load evaluation details.", "error");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadEvaluation);
 </script>
 </body>
 </html>

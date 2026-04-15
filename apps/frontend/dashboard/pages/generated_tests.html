@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Tests — TrainIQ L&D</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Tests - Aziro L&amp;D</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .test-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;transition:all var(--t);box-shadow:var(--shadow-xs)}
-    .test-card:hover{border-color:#d6cee9;box-shadow:var(--shadow-md)}
-    .card-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
-    .emp-name{font-size:15px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .emp-meta{font-size:12px;color:var(--text3);margin-top:3px}
-    .card-actions{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
-    .action-btn{display:flex;align-items:center;gap:5px;padding:6px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;font-size:12px;color:var(--text2);cursor:pointer;transition:all var(--t);text-decoration:none}
+    .summary-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+    .summary-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow-xs)}
+    .summary-value{font-size:24px;font-weight:800;color:var(--text);line-height:1}
+    .summary-label{font-size:12px;color:var(--text3);margin-top:6px}
+    .test-list{display:flex;flex-direction:column;gap:14px}
+    .test-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-xs);transition:all var(--t)}
+    .test-card:hover{border-color:#c8d6eb;box-shadow:var(--shadow-md)}
+    .card-top{display:flex;gap:12px;align-items:flex-start}
+    .card-main{flex:1;min-width:0}
+    .card-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .card-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px;font-weight:700;color:var(--text)}
+    .card-meta{font-size:12px;color:var(--text3);margin-top:4px;line-height:1.6}
+    .info-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+    .info-chip{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:10px 12px}
+    .info-chip strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:var(--text3);margin-bottom:4px}
+    .info-chip span{font-size:13px;color:var(--text2)}
+    .action-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--text2);transition:all var(--t)}
     .action-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
-    .action-btn.warn:hover{border-color:var(--orange);color:var(--orange);background:var(--orange-light)}
     .action-btn.success:hover{border-color:var(--success);color:var(--success);background:var(--success-bg)}
-    .module-list{display:flex;flex-direction:column;gap:5px}
-    .module-row{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--surface2);border-radius:8px}
-    .mod-badge{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;flex-shrink:0}
-    .mod-name{font-size:13px;color:var(--text2);flex:1}
-    .mod-open{font-size:12px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;font-weight:600}
-    .mod-open:hover{text-decoration:underline}
-    .mod-copy{font-size:14px;color:var(--text3);cursor:pointer;transition:color var(--t)}
-    .mod-copy:hover{color:var(--text)}
-    .test-list{display:flex;flex-direction:column;gap:12px}
+    .inline-note{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--danger-bg);border:1px solid rgba(220,38,38,0.12);font-size:12px;color:var(--danger)}
+    .empty-state{padding:28px 22px;text-align:center;color:var(--text3)}
+    @media (max-width: 1080px){
+      .summary-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width: 760px){
+      .card-top{flex-direction:column}
+      .card-actions{justify-content:flex-start}
+    }
+    @media (max-width: 640px){
+      .summary-strip{grid-template-columns:1fr}
+      .info-grid{grid-template-columns:1fr}
+      .toolbar-end{margin-left:0;width:100%}
+      .toolbar-end .btn{width:100%;justify-content:center}
+    }
   </style>
 </head>
 <body>
@@ -32,108 +49,335 @@
   <main class="main">
     <div class="topbar">
       <div class="topbar-left">
-        <div class="breadcrumb">🏠 Home › Generated Tests</div>
+        <div class="breadcrumb">Home &gt; Generated Tests</div>
         <div class="page-title">Generated Tests</div>
       </div>
       <div class="topbar-right">
-        <a href="create_test.html" class="btn btn-primary">+ Create New Test</a>
+        <a href="create_test.html" class="btn btn-primary">Create New Test</a>
       </div>
     </div>
+
     <div class="content">
-      <div class="toolbar anim-1">
+      <div class="summary-strip anim-1">
+        <div class="summary-card">
+          <div class="summary-value" id="totalAssignments">0</div>
+          <div class="summary-label">Candidate Assignments</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="pendingAssignments">0</div>
+          <div class="summary-label">Pending Or Sent</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="startedAssignments">0</div>
+          <div class="summary-label">Started</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="completedAssignments">0</div>
+          <div class="summary-label">Completed</div>
+        </div>
+      </div>
+
+      <div class="toolbar anim-2">
         <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);cursor:pointer">
           <input type="checkbox" id="selectAll" style="accent-color:var(--orange);width:15px;height:15px">
           Select All <span id="selCount" style="color:var(--orange);font-weight:600">(0 selected)</span>
         </label>
-        <div class="search-wrap"><span style="color:var(--text3)">🔍</span><input type="text" placeholder="Search employee or course…" oninput="filterByText(this,'.test-card')"></div>
-        <select class="filter-select" onchange="filterByStatus(this,'.test-card')">
+        <div class="search-wrap">
+          <span style="color:var(--text3)">Search</span>
+          <input type="text" id="searchInput" placeholder="Search employee, email, course, branch">
+        </div>
+        <select class="filter-select" id="statusFilter">
           <option value="all">All Statuses</option>
           <option value="sent">Sent</option>
-          <option value="completed">Completed</option>
           <option value="pending">Pending</option>
+          <option value="started">Started</option>
+          <option value="completed">Completed</option>
           <option value="expired">Expired</option>
         </select>
-        <div class="toolbar-end"><button class="btn btn-ghost btn-sm">📧 Send Emails to Selected</button></div>
+        <div class="toolbar-end">
+          <button class="btn btn-ghost btn-sm" type="button" id="copySelectedBtn">Copy Selected Links</button>
+        </div>
       </div>
 
       <div class="test-list" id="testList">
-        <!-- Card 1 -->
-        <div class="test-card anim-2" data-status="completed">
-          <div class="card-top">
-            <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
-            <div style="flex:1"><div class="emp-name">Ananya Sharma <span class="badge badge-completed">Completed</span></div><div class="emp-meta">ananya.sharma@company.com · Python Fundamentals · Mumbai</div></div>
-            <div class="card-actions">
-              <a href="#" class="action-btn" onclick="copyLink()">🔗 Copy Link</a>
-              <a href="#" class="action-btn warn">📧 Resend</a>
-              <a href="evaluation.html" class="action-btn success">📊 Result</a>
-            </div>
-          </div>
-          <div class="module-list">
-            <div class="module-row"><div class="mod-badge" style="background:#a435f0">L1</div><span class="mod-name">Aptitude Test</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#5b5ce2">L2</div><span class="mod-name">Python Theory MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#16a34a">L3</div><span class="mod-name">Python Fundamentals MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#f59e0b">L4</div><span class="mod-name">Coding Challenge (Python)</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#ec4899">L5</div><span class="mod-name">Soft Skills Assessment</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="test-card anim-3" data-status="sent">
-          <div class="card-top">
-            <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
-            <div style="flex:1"><div class="emp-name">Rajesh Kumar <span class="badge badge-sent">Sent</span></div><div class="emp-meta">rajesh.kumar@company.com · Docker Basics · Delhi HQ</div></div>
-            <div class="card-actions"><a href="#" class="action-btn" onclick="copyLink()">🔗 Copy Link</a><a href="#" class="action-btn warn">📧 Resend</a></div>
-          </div>
-          <div class="module-list">
-            <div class="module-row"><div class="mod-badge" style="background:#a435f0">L1</div><span class="mod-name">Docker Theory MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#5b5ce2">L2</div><span class="mod-name">Container Concepts MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#16a34a">L3</div><span class="mod-name">Docker Practical Scenario</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="test-card anim-4" data-status="completed">
-          <div class="card-top">
-            <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
-            <div style="flex:1"><div class="emp-name">Priya Mehta <span class="badge badge-completed">Completed</span></div><div class="emp-meta">priya.mehta@company.com · Linux Administration · Pune</div></div>
-            <div class="card-actions"><a href="#" class="action-btn" onclick="copyLink()">🔗 Copy Link</a><a href="evaluation.html" class="action-btn success">📊 Result</a></div>
-          </div>
-          <div class="module-list">
-            <div class="module-row"><div class="mod-badge" style="background:#a435f0">L1</div><span class="mod-name">Linux Commands MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#5b5ce2">L2</div><span class="mod-name">Shell Scripting Practical</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="test-card anim-5" data-status="pending">
-          <div class="card-top">
-            <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
-            <div style="flex:1"><div class="emp-name">Vikram Nair <span class="badge badge-pending">Pending</span></div><div class="emp-meta">vikram.nair@company.com · AWS Cloud Basics · Bangalore</div></div>
-            <div class="card-actions"><a href="#" class="action-btn" onclick="copyLink()">🔗 Copy Link</a><a href="#" class="action-btn warn">📧 Resend</a></div>
-          </div>
-          <div class="module-list">
-            <div class="module-row"><div class="mod-badge" style="background:#a435f0">L1</div><span class="mod-name">AWS Fundamentals MCQ</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-            <div class="module-row"><div class="mod-badge" style="background:#5b5ce2">L2</div><span class="mod-name">Cloud Architecture Scenario</span><a href="#" class="mod-open">↗ Open</a><span class="mod-copy" onclick="copyLink()">⧉</span></div>
-          </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="test-card anim-6" data-status="expired">
-          <div class="card-top">
-            <input type="checkbox" class="cb-item" style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px">
-            <div style="flex:1"><div class="emp-name">Arjun Singh <span class="badge badge-expired">Expired</span></div><div class="emp-meta">arjun.singh@company.com · Python Advanced · Chennai</div></div>
-            <div class="card-actions"><a href="create_test.html" class="action-btn">🔄 Regenerate</a></div>
-          </div>
-          <div class="module-list">
-            <div class="module-row"><div class="mod-badge" style="background:#94a3b8">L1</div><span class="mod-name">Advanced Python MCQ</span><span style="font-size:12px;color:var(--text3)">Link expired</span></div>
-          </div>
+        <div class="card">
+          <div class="empty-state">Loading generated tests...</div>
         </div>
       </div>
     </div>
   </main>
 </div>
+
 <div class="toast" id="toast"></div>
 <script src="../js/sidebar.js"></script>
+<script src="../js/api-config.js"></script>
 <script src="../js/main.js"></script>
 <script>
-  setupSelectAll('selectAll','cb-item','selCount');
-  function copyLink(){showToast('🔗 Test link copied to clipboard!');}
+  let API_BASE_URL = "";
+  let assignmentEntries = [];
+
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function formatDate(value) {
+    if (!value) {
+      return "-";
+    }
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return value;
+    }
+    return date.toLocaleString();
+  }
+
+  function displayStatus(entry) {
+    const rawStatus = String(entry.assignment.status || "pending").toLowerCase();
+    if (rawStatus === "completed" || rawStatus === "expired" || rawStatus === "started") {
+      return rawStatus;
+    }
+    if (String(entry.assignment.emailStatus || "").toLowerCase() === "sent") {
+      return "sent";
+    }
+    return "pending";
+  }
+
+  function statusBadgeClass(status) {
+    if (status === "completed") return "badge-completed";
+    if (status === "expired") return "badge-expired";
+    if (status === "started") return "badge-active";
+    if (status === "sent") return "badge-sent";
+    return "badge-pending";
+  }
+
+  function statusLabel(status) {
+    return status.charAt(0).toUpperCase() + status.slice(1);
+  }
+
+  function flattenTests(tests) {
+    const entries = [];
+    (tests || []).forEach((test) => {
+      (test.assignments || []).forEach((assignment) => {
+        entries.push({ test, assignment });
+      });
+    });
+    return entries.sort((left, right) => {
+      return new Date(right.assignment.createdAt || 0) - new Date(left.assignment.createdAt || 0);
+    });
+  }
+
+  function updateSummary(entries) {
+    const pendingOrSent = entries.filter((entry) => {
+      const status = displayStatus(entry);
+      return status === "pending" || status === "sent";
+    }).length;
+    const started = entries.filter((entry) => displayStatus(entry) === "started").length;
+    const completed = entries.filter((entry) => displayStatus(entry) === "completed").length;
+
+    document.getElementById("totalAssignments").textContent = String(entries.length);
+    document.getElementById("pendingAssignments").textContent = String(pendingOrSent);
+    document.getElementById("startedAssignments").textContent = String(started);
+    document.getElementById("completedAssignments").textContent = String(completed);
+  }
+
+  function copyLink(link) {
+    if (!link) {
+      showToast("No test link available to copy.", "error");
+      return;
+    }
+
+    navigator.clipboard.writeText(link).then(() => {
+      showToast("Test link copied to clipboard.", "success");
+    }).catch(() => {
+      showToast("Could not copy the test link.", "error");
+    });
+  }
+
+  function renderAssignments(entries) {
+    const list = document.getElementById("testList");
+
+    if (!entries.length) {
+      list.innerHTML = `
+        <div class="card">
+          <div class="empty-state">
+            <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px">No generated tests found</div>
+            <div>Create a new test to generate candidate links for a Udemy course.</div>
+          </div>
+        </div>
+      `;
+      if (typeof setupSelectAll === "function") {
+        setupSelectAll("selectAll", "cb-item", "selCount");
+      }
+      return;
+    }
+
+    list.innerHTML = entries.map((entry, index) => {
+      const test = entry.test;
+      const assignment = entry.assignment;
+      const status = displayStatus(entry);
+      const scoreText = status === "completed"
+        ? `${assignment.score ?? 0}/${assignment.totalQuestions ?? test.questionCount ?? 15} (${assignment.percentage ?? 0}%)`
+        : status === "expired"
+          ? "Link expired"
+          : `Email: ${assignment.emailStatus || "not_requested"}`;
+      const resultAction = status === "completed"
+        ? `<a href="evaluation.html?assignmentId=${encodeURIComponent(String(assignment.id))}" class="action-btn success">View Result</a>`
+        : "";
+      const openAction = assignment.testLink
+        ? `<a href="${escapeHtml(assignment.testLink)}" target="_blank" rel="noopener" class="action-btn">Open Test</a>`
+        : "";
+      const emailError = assignment.emailError
+        ? `<div class="inline-note">Email delivery issue: ${escapeHtml(assignment.emailError)}</div>`
+        : "";
+
+      return `
+        <div class="test-card anim-${(index % 6) + 1}" data-status="${escapeHtml(status)}">
+          <div class="card-top">
+            <input
+              type="checkbox"
+              class="cb-item"
+              data-link="${escapeHtml(assignment.testLink || "")}" 
+              style="accent-color:var(--orange);margin-top:4px;width:15px;height:15px"
+            >
+            <div class="card-main">
+              <div class="card-title">
+                ${escapeHtml(assignment.candidateName)}
+                <span class="badge ${statusBadgeClass(status)}">${escapeHtml(statusLabel(status))}</span>
+              </div>
+              <div class="card-meta">
+                ${escapeHtml(assignment.candidateEmail)} | ${escapeHtml(test.courseName)} | ${escapeHtml(assignment.branch || "No branch")}
+              </div>
+              <div class="info-grid">
+                <div class="info-chip">
+                  <strong>Questions</strong>
+                  <span>${escapeHtml(String(test.questionCount || 15))} MCQs</span>
+                </div>
+                <div class="info-chip">
+                  <strong>Time Limit</strong>
+                  <span>${escapeHtml(String(test.timeLimit || "Not set"))} minutes</span>
+                </div>
+                <div class="info-chip">
+                  <strong>Progress</strong>
+                  <span>${escapeHtml(scoreText)}</span>
+                </div>
+                <div class="info-chip">
+                  <strong>Created</strong>
+                  <span>${escapeHtml(formatDate(assignment.createdAt))}</span>
+                </div>
+              </div>
+              <div class="card-meta" style="margin-top:12px">
+                Expires: ${escapeHtml(formatDate(assignment.expiresAt))} | Employee ID: ${escapeHtml(assignment.employeeId || "Not provided")}
+              </div>
+              ${emailError}
+            </div>
+            <div class="card-actions">
+              ${openAction}
+              <a href="#" class="action-btn" data-copy-link="${escapeHtml(assignment.testLink || "")}">Copy Link</a>
+              ${resultAction}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    document.querySelectorAll("[data-copy-link]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        copyLink(button.dataset.copyLink);
+      });
+    });
+
+    if (typeof setupSelectAll === "function") {
+      setupSelectAll("selectAll", "cb-item", "selCount");
+    }
+  }
+
+  function applyFilters() {
+    const query = document.getElementById("searchInput").value.trim().toLowerCase();
+    const selectedStatus = document.getElementById("statusFilter").value;
+
+    const filtered = assignmentEntries.filter((entry) => {
+      const status = displayStatus(entry);
+      const haystack = [
+        entry.assignment.candidateName,
+        entry.assignment.candidateEmail,
+        entry.test.courseName,
+        entry.assignment.branch,
+        entry.assignment.employeeId,
+      ].join(" ").toLowerCase();
+
+      const matchesQuery = !query || haystack.includes(query);
+      const matchesStatus = selectedStatus === "all" || status === selectedStatus;
+      return matchesQuery && matchesStatus;
+    });
+
+    renderAssignments(filtered);
+  }
+
+  function copySelectedLinks() {
+    const selectedLinks = Array.from(document.querySelectorAll(".cb-item:checked"))
+      .map((item) => item.dataset.link || "")
+      .filter(Boolean);
+
+    if (!selectedLinks.length) {
+      showToast("Select at least one generated test link first.", "error");
+      return;
+    }
+
+    navigator.clipboard.writeText(selectedLinks.join("\n")).then(() => {
+      showToast(`${selectedLinks.length} test link(s) copied.`, "success");
+    }).catch(() => {
+      showToast("Could not copy the selected links.", "error");
+    });
+  }
+
+  async function loadTests() {
+    try {
+      API_BASE_URL = await window.AziroConfig.resolveApiBaseUrl();
+      const response = await fetch(`${API_BASE_URL}/api/tests`);
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.detail || "Failed to load generated tests.");
+      }
+
+      assignmentEntries = flattenTests(payload.tests || []);
+      updateSummary(assignmentEntries);
+      applyFilters();
+    } catch (error) {
+      const latest = localStorage.getItem("latestGeneratedTest");
+      if (latest) {
+        const parsed = JSON.parse(latest);
+        assignmentEntries = flattenTests([
+          {
+            ...parsed.test,
+            assignments: parsed.assignments || [],
+          },
+        ]);
+        updateSummary(assignmentEntries);
+        applyFilters();
+        return;
+      }
+
+      document.getElementById("testList").innerHTML = `
+        <div class="card">
+          <div class="empty-state">
+            <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px">Could not load generated tests</div>
+            <div>${escapeHtml(error.message || "Unexpected error.")}</div>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  document.getElementById("searchInput").addEventListener("input", applyFilters);
+  document.getElementById("statusFilter").addEventListener("change", applyFilters);
+  document.getElementById("copySelectedBtn").addEventListener("click", copySelectedLinks);
+  document.addEventListener("DOMContentLoaded", loadTests);
 </script>
 </body>
 </html>
